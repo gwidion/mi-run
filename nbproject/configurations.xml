@@ -4,6 +4,7 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
+      <itemPath>Object.h</itemPath>
       <itemPath>Reader.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
@@ -37,7 +38,12 @@
         <rebuildPropChanged>false</rebuildPropChanged>
       </toolsSet>
       <compileType>
+        <ccTool>
+          <commandLine>-g</commandLine>
+        </ccTool>
       </compileType>
+      <item path="Object.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="Reader.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Reader.h" ex="false" tool="3" flavor2="0">
@@ -65,6 +71,8 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
+      <item path="Object.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="Reader.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Reader.h" ex="false" tool="3" flavor2="0">
