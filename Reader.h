@@ -16,9 +16,9 @@
 
 class Reader {
 public:
-    Reader();
-    Reader(const Reader& orig);
-    virtual ~Reader();
+   Reader();
+   Reader(const Reader& orig);
+   virtual ~Reader();
 private:
 
 };
