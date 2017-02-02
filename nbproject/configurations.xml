@@ -11,6 +11,7 @@
       <itemPath>Object.h</itemPath>
       <itemPath>Reader.h</itemPath>
       <itemPath>Stack.h</itemPath>
+      <itemPath>compareFiles.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
@@ -81,6 +82,8 @@
       </item>
       <item path="Stack.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="compareFiles.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>
     </conf>
@@ -131,6 +134,8 @@
       <item path="Stack.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Stack.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="compareFiles.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>

@@ -94,7 +94,7 @@ Object* Reader::readList(FILE *input) {
 
 	if (nextChar == ')') {
 		return nullptr;
-//		return SCM_NIL;
+//		return new ObjectNil();
 	}
 	unreadChar(nextChar);
 	theCar = read(input);
@@ -159,10 +159,10 @@ Object* Reader::readSymbol(FILE *input) {
 				switch (buffer[1]) {
 					case 't':
 						free(buffer);
-//						return SCM_TRUE;
+						return new ObjectTrue;
 					case 'f':
 						free(buffer);
-//						return SCM_FALSE;
+						return new ObjectFalse;
 				}
 			}
 			newSymbolObject = new ObjectSymbol(buffer);
@@ -184,12 +184,12 @@ Object* Reader::read(FILE* input) {
 	Object* someObject;
 	char nextChar;
 
-	for (;;) {
+	while(true) {
 		nextChar = skipWhiteSpace(input);
 
-//		if (nextChar == EOF_CHAR) {
-//			return SCM_EOF;
-//		}
+		if (nextChar == -1) { // end-of-file
+			return nullptr;
+		}
 //
 //		DEBUGCODE(debugReader,{
 //			printf("the next char is %x (%c)\n", nextChar, nextChar);
@@ -209,9 +209,7 @@ Object* Reader::read(FILE* input) {
 				Object* expr;
 
 				expr = read(input);
-//				return makeCons(
-//						  makeSymbol("quote"),
-//						  makeCons(expr, SCM_NIL));
+				return new ObjectCons( expr, new ObjectNil );
 			}
 			case ')':
 //				error("')' unexpected");
