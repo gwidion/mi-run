@@ -15,6 +15,8 @@ public:
    Object * pop();
    Object * peek() const;
    std::list<Object*> pop(unsigned int amount);
+   int size() const;
+   
 private:
    std::stack<Object *> inputStack;
 };

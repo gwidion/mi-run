@@ -31,3 +31,6 @@ list<Object*> Stack::pop(unsigned int amount) {
 Object * Stack::peek() const {
    return inputStack.top();
 }
+int Stack::size() const {
+	return inputStack.size();
+}
