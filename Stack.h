@@ -2,20 +2,19 @@
 #define STACK_H
 
 #include <stack>
-#include "Object.h"
 
-using namespace std;
+class Object;
 
 class Stack {
 public:
    Stack();
    Stack(const Stack& orig);
    virtual ~Stack();
-   Object * push(Object * const object);
+   Object * push(Object * object);
    Object * pop();
    Object * peek() const;
 private:
-   stack<Object *> stack;
+   std::stack<Object *> inputStack;
 };
 
 #endif /* STACK_H */

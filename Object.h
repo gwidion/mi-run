@@ -4,6 +4,8 @@
 #include <iostream>
 #include <stack>
 
+class Environment;
+
 enum tagEnum {
     TAG_INT,
     TAG_FLOAT,
@@ -25,20 +27,23 @@ public:
     Object();
     Object( tagEnum t ) : tag( t ) {}
     virtual void print() { std::cout << ""; }
-    virtual Object* eval() { return nullptr; }
-    virtual int intValue() { std::cout << "chyba, neni int" << std::endl; }
+    virtual Object* eval(Environment& env) { return nullptr; }
+    
+    
+    virtual int intValue()            { std::cout << "chyba, neni int" << std::endl; }
+    virtual std::string stringValue() { std::cout << "chyba, neni string" << std::endl; }
     tagEnum tag;
 protected:
     
 };
 
-typedef Object (*ObjectFunction)();
+typedef Object* (*ObjectFunction)();
 
 class ObjectInt : public Object {
 public:
     ObjectInt( int x ) : Object( TAG_INT ), intVal( x ) {}
     virtual void print() override { std::cout << intVal; }
-    virtual int intValue() override { return intVal(); }
+    virtual int intValue() override { return intVal; }
 
 private:
     int intVal;
@@ -65,6 +70,7 @@ public:
     ObjectSymbol( const char* a ) : Object( TAG_SYMBOL ) {
         s = a;
     }
+    virtual Object* eval(Environment& env);
     virtual void print() override { std::cout << s; }
 private:
     std::string s;
@@ -75,6 +81,8 @@ public:
     ObjectString( const char* a ) : Object( TAG_STRING ) {
         s = a;
     }
+    virtual std::string stringValue() override { return s; }
+    
     virtual void print() override { std::cout << s; }
 private:
     std::string s;
@@ -82,20 +90,11 @@ private:
 
 class ObjectCons : public Object {
 public:
-    ObjectCons( Object* ca, Object* cd ) : Object( TAG_CONS ), car( ca ), cdr( cd ) {}
-    virtual void print() override {}
-    virtual Object* eval() {
-        Object* func = car->eval();
-        if( func->tag == TAG_BUILTINSYNTAX ) {
-            
-            std::stack<Object*> st;
-            st.push( cdr );
-            return func->eval();
-        }
-        else {
-            return nullptr;
-        }
+    ObjectCons( Object* ca, Object* cd ) : Object( TAG_CONS ) {
+        car = ca;
+        cdr = cd;
     }
+    virtual Object* eval(Environment& env) override;
 private:
     Object* car;
     Object* cdr;

@@ -1,4 +1,5 @@
 #include "Stack.h"
+#include "Object.h"
 
 using namespace std;
 
@@ -8,17 +9,17 @@ Stack::Stack(const Stack& orig) { }
 
 Stack::~Stack() { }
 
-Object * Stack::push(Object * const object) {
-   stack.push(object);
+Object * Stack::push(Object * object) {
+   inputStack.push(object);
    return this->peek();
 }
 
 Object * Stack::pop() {
-   Object * top = stack.top();
-   stack.pop();
+   Object * top = inputStack.top();
+   inputStack.pop();
    return top;
 }
 
 Object * Stack::peek() const {
-   return stack.top();
+   return inputStack.top();
 }

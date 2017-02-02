@@ -4,6 +4,7 @@
 
 #include "Object.h"
 #include "Reader.h"
+#include "Environment.h"
 
 using namespace std;
 
@@ -19,6 +20,7 @@ int main() {
 	cout << "kabelja4 and bliznjan runtime system for scheme" << endl;
 
 	Reader reader;
+	Environment environment;
 	
 	Object* expression;
 	Object* result;
@@ -35,7 +37,7 @@ int main() {
 //			return;
 //		}
 
-		result = expression->eval();
+		result = expression->eval( environment );
 		result->print();
 		cout << endl;
 	}

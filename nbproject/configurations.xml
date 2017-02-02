@@ -16,6 +16,8 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
+      <itemPath>Environment.cpp</itemPath>
+      <itemPath>Object.cpp</itemPath>
       <itemPath>Reader.cpp</itemPath>
       <itemPath>Stack.cpp</itemPath>
       <itemPath>main.cpp</itemPath>
@@ -45,7 +47,11 @@
           <commandLine>-g</commandLine>
         </ccTool>
       </compileType>
+      <item path="Environment.cpp" ex="false" tool="1" flavor2="0">
+      </item>
       <item path="Environment.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Object.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Object.h" ex="false" tool="3" flavor2="0">
       </item>
@@ -80,7 +86,11 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
+      <item path="Environment.cpp" ex="false" tool="1" flavor2="0">
+      </item>
       <item path="Environment.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Object.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Object.h" ex="false" tool="3" flavor2="0">
       </item>

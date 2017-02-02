@@ -35,6 +35,8 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
+	${OBJECTDIR}/Environment.o \
+	${OBJECTDIR}/Object.o \
 	${OBJECTDIR}/Reader.o \
 	${OBJECTDIR}/Stack.o \
 	${OBJECTDIR}/main.o
@@ -63,6 +65,16 @@ LDLIBSOPTIONS=
 ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/mi-run.exe: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/mi-run ${OBJECTFILES} ${LDLIBSOPTIONS}
+
+${OBJECTDIR}/Environment.o: Environment.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Environment.o Environment.cpp
+
+${OBJECTDIR}/Object.o: Object.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Object.o Object.cpp
 
 ${OBJECTDIR}/Reader.o: Reader.cpp
 	${MKDIR} -p ${OBJECTDIR}
