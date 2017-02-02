@@ -2,6 +2,7 @@
 #define STACK_H
 
 #include <stack>
+#include <list>
 
 class Object;
 
@@ -13,6 +14,7 @@ public:
    Object * push(Object * object);
    Object * pop();
    Object * peek() const;
+   std::list<Object*> pop(unsigned int amount);
 private:
    std::stack<Object *> inputStack;
 };

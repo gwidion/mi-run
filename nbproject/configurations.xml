@@ -5,6 +5,9 @@
                    displayName="Header Files"
                    projectFiles="true">
       <itemPath>Environment.h</itemPath>
+      <itemPath>Memory.h</itemPath>
+      <itemPath>MemoryBlock.h</itemPath>
+      <itemPath>MemoryRecord.h</itemPath>
       <itemPath>Object.h</itemPath>
       <itemPath>Reader.h</itemPath>
       <itemPath>Stack.h</itemPath>
@@ -17,6 +20,9 @@
                    displayName="Source Files"
                    projectFiles="true">
       <itemPath>Environment.cpp</itemPath>
+      <itemPath>Memory.cpp</itemPath>
+      <itemPath>MemoryBlock.cpp</itemPath>
+      <itemPath>MemoryRecord.cpp</itemPath>
       <itemPath>Object.cpp</itemPath>
       <itemPath>Reader.cpp</itemPath>
       <itemPath>Stack.cpp</itemPath>
@@ -44,12 +50,24 @@
       </toolsSet>
       <compileType>
         <ccTool>
-          <commandLine>-g</commandLine>
+          <commandLine>-Og -Wall</commandLine>
         </ccTool>
       </compileType>
       <item path="Environment.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Environment.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Memory.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Memory.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="MemoryBlock.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="MemoryBlock.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="MemoryRecord.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="MemoryRecord.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Object.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -89,6 +107,18 @@
       <item path="Environment.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Environment.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Memory.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Memory.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="MemoryBlock.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="MemoryBlock.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="MemoryRecord.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="MemoryRecord.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Object.cpp" ex="false" tool="1" flavor2="0">
       </item>

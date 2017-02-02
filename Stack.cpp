@@ -20,6 +20,14 @@ Object * Stack::pop() {
    return top;
 }
 
+list<Object*> Stack::pop(unsigned int amount) {
+   list<Object*> popped;
+   for (unsigned int i = 0; i < amount; i++) {
+      popped.push_front(this->pop());
+   }
+   return popped;
+}
+
 Object * Stack::peek() const {
    return inputStack.top();
 }

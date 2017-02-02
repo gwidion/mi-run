@@ -36,6 +36,9 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 # Object Files
 OBJECTFILES= \
 	${OBJECTDIR}/Environment.o \
+	${OBJECTDIR}/Memory.o \
+	${OBJECTDIR}/MemoryBlock.o \
+	${OBJECTDIR}/MemoryRecord.o \
 	${OBJECTDIR}/Object.o \
 	${OBJECTDIR}/Reader.o \
 	${OBJECTDIR}/Stack.o \
@@ -70,6 +73,21 @@ ${OBJECTDIR}/Environment.o: Environment.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Environment.o Environment.cpp
+
+${OBJECTDIR}/Memory.o: Memory.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Memory.o Memory.cpp
+
+${OBJECTDIR}/MemoryBlock.o: MemoryBlock.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/MemoryBlock.o MemoryBlock.cpp
+
+${OBJECTDIR}/MemoryRecord.o: MemoryRecord.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/MemoryRecord.o MemoryRecord.cpp
 
 ${OBJECTDIR}/Object.o: Object.cpp
 	${MKDIR} -p ${OBJECTDIR}

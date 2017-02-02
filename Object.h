@@ -30,8 +30,8 @@ public:
     virtual Object* eval(Environment& env) { return nullptr; }
     
     
-    virtual int intValue()            { std::cout << "chyba, neni int" << std::endl; }
-    virtual std::string stringValue() { std::cout << "chyba, neni string" << std::endl; }
+    virtual int intValue()            { std::cout << "chyba, neni int" << std::endl; return -1; }
+    virtual std::string stringValue() { std::cout << "chyba, neni string" << std::endl; return "ERROR"; }
     tagEnum tag;
 protected:
     
