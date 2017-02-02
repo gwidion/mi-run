@@ -27,3 +27,45 @@ Object* ObjectCons::eval(Environment& env, Stack& stack) {
 Object* ObjectSymbol::eval(Environment& env, Stack& stack) {
 	return env.getObject( s );
 }
+
+unsigned int Object::size() {
+   throw "Object should be abstract";
+   return sizeof(Object);
+}
+
+
+unsigned int ObjectInt::size() {
+   return sizeof(ObjectInt);
+}
+
+unsigned int ObjectBultInSyntax::size() {
+   return sizeof(ObjectBultInSyntax);
+}
+
+unsigned int ObjectBuiltInFunction::size() {
+   return sizeof(ObjectBuiltInFunction);
+}
+
+unsigned int ObjectSymbol::size() {
+   return sizeof(ObjectSymbol);
+}
+
+unsigned int ObjectString::size() {
+   return sizeof(ObjectString);
+}
+
+unsigned int ObjectCons::size() {
+   return sizeof(ObjectCons);
+}
+
+unsigned int ObjectTrue::size() {
+   return sizeof(ObjectTrue);
+}
+
+unsigned int ObjectFalse::size() {
+   return sizeof(ObjectFalse);
+}
+
+unsigned int ObjectNil::size() {
+   return sizeof(ObjectNil);
+}

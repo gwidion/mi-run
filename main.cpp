@@ -17,7 +17,6 @@ int main() {
 	//    defineWellknownBindings();
 	//    initializeStack();
 
-	Object a();
 	ObjectInt i( 1 );
 	ObjectBuiltInFunction bif( nullptr );
 	ObjectCons c( nullptr, nullptr );
