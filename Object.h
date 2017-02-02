@@ -2,9 +2,9 @@
 #define OBJECT_H
 
 #include <iostream>
+#include <stack>
 
 enum tagEnum {
-    TAG_TAGGED_INT,
     TAG_INT,
     TAG_FLOAT,
     TAG_TRUE,
@@ -26,19 +26,22 @@ public:
     Object( tagEnum t ) : tag( t ) {}
     virtual void print() { std::cout << ""; }
     virtual Object* eval() { return nullptr; }
-    
-protected:
+    virtual int intValue() { std::cout << "chyba, neni int" << std::endl; }
     tagEnum tag;
+protected:
+    
 };
 
 typedef Object (*ObjectFunction)();
 
 class ObjectInt : public Object {
 public:
-    ObjectInt( int x ) : Object( TAG_INT ), intValue( x ) {}
-    virtual void print() override { std::cout << intValue; }
+    ObjectInt( int x ) : Object( TAG_INT ), intVal( x ) {}
+    virtual void print() override { std::cout << intVal; }
+    virtual int intValue() override { return intVal(); }
+
 private:
-    int intValue;
+    int intVal;
 };
 
 class ObjectBultInSyntax : public Object {
@@ -81,6 +84,18 @@ class ObjectCons : public Object {
 public:
     ObjectCons( Object* ca, Object* cd ) : Object( TAG_CONS ), car( ca ), cdr( cd ) {}
     virtual void print() override {}
+    virtual Object* eval() {
+        Object* func = car->eval();
+        if( func->tag == TAG_BUILTINSYNTAX ) {
+            
+            std::stack<Object*> st;
+            st.push( cdr );
+            return func->eval();
+        }
+        else {
+            return nullptr;
+        }
+    }
 private:
     Object* car;
     Object* cdr;

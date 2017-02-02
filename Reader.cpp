@@ -146,7 +146,7 @@ Object* Reader::readSymbol(FILE *input) {
 	int currentSymbolLen = 0;
 	char *buffer = (char *) (malloc(currentBufferSize));
 
-	for (;;) {
+	while(true) {
 		char ch = nextChar(input);
 		if (isWhiteSpace(ch)
 				  || (ch == '(')
