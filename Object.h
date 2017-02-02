@@ -21,7 +21,7 @@ enum tagEnum {
     TAG_SYMBOL,
     TAG_BUILTINFUNCTION,
     TAG_BUILTINSYNTAX,
-    TAG_USERDEFINEDFUNCTION,
+//    TAG_USERDEFINEDFUNCTION,
 };
 
 class Object {
@@ -30,7 +30,6 @@ public:
     Object( tagEnum t ) : tag( t ) {}
     virtual void print() { std::cout << ""; }
     virtual Object* eval(Environment& env, Stack& stack) { return nullptr; }
-    virtual void foo() { std::cout << "object class" << std::endl; }
     
     virtual Object* carValue()  { std::cout << "chyba, neni car" << std::endl; }
     virtual Object* cdrValue()  { std::cout << "chyba, neni cdr" << std::endl; }
@@ -50,8 +49,6 @@ public:
     virtual void print() override { std::cout << intVal; }
     virtual int intValue() override { return intVal; }
     virtual Object* eval(Environment& env, Stack& stack) override { return this; }
-    
-    virtual void foo() override { std::cout << "object int class" << std::endl; }
 
 private:
     int intVal;
@@ -118,17 +115,26 @@ class ObjectTrue : public Object {
 public:
     ObjectTrue() : Object( TAG_TRUE ) {}
     bool boolValue() override { return true; }
+    void print() override { std::cout << "#t"; }
 };
 
 class ObjectFalse : public Object {
 public:
     ObjectFalse() : Object( TAG_FALSE ) {}
     bool boolValue() override { return false; }
+    void print() override { std::cout << "#f"; }
 };
 
 class ObjectNil : public Object {
 public:
     ObjectNil() : Object( TAG_NIL ) {}
+    void print() override { std::cout << "nil"; }
+
+};
+
+class ObjectVoid : public Object {
+public:
+    ObjectVoid() : Object( TAG_VOID ) {}
 
 };
 

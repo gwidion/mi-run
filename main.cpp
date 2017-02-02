@@ -1,13 +1,80 @@
 #include <iostream>
+#include <fstream>
+#include <string>
 #include <stdio.h>
-#include <stdlib.h>
 
 #include "Environment.h"
 #include "Object.h"
 #include "Reader.h"
 #include "Stack.h"
 
+#include "compareFiles.h"
+
 using namespace std;
+
+void initializeObjects() {
+	Object a();
+	ObjectInt i( 1 );
+	ObjectBuiltInFunction bif( nullptr );
+	ObjectCons c( nullptr, nullptr );
+	ObjectString s( "" );
+	ObjectTrue t();
+	ObjectFalse f();
+	ObjectNil n();
+}
+
+void repl( FILE* input = stdin ) {
+	Reader reader;
+	Environment environment;
+	Stack stack;
+	
+	Object* expression;
+	Object* result;
+
+	// REPL
+	while(true) {
+//		if(feof(cin)) {
+//			return;
+//		}
+		cout << "> ";
+		expression = reader.read(input);
+		
+		if (expression == nullptr) {
+			return;
+		}
+
+		result = expression->eval( environment, stack );
+		result->print();
+		cout << endl;
+	}
+}
+
+void testing() {
+	string testIn = "testIn.txt";
+	string testOut = "testOut.txt";
+	string testOutReference = "testOutReference.txt";
+	// streams
+	streambuf *backupOut = cout.rdbuf();     // back up cout's streambuf
+	ofstream out( testOut.c_str() );
+	cout.rdbuf(out.rdbuf());
+	
+	// run and compute
+   FILE* fp = fopen (testIn.c_str(), "r");
+   repl( fp );
+	
+	// checkResults
+	int testResult = compareFiles( testOut, testOutReference );
+	
+	cout.rdbuf(backupOut);        // restore cout's original streambuf
+	out.close();
+	
+	if( testResult == 0 ) {
+		cout << "tests passed OK" << endl;
+	}
+	else {
+		cout << "tests failed, first difference at line " << testResult << endl;
+	}
+}
 
 int main() {
 	//    initializeMemory();
@@ -16,40 +83,14 @@ int main() {
 	//    initializeGlobalEnvironment();
 	//    defineWellknownBindings();
 	//    initializeStack();
-
-	Object a();
-	ObjectInt i( 1 );
-	ObjectBuiltInFunction bif( nullptr );
-	ObjectCons c( nullptr, nullptr );
-	ObjectString s( "" );
+	
+	initializeObjects();
 
 	cout << "kabelja4 and bliznjan runtime system for scheme" << endl;
-//   FILE* fp = fopen ("input.txt", "r");
-
-	Reader reader;
-	Environment environment;
-	Stack stack;
 	
-	Object* expression;
-	Object* result;
+	testing();
 
-	// main loop with read - evaluate - print
-	while(true) {
-//		if(feof(cin)) {
-//			return;
-//		}
-		cout << "> ";
-//		expression = reader.read(fp);
-		expression = reader.read(stdin);
-		
-//		if (expression == SCM_EOF) {
-//			return;
-//		}
-
-		result = expression->eval( environment, stack );
-		result->print();
-		cout << endl;
-	}
+	repl();
 
 	// only reached on EOF
 	return 0;

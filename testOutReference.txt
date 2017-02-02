@@ -1,0 +1,19 @@
+> 0
+> 2
+> 25
+> no args for minus operator
+> -5
+> 0
+> 1
+> 6
+> 16
+> = expects exactly 2 arguments 
+> #t
+> #f
+> = expects exactly 2 arguments 
+> < expects exactly 2 arguments 
+> #t
+> < expects exactly 2 arguments 
+> > expects exactly 2 arguments 
+> #f
+> > expects exactly 2 arguments 
