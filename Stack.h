@@ -2,6 +2,7 @@
 #define STACK_H
 
 #include <stack>
+#include "Object.h"
 
 using namespace std;
 

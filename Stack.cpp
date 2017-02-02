@@ -14,7 +14,9 @@ Object * Stack::push(Object * const object) {
 }
 
 Object * Stack::pop() {
-   return stack.pop();
+   Object * top = stack.top();
+   stack.pop();
+   return top;
 }
 
 Object * Stack::peek() const {
