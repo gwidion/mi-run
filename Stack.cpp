@@ -8,7 +8,7 @@ Stack::Stack(const Stack& orig) { }
 
 Stack::~Stack() { }
 
-Object * Stack::push(Object * object) {
+Object * Stack::push(Object * const object) {
    stack.push(object);
    return this->peek();
 }
@@ -17,6 +17,6 @@ Object * Stack::pop() {
    return stack.pop();
 }
 
-Object * Stack::peek() {
+Object * Stack::peek() const {
    return stack.top();
 }

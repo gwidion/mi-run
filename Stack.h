@@ -10,9 +10,9 @@ public:
    Stack();
    Stack(const Stack& orig);
    virtual ~Stack();
-   Object * push(Object * object);
+   Object * push(Object * const object);
    Object * pop();
-   Object * peek();
+   Object * peek() const;
 private:
    stack<Object *> stack;
 };
