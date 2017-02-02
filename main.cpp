@@ -13,13 +13,13 @@
 using namespace std;
 
 void initializeObjects() {
-	ObjectInt i( 1 );
-	ObjectBuiltInFunction bif( nullptr );
-	ObjectCons c( nullptr, nullptr );
-	ObjectString s( "" );
-	ObjectTrue t();
-	ObjectFalse f();
-	ObjectNil n();
+	ObjectInt * i = ObjectInt::allocate( 1 );
+	ObjectBuiltInFunction * bif = ObjectBuiltInFunction::allocate( nullptr );
+	ObjectCons * c = ObjectCons::allocate( nullptr, nullptr );
+	ObjectString * s = ObjectString::allocate( "" );
+	ObjectTrue * t = ObjectTrue::allocate();
+	ObjectFalse * f = ObjectFalse::allocate();
+	ObjectNil * n = ObjectNil::allocate();
 }
 
 void repl( FILE* input = stdin ) {

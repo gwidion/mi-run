@@ -94,12 +94,12 @@ Object* Reader::readList(FILE *input) {
 
 	if (nextChar == ')') {
 		return nullptr;
-//		return new ObjectNil();
+//		return ObjectNil::allocate();
 	}
 	unreadChar(nextChar);
 	theCar = read(input);
 	theCdr = readList(input);
-	return new ObjectCons(theCar, theCdr);
+	return ObjectCons::allocate(theCar, theCdr);
 }
 
 Object* Reader::readString(FILE *input) {
@@ -113,7 +113,7 @@ Object* Reader::readString(FILE *input) {
 			Object* newStringObject;
 
 			buffer[currentStringLen] = '\0';
-			newStringObject = new ObjectString(buffer);
+			newStringObject = ObjectString::allocate(buffer);
 			free(buffer);
 			return (newStringObject);
 		}
@@ -138,7 +138,7 @@ Object* Reader::readNumber(FILE *input, char charAlready) {
 	}
 	// I have read one too many
 	unreadChar(c);
-	return new ObjectInt(intVal);
+	return ObjectInt::allocate(intVal);
 }
 
 Object* Reader::readSymbol(FILE *input) {
@@ -159,13 +159,13 @@ Object* Reader::readSymbol(FILE *input) {
 				switch (buffer[1]) {
 					case 't':
 						free(buffer);
-						return new ObjectTrue;
+						return ObjectTrue::allocate();
 					case 'f':
 						free(buffer);
-						return new ObjectFalse;
+						return ObjectFalse::allocate();
 				}
 			}
-			newSymbolObject = new ObjectSymbol(buffer);
+			newSymbolObject = ObjectSymbol::allocate(buffer);
 			free(buffer);
 			return (newSymbolObject);
 		}
@@ -209,7 +209,7 @@ Object* Reader::read(FILE* input) {
 				Object* expr;
 
 				expr = read(input);
-				return new ObjectCons( expr, new ObjectNil );
+				return ObjectCons::allocate( expr, ObjectNil::allocate() );
 			}
 			case ')':
 //				error("')' unexpected");

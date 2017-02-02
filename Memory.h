@@ -11,11 +11,11 @@ public:
    Memory();
    virtual ~Memory();
 
-   Object * allocate(unsigned int size);
+   Object * allocate(unsigned int requestedSize);
 private:
-   std::vector<MemoryBlock> blocks;
+   std::vector<MemoryBlock *> blocks;
 
-   unsigned char * getFreeAddress(unsigned int size);
+   unsigned char * getFreeAddress(unsigned int requestedSize);
    void free(const Object * object);
 
 };

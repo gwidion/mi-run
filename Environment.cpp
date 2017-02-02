@@ -14,7 +14,7 @@ Object* builtinPlus(int numArgs, Stack& stack) {
 		Object* nextArg = stack.pop();
 		sum += nextArg->intValue();
 	}
-	return new ObjectInt(sum);
+	return ObjectInt::allocate(sum);
 }
 
 //
@@ -27,12 +27,12 @@ Object* builtinPlus(int numArgs, Stack& stack) {
 Object* builtinMinus(int numArgs, Stack& stack) {
 	if (numArgs == 0) {
 		cout << "no args for minus operator";
-		return new ObjectVoid;
+		return ObjectVoid::allocate();
 	}
 	else if (numArgs == 1) {
 		Object* nextArg = stack.pop();
 		int intValue = nextArg->intValue();
-		return new ObjectInt(-intValue);
+		return ObjectInt::allocate(-intValue);
 
 	}
 	else {
@@ -44,7 +44,7 @@ Object* builtinMinus(int numArgs, Stack& stack) {
 			else // the rest subtracted
 				result -= nextArg->intValue();
 		}
-		return new ObjectInt(result);
+		return ObjectInt::allocate(result);
 	}
 }
 
@@ -59,7 +59,7 @@ Object* builtinTimes(int numArgs, Stack& stack) {
 		Object* nextArg = stack.pop();
 		sum *= nextArg->intValue();
 	}
-	return new ObjectInt(sum);
+	return ObjectInt::allocate(sum);
 }
 
 //
@@ -69,15 +69,15 @@ Object* builtinTimes(int numArgs, Stack& stack) {
 Object* builtinEquals(int numArgs, Stack& stack) {
 	if (numArgs != 2) {
 		cout << "= expects exactly 2 arguments ";
-		return new ObjectVoid;
+		return ObjectVoid::allocate();
 	}
 	Object* first = stack.pop();
 	Object* second = stack.pop();
 
 	if (first->intValue() == second->intValue())
-		return new ObjectTrue();
+		return ObjectTrue::allocate();
 	else
-		return new ObjectFalse();
+		return ObjectFalse::allocate();
 }
 
 
@@ -88,7 +88,7 @@ Object* builtinEquals(int numArgs, Stack& stack) {
 Object* builtinLessThan(int numArgs, Stack& stack) {
 	if (numArgs != 2) {
 		cout << "< expects exactly 2 arguments ";
-		return new ObjectVoid;
+		return ObjectVoid::allocate();
 	}
 
 	// arguments are reversed on stack
@@ -96,9 +96,9 @@ Object* builtinLessThan(int numArgs, Stack& stack) {
 	Object* first = stack.pop();
 
 	if (first->intValue() < second->intValue())
-		return new ObjectTrue();
+		return ObjectTrue::allocate();
 	else
-		return new ObjectFalse();
+		return ObjectFalse::allocate();
 }
 
 //
@@ -108,7 +108,7 @@ Object* builtinLessThan(int numArgs, Stack& stack) {
 Object* builtinGreaterThan(int numArgs, Stack& stack) {
 	if (numArgs != 2) {
 		cout << "> expects exactly 2 arguments ";
-		return new ObjectVoid;
+		return ObjectVoid::allocate();
 	}
 
 	// arguments are reversed on stack
@@ -116,17 +116,17 @@ Object* builtinGreaterThan(int numArgs, Stack& stack) {
 	Object* first = stack.pop();
 
 	if (first->intValue() > second->intValue())
-		return new ObjectTrue();
+		return ObjectTrue::allocate();
 	else
-		return new ObjectFalse();
+		return ObjectFalse::allocate();
 }
 
 Environment::Environment() {
 	parent = nullptr;
-	objectMap["+"] = new ObjectBuiltInFunction(builtinPlus);
-	objectMap["-"] = new ObjectBuiltInFunction(builtinMinus);
-	objectMap["*"] = new ObjectBuiltInFunction(builtinTimes);
-	objectMap["="] = new ObjectBuiltInFunction(builtinEquals);
-	objectMap["<"] = new ObjectBuiltInFunction(builtinLessThan);
-	objectMap[">"] = new ObjectBuiltInFunction(builtinGreaterThan);
+	objectMap["+"] = ObjectBuiltInFunction::allocate(builtinPlus);
+	objectMap["-"] = ObjectBuiltInFunction::allocate(builtinMinus);
+	objectMap["*"] = ObjectBuiltInFunction::allocate(builtinTimes);
+	objectMap["="] = ObjectBuiltInFunction::allocate(builtinEquals);
+	objectMap["<"] = ObjectBuiltInFunction::allocate(builtinLessThan);
+	objectMap[">"] = ObjectBuiltInFunction::allocate(builtinGreaterThan);
 }

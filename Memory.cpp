@@ -2,22 +2,27 @@
 
 using namespace std;
 
+Memory memory;
+
 Memory::Memory() { }
 
-Memory::~Memory() { }
-
-Object * Memory::allocate(unsigned int size) {
-   unsigned char * address = this->getFreeAddress(size);
-   if (address)
-      return reinterpret_cast<Object*> (address);
-   blocks.push_back(MemoryBlock());
-   return reinterpret_cast<Object*> (blocks.back().allocate(size));
+Memory::~Memory() {
+   for (MemoryBlock * block : blocks)
+      delete block;
 }
 
-unsigned char * Memory::getFreeAddress(unsigned int size) {
-   for (MemoryBlock & block : blocks)
-      if (block.hasSpaceFor(size))
-         return block.allocate(size);
+Object * Memory::allocate(unsigned int requestedSize) {
+   unsigned char * address = this->getFreeAddress(requestedSize);
+   if (address)
+      return reinterpret_cast<Object*> (address);
+   blocks.push_back(new MemoryBlock());
+   return reinterpret_cast<Object*> (blocks.back()->allocate(requestedSize));
+}
+
+unsigned char * Memory::getFreeAddress(unsigned int requestedSize) {
+   for (MemoryBlock * block : blocks)
+      if (block->hasSpaceFor(requestedSize))
+         return block->allocate(requestedSize);
    return nullptr;
 }
 

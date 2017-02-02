@@ -9,6 +9,7 @@ MemoryBlock::MemoryBlock() {
 
 MemoryBlock::~MemoryBlock() {
    delete [] data;
+   data = nullptr;
 }
 
 bool MemoryBlock::hasSpaceFor(unsigned int requestedSize) const {
