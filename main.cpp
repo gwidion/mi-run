@@ -2,9 +2,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#include "Environment.h"
 #include "Object.h"
 #include "Reader.h"
-#include "Environment.h"
+#include "Stack.h"
 
 using namespace std;
 
@@ -16,11 +17,18 @@ int main() {
 	//    defineWellknownBindings();
 	//    initializeStack();
 
+	Object a();
+	ObjectInt i( 1 );
+	ObjectBuiltInFunction bif( nullptr );
+	ObjectCons c( nullptr, nullptr );
+	ObjectString s( "" );
 
 	cout << "kabelja4 and bliznjan runtime system for scheme" << endl;
+//   FILE* fp = fopen ("input.txt", "r");
 
 	Reader reader;
 	Environment environment;
+	Stack stack;
 	
 	Object* expression;
 	Object* result;
@@ -31,13 +39,14 @@ int main() {
 //			return;
 //		}
 		cout << "> ";
+//		expression = reader.read(fp);
 		expression = reader.read(stdin);
 		
 //		if (expression == SCM_EOF) {
 //			return;
 //		}
 
-		result = expression->eval( environment );
+		result = expression->eval( environment, stack );
 		result->print();
 		cout << endl;
 	}

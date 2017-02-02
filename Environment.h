@@ -10,10 +10,10 @@
 class Environment {
 public:
     Environment();
-
+    Object* getObject( std::string key ) { return objectMap[key]; }
 private:
     Environment* parent;
-    std::unordered_map<std::string, ObjectFunction* > objectMap;
+    std::unordered_map<std::string, Object*> objectMap;
 };
 
 #endif /* ENVIRONMENT_H */

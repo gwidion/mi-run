@@ -23,3 +23,6 @@ Object * Stack::pop() {
 Object * Stack::peek() const {
    return inputStack.top();
 }
+int Stack::size() const {
+	return inputStack.size();
+}

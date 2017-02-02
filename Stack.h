@@ -13,6 +13,7 @@ public:
    Object * push(Object * object);
    Object * pop();
    Object * peek() const;
+   int size() const;
 private:
    std::stack<Object *> inputStack;
 };
