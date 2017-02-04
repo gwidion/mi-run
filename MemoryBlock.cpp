@@ -52,7 +52,7 @@ void MemoryBlock::sweep() {
             bb = nextFree->address() == address;
         if (nextFree != freeAddresses.end() && (nextFree->address() == address)) {
             // address is amoungst free ones
-            cout << "DEBUG: FREE from " << static_cast<void*> (nextFree->address()) << " to " << static_cast<void*> (nextFree->next()) << endl;
+            cout << "DEBUG: already free from " << static_cast<void*> (nextFree->address()) << " to " << static_cast<void*> (nextFree->next()) << endl;
             address = nextFree->next();
             nextFree++;
         } else {
@@ -66,12 +66,8 @@ void MemoryBlock::sweep() {
                 cout << "DEBUG: freed ";
                 object->print();
                 cout << " at " << static_cast<void*> (object) << endl;
-                cout.flush();
                 unused.push_back(object);
             } else {
-                cout << "DEBUG: in use ";
-                object->print();
-                cout << " at " << static_cast<void*> (object) << endl;
                 object->unMark();
             }
             address += size;
