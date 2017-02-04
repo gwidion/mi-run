@@ -1,10 +1,10 @@
 #include "MemoryRecord.h"
+#include <iostream>
 
 using namespace std;
 
 MemoryRecord::MemoryRecord(unsigned char * startAddress, unsigned int requestedSize) : startAddress(startAddress), size(requestedSize) {
-    if (requestedSize == 0)
-        throw "aaaa";
+    ;
 }
 
 bool MemoryRecord::hasSpaceFor(unsigned int requestedSize) const {
@@ -17,9 +17,9 @@ bool MemoryRecord::hasMoreSpaceThan(unsigned int requestedSize) const {
 
 MemoryRecord MemoryRecord::allocated(unsigned int requestedSize) const {
     if (!(this->hasSpaceFor(requestedSize)))
-        throw "not enought memory in this record";
+        throw runtime_error("not enought memory in this record");
     if (size <= requestedSize)
-        throw "size has to be greater - somewhere is a problem!";
+        throw runtime_error("size has to be greater - somewhere is a problem!");
     return MemoryRecord(startAddress + requestedSize, size - requestedSize);
 }
 

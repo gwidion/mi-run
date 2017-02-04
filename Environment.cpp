@@ -1,19 +1,20 @@
 #include "Environment.h"
-#include "Stack.h"
+#include "Memory.h"
 
 using namespace std;
 
 Environment globalEnvironment;
+extern Memory memory;
 
 //
 // (+ <number>...)
 // special: with 0 args returns 0 (neutral element of addition)
 //
 
-Object* builtinPlus(int numArgs, Stack& stack) {
+Object* builtinPlus(int numArgs, Environment& environment) {
     long int sum = 0;
     for (int i = 0; i < numArgs; i++) {
-        Object* nextArg = stack.pop();
+        Object* nextArg = memory.stack.pop();
         sum += nextArg->intValue();
     }
     return ObjectInt::allocate(sum);
@@ -26,19 +27,19 @@ Object* builtinPlus(int numArgs, Stack& stack) {
 // (- 3 2 2) return -1
 //
 
-Object* builtinMinus(int numArgs, Stack& stack) {
+Object* builtinMinus(int numArgs, Environment& environment) {
     if (numArgs == 0) {
         cout << "no args for minus operator";
         return ObjectVoid::allocate();
     } else if (numArgs == 1) {
-        Object* nextArg = stack.pop();
+        Object* nextArg = memory.stack.pop();
         int intValue = nextArg->intValue();
         return ObjectInt::allocate(-intValue);
 
     } else {
         long int result = 0;
         for (int i = 0; i < numArgs; i++) {
-            Object* nextArg = stack.pop();
+            Object* nextArg = memory.stack.pop();
             if (i == numArgs - 1) // first number, needs to be added
                 result += nextArg->intValue();
             else // the rest subtracted
@@ -53,10 +54,10 @@ Object* builtinMinus(int numArgs, Stack& stack) {
 // special: with 0 args returns 1 (neutral element of multiplication)
 //
 
-Object* builtinTimes(int numArgs, Stack& stack) {
+Object* builtinTimes(int numArgs, Environment& environment) {
     long int sum = 1;
     for (int i = 0; i < numArgs; i++) {
-        Object* nextArg = stack.pop();
+        Object* nextArg = memory.stack.pop();
         sum *= nextArg->intValue();
     }
     return ObjectInt::allocate(sum);
@@ -66,13 +67,13 @@ Object* builtinTimes(int numArgs, Stack& stack) {
 // (= <number1> <number2>) -> boolean
 //
 
-Object* builtinEquals(int numArgs, Stack& stack) {
+Object* builtinEquals(int numArgs, Environment& environment) {
     if (numArgs != 2) {
         cout << "= expects exactly 2 arguments ";
         return ObjectVoid::allocate();
     }
-    Object* first = stack.pop();
-    Object* second = stack.pop();
+    Object* first = memory.stack.pop();
+    Object* second = memory.stack.pop();
 
     if (first->intValue() == second->intValue())
         return ObjectTrue::allocate();
@@ -85,15 +86,15 @@ Object* builtinEquals(int numArgs, Stack& stack) {
 // (< <number1> <number2>) -> boolean
 //
 
-Object* builtinLessThan(int numArgs, Stack& stack) {
+Object* builtinLessThan(int numArgs, Environment& environment) {
     if (numArgs != 2) {
         cout << "< expects exactly 2 arguments ";
         return ObjectVoid::allocate();
     }
 
     // arguments are reversed on stack
-    Object* second = stack.pop();
-    Object* first = stack.pop();
+    Object* second = memory.stack.pop();
+    Object* first = memory.stack.pop();
 
     if (first->intValue() < second->intValue())
         return ObjectTrue::allocate();
@@ -105,20 +106,42 @@ Object* builtinLessThan(int numArgs, Stack& stack) {
 // (> <number1> <number2>) -> boolean
 //
 
-Object* builtinGreaterThan(int numArgs, Stack& stack) {
+Object* builtinGreaterThan(int numArgs, Environment& environment) {
     if (numArgs != 2) {
         cout << "> expects exactly 2 arguments ";
         return ObjectVoid::allocate();
     }
 
     // arguments are reversed on stack
-    Object* second = stack.pop();
-    Object* first = stack.pop();
+    Object* second = memory.stack.pop();
+    Object* first = memory.stack.pop();
 
     if (first->intValue() > second->intValue())
         return ObjectTrue::allocate();
     else
         return ObjectFalse::allocate();
+}
+
+//
+// (if <cond> <trueExpr> <falseExpr>
+//
+//Object* builtinIf(environment env) {
+
+Object* builtinIf(int numArgs, Environment& environment) {
+    if (numArgs != 3) {
+        cout << "if expects exactly 3 arguments ";
+        return ObjectVoid::allocate();
+    }
+
+    Object* ifFalseExpr = memory.stack.pop();
+    Object* ifTrueExpr = memory.stack.pop();
+    Object* condition = memory.stack.pop();
+
+    Object* evaluatedCondition = condition->eval(environment);
+    if (evaluatedCondition->boolValue())
+        return ifTrueExpr->eval(environment);
+    else
+        return ifFalseExpr->eval(environment);
 }
 
 Environment::Environment() {
@@ -129,6 +152,7 @@ Environment::Environment() {
     objectMap["="] = ObjectBuiltInFunction::allocate(builtinEquals);
     objectMap["<"] = ObjectBuiltInFunction::allocate(builtinLessThan);
     objectMap[">"] = ObjectBuiltInFunction::allocate(builtinGreaterThan);
+    objectMap["if"] = ObjectBuiltInFunction::allocate(builtinIf);
 }
 
 void Environment::mark() {

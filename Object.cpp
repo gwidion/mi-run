@@ -4,8 +4,10 @@
 
 extern Memory memory;
 
+using namespace std;
+
 unsigned int Object::size() const {
-    throw "Object should be abstract";
+    throw runtime_error("Object should be abstract");
     return sizeof (Object);
 }
 
@@ -21,27 +23,27 @@ void Object::unMark() {
     marked = false;
 }
 
-Object* ObjectCons::eval(Environment& env) {
-    Object* func = car->eval(env);
-    if (func->tag == TAG_BUILTINFUNCTION) {
+Object * ObjectCons::eval(Environment & environment) {
+    Object* func = car->eval(environment);
+    if (func && func->tag == TAG_BUILTINFUNCTION) {
         int initStackSize = memory.stack.size();
         Object* restArgs = cdr;
         while (restArgs) {
             Object* unevaluated = restArgs->carValue();
             //			unevaluated->foo();
-            //			Object* evaluated = unevaluated->eval( env, stack );
+            //			Object* evaluated = unevaluated->eval( env );
             memory.stack.push(unevaluated);
             restArgs = restArgs->cdrValue();
         }
         int args = memory.stack.size() - initStackSize;
-        return func->functionValue()(args, memory.stack);
+        return func->functionValue()(args, environment);
     } else {
         return nullptr;
     }
 }
 
-Object* ObjectSymbol::eval(Environment& env) {
-    return env.getObject(s);
+Object * ObjectSymbol::eval(Environment& environment) {
+    return environment.getObject(s);
 }
 
 unsigned int ObjectInt::size() const {
@@ -93,9 +95,16 @@ unsigned int ObjectCons::size() const {
     return sizeof (ObjectCons);
 }
 
-ObjectCons * ObjectCons::allocate(Object* ca, Object* cd) {
+ObjectCons * ObjectCons::allocate(Object* ca, Object * cd) {
     Object * x = memory.allocate(sizeof (ObjectCons));
     return new (x) ObjectCons(ca, cd);
+}
+
+void ObjectCons::mark() {
+    if (car)
+        car->mark();
+    if (cdr)
+        cdr->mark();
 }
 
 unsigned int ObjectTrue::size() const {

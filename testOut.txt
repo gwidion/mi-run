@@ -1,6 +1,4 @@
-> DEBUG: requesting 24 B
-DEBUG: allocated address 0x60005ce90
-DEBUG: requesting 32 B
+> DEBUG: requesting 32 B
 DEBUG: collecting garbage
 DEBUG: in use [an ObjectBuiltInFunction] at 0x60003a100
 DEBUG: in use [an ObjectBuiltInFunction] at 0x60003a118
@@ -9,7 +7,57 @@ DEBUG: in use [an ObjectBuiltInFunction] at 0x60003a148
 DEBUG: FREE from 0x60003a160 to 0x60003a164
 DEBUG: in use [an ObjectBuiltInFunction] at 0x60005ce60
 DEBUG: in use [an ObjectBuiltInFunction] at 0x60005ce78
-DEBUG: freed + at 0x60005ce90
+DEBUG: in use [an ObjectBuiltInFunction] at 0x60005ce90
 DEBUG: FREE from 0x60005cea8 to 0x60005cec4
+DEBUG: increasing memory
+DEBUG: allocated new address 0x60006d8d0
+DEBUG: requesting 24 B
+DEBUG: allocated address 0x60005cea8
+DEBUG: requesting 24 B
+DEBUG: allocated address 0x60006d8f0
+0
+> DEBUG: requesting 32 B
+DEBUG: allocated address 0x60006d908
+DEBUG: requesting 24 B
+DEBUG: collecting garbage
+DEBUG: in use [an ObjectBuiltInFunction] at 0x60003a100
+DEBUG: in use [an ObjectBuiltInFunction] at 0x60003a118
+DEBUG: in use [an ObjectBuiltInFunction] at 0x60003a130
+DEBUG: in use [an ObjectBuiltInFunction] at 0x60003a148
+DEBUG: FREE from 0x60003a160 to 0x60003a164
+DEBUG: in use [an ObjectBuiltInFunction] at 0x60005ce60
+DEBUG: in use [an ObjectBuiltInFunction] at 0x60005ce78
+DEBUG: in use [an ObjectBuiltInFunction] at 0x60005ce90
+DEBUG: freed + at 0x60005cea8
+DEBUG: FREE from 0x60005cec0 to 0x60005cec4
+DEBUG: freed [an ObjectCons] at 0x60006d8d0
+DEBUG: freed 0 at 0x60006d8f0
+DEBUG: freed [an ObjectCons] at 0x60006d908
+DEBUG: FREE from 0x60006d928 to 0x60006d934
 DEBUG: freed enough memory
-DEBUG: allocated address 0x60005ce90
+DEBUG: allocated address 0x60005cea8
+DEBUG: requesting 32 B
+DEBUG: allocated address 0x60006d8d0
+DEBUG: requesting 24 B
+DEBUG: allocated address 0x60006d8f0
+DEBUG: requesting 32 B
+DEBUG: allocated address 0x60006d908
+DEBUG: requesting 24 B
+DEBUG: collecting garbage
+DEBUG: in use [an ObjectBuiltInFunction] at 0x60003a100
+DEBUG: in use [an ObjectBuiltInFunction] at 0x60003a118
+DEBUG: in use [an ObjectBuiltInFunction] at 0x60003a130
+DEBUG: in use [an ObjectBuiltInFunction] at 0x60003a148
+DEBUG: FREE from 0x60003a160 to 0x60003a164
+DEBUG: in use [an ObjectBuiltInFunction] at 0x60005ce60
+DEBUG: in use [an ObjectBuiltInFunction] at 0x60005ce78
+DEBUG: in use [an ObjectBuiltInFunction] at 0x60005ce90
+DEBUG: freed + at 0x60005cea8
+DEBUG: FREE from 0x60005cec0 to 0x60005cec4
+DEBUG: freed [an ObjectCons] at 0x60006d8d0
+DEBUG: freed 1 at 0x60006d8f0
+DEBUG: freed [an ObjectCons] at 0x60006d908
+DEBUG: FREE from 0x60006d928 to 0x60006d934
+DEBUG: freed enough memory
+DEBUG: allocated address 0x60005cea8
+empty result, ending

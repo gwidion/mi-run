@@ -8,7 +8,7 @@ class Environment;
 class Object;
 class Stack;
 
-typedef Object* (*ObjectFunction)(int, Stack&);
+typedef Object* (*ObjectFunction)(int, Environment&);
 
 enum tagEnum {
     TAG_INT,
@@ -73,7 +73,7 @@ public:
     virtual unsigned int size() const = 0;
 
     bool isMarked() const;
-    void mark();
+    virtual void mark();
     void unMark();
 
 protected:
@@ -207,12 +207,21 @@ public:
         return cdr;
     }
 
+    Object* setCar(Object* ca) {
+        car = ca;
+    }
+
+    Object* setCdr(Object* cd) {
+        cdr = cd;
+    }
+
     virtual void print() const override {
         std::cout << "[an ObjectCons]";
     }
 
     virtual Object* eval(Environment& env) override;
     virtual unsigned int size() const override;
+    virtual void mark() override;
 
 private:
     Object* car;

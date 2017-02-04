@@ -1,7 +1,6 @@
 #include "Memory.h"
 #include "Stack.h"
 #include "Environment.h"
-#include <iostream>
 
 using namespace std;
 
@@ -18,11 +17,11 @@ Memory::~Memory() {
 
 Object * Memory::allocate(unsigned int requestedSize) {
     cout << "DEBUG: requesting " << requestedSize << " B" << endl;
-    unsigned char * address = this->getFreeAddress(requestedSize);
+    unsigned char * address = this->tryAllocate(requestedSize);
     if (!address) {
         cout << "DEBUG: collecting garbage" << endl;
         collectGarbage();
-        address = this->getFreeAddress(requestedSize);
+        address = this->tryAllocate(requestedSize);
         if (address)
             cout << "DEBUG: freed enough memory" << endl;
     }
@@ -35,11 +34,11 @@ Object * Memory::allocate(unsigned int requestedSize) {
     address = blocks.back()->allocate(requestedSize);
     cout << "DEBUG: allocated new address " << static_cast<void*> (address) << endl;
     if (!address)
-        throw "no address";
+        throw runtime_error("no address");
     return reinterpret_cast<Object*> (address);
 }
 
-unsigned char * Memory::getFreeAddress(unsigned int requestedSize) {
+unsigned char * Memory::tryAllocate(unsigned int requestedSize) {
     unsigned char * address;
     for (MemoryBlock * block : blocks) {
         address = block->allocate(requestedSize);

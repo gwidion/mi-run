@@ -42,9 +42,14 @@ unsigned char * MemoryBlock::allocate(unsigned int requestedSize) {
 }
 
 void MemoryBlock::sweep() {
+    vector<Object *> unused;
     set<MemoryRecord>::const_iterator nextFree = freeAddresses.begin();
     unsigned char * address = data;
     while (address < data + blockSize) {
+        bool aa = nextFree != freeAddresses.end();
+        bool bb = false;
+        if (aa)
+            bb = nextFree->address() == address;
         if (nextFree != freeAddresses.end() && (nextFree->address() == address)) {
             // address is amoungst free ones
             cout << "DEBUG: FREE from " << static_cast<void*> (nextFree->address()) << " to " << static_cast<void*> (nextFree->next()) << endl;
@@ -55,14 +60,14 @@ void MemoryBlock::sweep() {
             Object * object = reinterpret_cast<Object *> (address);
             unsigned int size = object->size();
             if (object->freed) {
-                throw "freed object!";
+                throw runtime_error("freed object!");
             }
             if (!object->isMarked()) {
                 cout << "DEBUG: freed ";
                 object->print();
                 cout << " at " << static_cast<void*> (object) << endl;
                 cout.flush();
-                this->free(object);
+                unused.push_back(object);
             } else {
                 cout << "DEBUG: in use ";
                 object->print();
@@ -72,6 +77,8 @@ void MemoryBlock::sweep() {
             address += size;
         }
     }
+    for (Object * object : unused)
+        this->free(object);
 }
 
 void MemoryBlock::free(Object * object) {

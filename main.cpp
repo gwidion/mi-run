@@ -1,7 +1,4 @@
-#include <iostream>
 #include <fstream>
-#include <string>
-#include <stdio.h>
 
 #include "Environment.h"
 #include "Object.h"
@@ -36,12 +33,16 @@ void repl(FILE* input = stdin) {
         //		}
         cout << "> ";
         expression = reader.read(input);
-
         if (expression == nullptr) {
+            cout << "empty input, ending";
             return;
         }
 
         result = expression->eval(globalEnvironment);
+        if (result == nullptr) {
+            cout << "empty result, ending";
+            return;
+        }
         result->print();
         cout << endl;
     }

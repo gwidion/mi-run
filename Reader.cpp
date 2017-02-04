@@ -1,5 +1,7 @@
 #include "Reader.h"
 
+using namespace std;
+
 Reader::Reader() {
     peekChar = 0;
 }
@@ -82,13 +84,17 @@ Object* Reader::readList(FILE *input) {
         //		return ObjectNil::allocate();
     }
     unreadChar(nextChar);
+    ObjectCons * allocated = ObjectCons::allocate(nullptr, nullptr);
     theCar = read(input);
+    allocated->setCar(theCar);
     theCdr = readList(input);
-    Object * allocated = ObjectCons::allocate(theCar, theCdr);
+    allocated->setCdr(theCdr);
     if (theCar == allocated)
-        throw "allocated same as theCar";
+        throw runtime_error("allocated same as theCar");
     if (theCdr == allocated)
-        throw "allocated same as theCdr";
+        throw runtime_error("allocated same as theCdr");
+    if (theCar && (theCar == theCdr))
+        throw runtime_error("theCar same as theCdr");
     return allocated;
 }
 
@@ -202,9 +208,9 @@ Object* Reader::read(FILE* input) {
                 return ObjectCons::allocate(expr, ObjectNil::allocate());
             }
             case ')':
-                //				error("')' unexpected");
+                std::cout << "')' unexpected";
             case '.':
-                //				error("'.' unexpected");
+                std::cout << "'.' unexpected";
             default:
                 if (isDigit(nextChar)) {
                     someObject = readNumber(input, nextChar);

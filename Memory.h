@@ -20,7 +20,7 @@ public:
 private:
     std::vector<MemoryBlock *> blocks;
 
-    unsigned char * getFreeAddress(unsigned int requestedSize);
+    unsigned char * tryAllocate(unsigned int requestedSize);
 
     void mark();
     void sweep();
