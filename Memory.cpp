@@ -21,18 +21,19 @@ Object * Memory::allocate(unsigned int requestedSize) {
     if (!address) {
         cout << "DEBUG: collecting garbage" << endl;
         collectGarbage();
+        cout << "DEBUG: garbage collected";
         address = this->tryAllocate(requestedSize);
         if (address)
-            cout << "DEBUG: freed enough memory" << endl;
+            cout << " - freed enough memory";
+        cout << endl;
     }
     if (address) {
         cout << "DEBUG: allocated address " << static_cast<void*> (address) << endl;
         return reinterpret_cast<Object*> (address);
     }
-    cout << "DEBUG: increasing memory" << endl;
     blocks.push_back(new MemoryBlock());
     address = blocks.back()->allocate(requestedSize);
-    cout << "DEBUG: allocated new address " << static_cast<void*> (address) << endl;
+    cout << "DEBUG: added block - allocated address " << static_cast<void*> (address) << endl;
     if (!address)
         throw runtime_error("no address");
     return reinterpret_cast<Object*> (address);
