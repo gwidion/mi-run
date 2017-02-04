@@ -212,9 +212,9 @@ Object* Reader::read(FILE* input) {
 				return ObjectCons::allocate( expr, ObjectNil::allocate() );
 			}
 			case ')':
-//				error("')' unexpected");
+				std::cout << "')' unexpected";
 			case '.':
-//				error("'.' unexpected");
+				std::cout << "'.' unexpected";
 			default:
 				if (isDigit(nextChar)) {
 					someObject = readNumber(input, nextChar);

@@ -4,9 +4,9 @@
 
 extern Memory memory;
 
-Object* ObjectCons::eval(Environment& env, Stack& stack) {
-   Object* func = car->eval(env, stack);
-   if (func->tag == TAG_BUILTINFUNCTION) {
+Object* ObjectCons::eval(Environment& environment, Stack& stack) {
+   Object* func = car->eval(environment, stack);
+   if (func && func->tag == TAG_BUILTINFUNCTION) {
       int initStackSize = stack.size();
       Object* restArgs = cdr;
       while (restArgs) {
@@ -17,14 +17,14 @@ Object* ObjectCons::eval(Environment& env, Stack& stack) {
          restArgs = restArgs->cdrValue();
       }
       int args = stack.size() - initStackSize;
-      return func->functionValue()(args, stack);
+      return func->functionValue()(args, stack, environment);
    } else {
       return nullptr;
    }
 }
 
-Object* ObjectSymbol::eval(Environment& env, Stack& stack) {
-   return env.getObject(s);
+Object* ObjectSymbol::eval(Environment& environment, Stack& stack) {
+   return environment.getObject(s);
 }
 
 unsigned int Object::size() {

@@ -37,12 +37,16 @@ void repl( FILE* input = stdin ) {
 //		}
 		cout << "> ";
 		expression = reader.read(input);
-		
 		if (expression == nullptr) {
+			cout << "empty input, ending";
 			return;
 		}
 
 		result = expression->eval( environment, stack );
+		if ( result == nullptr ) {
+			cout << "empty result, ending";
+			return;
+		}
 		result->print();
 		cout << endl;
 	}

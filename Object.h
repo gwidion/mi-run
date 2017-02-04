@@ -8,7 +8,7 @@ class Environment;
 class Object;
 class Stack;
 
-typedef Object* (*ObjectFunction)(int, Stack&);
+typedef Object* (*ObjectFunction)(int, Stack&, Environment&);
 
 enum tagEnum {
    TAG_INT,

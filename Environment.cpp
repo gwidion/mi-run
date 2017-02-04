@@ -8,7 +8,7 @@ using namespace std;
 // special: with 0 args returns 0 (neutral element of addition)
 //
 
-Object* builtinPlus(int numArgs, Stack& stack) {
+Object* builtinPlus(int numArgs, Stack& stack, Environment& environment) {
 	long int sum = 0;
 	for (int i = 0; i < numArgs; i++) {
 		Object* nextArg = stack.pop();
@@ -24,7 +24,7 @@ Object* builtinPlus(int numArgs, Stack& stack) {
 // (- 3 2 2) return -1
 //
 
-Object* builtinMinus(int numArgs, Stack& stack) {
+Object* builtinMinus(int numArgs, Stack& stack, Environment& environment) {
 	if (numArgs == 0) {
 		cout << "no args for minus operator";
 		return ObjectVoid::allocate();
@@ -53,7 +53,7 @@ Object* builtinMinus(int numArgs, Stack& stack) {
 // special: with 0 args returns 1 (neutral element of multiplication)
 //
 
-Object* builtinTimes(int numArgs, Stack& stack) {
+Object* builtinTimes(int numArgs, Stack& stack, Environment& environment) {
 	long int sum = 1;
 	for (int i = 0; i < numArgs; i++) {
 		Object* nextArg = stack.pop();
@@ -66,7 +66,7 @@ Object* builtinTimes(int numArgs, Stack& stack) {
 // (= <number1> <number2>) -> boolean
 //
 
-Object* builtinEquals(int numArgs, Stack& stack) {
+Object* builtinEquals(int numArgs, Stack& stack, Environment& environment) {
 	if (numArgs != 2) {
 		cout << "= expects exactly 2 arguments ";
 		return ObjectVoid::allocate();
@@ -85,7 +85,7 @@ Object* builtinEquals(int numArgs, Stack& stack) {
 // (< <number1> <number2>) -> boolean
 //
 
-Object* builtinLessThan(int numArgs, Stack& stack) {
+Object* builtinLessThan(int numArgs, Stack& stack, Environment& environment) {
 	if (numArgs != 2) {
 		cout << "< expects exactly 2 arguments ";
 		return ObjectVoid::allocate();
@@ -105,7 +105,7 @@ Object* builtinLessThan(int numArgs, Stack& stack) {
 // (> <number1> <number2>) -> boolean
 //
 
-Object* builtinGreaterThan(int numArgs, Stack& stack) {
+Object* builtinGreaterThan(int numArgs, Stack& stack, Environment& environment) {
 	if (numArgs != 2) {
 		cout << "> expects exactly 2 arguments ";
 		return ObjectVoid::allocate();
@@ -121,6 +121,28 @@ Object* builtinGreaterThan(int numArgs, Stack& stack) {
 		return ObjectFalse::allocate();
 }
 
+//
+// (if <cond> <trueExpr> <falseExpr>
+//
+//Object* builtinIf(environment env) {
+
+Object* builtinIf(int numArgs, Stack& stack, Environment& environment) {
+	if (numArgs != 3) {
+		cout << "if expects exactly 3 arguments ";
+		return ObjectVoid::allocate();
+	}
+
+	Object* ifFalseExpr = stack.pop();
+	Object* ifTrueExpr = stack.pop();
+	Object* condition = stack.pop();
+	
+	Object* evaluatedCondition = condition->eval(environment, stack);
+	if (evaluatedCondition->boolValue())
+		return ifTrueExpr->eval(environment, stack);
+	else 
+		return ifFalseExpr->eval(environment, stack);
+}
+
 Environment::Environment() {
 	parent = nullptr;
 	objectMap["+"] = ObjectBuiltInFunction::allocate(builtinPlus);
@@ -129,4 +151,5 @@ Environment::Environment() {
 	objectMap["="] = ObjectBuiltInFunction::allocate(builtinEquals);
 	objectMap["<"] = ObjectBuiltInFunction::allocate(builtinLessThan);
 	objectMap[">"] = ObjectBuiltInFunction::allocate(builtinGreaterThan);
+	objectMap["if"] = ObjectBuiltInFunction::allocate(builtinIf);
 }

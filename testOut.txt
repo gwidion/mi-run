@@ -17,4 +17,6 @@
 > > expects exactly 2 arguments 
 > #f
 > > expects exactly 2 arguments 
-> 
+> 1
+> 0
+> empty input, ending
