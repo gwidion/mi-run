@@ -6,10 +6,10 @@ extern Memory memory;
 
 using namespace std;
 
-void Object::memoryPrint(ostream & output = cout) const {
-    output << "DEBUG: allocated ";
-    this->print(output);
-    output << " from " << reinterpret_cast<uintptr_t> (this) << " to " << reinterpret_cast<uintptr_t> (this) + this->size() << " ( " << this->size() << " B )" << endl;
+void Object::memoryPrint() const {
+    cout << "DEBUG: allocated ";
+    this->typePrint();
+    cout << " from " << reinterpret_cast<uintptr_t> (this) << " to " << reinterpret_cast<uintptr_t> (this) + this->size() << " ( " << this->size() << " B )" << endl;
 }
 
 unsigned int Object::size() const {

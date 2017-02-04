@@ -1,2 +1,10 @@
-> 0
-> empty result, ending
+> DEBUG: allocated [a Const]  from 7696580280504 to 7696580280536 ( 32 B )
+DEBUG: allocated [a Symbol] + from 7696580280536 to 7696580280560 ( 24 B )
+DEBUG: allocated [an Integer] 0 from 7696580280560 to 7696580280584 ( 24 B )
+0
+> DEBUG: allocated [a Const]  from 7696580280584 to 7696580280616 ( 32 B )
+DEBUG: allocated [a Symbol] + from 7696580280616 to 7696580280640 ( 24 B )
+DEBUG: allocated [a Const]  from 7696580280640 to 7696580280672 ( 32 B )
+DEBUG: allocated [an Integer] 1 from 7696580280672 to 7696580280696 ( 24 B )
+DEBUG: allocated [a Const]  from 7696580280696 to 7696580280728 ( 32 B )
+DEBUG: allocated [an Integer] 1 from 7696580280728 to 7696580280752 ( 24 B )

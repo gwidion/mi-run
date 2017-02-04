@@ -35,11 +35,16 @@ public:
 
     bool freed = false;
 
-    virtual void print(std::ostream & output = std::cout) const {
-        output << "[an Object]";
+    virtual void print() const {
+        //do nothing
+    }
+    
+    virtual void typePrint() const {
+        std::cout << "[an Object] ";
+        this->print();
     }
 
-    void memoryPrint(std::ostream & output) const;
+    void memoryPrint() const;
 
     virtual Object* eval(Environment& env) {
         return nullptr;
@@ -89,8 +94,13 @@ public:
 
     static ObjectInt * allocate(int x);
 
-    virtual void print(std::ostream & output = std::cout) const override {
-        output << intVal;
+    virtual void print() const override {
+        std::cout << intVal;
+    }
+    
+    virtual void typePrint() const override {
+        std::cout << "[an Integer] ";
+        this->print();
     }
 
     virtual int intValue() const override {
@@ -114,9 +124,15 @@ public:
 
     static ObjectBultInSyntax * allocate();
 
-    virtual void print(std::ostream & output = std::cout) const override {
-        output << c;
+    virtual void print() const override {
+        std::cout << c;
     }
+    
+    virtual void typePrint() const override {
+        std::cout << "[an ObjectBuiltInSyntax] ";
+        this->print();
+    }
+
     virtual unsigned int size() const override;
 
 private:
@@ -135,10 +151,12 @@ public:
     virtual ObjectFunction functionValue() const override {
         return functionCode;
     }
-
-    virtual void print(std::ostream & output = std::cout) const override {
-        output << "[an ObjectBuiltInFunction]";
+    
+    virtual void typePrint() const override {
+        std::cout << "[a BuiltInFunction] ";
+        this->print();
     }
+    
     virtual unsigned int size() const override;
 
 private:
@@ -160,9 +178,15 @@ public:
         return s;
     }
 
-    virtual void print(std::ostream & output = std::cout) const override {
-        output << s;
+    virtual void print() const override {
+        std::cout << s;
     }
+    
+    virtual void typePrint() const override {
+        std::cout << "[a Symbol] ";
+        this->print();
+    }
+    
     virtual unsigned int size() const override;
 
 private:
@@ -182,9 +206,15 @@ public:
         return s;
     }
 
-    virtual void print(std::ostream & output = std::cout) const override {
-        output << s;
+    virtual void print() const override {
+        std::cout << s;
     }
+    
+    virtual void typePrint() const override {
+        std::cout << "[a String] ";
+        this->print();
+    }
+    
     virtual unsigned int size() const override;
 
 private:
@@ -216,9 +246,10 @@ public:
     Object* setCdr(Object* cd) {
         cdr = cd;
     }
-
-    virtual void print(std::ostream & output = std::cout) const override {
-        output << "[an ObjectCons]";
+    
+    virtual void typePrint() const override {
+        std::cout << "[a Const] ";
+        this->print();
     }
 
     virtual Object* eval(Environment& env) override;
@@ -242,10 +273,14 @@ public:
     }
     virtual unsigned int size() const override;
 
-    void print(std::ostream & output = std::cout) const override {
-        output << "#t";
+    void print() const override {
+        std::cout << "#t";
     }
-
+    
+    virtual void typePrint() const override {
+        std::cout << "[a Boolean] ";
+        this->print();
+    }
 };
 
 class ObjectFalse : public Object {
@@ -260,8 +295,13 @@ public:
     }
     virtual unsigned int size() const override;
 
-    void print(std::ostream & output = std::cout) const override {
-        output << "#f";
+    void print() const override {
+        std::cout << "#f";
+    }
+    
+    virtual void typePrint() const override {
+        std::cout << "[a Boolean] ";
+        this->print();
     }
 };
 
@@ -274,8 +314,12 @@ public:
 
     virtual unsigned int size() const override;
 
-    void print(std::ostream & output = std::cout) const override {
-        output << "nil";
+    void print() const override {
+        std::cout << "nil";
+    }
+    
+    virtual void typePrint() const override {
+        this->print();
     }
 };
 
@@ -287,9 +331,9 @@ public:
     static ObjectVoid * allocate();
 
     virtual unsigned int size() const override;
-
-    virtual void print(std::ostream & output = std::cout) const override {
-        output << "[a Void (scary, right?)]";
+    
+    virtual void typePrint() const override {
+        std::cout << "[a Void (scary, right?)]";
     }
 };
 

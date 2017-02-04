@@ -2,14 +2,12 @@
 #include "Object.h"
 
 using namespace std;
-static const unsigned int blockSize = 100;
+//static const unsigned int blockSize = 100; // 100 B
+static const unsigned int blockSize = 1048576; // 1 MB
 
 MemoryBlock::MemoryBlock() {
-    //data = new unsigned char [1048576]; // 1 MB
-    //freeAddresses.push_back(MemoryRecord(data, 1048576));
-    data = new unsigned char [blockSize]; // 100 B
+    data = new unsigned char [blockSize];
     freeAddresses.insert(MemoryRecord(data, blockSize));
-
 }
 
 MemoryBlock::~MemoryBlock() {
@@ -53,7 +51,7 @@ void MemoryBlock::sweep() {
         if (nextFree != freeAddresses.end() && (nextFree->address() == address)) {
             // address is amoungst free ones
             cout << "DEBUG:   empty space from " << reinterpret_cast<uintptr_t> (nextFree->address()) << " to " << reinterpret_cast<uintptr_t> (nextFree->next()) << " ( " << nextFree->getSize() << " B )" << endl;
-            address = nextFree->next();           
+            address = nextFree->next();
 
             nextFree++;
         } else {

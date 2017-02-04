@@ -14,12 +14,20 @@ int compareFiles(std::string& file1name, std::string file2name) {
     while (!file1.eof() && !file2.eof()) {
         file1.getline(string1, 256);
         file2.getline(string2, 256);
+        while (strncmp("DEBUG", string1, 5) && !file1.eof())
+            file1.getline(string1, 256);
+        while (strncmp("DEBUG", string2, 5) && !file2.eof())
+            file2.getline(string2, 256);
         j++;
-        if (strcmp(string1, string2)) 
-            return j;        
+        if (strcmp(string1, string2))
+            return j;
     }
-    if(!file1.eof() || !file2.eof())
-        return j+1;
+    while (strncmp("DEBUG", string1, 5) && !file1.eof())
+        file1.getline(string1, 256);
+    while (strncmp("DEBUG", string2, 5) && !file2.eof())
+        file2.getline(string2, 256);
+    if (!file1.eof() || !file2.eof())
+        return j + 1;
     return 0;
 }
 

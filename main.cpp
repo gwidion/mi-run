@@ -20,7 +20,7 @@ void initializeObjects() {
     ObjectNil * n = ObjectNil::allocate();
 }
 
-void repl(FILE * input = stdin, ostream & output = cout) {
+void repl(FILE * input = stdin) {
     Reader reader;
 
     Object* expression;
@@ -31,20 +31,20 @@ void repl(FILE * input = stdin, ostream & output = cout) {
         //		if(feof(cin)) {
         //			return;
         //		}
-        output << "> ";
+        cout << "> ";
         expression = reader.read(input);
         if (expression == nullptr) {
-            output << "empty input, ending";
+            cout << "empty input, ending";
             return;
         }
 
         result = expression->eval(globalEnvironment);
         if (result == nullptr) {
-            output << "empty result, ending";
+            cout << "empty result, ending";
             return;
         }
-        result->print(output);
-        output << endl;
+        result->print();
+        cout << endl;
     }
 }
 
@@ -55,16 +55,16 @@ void testing() {
     // streams
     streambuf *backupOut = cout.rdbuf(); // back up cout's streambuf
     ofstream out(testOut.c_str());
-    //cout.rdbuf(out.rdbuf());
+    cout.rdbuf(out.rdbuf());
 
     // run and compute
     FILE* fp = fopen(testIn.c_str(), "r");
-    repl(fp, out);
+    repl(fp);
 
     // checkResults
     int testResult = compareFiles(testOutReference, testOut);
 
-    //cout.rdbuf(backupOut); // restore cout's original streambuf
+    cout.rdbuf(backupOut); // restore cout's original streambuf
     out.close();
 
     if (testResult == 0) {
