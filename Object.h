@@ -30,46 +30,46 @@ public:
    Object();
 
    Object(tagEnum t) : tag(t) { }
+   
+   tagEnum tag;
+   bool marked;
 
-   virtual void print() {
+   virtual void print() const {
       std::cout << "";
    }
 
-   virtual Object* eval(Environment& env, Stack& stack) {
+   virtual Object* eval(Environment& env) {
       return nullptr;
    }
 
-   virtual Object* carValue() {
+   virtual Object* carValue() const {
       std::cout << "chyba, neni car" << std::endl;
    }
 
-   virtual Object* cdrValue() {
+   virtual Object* cdrValue() const {
       std::cout << "chyba, neni cdr" << std::endl;
    }
 
-   virtual int intValue() {
+   virtual int intValue() const {
       std::cout << "chyba, neni int" << std::endl;
    }
 
-   virtual std::string stringValue() {
+   virtual std::string stringValue() const {
       std::cout << "chyba, neni string" << std::endl;
    }
 
-   virtual ObjectFunction functionValue() {
+   virtual ObjectFunction functionValue() const {
       std::cout << "chyba, neni funkce" << std::endl;
    }
 
-   virtual std::string symbolValue() {
+   virtual std::string symbolValue() const {
       std::cout << "chyba, neni symbol" << std::endl;
    }
 
-   virtual bool boolValue() {
+   virtual bool boolValue() const {
       std::cout << "chyba, neni bool" << std::endl;
    }
-   virtual unsigned int size() = 0;
-   tagEnum tag;
-protected:
-
+   virtual unsigned int size() const = 0;
 };
 
 class ObjectInt : public Object {
@@ -79,18 +79,18 @@ public:
    
    static ObjectInt * allocate(int x);
 
-   virtual void print() override {
+   virtual void print() const override {
       std::cout << intVal;
    }
 
-   virtual int intValue() override {
+   virtual int intValue() const override {
       return intVal;
    }
 
-   virtual Object* eval(Environment& env, Stack& stack) override {
+   virtual Object* eval(Environment& env) override {
       return this;
    }
-   virtual unsigned int size() override;
+   virtual unsigned int size() const override;
 
 
 private:
@@ -104,10 +104,10 @@ public:
    
    static ObjectBultInSyntax * allocate();
 
-   virtual void print() override {
+   virtual void print() const override {
       std::cout << c;
    }
-   virtual unsigned int size() override;
+   virtual unsigned int size() const override;
 
 private:
    char c;
@@ -122,12 +122,12 @@ public:
    
    static ObjectBuiltInFunction * allocate(ObjectFunction f);
 
-   virtual ObjectFunction functionValue() override {
+   virtual ObjectFunction functionValue() const override {
       return functionCode;
    }
 
-   virtual void print() override { }
-   virtual unsigned int size() override;
+   virtual void print() const override { }
+   virtual unsigned int size() const override;
 
 private:
    ObjectFunction functionCode;
@@ -142,16 +142,16 @@ public:
    
    static ObjectSymbol * allocate(const char * a);
    
-   virtual Object* eval(Environment& env, Stack& stack);
+   virtual Object* eval(Environment& env) ;
 
-   virtual std::string stringValue() override {
+   virtual std::string stringValue() const override {
       return s;
    }
 
-   virtual void print() override {
+   virtual void print() const override {
       std::cout << s;
    }
-   virtual unsigned int size() override;
+   virtual unsigned int size() const override;
 
 private:
    std::string s;
@@ -166,14 +166,14 @@ public:
    
    static ObjectString * allocate(const char* a);
 
-   virtual std::string stringValue() override {
+   virtual std::string stringValue() const override {
       return s;
    }
 
-   virtual void print() override {
+   virtual void print() const override {
       std::cout << s;
    }
-   virtual unsigned int size() override;
+   virtual unsigned int size() const override;
 
 private:
    std::string s;
@@ -189,15 +189,15 @@ public:
 
    static ObjectCons * allocate(Object* ca, Object* cd);
    
-   virtual Object* carValue() override {
+   virtual Object* carValue() const override {
       return car;
    }
 
-   virtual Object* cdrValue() override {
+   virtual Object* cdrValue() const override {
       return cdr;
    }
-   virtual Object* eval(Environment& env, Stack& stack) override;
-   virtual unsigned int size() override;
+   virtual Object* eval(Environment& env) override;
+   virtual unsigned int size() const override;
 
 private:
    Object* car;
@@ -211,12 +211,12 @@ public:
    
    static ObjectTrue * allocate();
 
-   bool boolValue() override {
+   bool boolValue() const override {
       return true;
    }
-   virtual unsigned int size() override;
+   virtual unsigned int size() const override;
 
-   void print() override {
+   void print() const override {
       std::cout << "#t";
    }
 
@@ -229,12 +229,12 @@ public:
 
    static ObjectFalse * allocate();
 
-   bool boolValue() override {
+   bool boolValue() const override {
       return false;
    }
-   virtual unsigned int size() override;
+   virtual unsigned int size() const override;
 
-   void print() override {
+   void print() const override {
       std::cout << "#f";
    }
 };
@@ -246,9 +246,9 @@ public:
 
    static ObjectNil * allocate();
    
-   virtual unsigned int size() override;
+   virtual unsigned int size() const override;
 
-   void print() override {
+   void print() const override {
       std::cout << "nil";
    }
 };
@@ -260,7 +260,7 @@ public:
 
    static ObjectVoid * allocate();
    
-   virtual unsigned int size() override;
+   virtual unsigned int size() const override;
 
 };
 

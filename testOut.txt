@@ -1,20 +1,372 @@
-> 0
-> 2
-> 25
-> no args for minus operator
-> -5
-> 0
-> 1
-> 6
-> 16
-> = expects exactly 2 arguments 
-> #t
-> #f
-> = expects exactly 2 arguments 
-> < expects exactly 2 arguments 
-> #t
-> < expects exactly 2 arguments 
-> > expects exactly 2 arguments 
-> #f
-> > expects exactly 2 arguments 
+DEBUG: requesting 24 B
+DEBUG: allocated address 0x60005aa08
+DEBUG: requesting 24 B
+DEBUG: collecting garbage
+DEBUG: increasing memory
+DEBUG: allocated new address 0x60005b440
+DEBUG: requesting 24 B
+DEBUG: allocated address 0x60005b458
+DEBUG: requesting 24 B
+DEBUG: allocated address 0x60005b470
+DEBUG: requesting 24 B
+DEBUG: allocated address 0x60005b488
+DEBUG: requesting 24 B
+DEBUG: collecting garbage
+DEBUG: increasing memory
+DEBUG: allocated new address 0x60005b6c0
+> DEBUG: requesting 24 B
+DEBUG: allocated address 0x60005b6d8
+DEBUG: requesting 32 B
+DEBUG: allocated address 0x60005b6f0
+DEBUG: requesting 24 B
+DEBUG: collecting garbage
+DEBUG: increasing memory
+DEBUG: allocated new address 0x60006b7c0
+0
+> DEBUG: requesting 24 B
+DEBUG: allocated address 0x60006b7d8
+DEBUG: requesting 24 B
+DEBUG: allocated address 0x60006b7f0
+DEBUG: requesting 24 B
+DEBUG: allocated address 0x60006b808
+DEBUG: requesting 32 B
+DEBUG: collecting garbage
+DEBUG: increasing memory
+DEBUG: allocated new address 0x60006b8b0
+DEBUG: requesting 32 B
+DEBUG: allocated address 0x60006b8d0
+DEBUG: requesting 32 B
+DEBUG: allocated address 0x60006b8f0
+DEBUG: requesting 24 B
+DEBUG: collecting garbage
+DEBUG: increasing memory
+DEBUG: allocated new address 0x60006b9b0
+2
+> DEBUG: requesting 24 B
+DEBUG: allocated address 0x60006b9c8
+DEBUG: requesting 24 B
+DEBUG: allocated address 0x60006b9e0
+DEBUG: requesting 24 B
+DEBUG: allocated address 0x60006b9f8
+DEBUG: requesting 24 B
+DEBUG: collecting garbage
+DEBUG: increasing memory
+DEBUG: allocated new address 0x60006baa0
+DEBUG: requesting 24 B
+DEBUG: allocated address 0x60006bab8
+DEBUG: requesting 24 B
+DEBUG: allocated address 0x60006bad0
+DEBUG: requesting 32 B
+DEBUG: collecting garbage
+DEBUG: increasing memory
+DEBUG: allocated new address 0x60006bb40
+DEBUG: requesting 32 B
+DEBUG: allocated address 0x60006bb60
+DEBUG: requesting 32 B
+DEBUG: allocated address 0x60006bb80
+DEBUG: requesting 32 B
+DEBUG: collecting garbage
+DEBUG: increasing memory
+DEBUG: allocated new address 0x60006bc60
+DEBUG: requesting 32 B
+DEBUG: allocated address 0x60006bc80
+DEBUG: requesting 32 B
+DEBUG: allocated address 0x60006bca0
+DEBUG: requesting 24 B
+DEBUG: allocated address 0x60006bae8
+25
+> DEBUG: requesting 24 B
+DEBUG: collecting garbage
+DEBUG: increasing memory
+DEBUG: allocated new address 0x60006bda0
+DEBUG: requesting 32 B
+DEBUG: allocated address 0x60006bdb8
+no args for minus operatorDEBUG: requesting 16 B
+DEBUG: allocated address 0x60005aa20
+
+> DEBUG: requesting 24 B
+DEBUG: allocated address 0x60006bdd8
+DEBUG: requesting 24 B
+DEBUG: collecting garbage
+DEBUG: increasing memory
+DEBUG: allocated new address 0x60006be70
+DEBUG: requesting 32 B
+DEBUG: allocated address 0x60006be88
+DEBUG: requesting 32 B
+DEBUG: allocated address 0x60006bea8
+DEBUG: requesting 24 B
+DEBUG: collecting garbage
+DEBUG: increasing memory
+DEBUG: allocated new address 0x60006bf10
+-5
+> DEBUG: requesting 24 B
+DEBUG: allocated address 0x60006bf28
+DEBUG: requesting 24 B
+DEBUG: allocated address 0x60006bf40
+DEBUG: requesting 24 B
+DEBUG: allocated address 0x60006bf58
+DEBUG: requesting 24 B
+DEBUG: collecting garbage
+DEBUG: increasing memory
+DEBUG: allocated new address 0x60006c020
+DEBUG: requesting 24 B
+DEBUG: allocated address 0x60006c038
+DEBUG: requesting 32 B
+DEBUG: allocated address 0x60006c050
+DEBUG: requesting 32 B
+DEBUG: collecting garbage
+DEBUG: increasing memory
+DEBUG: allocated new address 0x60006c0c0
+DEBUG: requesting 32 B
+DEBUG: allocated address 0x60006c0e0
+DEBUG: requesting 32 B
+DEBUG: allocated address 0x60006c100
+DEBUG: requesting 32 B
+DEBUG: collecting garbage
+DEBUG: increasing memory
+DEBUG: allocated new address 0x60006c180
+DEBUG: requesting 24 B
+DEBUG: allocated address 0x60006c1a0
+0
+> DEBUG: requesting 24 B
+DEBUG: allocated address 0x60006c1b8
+DEBUG: requesting 32 B
+DEBUG: collecting garbage
+DEBUG: increasing memory
+DEBUG: allocated new address 0x60006c290
+DEBUG: requesting 24 B
+DEBUG: allocated address 0x60006c2b0
+1
+> DEBUG: requesting 24 B
+DEBUG: allocated address 0x60006c2c8
+DEBUG: requesting 24 B
+DEBUG: collecting garbage
+DEBUG: increasing memory
+DEBUG: allocated new address 0x60006c410
+DEBUG: requesting 32 B
+DEBUG: allocated address 0x60006c428
+DEBUG: requesting 32 B
+DEBUG: allocated address 0x60006c448
+DEBUG: requesting 24 B
+DEBUG: collecting garbage
+DEBUG: increasing memory
+DEBUG: allocated new address 0x60006c4b0
+6
+> DEBUG: requesting 24 B
+DEBUG: allocated address 0x60006c4c8
+DEBUG: requesting 24 B
+DEBUG: allocated address 0x60006c4e0
+DEBUG: requesting 24 B
+DEBUG: allocated address 0x60006c4f8
+DEBUG: requesting 24 B
+DEBUG: collecting garbage
+DEBUG: increasing memory
+DEBUG: allocated new address 0x60006c5c0
+DEBUG: requesting 24 B
+DEBUG: allocated address 0x60006c5d8
+DEBUG: requesting 32 B
+DEBUG: allocated address 0x60006c5f0
+DEBUG: requesting 32 B
+DEBUG: collecting garbage
+DEBUG: increasing memory
+DEBUG: allocated new address 0x60006c660
+DEBUG: requesting 32 B
+DEBUG: allocated address 0x60006c680
+DEBUG: requesting 32 B
+DEBUG: allocated address 0x60006c6a0
+DEBUG: requesting 32 B
+DEBUG: collecting garbage
+DEBUG: increasing memory
+DEBUG: allocated new address 0x60006c720
+DEBUG: requesting 24 B
+DEBUG: allocated address 0x60006c740
+16
+> DEBUG: requesting 24 B
+DEBUG: allocated address 0x60006c758
+DEBUG: requesting 24 B
+DEBUG: collecting garbage
+DEBUG: increasing memory
+DEBUG: allocated new address 0x60006c830
+DEBUG: requesting 32 B
+DEBUG: allocated address 0x60006c848
+DEBUG: requesting 32 B
+DEBUG: allocated address 0x60006c868
+= expects exactly 2 arguments DEBUG: requesting 16 B
+DEBUG: allocated address 0x60005b710
+
+> DEBUG: requesting 24 B
+DEBUG: collecting garbage
+DEBUG: increasing memory
+DEBUG: allocated new address 0x60006c920
+DEBUG: requesting 24 B
+DEBUG: allocated address 0x60006c938
+DEBUG: requesting 24 B
+DEBUG: allocated address 0x60006c950
+DEBUG: requesting 32 B
+DEBUG: collecting garbage
+DEBUG: increasing memory
+DEBUG: allocated new address 0x60006c9e0
+DEBUG: requesting 32 B
+DEBUG: allocated address 0x60006ca00
+DEBUG: requesting 32 B
+DEBUG: allocated address 0x60006ca20
+DEBUG: requesting 16 B
+DEBUG: allocated address 0x60006bdf0
+#t
+> DEBUG: requesting 24 B
+DEBUG: allocated address 0x60006c968
+DEBUG: requesting 24 B
+DEBUG: collecting garbage
+DEBUG: increasing memory
+DEBUG: allocated new address 0x60006cad0
+DEBUG: requesting 24 B
+DEBUG: allocated address 0x60006cae8
+DEBUG: requesting 32 B
+DEBUG: allocated address 0x60006cb00
+DEBUG: requesting 32 B
+DEBUG: collecting garbage
+DEBUG: increasing memory
+DEBUG: allocated new address 0x60006cb70
+DEBUG: requesting 32 B
+DEBUG: allocated address 0x60006cb90
+DEBUG: requesting 16 B
+DEBUG: allocated address 0x60006c070
+#f
+> DEBUG: requesting 24 B
+DEBUG: allocated address 0x60006cbb0
+DEBUG: requesting 24 B
+DEBUG: collecting garbage
+DEBUG: increasing memory
+DEBUG: allocated new address 0x60006cc80
+DEBUG: requesting 24 B
+DEBUG: allocated address 0x60006cc98
+DEBUG: requesting 24 B
+DEBUG: allocated address 0x60006ccb0
+DEBUG: requesting 32 B
+DEBUG: collecting garbage
+DEBUG: increasing memory
+DEBUG: allocated new address 0x60006cd20
+DEBUG: requesting 32 B
+DEBUG: allocated address 0x60006cd40
+DEBUG: requesting 32 B
+DEBUG: allocated address 0x60006cd60
+DEBUG: requesting 32 B
+DEBUG: collecting garbage
+DEBUG: increasing memory
+DEBUG: allocated new address 0x60006cde0
+= expects exactly 2 arguments DEBUG: requesting 16 B
+DEBUG: allocated address 0x60006c1d0
+
+> DEBUG: requesting 24 B
+DEBUG: allocated address 0x60006ccc8
+DEBUG: requesting 24 B
+DEBUG: allocated address 0x60006ce00
+DEBUG: requesting 32 B
+DEBUG: allocated address 0x60006ce18
+DEBUG: requesting 32 B
+DEBUG: collecting garbage
+DEBUG: increasing memory
+DEBUG: allocated new address 0x60006cef0
+< expects exactly 2 arguments DEBUG: requesting 16 B
+DEBUG: allocated address 0x60006c2e0
+
+> DEBUG: requesting 24 B
+DEBUG: allocated address 0x60006cf10
+DEBUG: requesting 24 B
+DEBUG: allocated address 0x60006cf28
+DEBUG: requesting 24 B
+DEBUG: collecting garbage
+DEBUG: increasing memory
+DEBUG: allocated new address 0x60006cfe0
+DEBUG: requesting 32 B
+DEBUG: allocated address 0x60006cff8
+DEBUG: requesting 32 B
+DEBUG: allocated address 0x60006d018
+DEBUG: requesting 32 B
+DEBUG: collecting garbage
+DEBUG: increasing memory
+DEBUG: allocated new address 0x60006d080
+DEBUG: requesting 16 B
+DEBUG: allocated address 0x60006c610
+#t
+> DEBUG: requesting 24 B
+DEBUG: allocated address 0x60006d0a0
+DEBUG: requesting 24 B
+DEBUG: allocated address 0x60006d0b8
+DEBUG: requesting 24 B
+DEBUG: collecting garbage
+DEBUG: increasing memory
+DEBUG: allocated new address 0x60006d320
+DEBUG: requesting 24 B
+DEBUG: allocated address 0x60006d338
+DEBUG: requesting 32 B
+DEBUG: allocated address 0x60006d350
+DEBUG: requesting 32 B
+DEBUG: collecting garbage
+DEBUG: increasing memory
+DEBUG: allocated new address 0x60006d390
+DEBUG: requesting 32 B
+DEBUG: allocated address 0x60006d3b0
+DEBUG: requesting 32 B
+DEBUG: allocated address 0x60006d3d0
+< expects exactly 2 arguments DEBUG: requesting 16 B
+DEBUG: allocated address 0x60006c770
+
+> DEBUG: requesting 24 B
+DEBUG: collecting garbage
+DEBUG: increasing memory
+DEBUG: allocated new address 0x60006d450
+DEBUG: requesting 24 B
+DEBUG: allocated address 0x60006d468
+DEBUG: requesting 32 B
+DEBUG: allocated address 0x60006d480
+DEBUG: requesting 32 B
+DEBUG: collecting garbage
+DEBUG: increasing memory
+DEBUG: allocated new address 0x60006d510
+> expects exactly 2 arguments DEBUG: requesting 16 B
+DEBUG: allocated address 0x60006cb20
+
+> DEBUG: requesting 24 B
+DEBUG: allocated address 0x60006d530
+DEBUG: requesting 24 B
+DEBUG: allocated address 0x60006d548
+DEBUG: requesting 24 B
+DEBUG: collecting garbage
+DEBUG: increasing memory
+DEBUG: allocated new address 0x60006d640
+DEBUG: requesting 32 B
+DEBUG: allocated address 0x60006d658
+DEBUG: requesting 32 B
+DEBUG: allocated address 0x60006d678
+DEBUG: requesting 32 B
+DEBUG: collecting garbage
+DEBUG: increasing memory
+DEBUG: allocated new address 0x60006d6e0
+DEBUG: requesting 16 B
+DEBUG: allocated address 0x60006cf40
+#f
+> DEBUG: requesting 24 B
+DEBUG: allocated address 0x60006d700
+DEBUG: requesting 24 B
+DEBUG: allocated address 0x60006d718
+DEBUG: requesting 24 B
+DEBUG: collecting garbage
+DEBUG: increasing memory
+DEBUG: allocated new address 0x60006d7f0
+DEBUG: requesting 24 B
+DEBUG: allocated address 0x60006d808
+DEBUG: requesting 32 B
+DEBUG: allocated address 0x60006d820
+DEBUG: requesting 32 B
+DEBUG: collecting garbage
+DEBUG: increasing memory
+DEBUG: allocated new address 0x60006d890
+DEBUG: requesting 32 B
+DEBUG: allocated address 0x60006d8b0
+DEBUG: requesting 32 B
+DEBUG: allocated address 0x60006d8d0
+> expects exactly 2 arguments DEBUG: requesting 16 B
+DEBUG: allocated address 0x60006d0d0
+
 > 

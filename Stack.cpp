@@ -10,13 +10,13 @@ Stack::Stack(const Stack& orig) { }
 Stack::~Stack() { }
 
 Object * Stack::push(Object * object) {
-   inputStack.push(object);
+   data.push_back(object);
    return this->peek();
 }
 
 Object * Stack::pop() {
-   Object * top = inputStack.top();
-   inputStack.pop();
+   Object * top = this->peek();
+   data.pop_back();
    return top;
 }
 
@@ -29,8 +29,30 @@ list<Object*> Stack::pop(unsigned int amount) {
 }
 
 Object * Stack::peek() const {
-   return inputStack.top();
+   return data.back();
 }
+
 int Stack::size() const {
-	return inputStack.size();
+   return data.size();
+}
+
+void Stack::markAll() {
+   for (Object * item : data)
+      item->marked = true;
+}
+
+auto Stack::begin() const {
+   return data.begin();
+}
+
+auto Stack::begin() {
+   return data.begin();
+}
+
+auto Stack::end() const {
+   return data.end();
+}
+
+auto Stack::end() {
+   return data.end();
 }

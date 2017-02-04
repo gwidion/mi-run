@@ -1,7 +1,7 @@
 #ifndef STACK_H
 #define STACK_H
 
-#include <stack>
+#include <vector>
 #include <list>
 
 class Object;
@@ -16,9 +16,15 @@ public:
    Object * peek() const;
    std::list<Object*> pop(unsigned int amount);
    int size() const;
-   
+   void markAll();
+
+   auto begin() const;
+   auto begin();
+   auto end() const;
+   auto end();
+
 private:
-   std::stack<Object *> inputStack;
+   std::vector<Object *> data;
 };
 
 #endif /* STACK_H */

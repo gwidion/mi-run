@@ -16,12 +16,14 @@
 
 class MemoryRecord {
 public:
-   MemoryRecord(unsigned char * address, int size);
+   MemoryRecord(unsigned char * address, unsigned int size);
 
    bool hasSpaceFor(unsigned int requestedSize) const;
    unsigned char * allocate(unsigned int requestedSize);
    unsigned char * allocateAtEnd(unsigned int requestedSize);
    bool isEmpty() const;
+   unsigned char * next();
+   bool isAddress(unsigned char * requestedAddress);
 private:
    unsigned char * address;
    unsigned int size;

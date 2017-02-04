@@ -51,7 +51,7 @@
       </toolsSet>
       <compileType>
         <ccTool>
-          <commandLine>-Og -pedantic</commandLine>
+          <commandLine>-O0 -pedantic</commandLine>
         </ccTool>
       </compileType>
       <item path="Environment.cpp" ex="false" tool="1" flavor2="0">

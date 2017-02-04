@@ -2,7 +2,9 @@
 #define MEMORYBLOCK_H
 
 #include "MemoryRecord.h"
-#include <vector>
+#include <set>
+
+class Object;
 
 class MemoryBlock {
 public:
@@ -11,10 +13,12 @@ public:
 
    unsigned char * allocate(unsigned int requestedSize);
    bool hasSpaceFor(unsigned int requestedSize) const;
+   void sweepAll();
 private:
    unsigned char * data;
-   std::vector<MemoryRecord> freeAddresses;   
+   std::set<MemoryRecord> freeAddresses;
    MemoryRecord * recordFor(unsigned int requestedSize);
+   void free(Object * object);
 };
 
 #endif /* MEMORYBLOCK_H */
