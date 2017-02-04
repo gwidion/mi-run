@@ -35,40 +35,42 @@ public:
 
     bool freed = false;
 
-    virtual void print() const {
-        std::cout << "[an Object]";
+    virtual void print(std::ostream & output = std::cout) const {
+        output << "[an Object]";
     }
+
+    void memoryPrint(std::ostream & output) const;
 
     virtual Object* eval(Environment& env) {
         return nullptr;
     }
 
     virtual Object* carValue() const {
-        std::cout << "chyba, neni car" << std::endl;
+        throw std::runtime_error("chyba, neni car");
     }
 
     virtual Object* cdrValue() const {
-        std::cout << "chyba, neni cdr" << std::endl;
+        throw std::runtime_error("chyba, neni cdr");
     }
 
     virtual int intValue() const {
-        std::cout << "chyba, neni int" << std::endl;
+        throw std::runtime_error("chyba, neni int");
     }
 
     virtual std::string stringValue() const {
-        std::cout << "chyba, neni string" << std::endl;
+        throw std::runtime_error("chyba, neni string");
     }
 
     virtual ObjectFunction functionValue() const {
-        std::cout << "chyba, neni funkce" << std::endl;
+        throw std::runtime_error("chyba, neni funkce");
     }
 
     virtual std::string symbolValue() const {
-        std::cout << "chyba, neni symbol" << std::endl;
+        throw std::runtime_error("chyba, neni symbol");
     }
 
     virtual bool boolValue() const {
-        std::cout << "chyba, neni bool" << std::endl;
+        throw std::runtime_error("chyba, neni bool");
     }
     virtual unsigned int size() const = 0;
 
@@ -87,8 +89,8 @@ public:
 
     static ObjectInt * allocate(int x);
 
-    virtual void print() const override {
-        std::cout << intVal;
+    virtual void print(std::ostream & output = std::cout) const override {
+        output << intVal;
     }
 
     virtual int intValue() const override {
@@ -112,8 +114,8 @@ public:
 
     static ObjectBultInSyntax * allocate();
 
-    virtual void print() const override {
-        std::cout << c;
+    virtual void print(std::ostream & output = std::cout) const override {
+        output << c;
     }
     virtual unsigned int size() const override;
 
@@ -134,8 +136,8 @@ public:
         return functionCode;
     }
 
-    virtual void print() const override {
-        std::cout << "[an ObjectBuiltInFunction]";
+    virtual void print(std::ostream & output = std::cout) const override {
+        output << "[an ObjectBuiltInFunction]";
     }
     virtual unsigned int size() const override;
 
@@ -158,8 +160,8 @@ public:
         return s;
     }
 
-    virtual void print() const override {
-        std::cout << s;
+    virtual void print(std::ostream & output = std::cout) const override {
+        output << s;
     }
     virtual unsigned int size() const override;
 
@@ -180,8 +182,8 @@ public:
         return s;
     }
 
-    virtual void print() const override {
-        std::cout << s;
+    virtual void print(std::ostream & output = std::cout) const override {
+        output << s;
     }
     virtual unsigned int size() const override;
 
@@ -215,8 +217,8 @@ public:
         cdr = cd;
     }
 
-    virtual void print() const override {
-        std::cout << "[an ObjectCons]";
+    virtual void print(std::ostream & output = std::cout) const override {
+        output << "[an ObjectCons]";
     }
 
     virtual Object* eval(Environment& env) override;
@@ -240,8 +242,8 @@ public:
     }
     virtual unsigned int size() const override;
 
-    void print() const override {
-        std::cout << "#t";
+    void print(std::ostream & output = std::cout) const override {
+        output << "#t";
     }
 
 };
@@ -258,8 +260,8 @@ public:
     }
     virtual unsigned int size() const override;
 
-    void print() const override {
-        std::cout << "#f";
+    void print(std::ostream & output = std::cout) const override {
+        output << "#f";
     }
 };
 
@@ -272,8 +274,8 @@ public:
 
     virtual unsigned int size() const override;
 
-    void print() const override {
-        std::cout << "nil";
+    void print(std::ostream & output = std::cout) const override {
+        output << "nil";
     }
 };
 
@@ -286,8 +288,8 @@ public:
 
     virtual unsigned int size() const override;
 
-    virtual void print() const override {
-        std::cout << "[a Void (scary, right?)]";
+    virtual void print(std::ostream & output = std::cout) const override {
+        output << "[a Void (scary, right?)]";
     }
 };
 

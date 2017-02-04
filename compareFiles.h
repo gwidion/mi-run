@@ -11,14 +11,15 @@ int compareFiles(std::string& file1name, std::string file2name) {
     char string1[256], string2[256];
     int j = 0;
 
-    while (!file1.eof()) {
+    while (!file1.eof() && !file2.eof()) {
         file1.getline(string1, 256);
         file2.getline(string2, 256);
         j++;
-        if (strcmp(string1, string2) != 0 && !strncmp(string1, "DEBUG", 5) && !strncmp(string2, "DEBUG", 5)) {
-            return j;
-        }
+        if (strcmp(string1, string2)) 
+            return j;        
     }
+    if(!file1.eof() || !file2.eof())
+        return j+1;
     return 0;
 }
 

@@ -6,6 +6,12 @@ extern Memory memory;
 
 using namespace std;
 
+void Object::memoryPrint(ostream & output = cout) const {
+    output << "DEBUG: allocated ";
+    this->print(output);
+    output << " from " << reinterpret_cast<uintptr_t> (this) << " to " << reinterpret_cast<uintptr_t> (this) + this->size() << " ( " << this->size() << " B )" << endl;
+}
+
 unsigned int Object::size() const {
     throw runtime_error("Object should be abstract");
     return sizeof (Object);
@@ -52,7 +58,9 @@ unsigned int ObjectInt::size() const {
 
 ObjectInt * ObjectInt::allocate(int x) {
     Object * y = memory.allocate(sizeof (ObjectInt));
-    return new (y) ObjectInt(x);
+    ObjectInt * z = new (y) ObjectInt(x);
+    z->memoryPrint();
+    return z;
 }
 
 unsigned int ObjectBultInSyntax::size() const {
@@ -60,8 +68,10 @@ unsigned int ObjectBultInSyntax::size() const {
 }
 
 ObjectBultInSyntax * ObjectBultInSyntax::allocate() {
-    Object * x = memory.allocate(sizeof (ObjectBultInSyntax));
-    return new (x) ObjectBultInSyntax();
+    Object * y = memory.allocate(sizeof (ObjectBultInSyntax));
+    ObjectBultInSyntax * z = new (y) ObjectBultInSyntax();
+    z->memoryPrint();
+    return z;
 }
 
 unsigned int ObjectBuiltInFunction::size() const {
@@ -69,8 +79,10 @@ unsigned int ObjectBuiltInFunction::size() const {
 }
 
 ObjectBuiltInFunction * ObjectBuiltInFunction::allocate(ObjectFunction f) {
-    Object * x = memory.allocate(sizeof (ObjectBuiltInFunction));
-    return new (x) ObjectBuiltInFunction(f);
+    Object * y = memory.allocate(sizeof (ObjectBuiltInFunction));
+    ObjectBuiltInFunction * z = new (y) ObjectBuiltInFunction(f);
+    z->memoryPrint();
+    return z;
 }
 
 unsigned int ObjectSymbol::size() const {
@@ -78,8 +90,10 @@ unsigned int ObjectSymbol::size() const {
 }
 
 ObjectSymbol * ObjectSymbol::allocate(const char * a) {
-    Object * x = memory.allocate(sizeof (ObjectSymbol));
-    return new (x) ObjectSymbol(a);
+    Object * y = memory.allocate(sizeof (ObjectSymbol));
+    ObjectSymbol * z = new (y) ObjectSymbol(a);
+    z->memoryPrint();
+    return z;
 }
 
 unsigned int ObjectString::size() const {
@@ -87,8 +101,10 @@ unsigned int ObjectString::size() const {
 }
 
 ObjectString * ObjectString::allocate(const char* a) {
-    Object * x = memory.allocate(sizeof (ObjectString));
-    return new (x) ObjectString(a);
+    Object * y = memory.allocate(sizeof (ObjectString));
+    ObjectString * z = new (y) ObjectString(a);
+    z->memoryPrint();
+    return z;
 }
 
 unsigned int ObjectCons::size() const {
@@ -96,8 +112,10 @@ unsigned int ObjectCons::size() const {
 }
 
 ObjectCons * ObjectCons::allocate(Object* ca, Object * cd) {
-    Object * x = memory.allocate(sizeof (ObjectCons));
-    return new (x) ObjectCons(ca, cd);
+    Object * y = memory.allocate(sizeof (ObjectCons));
+    ObjectCons * z = new (y) ObjectCons(ca, cd);
+    z->memoryPrint();
+    return z;
 }
 
 void ObjectCons::mark() {
@@ -112,8 +130,10 @@ unsigned int ObjectTrue::size() const {
 }
 
 ObjectTrue * ObjectTrue::allocate() {
-    Object * x = memory.allocate(sizeof (ObjectTrue));
-    return new (x) ObjectTrue();
+    Object * y = memory.allocate(sizeof (ObjectTrue));
+    ObjectTrue * z = new (y) ObjectTrue();
+    z->memoryPrint();
+    return z;
 }
 
 unsigned int ObjectFalse::size() const {
@@ -121,8 +141,10 @@ unsigned int ObjectFalse::size() const {
 }
 
 ObjectFalse * ObjectFalse::allocate() {
-    Object * x = memory.allocate(sizeof (ObjectFalse));
-    return new (x) ObjectFalse();
+    Object * y = memory.allocate(sizeof (ObjectFalse));
+    ObjectFalse * z = new (y) ObjectFalse();
+    z->memoryPrint();
+    return z;
 }
 
 unsigned int ObjectNil::size() const {
@@ -130,8 +152,10 @@ unsigned int ObjectNil::size() const {
 }
 
 ObjectNil * ObjectNil::allocate() {
-    Object * x = memory.allocate(sizeof (ObjectNil));
-    return new (x) ObjectNil();
+    Object * y = memory.allocate(sizeof (ObjectNil));
+    ObjectNil * z = new (y) ObjectNil();
+    z->memoryPrint();
+    return z;
 }
 
 unsigned int ObjectVoid::size() const {
@@ -139,6 +163,8 @@ unsigned int ObjectVoid::size() const {
 }
 
 ObjectVoid * ObjectVoid::allocate() {
-    Object * x = memory.allocate(sizeof (ObjectVoid));
-    return new (x) ObjectVoid();
+    Object * y = memory.allocate(sizeof (ObjectVoid));
+    ObjectVoid * z = new (y) ObjectVoid();
+    z->memoryPrint();
+    return z;
 }

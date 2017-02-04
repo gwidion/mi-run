@@ -16,10 +16,9 @@ Memory::~Memory() {
 }
 
 Object * Memory::allocate(unsigned int requestedSize) {
-    cout << "DEBUG: requesting " << requestedSize << " B" << endl;
     unsigned char * address = this->tryAllocate(requestedSize);
     if (!address) {
-        cout << "DEBUG: collecting garbage" << endl;
+        cout << "DEBUG: collecting garbage to free " << requestedSize << " B" << endl;
         collectGarbage();
         cout << "DEBUG: garbage collected";
         address = this->tryAllocate(requestedSize);
@@ -27,13 +26,10 @@ Object * Memory::allocate(unsigned int requestedSize) {
             cout << " - freed enough memory";
         cout << endl;
     }
-    if (address) {
-        cout << "DEBUG: allocated address " << static_cast<void*> (address) << endl;
+    if (address)
         return reinterpret_cast<Object*> (address);
-    }
     blocks.push_back(new MemoryBlock());
     address = blocks.back()->allocate(requestedSize);
-    cout << "DEBUG: added block - allocated address " << static_cast<void*> (address) << endl;
     if (!address)
         throw runtime_error("no address");
     return reinterpret_cast<Object*> (address);

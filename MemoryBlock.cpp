@@ -52,8 +52,9 @@ void MemoryBlock::sweep() {
             bb = nextFree->address() == address;
         if (nextFree != freeAddresses.end() && (nextFree->address() == address)) {
             // address is amoungst free ones
-            cout << "DEBUG: already free from " << static_cast<void*> (nextFree->address()) << " to " << static_cast<void*> (nextFree->next()) << endl;
-            address = nextFree->next();
+            cout << "DEBUG:   empty space from " << reinterpret_cast<uintptr_t> (nextFree->address()) << " to " << reinterpret_cast<uintptr_t> (nextFree->next()) << " ( " << nextFree->getSize() << " B )" << endl;
+            address = nextFree->next();           
+
             nextFree++;
         } else {
             // there is object in address
@@ -63,9 +64,9 @@ void MemoryBlock::sweep() {
                 throw runtime_error("freed object!");
             }
             if (!object->isMarked()) {
-                cout << "DEBUG: freed ";
+                cout << "DEBUG:   freed ";
                 object->print();
-                cout << " at " << static_cast<void*> (object) << endl;
+                cout << " from " << reinterpret_cast<uintptr_t> (object) << " to " << reinterpret_cast<uintptr_t> (object) + object->size() << " ( " << object->size() << " B )" << endl;
                 unused.push_back(object);
             } else {
                 object->unMark();
