@@ -8,23 +8,23 @@ class Object;
 
 class Stack {
 public:
-   Stack();
-   Stack(const Stack& orig);
-   virtual ~Stack();
-   Object * push(Object * object);
-   Object * pop();
-   Object * peek() const;
-   std::list<Object*> pop(unsigned int amount);
-   int size() const;
-   void markAll();
+    Stack();
+    Stack(const Stack& orig);
+    virtual ~Stack();
+    Object * push(Object * object);
+    Object * pop();
+    Object * peek() const;
+    std::list<Object*> pop(unsigned int amount);
+    int size() const;
+    void mark();
 
-   auto begin() const;
-   auto begin();
-   auto end() const;
-   auto end();
+    auto begin() const;
+    auto begin();
+    auto end() const;
+    auto end();
 
 private:
-   std::vector<Object *> data;
+    std::vector<Object *> data;
 };
 
 #endif /* STACK_H */

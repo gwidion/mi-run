@@ -6,91 +6,89 @@
 #include "Environment.h"
 #include "Object.h"
 #include "Reader.h"
-#include "Stack.h"
 
 #include "compareFiles.h"
 
 using namespace std;
 
-extern Stack stack;
+extern Environment globalEnvironment;
 
 void initializeObjects() {
-   ObjectInt * i = ObjectInt::allocate(1);
-   ObjectBuiltInFunction * bif = ObjectBuiltInFunction::allocate(nullptr);
-   ObjectCons * c = ObjectCons::allocate(nullptr, nullptr);
-   ObjectString * s = ObjectString::allocate("");
-   ObjectTrue * t = ObjectTrue::allocate();
-   ObjectFalse * f = ObjectFalse::allocate();
-   ObjectNil * n = ObjectNil::allocate();
+    ObjectInt * i = ObjectInt::allocate(1);
+    ObjectBuiltInFunction * bif = ObjectBuiltInFunction::allocate(nullptr);
+    ObjectCons * c = ObjectCons::allocate(nullptr, nullptr);
+    ObjectString * s = ObjectString::allocate("");
+    ObjectTrue * t = ObjectTrue::allocate();
+    ObjectFalse * f = ObjectFalse::allocate();
+    ObjectNil * n = ObjectNil::allocate();
 }
 
 void repl(FILE* input = stdin) {
-   Reader reader;
-   Environment environment;
+    Reader reader;
 
-   Object* expression;
-   Object* result;
+    Object* expression;
+    Object* result;
 
-   // REPL
-   while (true) {
-      //		if(feof(cin)) {
-      //			return;
-      //		}
-      cout << "> ";
-      expression = reader.read(input);
+    // REPL
+    while (true) {
+        //		if(feof(cin)) {
+        //			return;
+        //		}
+        cout << "> ";
+        expression = reader.read(input);
 
-      if (expression == nullptr) {
-         return;
-      }
+        if (expression == nullptr) {
+            return;
+        }
 
-      result = expression->eval(environment);
-      result->print();
-      cout << endl;
-   }
+        result = expression->eval(globalEnvironment);
+        result->print();
+        cout << endl;
+    }
 }
 
 void testing() {
-   string testIn = "testIn.txt";
-   string testOut = "testOut.txt";
-   string testOutReference = "testOutReference.txt";
-   // streams
-   streambuf *backupOut = cout.rdbuf(); // back up cout's streambuf
-   ofstream out(testOut.c_str());
-   cout.rdbuf(out.rdbuf());
+    string testIn = "testIn.txt";
+    string testOut = "testOut.txt";
+    string testOutReference = "testOutReference.txt";
+    // streams
+    streambuf *backupOut = cout.rdbuf(); // back up cout's streambuf
+    ofstream out(testOut.c_str());
+    cout.rdbuf(out.rdbuf());
 
-   // run and compute
-   FILE* fp = fopen(testIn.c_str(), "r");
-   repl(fp);
+    // run and compute
+    FILE* fp = fopen(testIn.c_str(), "r");
+    repl(fp);
 
-   // checkResults
-   int testResult = compareFiles(testOut, testOutReference);
+    // checkResults
+    int testResult = compareFiles(testOut, testOutReference);
 
-   cout.rdbuf(backupOut); // restore cout's original streambuf
-   out.close();
+    cout.rdbuf(backupOut); // restore cout's original streambuf
+    out.close();
 
-   if (testResult == 0) {
-      cout << "tests passed OK" << endl;
-   } else {
-      cout << "tests failed, first difference at line " << testResult << endl;
-   }
+    if (testResult == 0) {
+        cout << "tests passed OK" << endl;
+    } else {
+        cout << "tests failed, first difference at line " << testResult << endl;
+    }
 }
 
 int main() {
-   //    initializeMemory();
-   //    initializeSymbolTable();
-   //    initializeWellKnownObjects();
-   //    initializeGlobalEnvironment();
-   //    defineWellknownBindings();
-   //    initializeStack();
+    //    initializeMemory();
+    //    initializeSymbolTable();
+    //    initializeWellKnownObjects();
+    //    initializeGlobalEnvironment();
+    //    defineWellknownBindings();
+    //    initializeStack();
 
-   initializeObjects();
+    // initializeObjects();
 
-   cout << "kabelja4 and bliznjan runtime system for scheme" << endl;
+    cout << "kabelja4 and bliznjan runtime system for scheme" << endl;
 
-   testing();
+    testing();
 
-   repl();
+    repl();
 
-   // only reached on EOF
-   return 0;
+    // only reached on EOF
+    return 0;
 }

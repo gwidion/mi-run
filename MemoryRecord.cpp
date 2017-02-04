@@ -2,35 +2,43 @@
 
 using namespace std;
 
-MemoryRecord::MemoryRecord(unsigned char * address, unsigned int size) : address(address), size(size) { }
+MemoryRecord::MemoryRecord(unsigned char * startAddress, unsigned int requestedSize) : startAddress(startAddress), size(requestedSize) {
+    if (requestedSize == 0)
+        throw "aaaa";
+}
 
 bool MemoryRecord::hasSpaceFor(unsigned int requestedSize) const {
-   return size >= requestedSize;
+    return size >= requestedSize;
 }
 
-unsigned char * MemoryRecord::allocate(unsigned int requestedSize) {
-   if (!(this->hasSpaceFor(requestedSize)))
-      throw "not enought memory in this record";
-   address += requestedSize;
-   size -= requestedSize;
-   return address - requestedSize;
+bool MemoryRecord::hasMoreSpaceThan(unsigned int requestedSize) const {
+    return size > requestedSize;
 }
 
-unsigned char * MemoryRecord::allocateAtEnd(unsigned int requestedSize) {
-   if (!(this->hasSpaceFor(requestedSize)))
-      throw "not enought memory in this record";
-   size -= requestedSize;
-   return address + size;
+MemoryRecord MemoryRecord::allocated(unsigned int requestedSize) const {
+    if (!(this->hasSpaceFor(requestedSize)))
+        throw "not enought memory in this record";
+    if (size <= requestedSize)
+        throw "size has to be greater - somewhere is a problem!";
+    return MemoryRecord(startAddress + requestedSize, size - requestedSize);
+}
+
+unsigned char * MemoryRecord::address() const {
+    return startAddress;
+}
+
+unsigned int MemoryRecord::getSize() const {
+    return size;
 }
 
 bool MemoryRecord::isEmpty() const {
-   return size == 0;
+    return size == 0;
 }
 
-unsigned char * MemoryRecord::next() {
-   return address + size;
+unsigned char * MemoryRecord::next() const {
+    return startAddress + size;
 }
 
-bool MemoryRecord::isAddress(unsigned char * requestedAddress) {
-   return address == requestedAddress;
+bool MemoryRecord::operator<(const MemoryRecord & other) const {
+    return startAddress < other.address();
 }

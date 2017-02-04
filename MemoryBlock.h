@@ -8,17 +8,19 @@ class Object;
 
 class MemoryBlock {
 public:
-   MemoryBlock();
-   virtual ~MemoryBlock();
+    MemoryBlock();
+    virtual ~MemoryBlock();
 
-   unsigned char * allocate(unsigned int requestedSize);
-   bool hasSpaceFor(unsigned int requestedSize) const;
-   void sweepAll();
+    unsigned char * allocate(unsigned int requestedSize);
+    bool hasSpaceFor(unsigned int requestedSize) const;
+    void sweep();
 private:
-   unsigned char * data;
-   std::set<MemoryRecord> freeAddresses;
-   MemoryRecord * recordFor(unsigned int requestedSize);
-   void free(Object * object);
+    unsigned char * data;
+    std::set<MemoryRecord> freeAddresses;
+    const MemoryRecord & recordFor(unsigned int requestedSize);
+    void free(Object * object);
+
+    void print();
 };
 
 #endif /* MEMORYBLOCK_H */

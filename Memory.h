@@ -9,22 +9,21 @@ class Object;
 
 class Memory {
 public:
-   Memory();
-   virtual ~Memory();
+    Memory();
+    virtual ~Memory();
 
-   Object * allocate(unsigned int requestedSize);
-   
-   void collectGarbage();
-   
-   Stack stack;
+    Object * allocate(unsigned int requestedSize);
+
+    void collectGarbage();
+
+    Stack stack;
 private:
-   std::vector<MemoryBlock *> blocks;
+    std::vector<MemoryBlock *> blocks;
 
-   unsigned char * getFreeAddress(unsigned int requestedSize);
-   void free(const Object * object);
-   
-   void mark();
-   void sweep();
+    unsigned char * getFreeAddress(unsigned int requestedSize);
+
+    void mark();
+    void sweep();
 };
 
 #endif /* MEMORY_H */

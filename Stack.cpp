@@ -10,49 +10,49 @@ Stack::Stack(const Stack& orig) { }
 Stack::~Stack() { }
 
 Object * Stack::push(Object * object) {
-   data.push_back(object);
-   return this->peek();
+    data.push_back(object);
+    return this->peek();
 }
 
 Object * Stack::pop() {
-   Object * top = this->peek();
-   data.pop_back();
-   return top;
+    Object * top = this->peek();
+    data.pop_back();
+    return top;
 }
 
 list<Object*> Stack::pop(unsigned int amount) {
-   list<Object*> popped;
-   for (unsigned int i = 0; i < amount; i++) {
-      popped.push_front(this->pop());
-   }
-   return popped;
+    list<Object*> popped;
+    for (unsigned int i = 0; i < amount; i++) {
+        popped.push_front(this->pop());
+    }
+    return popped;
 }
 
 Object * Stack::peek() const {
-   return data.back();
+    return data.back();
 }
 
 int Stack::size() const {
-   return data.size();
+    return data.size();
 }
 
-void Stack::markAll() {
-   for (Object * item : data)
-      item->marked = true;
+void Stack::mark() {
+    for (Object * item : data)
+        item->mark();
 }
 
 auto Stack::begin() const {
-   return data.begin();
+    return data.begin();
 }
 
 auto Stack::begin() {
-   return data.begin();
+    return data.begin();
 }
 
 auto Stack::end() const {
-   return data.end();
+    return data.end();
 }
 
 auto Stack::end() {
-   return data.end();
+    return data.end();
 }

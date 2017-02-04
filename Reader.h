@@ -8,11 +8,11 @@ public:
     Reader();
     Reader(const Reader& orig);
     virtual ~Reader();
-    
+
     Object* read(FILE* input);
 private:
     char peekChar;
-    
+
     void unreadChar(char ch);
     char nextChar(FILE *input);
     bool isWhiteSpace(char c);

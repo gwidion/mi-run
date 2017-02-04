@@ -16,17 +16,20 @@
 
 class MemoryRecord {
 public:
-   MemoryRecord(unsigned char * address, unsigned int size);
+    MemoryRecord(unsigned char * startAddress, unsigned int requestedSize);
 
-   bool hasSpaceFor(unsigned int requestedSize) const;
-   unsigned char * allocate(unsigned int requestedSize);
-   unsigned char * allocateAtEnd(unsigned int requestedSize);
-   bool isEmpty() const;
-   unsigned char * next();
-   bool isAddress(unsigned char * requestedAddress);
+    bool hasSpaceFor(unsigned int requestedSize) const;
+    MemoryRecord allocated(unsigned int requestedSize) const;
+    unsigned char * address() const;
+    unsigned int getSize() const;
+    bool isEmpty() const;
+    unsigned char * next() const;
+    bool hasMoreSpaceThan(unsigned int requestedSize) const;
+
+    bool operator<(const MemoryRecord & other) const;
 private:
-   unsigned char * address;
-   unsigned int size;
+    unsigned char * startAddress;
+    unsigned int size;
 };
 
 #endif /* MEMORYRECORD_H */
