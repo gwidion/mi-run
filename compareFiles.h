@@ -6,28 +6,25 @@
 #include <string.h>
 
 /* return line of file that differs, zero if they are same */
-int compareFiles(std::string& file1name, std::string file2name) {
+int compareFiles(std::string & file1name, std::string & file2name) {
     std::fstream file1(file1name), file2(file2name);
-    char string1[256], string2[256];
+    std::string buffer1, buffer2;
+    std::string buffer;
+    size_t position;
     int j = 0;
 
-    while (!file1.eof() && !file2.eof()) {
-        file1.getline(string1, 256);
-        file2.getline(string2, 256);
-        while (strncmp("DEBUG", string1, 5) && !file1.eof())
-            file1.getline(string1, 256);
-        while (strncmp("DEBUG", string2, 5) && !file2.eof())
-            file2.getline(string2, 256);
-        j++;
-        if (strcmp(string1, string2))
-            return j;
+    while (!file1.eof()) {
+        getline(file1, buffer);
+        position = buffer.find("DEBUG");
+        buffer1 += buffer.substr(0, position);
     }
-    while (strncmp("DEBUG", string1, 5) && !file1.eof())
-        file1.getline(string1, 256);
-    while (strncmp("DEBUG", string2, 5) && !file2.eof())
-        file2.getline(string2, 256);
-    if (!file1.eof() || !file2.eof())
-        return j + 1;
+    while (!file2.eof()) {
+        getline(file2, buffer);
+        position = buffer.find("DEBUG");
+        buffer2 += buffer.substr(0, position);
+    }
+    if (buffer1.compare(buffer2))
+        return j;
     return 0;
 }
 
