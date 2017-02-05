@@ -9,7 +9,7 @@ using namespace std;
 void Object::memoryPrint() const {
     cout << "DEBUG: allocated ";
     this->typePrint();
-    cout << " from " << reinterpret_cast<const void*> (this) << " to " << reinterpret_cast<const void*> (reinterpret_cast<const char *>(this) + this->size()) << " ( " << this->size() << " B )" << endl;
+    cout << " from " << reinterpret_cast<const void*> (this) << " to " << reinterpret_cast<const void*> (reinterpret_cast<const char *> (this) + this->size()) << " ( " << this->size() << " B )" << endl;
 }
 
 Object* Object::eval(Environment& env) {
@@ -39,24 +39,6 @@ bool Object::isNil() const {
 
 bool Object::isNotNil() const {
     return true;
-}
-
-Object * ObjectCons::eval(Environment & environment) {
-    Object* func = car->eval(environment);
-    if (func && func->tag == TAG_BUILTINFUNCTION) {
-        int initStackSize = memory.stack.size();
-        Object* restArgs = cdr;
-        while (restArgs->isNotNil()) {
-            Object* unevaluated = restArgs->carValue();
-            //			unevaluated->foo();
-            //			Object* evaluated = unevaluated->eval( env );
-            memory.stack.push(unevaluated);
-            restArgs = restArgs->cdrValue();
-        }
-        int args = memory.stack.size() - initStackSize;
-        return func->functionValue()(args, environment);
-    } else
-        return ObjectNil::allocate();
 }
 
 Object * ObjectSymbol::eval(Environment& environment) {
@@ -113,6 +95,24 @@ ObjectString * ObjectString::allocate(const char* a) {
     return object;
 }
 
+Object * ObjectCons::eval(Environment & environment) {
+    Object* func = car->eval(environment);
+    if (func && func->tag == TAG_BUILTINFUNCTION) {
+        int initStackSize = memory.stack.size();
+        Object* restArgs = cdr;
+        while (restArgs->isNotNil()) {
+            Object* unevaluated = restArgs->carValue();
+            //			unevaluated->foo();
+            //			Object* evaluated = unevaluated->eval( env );
+            memory.stack.push(unevaluated);
+            restArgs = restArgs->cdrValue();
+        }
+        int args = memory.stack.size() - initStackSize;
+        return func->functionValue()(args, environment);
+    } else
+        return ObjectNil::allocate();
+}
+
 unsigned int ObjectCons::size() const {
     return sizeof (ObjectCons);
 }
@@ -141,6 +141,10 @@ void ObjectCons::mark() {
     Object::mark();
     car->mark();
     cdr->mark();
+}
+
+int ObjectCons::intValue(Environment & environment) {
+    return this->eval(environment)->intValue(environment);
 }
 
 unsigned int ObjectTrue::size() const {

@@ -15,7 +15,7 @@ Object* builtinPlus(int numArgs, Environment& environment) {
     long int sum = 0;
     for (int i = 0; i < numArgs; i++) {
         Object* nextArg = memory.stack.pop();
-        sum += nextArg->intValue();
+        sum += nextArg->intValue(environment);
     }
     return ObjectInt::allocate(sum);
 }
@@ -33,7 +33,7 @@ Object* builtinMinus(int numArgs, Environment& environment) {
         return ObjectVoid::allocate();
     } else if (numArgs == 1) {
         Object* nextArg = memory.stack.pop();
-        int intValue = nextArg->intValue();
+        int intValue = nextArg->intValue(environment);
         return ObjectInt::allocate(-intValue);
 
     } else {
@@ -41,9 +41,9 @@ Object* builtinMinus(int numArgs, Environment& environment) {
         for (int i = 0; i < numArgs; i++) {
             Object* nextArg = memory.stack.pop();
             if (i == numArgs - 1) // first number, needs to be added
-                result += nextArg->intValue();
+                result += nextArg->intValue(environment);
             else // the rest subtracted
-                result -= nextArg->intValue();
+                result -= nextArg->intValue(environment);
         }
         return ObjectInt::allocate(result);
     }
@@ -58,7 +58,7 @@ Object* builtinTimes(int numArgs, Environment& environment) {
     long int sum = 1;
     for (int i = 0; i < numArgs; i++) {
         Object* nextArg = memory.stack.pop();
-        sum *= nextArg->intValue();
+        sum *= nextArg->intValue(environment);
     }
     return ObjectInt::allocate(sum);
 }
@@ -75,7 +75,7 @@ Object* builtinEquals(int numArgs, Environment& environment) {
     Object* first = memory.stack.pop();
     Object* second = memory.stack.pop();
 
-    if (first->intValue() == second->intValue())
+    if (first->intValue(environment) == second->intValue(environment))
         return ObjectTrue::allocate();
     else
         return ObjectFalse::allocate();
@@ -96,7 +96,7 @@ Object* builtinLessThan(int numArgs, Environment& environment) {
     Object* second = memory.stack.pop();
     Object* first = memory.stack.pop();
 
-    if (first->intValue() < second->intValue())
+    if (first->intValue(environment) < second->intValue(environment))
         return ObjectTrue::allocate();
     else
         return ObjectFalse::allocate();
@@ -116,7 +116,7 @@ Object* builtinGreaterThan(int numArgs, Environment& environment) {
     Object* second = memory.stack.pop();
     Object* first = memory.stack.pop();
 
-    if (first->intValue() > second->intValue())
+    if (first->intValue(environment) > second->intValue(environment))
         return ObjectTrue::allocate();
     else
         return ObjectFalse::allocate();
