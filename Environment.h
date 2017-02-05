@@ -9,10 +9,10 @@
 class Environment {
 public:
     Environment();
+    Environment( Environment& environment );
 
-    Object* getObject(std::string key) {
-        return objectMap[key];
-    }
+    Object* getObject(std::string key);
+    void addObject( std::string key, Object* object );
 
     void mark();
     void markWithParents();

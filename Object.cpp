@@ -12,6 +12,7 @@ void Object::memoryPrint() const {
     cout << " from " << reinterpret_cast<const void*> (this) << " to " << reinterpret_cast<const void*> (reinterpret_cast<const char *> (this) + this->size()) << " ( " << this->size() << " B )" << endl;
 }
 
+
 Object* Object::eval(Environment& env) {
     return ObjectNil::allocate();
 }
@@ -49,27 +50,27 @@ unsigned int ObjectInt::size() const {
     return sizeof (ObjectInt);
 }
 
-ObjectInt * ObjectInt::allocate(int x) {
+ObjectInt * ObjectInt::allocate( int x ) {
     ObjectInt * object = new (memory.allocate(sizeof (ObjectInt))) ObjectInt(x);
     object->memoryPrint();
     return object;
 }
 
-unsigned int ObjectBultInSyntax::size() const {
-    return sizeof (ObjectBultInSyntax);
+unsigned int ObjectBuiltInSyntax::size() const {
+    return sizeof (ObjectBuiltInSyntax);
 }
 
-ObjectBultInSyntax * ObjectBultInSyntax::allocate() {
-    ObjectBultInSyntax * object = new (memory.allocate(sizeof (ObjectBultInSyntax))) ObjectBultInSyntax();
-    object->memoryPrint();
-    return object;
+ObjectBuiltInSyntax * ObjectBuiltInSyntax::allocate( ObjectFunction f ) {
+   ObjectBuiltInSyntax * object = new (memory.allocate( sizeof (ObjectBuiltInSyntax ) ) ) ObjectBuiltInSyntax( f );
+   object->memoryPrint();
+   return object;
 }
 
 unsigned int ObjectBuiltInFunction::size() const {
     return sizeof (ObjectBuiltInFunction);
 }
 
-ObjectBuiltInFunction * ObjectBuiltInFunction::allocate(ObjectFunction f) {
+ObjectBuiltInFunction * ObjectBuiltInFunction::allocate( ObjectFunction f ) {
     ObjectBuiltInFunction * object = new (memory.allocate(sizeof (ObjectBuiltInFunction))) ObjectBuiltInFunction(f);
     object->memoryPrint();
     return object;
@@ -79,7 +80,7 @@ unsigned int ObjectSymbol::size() const {
     return sizeof (ObjectSymbol);
 }
 
-ObjectSymbol * ObjectSymbol::allocate(const char * a) {
+ObjectSymbol * ObjectSymbol::allocate( const char * a ) {
     ObjectSymbol * object = new (memory.allocate(sizeof (ObjectSymbol))) ObjectSymbol(a);
     object->memoryPrint();
     return object;
@@ -89,28 +90,69 @@ unsigned int ObjectString::size() const {
     return sizeof (ObjectString);
 }
 
-ObjectString * ObjectString::allocate(const char* a) {
+ObjectString * ObjectString::allocate( const char* a ) {
     ObjectString * object = new (memory.allocate(sizeof (ObjectString))) ObjectString(a);
     object->memoryPrint();
     return object;
 }
 
-Object * ObjectCons::eval(Environment & environment) {
-    Object* func = car->eval(environment);
-    if (func && func->tag == TAG_BUILTINFUNCTION) {
-        int initStackSize = memory.stack.size();
-        Object* restArgs = cdr;
-        while (restArgs->isNotNil()) {
-            Object* unevaluated = restArgs->carValue();
-            //			unevaluated->foo();
-            //			Object* evaluated = unevaluated->eval( env );
-            memory.stack.push(unevaluated);
-            restArgs = restArgs->cdrValue();
-        }
-        int args = memory.stack.size() - initStackSize;
-        return func->functionValue()(args, environment);
-    } else
-        return ObjectNil::allocate();
+Object* ObjectCons::eval(Environment& environment) {
+   Object* func = car->eval( environment );
+   if( func && func->tag == TAG_BUILTINFUNCTION ) {
+      int args = 0;
+      Object* restArgs = cdr;
+      // push on stack evaluated argument
+      while (restArgs->isNotNil()) {
+         Object* unevaluated = restArgs->getCar( );
+         Object* evaluated = unevaluated->eval( environment );
+         memory.stack.push( evaluated );
+         restArgs = restArgs->getCdr( );
+         args++;
+      }
+      // run function code
+      return func->getFunction( )( args, environment );
+   }
+   if( func && func->tag == TAG_BUILTINSYNTAX ) {
+      int args = 0;
+      Object* restArgs = cdr;
+      // push on stack unevaluated argument
+      while (restArgs->isNotNil()) {
+         Object* unevaluated = restArgs->getCar( );
+         memory.stack.push( unevaluated );
+         restArgs = restArgs->getCdr( );
+         args++;
+      }
+      // run function code
+      return func->getFunction( )( args, environment );
+   }
+   else if( func && func->tag == TAG_USERDEFINEDFUNCTION ) {
+      Object* formalArgs = func->getArgList( );
+      Object* bodyList = func->getBodyList( );
+      Environment newEnvironment( environment );
+
+      // setup new environment
+      Object* restFormalArgs = formalArgs;
+      Object* restUnevaluatedArgs = cdr;
+      while (restFormalArgs->isNotNil()) {
+         // get formal argument and its passed value
+         Object* theFormalArg = restFormalArgs->getCar( );
+         Object* unevaluatedArg = restUnevaluatedArgs->getCar( );
+         Object* argVal = unevaluatedArg->eval( environment );
+         
+         // bind it in new environment
+         newEnvironment.addObject( theFormalArg->getString( ), argVal );
+
+         // get next parameter
+         restFormalArgs = restFormalArgs->getCdr( );
+         restUnevaluatedArgs = restUnevaluatedArgs->getCdr( );
+      }
+
+      // then evaluate body in the new environment
+      return bodyList->eval( newEnvironment );
+   }
+   else {
+      return nullptr;
+   }
 }
 
 unsigned int ObjectCons::size() const {
@@ -143,15 +185,15 @@ void ObjectCons::mark() {
     cdr->mark();
 }
 
-int ObjectCons::intValue(Environment & environment) {
-    return this->eval(environment)->intValue(environment);
+int ObjectCons::getInt(Environment & environment) {
+    return this->eval(environment)->getInt(environment);
 }
 
 unsigned int ObjectTrue::size() const {
     return sizeof (ObjectTrue);
 }
 
-ObjectTrue * ObjectTrue::allocate() {
+ObjectTrue * ObjectTrue::allocate( ) {
     ObjectTrue * object = new (memory.allocate(sizeof (ObjectTrue))) ObjectTrue();
     object->memoryPrint();
     return object;
@@ -161,7 +203,7 @@ unsigned int ObjectFalse::size() const {
     return sizeof (ObjectFalse);
 }
 
-ObjectFalse * ObjectFalse::allocate() {
+ObjectFalse * ObjectFalse::allocate( ) {
     ObjectFalse * object = new (memory.allocate(sizeof (ObjectFalse))) ObjectFalse();
     object->memoryPrint();
     return object;
@@ -171,7 +213,7 @@ unsigned int ObjectNil::size() const {
     return sizeof (ObjectNil);
 }
 
-ObjectNil * ObjectNil::allocate() {
+ObjectNil * ObjectNil::allocate( ) {
     ObjectNil * object = new (memory.allocate(sizeof (ObjectNil))) ObjectNil();
     object->memoryPrint();
     return object;
@@ -189,8 +231,16 @@ unsigned int ObjectVoid::size() const {
     return sizeof (ObjectVoid);
 }
 
-ObjectVoid * ObjectVoid::allocate() {
+ObjectVoid * ObjectVoid::allocate( ) {
     ObjectVoid * object = new (memory.allocate(sizeof (ObjectVoid))) ObjectVoid();
     object->memoryPrint();
     return object;
+}
+
+unsigned int ObjectUserDefinedFunction::size( ) const {
+   return sizeof (ObjectUserDefinedFunction);
+}
+
+ObjectUserDefinedFunction* ObjectUserDefinedFunction::allocate( Object* argList, Object* bodyList ) {
+   return new (memory.allocate( sizeof (ObjectUserDefinedFunction) ) ) ObjectUserDefinedFunction( argList, bodyList );
 }

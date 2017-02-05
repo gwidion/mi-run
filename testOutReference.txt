@@ -19,3 +19,16 @@
 > > expects exactly 2 arguments 
 > 1
 > 0
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> #f
+> #t
+> #t
+> 100
+> 4
+> 24
