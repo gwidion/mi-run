@@ -46,9 +46,7 @@ public:
 
     void memoryPrint() const;
 
-    virtual Object* eval(Environment& env) {
-        return nullptr;
-    }
+    virtual Object* eval(Environment& env);
 
     virtual Object* carValue() const {
         throw std::runtime_error("chyba, neni car");
@@ -78,6 +76,9 @@ public:
         throw std::runtime_error("chyba, neni bool");
     }
     virtual unsigned int size() const = 0;
+    
+    virtual bool isNil() const;
+    virtual bool isNotNil() const;
 
     bool isMarked() const;
     virtual void mark();
@@ -229,7 +230,9 @@ public:
         cdr = cd;
     }
 
-    static ObjectCons * allocate(Object* ca, Object* cd);
+//    static ObjectCons * allocate(Object* ca, Object* cd);
+    
+    static ObjectCons * fromStack();
 
     virtual Object* carValue() const override {
         return car;
@@ -237,14 +240,6 @@ public:
 
     virtual Object* cdrValue() const override {
         return cdr;
-    }
-
-    Object* setCar(Object* ca) {
-        car = ca;
-    }
-
-    Object* setCdr(Object* cd) {
-        cdr = cd;
     }
     
     virtual void typePrint() const override {
@@ -321,6 +316,9 @@ public:
     virtual void typePrint() const override {
         this->print();
     }
+    
+    virtual bool isNil() const override;
+    virtual bool isNotNil() const override;
 };
 
 class ObjectVoid : public Object {

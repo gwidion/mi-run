@@ -9,7 +9,11 @@ using namespace std;
 void Object::memoryPrint() const {
     cout << "DEBUG: allocated ";
     this->typePrint();
-    cout << " from " << reinterpret_cast<uintptr_t> (this) << " to " << reinterpret_cast<uintptr_t> (this) + this->size() << " ( " << this->size() << " B )" << endl;
+    cout << " from " << reinterpret_cast<const void*> (this) << " to " << reinterpret_cast<const void*> (reinterpret_cast<const char *>(this) + this->size()) << " ( " << this->size() << " B )" << endl;
+}
+
+Object* Object::eval(Environment& env) {
+    return ObjectNil::allocate();
 }
 
 unsigned int Object::size() const {
@@ -29,12 +33,20 @@ void Object::unMark() {
     marked = false;
 }
 
+bool Object::isNil() const {
+    return false;
+}
+
+bool Object::isNotNil() const {
+    return true;
+}
+
 Object * ObjectCons::eval(Environment & environment) {
     Object* func = car->eval(environment);
     if (func && func->tag == TAG_BUILTINFUNCTION) {
         int initStackSize = memory.stack.size();
         Object* restArgs = cdr;
-        while (restArgs) {
+        while (restArgs->isNotNil()) {
             Object* unevaluated = restArgs->carValue();
             //			unevaluated->foo();
             //			Object* evaluated = unevaluated->eval( env );
@@ -43,9 +55,8 @@ Object * ObjectCons::eval(Environment & environment) {
         }
         int args = memory.stack.size() - initStackSize;
         return func->functionValue()(args, environment);
-    } else {
-        return nullptr;
-    }
+    } else
+        return ObjectNil::allocate();
 }
 
 Object * ObjectSymbol::eval(Environment& environment) {
@@ -57,10 +68,9 @@ unsigned int ObjectInt::size() const {
 }
 
 ObjectInt * ObjectInt::allocate(int x) {
-    Object * y = memory.allocate(sizeof (ObjectInt));
-    ObjectInt * z = new (y) ObjectInt(x);
-    z->memoryPrint();
-    return z;
+    ObjectInt * object = new (memory.allocate(sizeof (ObjectInt))) ObjectInt(x);
+    object->memoryPrint();
+    return object;
 }
 
 unsigned int ObjectBultInSyntax::size() const {
@@ -68,10 +78,9 @@ unsigned int ObjectBultInSyntax::size() const {
 }
 
 ObjectBultInSyntax * ObjectBultInSyntax::allocate() {
-    Object * y = memory.allocate(sizeof (ObjectBultInSyntax));
-    ObjectBultInSyntax * z = new (y) ObjectBultInSyntax();
-    z->memoryPrint();
-    return z;
+    ObjectBultInSyntax * object = new (memory.allocate(sizeof (ObjectBultInSyntax))) ObjectBultInSyntax();
+    object->memoryPrint();
+    return object;
 }
 
 unsigned int ObjectBuiltInFunction::size() const {
@@ -79,10 +88,9 @@ unsigned int ObjectBuiltInFunction::size() const {
 }
 
 ObjectBuiltInFunction * ObjectBuiltInFunction::allocate(ObjectFunction f) {
-    Object * y = memory.allocate(sizeof (ObjectBuiltInFunction));
-    ObjectBuiltInFunction * z = new (y) ObjectBuiltInFunction(f);
-    z->memoryPrint();
-    return z;
+    ObjectBuiltInFunction * object = new (memory.allocate(sizeof (ObjectBuiltInFunction))) ObjectBuiltInFunction(f);
+    object->memoryPrint();
+    return object;
 }
 
 unsigned int ObjectSymbol::size() const {
@@ -90,10 +98,9 @@ unsigned int ObjectSymbol::size() const {
 }
 
 ObjectSymbol * ObjectSymbol::allocate(const char * a) {
-    Object * y = memory.allocate(sizeof (ObjectSymbol));
-    ObjectSymbol * z = new (y) ObjectSymbol(a);
-    z->memoryPrint();
-    return z;
+    ObjectSymbol * object = new (memory.allocate(sizeof (ObjectSymbol))) ObjectSymbol(a);
+    object->memoryPrint();
+    return object;
 }
 
 unsigned int ObjectString::size() const {
@@ -101,28 +108,39 @@ unsigned int ObjectString::size() const {
 }
 
 ObjectString * ObjectString::allocate(const char* a) {
-    Object * y = memory.allocate(sizeof (ObjectString));
-    ObjectString * z = new (y) ObjectString(a);
-    z->memoryPrint();
-    return z;
+    ObjectString * object = new (memory.allocate(sizeof (ObjectString))) ObjectString(a);
+    object->memoryPrint();
+    return object;
 }
 
 unsigned int ObjectCons::size() const {
     return sizeof (ObjectCons);
 }
 
-ObjectCons * ObjectCons::allocate(Object* ca, Object * cd) {
-    Object * y = memory.allocate(sizeof (ObjectCons));
-    ObjectCons * z = new (y) ObjectCons(ca, cd);
-    z->memoryPrint();
-    return z;
+//ObjectCons * ObjectCons::allocate(Object* ca, Object * cd) {
+//    ObjectCons * object = new (memory.allocate(sizeof (ObjectCons))) ObjectCons(ca, cd);
+//    object->memoryPrint();
+//    return object;
+//}
+
+ObjectCons * ObjectCons::fromStack() {
+    Object * address = memory.allocate(sizeof (ObjectCons));
+    Object * cd = memory.stack.pop();
+    ObjectCons * object = new (address) ObjectCons(memory.stack.pop(), cd);
+    if (object == object->car)
+        throw "allocated same for const and car";
+    if (object == object->cdr)
+        throw "allocated same for const and cdr";
+    if (object->car == object->cdr)
+        throw "allocated same for car and cdr";
+    object->memoryPrint();
+    return object;
 }
 
 void ObjectCons::mark() {
-    if (car)
-        car->mark();
-    if (cdr)
-        cdr->mark();
+    Object::mark();
+    car->mark();
+    cdr->mark();
 }
 
 unsigned int ObjectTrue::size() const {
@@ -130,10 +148,9 @@ unsigned int ObjectTrue::size() const {
 }
 
 ObjectTrue * ObjectTrue::allocate() {
-    Object * y = memory.allocate(sizeof (ObjectTrue));
-    ObjectTrue * z = new (y) ObjectTrue();
-    z->memoryPrint();
-    return z;
+    ObjectTrue * object = new (memory.allocate(sizeof (ObjectTrue))) ObjectTrue();
+    object->memoryPrint();
+    return object;
 }
 
 unsigned int ObjectFalse::size() const {
@@ -141,10 +158,9 @@ unsigned int ObjectFalse::size() const {
 }
 
 ObjectFalse * ObjectFalse::allocate() {
-    Object * y = memory.allocate(sizeof (ObjectFalse));
-    ObjectFalse * z = new (y) ObjectFalse();
-    z->memoryPrint();
-    return z;
+    ObjectFalse * object = new (memory.allocate(sizeof (ObjectFalse))) ObjectFalse();
+    object->memoryPrint();
+    return object;
 }
 
 unsigned int ObjectNil::size() const {
@@ -152,10 +168,17 @@ unsigned int ObjectNil::size() const {
 }
 
 ObjectNil * ObjectNil::allocate() {
-    Object * y = memory.allocate(sizeof (ObjectNil));
-    ObjectNil * z = new (y) ObjectNil();
-    z->memoryPrint();
-    return z;
+    ObjectNil * object = new (memory.allocate(sizeof (ObjectNil))) ObjectNil();
+    object->memoryPrint();
+    return object;
+}
+
+bool ObjectNil::isNil() const {
+    return true;
+}
+
+bool ObjectNil::isNotNil() const {
+    return false;
 }
 
 unsigned int ObjectVoid::size() const {
@@ -163,8 +186,7 @@ unsigned int ObjectVoid::size() const {
 }
 
 ObjectVoid * ObjectVoid::allocate() {
-    Object * y = memory.allocate(sizeof (ObjectVoid));
-    ObjectVoid * z = new (y) ObjectVoid();
-    z->memoryPrint();
-    return z;
+    ObjectVoid * object = new (memory.allocate(sizeof (ObjectVoid))) ObjectVoid();
+    object->memoryPrint();
+    return object;
 }

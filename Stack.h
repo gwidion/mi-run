@@ -14,6 +14,7 @@ public:
     Object * push(Object * object);
     Object * pop();
     Object * peek() const;
+    Object * top() const;
     std::list<Object*> pop(unsigned int amount);
     int size() const;
     void mark();

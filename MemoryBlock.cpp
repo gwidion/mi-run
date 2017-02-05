@@ -2,8 +2,8 @@
 #include "Object.h"
 
 using namespace std;
-//static const unsigned int blockSize = 100; // 100 B
-static const unsigned int blockSize = 1048576; // 1 MB
+static const unsigned int blockSize = 100; // 100 B
+//static const unsigned int blockSize = 1048576; // 1 MB
 
 MemoryBlock::MemoryBlock() {
     data = new unsigned char [blockSize];
@@ -44,13 +44,9 @@ void MemoryBlock::sweep() {
     set<MemoryRecord>::const_iterator nextFree = freeAddresses.begin();
     unsigned char * address = data;
     while (address < data + blockSize) {
-        bool aa = nextFree != freeAddresses.end();
-        bool bb = false;
-        if (aa)
-            bb = nextFree->address() == address;
         if (nextFree != freeAddresses.end() && (nextFree->address() == address)) {
             // address is amoungst free ones
-            cout << "DEBUG:   empty space from " << reinterpret_cast<uintptr_t> (nextFree->address()) << " to " << reinterpret_cast<uintptr_t> (nextFree->next()) << " ( " << nextFree->getSize() << " B )" << endl;
+            cout << "DEBUG:   empty space from " << reinterpret_cast<void*> (nextFree->address()) << " to " << reinterpret_cast<void*> (nextFree->next()) << " ( " << nextFree->getSize() << " B )" << endl;
             address = nextFree->next();
 
             nextFree++;
@@ -58,17 +54,15 @@ void MemoryBlock::sweep() {
             // there is object in address
             Object * object = reinterpret_cast<Object *> (address);
             unsigned int size = object->size();
-            if (object->freed) {
+            if (object->freed)
                 throw runtime_error("freed object!");
-            }
             if (!object->isMarked()) {
                 cout << "DEBUG:   freed ";
-                object->print();
-                cout << " from " << reinterpret_cast<uintptr_t> (object) << " to " << reinterpret_cast<uintptr_t> (object) + object->size() << " ( " << object->size() << " B )" << endl;
+                object->typePrint();
+                cout << " from " << reinterpret_cast<void*> (address) << " to " << reinterpret_cast<void*> (address + size) << " ( " << size << " B )" << endl;
                 unused.push_back(object);
-            } else {
+            } else
                 object->unMark();
-            }
             address += size;
         }
     }

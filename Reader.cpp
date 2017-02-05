@@ -2,6 +2,8 @@
 
 using namespace std;
 
+extern Memory memory;
+
 Reader::Reader() {
     peekChar = 0;
 }
@@ -76,26 +78,14 @@ char Reader::skipWhiteSpace(FILE *input) {
 
 Object* Reader::readList(FILE *input) {
     char nextChar = skipWhiteSpace(input);
-    Object* theCar;
-    Object* theCdr;
 
-    if (nextChar == ')') {
-        return nullptr;
-        //		return ObjectNil::allocate();
-    }
+    if (nextChar == ')')
+        return ObjectNil::allocate();
+
     unreadChar(nextChar);
-    ObjectCons * allocated = ObjectCons::allocate(nullptr, nullptr);
-    theCar = read(input);
-    allocated->setCar(theCar);
-    theCdr = readList(input);
-    allocated->setCdr(theCdr);
-    if (theCar == allocated)
-        throw runtime_error("allocated same as theCar");
-    if (theCdr == allocated)
-        throw runtime_error("allocated same as theCdr");
-    if (theCar && (theCar == theCdr))
-        throw runtime_error("theCar same as theCdr");
-    return allocated;
+    memory.stack.push(read(input)); //car
+    memory.stack.push(readList(input)); //cdr
+    return ObjectCons::fromStack(); //cons
 }
 
 Object* Reader::readString(FILE *input) {
@@ -184,7 +174,7 @@ Object* Reader::read(FILE* input) {
         nextChar = skipWhiteSpace(input);
 
         if (nextChar == -1) { // end-of-file
-            return nullptr;
+            return ObjectNil::allocate();
         }
         //
         //		DEBUGCODE(debugReader,{
@@ -202,10 +192,9 @@ Object* Reader::read(FILE* input) {
 
             case '\'':
             {
-                Object* expr;
-
-                expr = read(input);
-                return ObjectCons::allocate(expr, ObjectNil::allocate());
+                memory.stack.push(read(input));
+                memory.stack.push(ObjectNil::allocate());
+                return ObjectCons::fromStack();
             }
             case ')':
                 std::cout << "')' unexpected";

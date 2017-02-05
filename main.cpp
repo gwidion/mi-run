@@ -10,15 +10,15 @@ using namespace std;
 
 extern Environment globalEnvironment;
 
-void initializeObjects() {
-    ObjectInt * i = ObjectInt::allocate(1);
-    ObjectBuiltInFunction * bif = ObjectBuiltInFunction::allocate(nullptr);
-    ObjectCons * c = ObjectCons::allocate(nullptr, nullptr);
-    ObjectString * s = ObjectString::allocate("");
-    ObjectTrue * t = ObjectTrue::allocate();
-    ObjectFalse * f = ObjectFalse::allocate();
-    ObjectNil * n = ObjectNil::allocate();
-}
+//void initializeObjects() {
+//    ObjectInt::allocate(1);
+//    ObjectBuiltInFunction::allocate(nullptr);
+//    ObjectCons::allocate(nullptr, nullptr);
+//    ObjectString::allocate("");
+//    ObjectTrue::allocate();
+//    ObjectFalse::allocate();
+//    ObjectNil::allocate();
+//}
 
 void repl(FILE * input = stdin) {
     Reader reader;
@@ -33,13 +33,13 @@ void repl(FILE * input = stdin) {
         //		}
         cout << "> ";
         expression = reader.read(input);
-        if (expression == nullptr) {
+        if (expression->isNil()) {
             cout << "empty input, ending";
             return;
         }
 
         result = expression->eval(globalEnvironment);
-        if (result == nullptr) {
+        if (result->isNil()) {
             cout << "empty result, ending";
             return;
         }

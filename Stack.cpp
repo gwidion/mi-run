@@ -32,6 +32,10 @@ Object * Stack::peek() const {
     return data.back();
 }
 
+Object * Stack::top() const {
+    return data.back();
+}
+
 int Stack::size() const {
     return data.size();
 }
