@@ -176,16 +176,19 @@ unsigned int ObjectCons::size() const {
 }
 
 ObjectCons * ObjectCons::fromStack() {
+    high_resolution_clock::time_point t1 = high_resolution_clock::now();
     Object * address = memory.allocate(sizeof (ObjectCons));
     Object * cd = memory.stack.pop();
     ObjectCons * object = new (address) ObjectCons(memory.stack.pop(), cd);
+    high_resolution_clock::time_point t2 = high_resolution_clock::now();
     if (object == object->car)
         throw "allocated same for const and car";
     if (object == object->cdr)
         throw "allocated same for const and cdr";
     if (object->car == object->cdr)
         throw "allocated same for car and cdr";
-    object->memoryPrint();
+    auto duration = duration_cast<nanoseconds>(t2 - t1).count();
+    object->memoryPrint(string(" in ") + to_string(duration) + " ns");
     return object;
 }
 
@@ -263,12 +266,12 @@ unsigned int ObjectUserDefinedFunction::size() const {
     return sizeof (ObjectUserDefinedFunction);
 }
 
-
 ObjectUserDefinedFunction * ObjectUserDefinedFunction::fromStack() {
-     high_resolution_clock::time_point t1 = high_resolution_clock::now();
+    high_resolution_clock::time_point t1 = high_resolution_clock::now();
     Object * address = memory.allocate(sizeof (ObjectUserDefinedFunction));
     Object * body = memory.stack.pop();
-    ObjectUserDefinedFunction * object = new (address) ObjectUserDefinedFunction(memory.stack.pop(), body);    high_resolution_clock::time_point t2 = high_resolution_clock::now();
+    ObjectUserDefinedFunction * object = new (address) ObjectUserDefinedFunction(memory.stack.pop(), body);
+    high_resolution_clock::time_point t2 = high_resolution_clock::now();
     if (object == object->argList)
         throw "allocated same for const and argList";
     if (object == object->bodyList)
