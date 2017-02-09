@@ -5,10 +5,12 @@
 #include "Reader.h"
 
 #include "compareFiles.h"
+#include <chrono>
 
 extern Environment globalEnvironment;
 
 using namespace std;
+using namespace std::chrono;
 
 void repl(FILE* input = stdin) {
     Reader reader;
@@ -47,7 +49,12 @@ void testing() {
 
     // run and compute
     FILE* fp = fopen(testIn.c_str(), "r");
+    
+    high_resolution_clock::time_point start = high_resolution_clock::now();
     repl(fp);
+    high_resolution_clock::time_point end = high_resolution_clock::now();
+    auto duration = duration_cast<microseconds>(end - start).count();
+    cout << (string("DEBUG: IT TOOK ") + to_string(duration) + " us") << endl;
 
     // checkResults
     string testResult = compareFiles(testOut, testOutReference);

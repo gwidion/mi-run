@@ -26,7 +26,7 @@ Object * Memory::allocate(unsigned int requestedSize) {
         collectGarbage();
         freeBlock = -1;
 #ifdef DEBUG
-        cout << "DEBUG: garbage collected";
+        cout << "DEBUG: garbage collected - mode set to pick free spaces";
 #endif
         address = this->tryAllocate(requestedSize);
 #ifdef DEBUG
@@ -38,6 +38,9 @@ Object * Memory::allocate(unsigned int requestedSize) {
     if (address)
         return reinterpret_cast<Object*> (address);
     freeBlock = blocks.size();
+#ifdef DEBUG
+        cout << "DEBUG: mode set to always append to end" << endl;
+#endif
     blocks.push_back(new MemoryBlock());
     address = blocks.back()->allocateAtEnd(requestedSize);
     if (!address)

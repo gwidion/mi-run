@@ -44,7 +44,7 @@ public:
         this->print();
     }
 
-    void memoryPrint(std::string additionalInfo = "") const;
+    void memoryPrint() const;
 
     virtual Object* eval(Environment& env);
 
