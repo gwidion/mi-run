@@ -1,173 +1,173 @@
-> DEBUG: allocated [a Symbol] + from 0x600022958 to 0x600022970 ( 24 B ) in 11100 ns
-DEBUG: allocated nil from 0x600022970 to 0x600022980 ( 16 B ) in 2800 ns
-DEBUG: allocated [a Const] ( + nil ) from 0x600022980 to 0x6000229a0 ( 32 B ) in 2800 ns
-DEBUG: allocated [an Integer] 0 from 0x6000229a0 to 0x6000229b8 ( 24 B ) in 2500 ns
+> DEBUG: allocated [a Symbol] + from 0x600022958 to 0x600022970 ( 24 B ) in 14800 ns
+DEBUG: allocated nil from 0x600022970 to 0x600022980 ( 16 B ) in 3700 ns
+DEBUG: allocated [a Const] ( + nil ) from 0x600022980 to 0x6000229a0 ( 32 B ) in 3300 ns
+DEBUG: allocated [an Integer] 0 from 0x6000229a0 to 0x6000229b8 ( 24 B ) in 25500 ns
 0
-> DEBUG: allocated [a Symbol] + from 0x6000229b8 to 0x6000229d0 ( 24 B ) in 2400 ns
-DEBUG: allocated [an Integer] 1 from 0x6000229d0 to 0x6000229e8 ( 24 B ) in 2100 ns
-DEBUG: allocated [an Integer] 1 from 0x6000229e8 to 0x600022a00 ( 24 B ) in 2100 ns
-DEBUG: allocated nil from 0x600022a00 to 0x600022a10 ( 16 B ) in 2100 ns
+> DEBUG: allocated [a Symbol] + from 0x6000229b8 to 0x6000229d0 ( 24 B ) in 4500 ns
+DEBUG: allocated [an Integer] 1 from 0x6000229d0 to 0x6000229e8 ( 24 B ) in 2500 ns
+DEBUG: allocated [an Integer] 1 from 0x6000229e8 to 0x600022a00 ( 24 B ) in 1600 ns
+DEBUG: allocated nil from 0x600022a00 to 0x600022a10 ( 16 B ) in 2000 ns
 DEBUG: allocated [a Const] ( 1 nil ) from 0x600022a10 to 0x600022a30 ( 32 B ) in 2100 ns
-DEBUG: allocated [a Const] ( 1 ( 1 nil ) ) from 0x600022a30 to 0x600022a50 ( 32 B ) in 2100 ns
-DEBUG: allocated [a Const] ( + ( 1 ( 1 nil ) ) ) from 0x600022a50 to 0x600022a70 ( 32 B ) in 2100 ns
-DEBUG: allocated [an Integer] 2 from 0x600022a70 to 0x600022a88 ( 24 B ) in 2000 ns
+DEBUG: allocated [a Const] ( 1 ( 1 nil ) ) from 0x600022a30 to 0x600022a50 ( 32 B ) in 2500 ns
+DEBUG: allocated [a Const] ( + ( 1 ( 1 nil ) ) ) from 0x600022a50 to 0x600022a70 ( 32 B ) in 2900 ns
+DEBUG: allocated [an Integer] 2 from 0x600022a70 to 0x600022a88 ( 24 B ) in 2900 ns
 2
-> DEBUG: allocated [a Symbol] + from 0x600022a88 to 0x600022aa0 ( 24 B ) in 2800 ns
+> DEBUG: allocated [a Symbol] + from 0x600022a88 to 0x600022aa0 ( 24 B ) in 3300 ns
 DEBUG: allocated [an Integer] 5 from 0x600022aa0 to 0x600022ab8 ( 24 B ) in 2000 ns
-DEBUG: allocated [an Integer] 5 from 0x600022ab8 to 0x600022ad0 ( 24 B ) in 1600 ns
-DEBUG: allocated [an Integer] 5 from 0x600022ad0 to 0x600022ae8 ( 24 B ) in 2000 ns
-DEBUG: allocated [an Integer] 5 from 0x600022ae8 to 0x600022b00 ( 24 B ) in 1600 ns
-DEBUG: allocated [an Integer] 5 from 0x600022b00 to 0x600022b18 ( 24 B ) in 2100 ns
-DEBUG: allocated nil from 0x600022b18 to 0x600022b28 ( 16 B ) in 2100 ns
-DEBUG: allocated [a Const] ( 5 nil ) from 0x600022b28 to 0x600022b48 ( 32 B ) in 2100 ns
-DEBUG: allocated [a Const] ( 5 ( 5 nil ) ) from 0x600022b48 to 0x600022b68 ( 32 B ) in 2500 ns
-DEBUG: allocated [a Const] ( 5 ( 5 ( 5 nil ) ) ) from 0x600022b68 to 0x600022b88 ( 32 B ) in 2100 ns
-DEBUG: allocated [a Const] ( 5 ( 5 ( 5 ( 5 nil ) ) ) ) from 0x600022b88 to 0x600022ba8 ( 32 B ) in 2000 ns
-DEBUG: allocated [a Const] ( 5 ( 5 ( 5 ( 5 ( 5 nil ) ) ) ) ) from 0x600022ba8 to 0x600022bc8 ( 32 B ) in 2100 ns
-DEBUG: allocated [a Const] ( + ( 5 ( 5 ( 5 ( 5 ( 5 nil ) ) ) ) ) ) from 0x600022bc8 to 0x600022be8 ( 32 B ) in 2100 ns
-DEBUG: allocated [an Integer] 25 from 0x600022be8 to 0x600022c00 ( 24 B ) in 2000 ns
+DEBUG: allocated [an Integer] 5 from 0x600022ab8 to 0x600022ad0 ( 24 B ) in 2000 ns
+DEBUG: allocated [an Integer] 5 from 0x600022ad0 to 0x600022ae8 ( 24 B ) in 2100 ns
+DEBUG: allocated [an Integer] 5 from 0x600022ae8 to 0x600022b00 ( 24 B ) in 2900 ns
+DEBUG: allocated [an Integer] 5 from 0x600022b00 to 0x600022b18 ( 24 B ) in 2000 ns
+DEBUG: allocated nil from 0x600022b18 to 0x600022b28 ( 16 B ) in 2000 ns
+DEBUG: allocated [a Const] ( 5 nil ) from 0x600022b28 to 0x600022b48 ( 32 B ) in 2400 ns
+DEBUG: allocated [a Const] ( 5 ( 5 nil ) ) from 0x600022b48 to 0x600022b68 ( 32 B ) in 2000 ns
+DEBUG: allocated [a Const] ( 5 ( 5 ( 5 nil ) ) ) from 0x600022b68 to 0x600022b88 ( 32 B ) in 2500 ns
+DEBUG: allocated [a Const] ( 5 ( 5 ( 5 ( 5 nil ) ) ) ) from 0x600022b88 to 0x600022ba8 ( 32 B ) in 2100 ns
+DEBUG: allocated [a Const] ( 5 ( 5 ( 5 ( 5 ( 5 nil ) ) ) ) ) from 0x600022ba8 to 0x600022bc8 ( 32 B ) in 6600 ns
+DEBUG: allocated [a Const] ( + ( 5 ( 5 ( 5 ( 5 ( 5 nil ) ) ) ) ) ) from 0x600022bc8 to 0x600022be8 ( 32 B ) in 3300 ns
+DEBUG: allocated [an Integer] 25 from 0x600022be8 to 0x600022c00 ( 24 B ) in 2900 ns
 25
-> DEBUG: allocated [a Symbol] - from 0x600022c00 to 0x600022c18 ( 24 B ) in 2400 ns
-DEBUG: allocated nil from 0x600022c18 to 0x600022c28 ( 16 B ) in 2000 ns
-DEBUG: allocated [a Const] ( - nil ) from 0x600022c28 to 0x600022c48 ( 32 B ) in 2100 ns
-no args for minus operatorDEBUG: allocated [an Object]  from 0x600022c48 to 0x600022c58 ( 16 B ) in 2500 ns
+> DEBUG: allocated [a Symbol] - from 0x600022c00 to 0x600022c18 ( 24 B ) in 3700 ns
+DEBUG: allocated nil from 0x600022c18 to 0x600022c28 ( 16 B ) in 2900 ns
+DEBUG: allocated [a Const] ( - nil ) from 0x600022c28 to 0x600022c48 ( 32 B ) in 2500 ns
+no args for minus operatorDEBUG: allocated [an Object]  from 0x600022c48 to 0x600022c58 ( 16 B ) in 4500 ns
 
-> DEBUG: allocated [a Symbol] - from 0x600022c58 to 0x600022c70 ( 24 B ) in 2500 ns
-DEBUG: allocated [an Integer] 5 from 0x600022c70 to 0x600022c88 ( 24 B ) in 2000 ns
-DEBUG: allocated nil from 0x600022c88 to 0x600022c98 ( 16 B ) in 1600 ns
+> DEBUG: allocated [a Symbol] - from 0x600022c58 to 0x600022c70 ( 24 B ) in 3700 ns
+DEBUG: allocated [an Integer] 5 from 0x600022c70 to 0x600022c88 ( 24 B ) in 2400 ns
+DEBUG: allocated nil from 0x600022c88 to 0x600022c98 ( 16 B ) in 2500 ns
 DEBUG: allocated [a Const] ( 5 nil ) from 0x600022c98 to 0x600022cb8 ( 32 B ) in 2400 ns
-DEBUG: allocated [a Const] ( - ( 5 nil ) ) from 0x600022cb8 to 0x600022cd8 ( 32 B ) in 2000 ns
-DEBUG: allocated [an Integer] -5 from 0x600022cd8 to 0x600022cf0 ( 24 B ) in 2000 ns
+DEBUG: allocated [a Const] ( - ( 5 nil ) ) from 0x600022cb8 to 0x600022cd8 ( 32 B ) in 2500 ns
+DEBUG: allocated [an Integer] -5 from 0x600022cd8 to 0x600022cf0 ( 24 B ) in 2500 ns
 -5
-> DEBUG: allocated [a Symbol] - from 0x600022cf0 to 0x600022d08 ( 24 B ) in 2800 ns
-DEBUG: allocated [an Integer] 30 from 0x600022d08 to 0x600022d20 ( 24 B ) in 2000 ns
-DEBUG: allocated [an Integer] 10 from 0x600022d20 to 0x600022d38 ( 24 B ) in 2000 ns
-DEBUG: allocated [an Integer] 10 from 0x600022d38 to 0x600022d50 ( 24 B ) in 2000 ns
-DEBUG: allocated [an Integer] 10 from 0x600022d50 to 0x600022d68 ( 24 B ) in 1600 ns
-DEBUG: allocated nil from 0x600022d68 to 0x600022d78 ( 16 B ) in 1600 ns
-DEBUG: allocated [a Const] ( 10 nil ) from 0x600022d78 to 0x600022d98 ( 32 B ) in 1700 ns
-DEBUG: allocated [a Const] ( 10 ( 10 nil ) ) from 0x600022d98 to 0x600022db8 ( 32 B ) in 2100 ns
-DEBUG: allocated [a Const] ( 10 ( 10 ( 10 nil ) ) ) from 0x600022db8 to 0x600022dd8 ( 32 B ) in 2100 ns
-DEBUG: allocated [a Const] ( 30 ( 10 ( 10 ( 10 nil ) ) ) ) from 0x600022dd8 to 0x600022df8 ( 32 B ) in 2100 ns
-DEBUG: allocated [a Const] ( - ( 30 ( 10 ( 10 ( 10 nil ) ) ) ) ) from 0x600022df8 to 0x600022e18 ( 32 B ) in 2100 ns
-DEBUG: allocated [an Integer] 0 from 0x600022e18 to 0x600022e30 ( 24 B ) in 2000 ns
+> DEBUG: allocated [a Symbol] - from 0x600022cf0 to 0x600022d08 ( 24 B ) in 2900 ns
+DEBUG: allocated [an Integer] 30 from 0x600022d08 to 0x600022d20 ( 24 B ) in 2500 ns
+DEBUG: allocated [an Integer] 10 from 0x600022d20 to 0x600022d38 ( 24 B ) in 2500 ns
+DEBUG: allocated [an Integer] 10 from 0x600022d38 to 0x600022d50 ( 24 B ) in 2100 ns
+DEBUG: allocated [an Integer] 10 from 0x600022d50 to 0x600022d68 ( 24 B ) in 2000 ns
+DEBUG: allocated nil from 0x600022d68 to 0x600022d78 ( 16 B ) in 2000 ns
+DEBUG: allocated [a Const] ( 10 nil ) from 0x600022d78 to 0x600022d98 ( 32 B ) in 2000 ns
+DEBUG: allocated [a Const] ( 10 ( 10 nil ) ) from 0x600022d98 to 0x600022db8 ( 32 B ) in 2500 ns
+DEBUG: allocated [a Const] ( 10 ( 10 ( 10 nil ) ) ) from 0x600022db8 to 0x600022dd8 ( 32 B ) in 2400 ns
+DEBUG: allocated [a Const] ( 30 ( 10 ( 10 ( 10 nil ) ) ) ) from 0x600022dd8 to 0x600022df8 ( 32 B ) in 2500 ns
+DEBUG: allocated [a Const] ( - ( 30 ( 10 ( 10 ( 10 nil ) ) ) ) ) from 0x600022df8 to 0x600022e18 ( 32 B ) in 2900 ns
+DEBUG: allocated [an Integer] 0 from 0x600022e18 to 0x600022e30 ( 24 B ) in 3300 ns
 0
-> DEBUG: allocated [a Symbol] * from 0x600022e30 to 0x600022e48 ( 24 B ) in 2900 ns
-DEBUG: allocated nil from 0x600022e48 to 0x600022e58 ( 16 B ) in 2100 ns
+> DEBUG: allocated [a Symbol] * from 0x600022e30 to 0x600022e48 ( 24 B ) in 3700 ns
+DEBUG: allocated nil from 0x600022e48 to 0x600022e58 ( 16 B ) in 1600 ns
 DEBUG: allocated [a Const] ( * nil ) from 0x600022e58 to 0x600022e78 ( 32 B ) in 2000 ns
-DEBUG: allocated [an Integer] 1 from 0x600022e78 to 0x600022e90 ( 24 B ) in 2100 ns
+DEBUG: allocated [an Integer] 1 from 0x600022e78 to 0x600022e90 ( 24 B ) in 2000 ns
 1
 > DEBUG: allocated [a Symbol] * from 0x600022e90 to 0x600022ea8 ( 24 B ) in 2500 ns
 DEBUG: allocated [an Integer] 6 from 0x600022ea8 to 0x600022ec0 ( 24 B ) in 2100 ns
-DEBUG: allocated nil from 0x600022ec0 to 0x600022ed0 ( 16 B ) in 1600 ns
-DEBUG: allocated [a Const] ( 6 nil ) from 0x600022ed0 to 0x600022ef0 ( 32 B ) in 2400 ns
-DEBUG: allocated [a Const] ( * ( 6 nil ) ) from 0x600022ef0 to 0x600022f10 ( 32 B ) in 2000 ns
-DEBUG: allocated [an Integer] 6 from 0x600022f10 to 0x600022f28 ( 24 B ) in 2000 ns
+DEBUG: allocated nil from 0x600022ec0 to 0x600022ed0 ( 16 B ) in 2100 ns
+DEBUG: allocated [a Const] ( 6 nil ) from 0x600022ed0 to 0x600022ef0 ( 32 B ) in 2500 ns
+DEBUG: allocated [a Const] ( * ( 6 nil ) ) from 0x600022ef0 to 0x600022f10 ( 32 B ) in 2500 ns
+DEBUG: allocated [an Integer] 6 from 0x600022f10 to 0x600022f28 ( 24 B ) in 2400 ns
 6
-> DEBUG: allocated [a Symbol] * from 0x600022f28 to 0x600022f40 ( 24 B ) in 2400 ns
+> DEBUG: allocated [a Symbol] * from 0x600022f28 to 0x600022f40 ( 24 B ) in 3300 ns
 DEBUG: allocated [an Integer] 2 from 0x600022f40 to 0x600022f58 ( 24 B ) in 2000 ns
 DEBUG: allocated [an Integer] 2 from 0x600022f58 to 0x600022f70 ( 24 B ) in 2100 ns
-DEBUG: allocated [an Integer] 2 from 0x600022f70 to 0x600022f88 ( 24 B ) in 2000 ns
-DEBUG: allocated [an Integer] 2 from 0x600022f88 to 0x600022fa0 ( 24 B ) in 1600 ns
-DEBUG: allocated nil from 0x600022fa0 to 0x600022fb0 ( 16 B ) in 2000 ns
-DEBUG: allocated [a Const] ( 2 nil ) from 0x600022fb0 to 0x600022fd0 ( 32 B ) in 2100 ns
-DEBUG: allocated [a Const] ( 2 ( 2 nil ) ) from 0x600022fd0 to 0x600022ff0 ( 32 B ) in 2100 ns
-DEBUG: allocated [a Const] ( 2 ( 2 ( 2 nil ) ) ) from 0x600022ff0 to 0x600023010 ( 32 B ) in 2100 ns
-DEBUG: allocated [a Const] ( 2 ( 2 ( 2 ( 2 nil ) ) ) ) from 0x600023010 to 0x600023030 ( 32 B ) in 2100 ns
-DEBUG: allocated [a Const] ( * ( 2 ( 2 ( 2 ( 2 nil ) ) ) ) ) from 0x600023030 to 0x600023050 ( 32 B ) in 2500 ns
+DEBUG: allocated [an Integer] 2 from 0x600022f70 to 0x600022f88 ( 24 B ) in 2500 ns
+DEBUG: allocated [an Integer] 2 from 0x600022f88 to 0x600022fa0 ( 24 B ) in 2100 ns
+DEBUG: allocated nil from 0x600022fa0 to 0x600022fb0 ( 16 B ) in 2500 ns
+DEBUG: allocated [a Const] ( 2 nil ) from 0x600022fb0 to 0x600022fd0 ( 32 B ) in 2500 ns
+DEBUG: allocated [a Const] ( 2 ( 2 nil ) ) from 0x600022fd0 to 0x600022ff0 ( 32 B ) in 2500 ns
+DEBUG: allocated [a Const] ( 2 ( 2 ( 2 nil ) ) ) from 0x600022ff0 to 0x600023010 ( 32 B ) in 2500 ns
+DEBUG: allocated [a Const] ( 2 ( 2 ( 2 ( 2 nil ) ) ) ) from 0x600023010 to 0x600023030 ( 32 B ) in 2500 ns
+DEBUG: allocated [a Const] ( * ( 2 ( 2 ( 2 ( 2 nil ) ) ) ) ) from 0x600023030 to 0x600023050 ( 32 B ) in 2400 ns
 DEBUG: allocated [an Integer] 16 from 0x600023050 to 0x600023068 ( 24 B ) in 2100 ns
 16
-> DEBUG: allocated [a Symbol] = from 0x600023068 to 0x600023080 ( 24 B ) in 2800 ns
-DEBUG: allocated [an Integer] 1 from 0x600023080 to 0x600023098 ( 24 B ) in 2000 ns
-DEBUG: allocated nil from 0x600023098 to 0x6000230a8 ( 16 B ) in 1600 ns
-DEBUG: allocated [a Const] ( 1 nil ) from 0x6000230a8 to 0x6000230c8 ( 32 B ) in 2000 ns
-DEBUG: allocated [a Const] ( = ( 1 nil ) ) from 0x6000230c8 to 0x6000230e8 ( 32 B ) in 1600 ns
-= expects exactly 2 argumentsDEBUG: allocated [an Object]  from 0x6000230e8 to 0x6000230f8 ( 16 B ) in 1600 ns
+> DEBUG: allocated [a Symbol] = from 0x600023068 to 0x600023080 ( 24 B ) in 3300 ns
+DEBUG: allocated [an Integer] 1 from 0x600023080 to 0x600023098 ( 24 B ) in 2500 ns
+DEBUG: allocated nil from 0x600023098 to 0x6000230a8 ( 16 B ) in 2500 ns
+DEBUG: allocated [a Const] ( 1 nil ) from 0x6000230a8 to 0x6000230c8 ( 32 B ) in 2500 ns
+DEBUG: allocated [a Const] ( = ( 1 nil ) ) from 0x6000230c8 to 0x6000230e8 ( 32 B ) in 3300 ns
+= expects exactly 2 argumentsDEBUG: allocated [an Object]  from 0x6000230e8 to 0x6000230f8 ( 16 B ) in 2400 ns
 
-> DEBUG: allocated [a Symbol] = from 0x6000230f8 to 0x600023110 ( 24 B ) in 2800 ns
+> DEBUG: allocated [a Symbol] = from 0x6000230f8 to 0x600023110 ( 24 B ) in 3300 ns
 DEBUG: allocated [an Integer] 10 from 0x600023110 to 0x600023128 ( 24 B ) in 2100 ns
-DEBUG: allocated [an Integer] 10 from 0x600023128 to 0x600023140 ( 24 B ) in 2100 ns
-DEBUG: allocated nil from 0x600023140 to 0x600023150 ( 16 B ) in 2000 ns
-DEBUG: allocated [a Const] ( 10 nil ) from 0x600023150 to 0x600023170 ( 32 B ) in 2100 ns
+DEBUG: allocated [an Integer] 10 from 0x600023128 to 0x600023140 ( 24 B ) in 2400 ns
+DEBUG: allocated nil from 0x600023140 to 0x600023150 ( 16 B ) in 2400 ns
+DEBUG: allocated [a Const] ( 10 nil ) from 0x600023150 to 0x600023170 ( 32 B ) in 2500 ns
 DEBUG: allocated [a Const] ( 10 ( 10 nil ) ) from 0x600023170 to 0x600023190 ( 32 B ) in 2100 ns
-DEBUG: allocated [a Const] ( = ( 10 ( 10 nil ) ) ) from 0x600023190 to 0x6000231b0 ( 32 B ) in 2100 ns
+DEBUG: allocated [a Const] ( = ( 10 ( 10 nil ) ) ) from 0x600023190 to 0x6000231b0 ( 32 B ) in 2800 ns
 DEBUG: allocated [a Boolean] #t from 0x6000231b0 to 0x6000231c0 ( 16 B ) in 2000 ns
 #t
-> DEBUG: allocated [a Symbol] = from 0x6000231c0 to 0x6000231d8 ( 24 B ) in 2400 ns
+> DEBUG: allocated [a Symbol] = from 0x6000231c0 to 0x6000231d8 ( 24 B ) in 2900 ns
 DEBUG: allocated [an Integer] 5 from 0x6000231d8 to 0x6000231f0 ( 24 B ) in 2000 ns
-DEBUG: allocated [an Integer] 2 from 0x6000231f0 to 0x600023208 ( 24 B ) in 2000 ns
-DEBUG: allocated nil from 0x600023208 to 0x600023218 ( 16 B ) in 2100 ns
+DEBUG: allocated [an Integer] 2 from 0x6000231f0 to 0x600023208 ( 24 B ) in 2500 ns
+DEBUG: allocated nil from 0x600023208 to 0x600023218 ( 16 B ) in 2000 ns
 DEBUG: allocated [a Const] ( 2 nil ) from 0x600023218 to 0x600023238 ( 32 B ) in 2500 ns
-DEBUG: allocated [a Const] ( 5 ( 2 nil ) ) from 0x600023238 to 0x600023258 ( 32 B ) in 2000 ns
-DEBUG: allocated [a Const] ( = ( 5 ( 2 nil ) ) ) from 0x600023258 to 0x600023278 ( 32 B ) in 2100 ns
-DEBUG: allocated [a Boolean] #f from 0x600023278 to 0x600023288 ( 16 B ) in 2100 ns
+DEBUG: allocated [a Const] ( 5 ( 2 nil ) ) from 0x600023238 to 0x600023258 ( 32 B ) in 2900 ns
+DEBUG: allocated [a Const] ( = ( 5 ( 2 nil ) ) ) from 0x600023258 to 0x600023278 ( 32 B ) in 3300 ns
+DEBUG: allocated [a Boolean] #f from 0x600023278 to 0x600023288 ( 16 B ) in 2500 ns
 #f
-> DEBUG: allocated [a Symbol] = from 0x600023288 to 0x6000232a0 ( 24 B ) in 2500 ns
-DEBUG: allocated [an Integer] 2 from 0x6000232a0 to 0x6000232b8 ( 24 B ) in 2100 ns
-DEBUG: allocated [an Integer] 3 from 0x6000232b8 to 0x6000232d0 ( 24 B ) in 2100 ns
-DEBUG: allocated [an Integer] 5 from 0x6000232d0 to 0x6000232e8 ( 24 B ) in 1700 ns
+> DEBUG: allocated [a Symbol] = from 0x600023288 to 0x6000232a0 ( 24 B ) in 3300 ns
+DEBUG: allocated [an Integer] 2 from 0x6000232a0 to 0x6000232b8 ( 24 B ) in 2900 ns
+DEBUG: allocated [an Integer] 3 from 0x6000232b8 to 0x6000232d0 ( 24 B ) in 2500 ns
+DEBUG: allocated [an Integer] 5 from 0x6000232d0 to 0x6000232e8 ( 24 B ) in 2400 ns
 DEBUG: allocated nil from 0x6000232e8 to 0x6000232f8 ( 16 B ) in 2000 ns
-DEBUG: allocated [a Const] ( 5 nil ) from 0x6000232f8 to 0x600023318 ( 32 B ) in 2000 ns
-DEBUG: allocated [a Const] ( 3 ( 5 nil ) ) from 0x600023318 to 0x600023338 ( 32 B ) in 2100 ns
-DEBUG: allocated [a Const] ( 2 ( 3 ( 5 nil ) ) ) from 0x600023338 to 0x600023358 ( 32 B ) in 2100 ns
-DEBUG: allocated [a Const] ( = ( 2 ( 3 ( 5 nil ) ) ) ) from 0x600023358 to 0x600023378 ( 32 B ) in 2000 ns
-= expects exactly 2 argumentsDEBUG: allocated [an Object]  from 0x600023378 to 0x600023388 ( 16 B ) in 2100 ns
+DEBUG: allocated [a Const] ( 5 nil ) from 0x6000232f8 to 0x600023318 ( 32 B ) in 2500 ns
+DEBUG: allocated [a Const] ( 3 ( 5 nil ) ) from 0x600023318 to 0x600023338 ( 32 B ) in 2400 ns
+DEBUG: allocated [a Const] ( 2 ( 3 ( 5 nil ) ) ) from 0x600023338 to 0x600023358 ( 32 B ) in 2500 ns
+DEBUG: allocated [a Const] ( = ( 2 ( 3 ( 5 nil ) ) ) ) from 0x600023358 to 0x600023378 ( 32 B ) in 2500 ns
+= expects exactly 2 argumentsDEBUG: allocated [an Object]  from 0x600023378 to 0x600023388 ( 16 B ) in 2900 ns
 
-> DEBUG: allocated [a Symbol] < from 0x600023388 to 0x6000233a0 ( 24 B ) in 2400 ns
-DEBUG: allocated [an Integer] 4 from 0x6000233a0 to 0x6000233b8 ( 24 B ) in 2000 ns
-DEBUG: allocated nil from 0x6000233b8 to 0x6000233c8 ( 16 B ) in 1600 ns
-DEBUG: allocated [a Const] ( 4 nil ) from 0x6000233c8 to 0x6000233e8 ( 32 B ) in 2500 ns
-DEBUG: allocated [a Const] ( < ( 4 nil ) ) from 0x6000233e8 to 0x600023408 ( 32 B ) in 2100 ns
-< expects exactly 2 argumentsDEBUG: allocated [an Object]  from 0x600023408 to 0x600023418 ( 16 B ) in 2100 ns
+> DEBUG: allocated [a Symbol] < from 0x600023388 to 0x6000233a0 ( 24 B ) in 2900 ns
+DEBUG: allocated [an Integer] 4 from 0x6000233a0 to 0x6000233b8 ( 24 B ) in 2100 ns
+DEBUG: allocated nil from 0x6000233b8 to 0x6000233c8 ( 16 B ) in 2100 ns
+DEBUG: allocated [a Const] ( 4 nil ) from 0x6000233c8 to 0x6000233e8 ( 32 B ) in 2100 ns
+DEBUG: allocated [a Const] ( < ( 4 nil ) ) from 0x6000233e8 to 0x600023408 ( 32 B ) in 2500 ns
+< expects exactly 2 argumentsDEBUG: allocated [an Object]  from 0x600023408 to 0x600023418 ( 16 B ) in 2000 ns
 
-> DEBUG: allocated [a Symbol] < from 0x600023418 to 0x600023430 ( 24 B ) in 2500 ns
-DEBUG: allocated [an Integer] 2 from 0x600023430 to 0x600023448 ( 24 B ) in 2100 ns
-DEBUG: allocated [an Integer] 3 from 0x600023448 to 0x600023460 ( 24 B ) in 1700 ns
-DEBUG: allocated nil from 0x600023460 to 0x600023470 ( 16 B ) in 1600 ns
+> DEBUG: allocated [a Symbol] < from 0x600023418 to 0x600023430 ( 24 B ) in 2900 ns
+DEBUG: allocated [an Integer] 2 from 0x600023430 to 0x600023448 ( 24 B ) in 2500 ns
+DEBUG: allocated [an Integer] 3 from 0x600023448 to 0x600023460 ( 24 B ) in 2100 ns
+DEBUG: allocated nil from 0x600023460 to 0x600023470 ( 16 B ) in 2100 ns
 DEBUG: allocated [a Const] ( 3 nil ) from 0x600023470 to 0x600023490 ( 32 B ) in 2000 ns
-DEBUG: allocated [a Const] ( 2 ( 3 nil ) ) from 0x600023490 to 0x6000234b0 ( 32 B ) in 2000 ns
+DEBUG: allocated [a Const] ( 2 ( 3 nil ) ) from 0x600023490 to 0x6000234b0 ( 32 B ) in 2400 ns
 DEBUG: allocated [a Const] ( < ( 2 ( 3 nil ) ) ) from 0x6000234b0 to 0x6000234d0 ( 32 B ) in 2000 ns
 DEBUG: allocated [a Boolean] #t from 0x6000234d0 to 0x6000234e0 ( 16 B ) in 2100 ns
 #t
-> DEBUG: allocated [a Symbol] < from 0x6000234e0 to 0x6000234f8 ( 24 B ) in 2400 ns
+> DEBUG: allocated [a Symbol] < from 0x6000234e0 to 0x6000234f8 ( 24 B ) in 3300 ns
 DEBUG: allocated [an Integer] 2 from 0x6000234f8 to 0x600023510 ( 24 B ) in 2100 ns
-DEBUG: allocated [an Integer] 3 from 0x600023510 to 0x600023528 ( 24 B ) in 2100 ns
-DEBUG: allocated [an Integer] 5 from 0x600023528 to 0x600023540 ( 24 B ) in 2100 ns
-DEBUG: allocated nil from 0x600023540 to 0x600023550 ( 16 B ) in 1600 ns
-DEBUG: allocated [a Const] ( 5 nil ) from 0x600023550 to 0x600023570 ( 32 B ) in 2000 ns
-DEBUG: allocated [a Const] ( 3 ( 5 nil ) ) from 0x600023570 to 0x600023590 ( 32 B ) in 2100 ns
-DEBUG: allocated [a Const] ( 2 ( 3 ( 5 nil ) ) ) from 0x600023590 to 0x6000235b0 ( 32 B ) in 2000 ns
-DEBUG: allocated [a Const] ( < ( 2 ( 3 ( 5 nil ) ) ) ) from 0x6000235b0 to 0x6000235d0 ( 32 B ) in 1600 ns
-< expects exactly 2 argumentsDEBUG: allocated [an Object]  from 0x6000235d0 to 0x6000235e0 ( 16 B ) in 1700 ns
+DEBUG: allocated [an Integer] 3 from 0x600023510 to 0x600023528 ( 24 B ) in 2400 ns
+DEBUG: allocated [an Integer] 5 from 0x600023528 to 0x600023540 ( 24 B ) in 2500 ns
+DEBUG: allocated nil from 0x600023540 to 0x600023550 ( 16 B ) in 2500 ns
+DEBUG: allocated [a Const] ( 5 nil ) from 0x600023550 to 0x600023570 ( 32 B ) in 2900 ns
+DEBUG: allocated [a Const] ( 3 ( 5 nil ) ) from 0x600023570 to 0x600023590 ( 32 B ) in 2400 ns
+DEBUG: allocated [a Const] ( 2 ( 3 ( 5 nil ) ) ) from 0x600023590 to 0x6000235b0 ( 32 B ) in 2900 ns
+DEBUG: allocated [a Const] ( < ( 2 ( 3 ( 5 nil ) ) ) ) from 0x6000235b0 to 0x6000235d0 ( 32 B ) in 2500 ns
+< expects exactly 2 argumentsDEBUG: allocated [an Object]  from 0x6000235d0 to 0x6000235e0 ( 16 B ) in 2400 ns
 
-> DEBUG: allocated [a Symbol] > from 0x6000235e0 to 0x6000235f8 ( 24 B ) in 2900 ns
-DEBUG: allocated [an Integer] 4 from 0x6000235f8 to 0x600023610 ( 24 B ) in 2100 ns
+> DEBUG: allocated [a Symbol] > from 0x6000235e0 to 0x6000235f8 ( 24 B ) in 3300 ns
+DEBUG: allocated [an Integer] 4 from 0x6000235f8 to 0x600023610 ( 24 B ) in 2500 ns
 DEBUG: allocated nil from 0x600023610 to 0x600023620 ( 16 B ) in 2100 ns
-DEBUG: allocated [a Const] ( 4 nil ) from 0x600023620 to 0x600023640 ( 32 B ) in 2400 ns
-DEBUG: allocated [a Const] ( > ( 4 nil ) ) from 0x600023640 to 0x600023660 ( 32 B ) in 2000 ns
-> expects exactly 2 argumentsDEBUG: allocated [an Object]  from 0x600023660 to 0x600023670 ( 16 B ) in 2100 ns
+DEBUG: allocated [a Const] ( 4 nil ) from 0x600023620 to 0x600023640 ( 32 B ) in 2500 ns
+DEBUG: allocated [a Const] ( > ( 4 nil ) ) from 0x600023640 to 0x600023660 ( 32 B ) in 2900 ns
+> expects exactly 2 argumentsDEBUG: allocated [an Object]  from 0x600023660 to 0x600023670 ( 16 B ) in 3300 ns
 
-> DEBUG: allocated [a Symbol] > from 0x600023670 to 0x600023688 ( 24 B ) in 2500 ns
-DEBUG: allocated [an Integer] 2 from 0x600023688 to 0x6000236a0 ( 24 B ) in 2000 ns
+> DEBUG: allocated [a Symbol] > from 0x600023670 to 0x600023688 ( 24 B ) in 3300 ns
+DEBUG: allocated [an Integer] 2 from 0x600023688 to 0x6000236a0 ( 24 B ) in 2400 ns
 DEBUG: allocated [an Integer] 3 from 0x6000236a0 to 0x6000236b8 ( 24 B ) in 2100 ns
-DEBUG: allocated nil from 0x6000236b8 to 0x6000236c8 ( 16 B ) in 2100 ns
-DEBUG: allocated [a Const] ( 3 nil ) from 0x6000236c8 to 0x6000236e8 ( 32 B ) in 2000 ns
-DEBUG: allocated [a Const] ( 2 ( 3 nil ) ) from 0x6000236e8 to 0x600023708 ( 32 B ) in 2000 ns
+DEBUG: allocated nil from 0x6000236b8 to 0x6000236c8 ( 16 B ) in 2500 ns
+DEBUG: allocated [a Const] ( 3 nil ) from 0x6000236c8 to 0x6000236e8 ( 32 B ) in 2500 ns
+DEBUG: allocated [a Const] ( 2 ( 3 nil ) ) from 0x6000236e8 to 0x600023708 ( 32 B ) in 3200 ns
 DEBUG: allocated [a Const] ( > ( 2 ( 3 nil ) ) ) from 0x600023708 to 0x600023728 ( 32 B ) in 2100 ns
-DEBUG: allocated [a Boolean] #f from 0x600023728 to 0x600023738 ( 16 B ) in 2100 ns
+DEBUG: allocated [a Boolean] #f from 0x600023728 to 0x600023738 ( 16 B ) in 2500 ns
 #f
-> DEBUG: allocated [a Symbol] > from 0x600023738 to 0x600023750 ( 24 B ) in 2400 ns
-DEBUG: allocated [an Integer] 2 from 0x600023750 to 0x600023768 ( 24 B ) in 2100 ns
+> DEBUG: allocated [a Symbol] > from 0x600023738 to 0x600023750 ( 24 B ) in 3700 ns
+DEBUG: allocated [an Integer] 2 from 0x600023750 to 0x600023768 ( 24 B ) in 2400 ns
 DEBUG: allocated [an Integer] 3 from 0x600023768 to 0x600023780 ( 24 B ) in 2500 ns
-DEBUG: allocated [an Integer] 5 from 0x600023780 to 0x600023798 ( 24 B ) in 2000 ns
-DEBUG: allocated nil from 0x600023798 to 0x6000237a8 ( 16 B ) in 2000 ns
-DEBUG: allocated [a Const] ( 5 nil ) from 0x6000237a8 to 0x6000237c8 ( 32 B ) in 2100 ns
-DEBUG: allocated [a Const] ( 3 ( 5 nil ) ) from 0x6000237c8 to 0x6000237e8 ( 32 B ) in 2100 ns
-DEBUG: allocated [a Const] ( 2 ( 3 ( 5 nil ) ) ) from 0x6000237e8 to 0x600023808 ( 32 B ) in 2100 ns
-DEBUG: allocated [a Const] ( > ( 2 ( 3 ( 5 nil ) ) ) ) from 0x600023808 to 0x600023828 ( 32 B ) in 2100 ns
+DEBUG: allocated [an Integer] 5 from 0x600023780 to 0x600023798 ( 24 B ) in 2500 ns
+DEBUG: allocated nil from 0x600023798 to 0x6000237a8 ( 16 B ) in 2100 ns
+DEBUG: allocated [a Const] ( 5 nil ) from 0x6000237a8 to 0x6000237c8 ( 32 B ) in 2900 ns
+DEBUG: allocated [a Const] ( 3 ( 5 nil ) ) from 0x6000237c8 to 0x6000237e8 ( 32 B ) in 2500 ns
+DEBUG: allocated [a Const] ( 2 ( 3 ( 5 nil ) ) ) from 0x6000237e8 to 0x600023808 ( 32 B ) in 2400 ns
+DEBUG: allocated [a Const] ( > ( 2 ( 3 ( 5 nil ) ) ) ) from 0x600023808 to 0x600023828 ( 32 B ) in 4500 ns
 > expects exactly 2 argumentsDEBUG: allocated [an Object]  from 0x600023828 to 0x600023838 ( 16 B ) in 2000 ns
 
-> DEBUG: allocated [a Symbol] if from 0x600023838 to 0x600023850 ( 24 B ) in 2000 ns
+> DEBUG: allocated [a Symbol] if from 0x600023838 to 0x600023850 ( 24 B ) in 2500 ns
 DEBUG: collecting garbage to free 24 B
 DEBUG:   freed [a Symbol] + from 0x600022958 to 0x600022970 ( 24 B )
 DEBUG:   freed nil from 0x600022970 to 0x600022980 ( 16 B )
@@ -320,330 +320,330 @@ DEBUG:   freed [a Const] ( 2 ( 3 ( 5 nil ) ) ) from 0x6000237e8 to 0x600023808 (
 DEBUG:   freed [a Const] ( > ( 2 ( 3 ( 5 nil ) ) ) ) from 0x600023808 to 0x600023828 ( 32 B )
 DEBUG:   freed [an Object]  from 0x600023828 to 0x600023838 ( 16 B )
 DEBUG: garbage collected - freed enough memory
-DEBUG: allocated [a Symbol] < from 0x600022958 to 0x600022970 ( 24 B ) in 1985300 ns
-DEBUG: allocated [an Integer] 2 from 0x600022970 to 0x600022988 ( 24 B ) in 2400 ns
-DEBUG: allocated [an Integer] 3 from 0x600022988 to 0x6000229a0 ( 24 B ) in 1600 ns
-DEBUG: allocated nil from 0x6000229a0 to 0x6000229b0 ( 16 B ) in 1700 ns
-DEBUG: allocated [a Const] ( 3 nil ) from 0x6000229b0 to 0x6000229d0 ( 32 B ) in 2100 ns
+DEBUG: allocated [a Symbol] < from 0x600022958 to 0x600022970 ( 24 B ) in 1485700 ns
+DEBUG: allocated [an Integer] 2 from 0x600022970 to 0x600022988 ( 24 B ) in 2900 ns
+DEBUG: allocated [an Integer] 3 from 0x600022988 to 0x6000229a0 ( 24 B ) in 2000 ns
+DEBUG: allocated nil from 0x6000229a0 to 0x6000229b0 ( 16 B ) in 2000 ns
+DEBUG: allocated [a Const] ( 3 nil ) from 0x6000229b0 to 0x6000229d0 ( 32 B ) in 2900 ns
 DEBUG: allocated [a Const] ( 2 ( 3 nil ) ) from 0x6000229d0 to 0x6000229f0 ( 32 B ) in 2500 ns
-DEBUG: allocated [a Const] ( < ( 2 ( 3 nil ) ) ) from 0x6000229f0 to 0x600022a10 ( 32 B ) in 1700 ns
-DEBUG: allocated [a Symbol] + from 0x600022a10 to 0x600022a28 ( 24 B ) in 4100 ns
-DEBUG: allocated [an Integer] 1 from 0x600022a28 to 0x600022a40 ( 24 B ) in 4100 ns
-DEBUG: allocated [an Integer] 0 from 0x600022a40 to 0x600022a58 ( 24 B ) in 3700 ns
-DEBUG: allocated nil from 0x600022a58 to 0x600022a68 ( 16 B ) in 3300 ns
-DEBUG: allocated [a Const] ( 0 nil ) from 0x600022a68 to 0x600022a88 ( 32 B ) in 2900 ns
-DEBUG: allocated [a Const] ( 1 ( 0 nil ) ) from 0x600022a88 to 0x600022aa8 ( 32 B ) in 2500 ns
+DEBUG: allocated [a Const] ( < ( 2 ( 3 nil ) ) ) from 0x6000229f0 to 0x600022a10 ( 32 B ) in 2400 ns
+DEBUG: allocated [a Symbol] + from 0x600022a10 to 0x600022a28 ( 24 B ) in 2900 ns
+DEBUG: allocated [an Integer] 1 from 0x600022a28 to 0x600022a40 ( 24 B ) in 2500 ns
+DEBUG: allocated [an Integer] 0 from 0x600022a40 to 0x600022a58 ( 24 B ) in 2000 ns
+DEBUG: allocated nil from 0x600022a58 to 0x600022a68 ( 16 B ) in 2100 ns
+DEBUG: allocated [a Const] ( 0 nil ) from 0x600022a68 to 0x600022a88 ( 32 B ) in 2100 ns
+DEBUG: allocated [a Const] ( 1 ( 0 nil ) ) from 0x600022a88 to 0x600022aa8 ( 32 B ) in 2100 ns
 DEBUG: allocated [a Const] ( + ( 1 ( 0 nil ) ) ) from 0x600022aa8 to 0x600022ac8 ( 32 B ) in 2100 ns
-DEBUG: allocated [a Symbol] + from 0x600022ac8 to 0x600022ae0 ( 24 B ) in 2400 ns
-DEBUG: allocated [an Integer] 0 from 0x600022ae0 to 0x600022af8 ( 24 B ) in 2000 ns
-DEBUG: allocated [an Integer] 0 from 0x600022af8 to 0x600022b10 ( 24 B ) in 1600 ns
-DEBUG: allocated nil from 0x600022b10 to 0x600022b20 ( 16 B ) in 1700 ns
-DEBUG: allocated [a Const] ( 0 nil ) from 0x600022b20 to 0x600022b40 ( 32 B ) in 1600 ns
-DEBUG: allocated [a Const] ( 0 ( 0 nil ) ) from 0x600022b40 to 0x600022b60 ( 32 B ) in 2000 ns
-DEBUG: allocated [a Const] ( + ( 0 ( 0 nil ) ) ) from 0x600022b60 to 0x600022b80 ( 32 B ) in 2100 ns
-DEBUG: allocated nil from 0x600022b80 to 0x600022b90 ( 16 B ) in 1700 ns
+DEBUG: allocated [a Symbol] + from 0x600022ac8 to 0x600022ae0 ( 24 B ) in 2500 ns
+DEBUG: allocated [an Integer] 0 from 0x600022ae0 to 0x600022af8 ( 24 B ) in 1700 ns
+DEBUG: allocated [an Integer] 0 from 0x600022af8 to 0x600022b10 ( 24 B ) in 2100 ns
+DEBUG: allocated nil from 0x600022b10 to 0x600022b20 ( 16 B ) in 2100 ns
+DEBUG: allocated [a Const] ( 0 nil ) from 0x600022b20 to 0x600022b40 ( 32 B ) in 2100 ns
+DEBUG: allocated [a Const] ( 0 ( 0 nil ) ) from 0x600022b40 to 0x600022b60 ( 32 B ) in 1600 ns
+DEBUG: allocated [a Const] ( + ( 0 ( 0 nil ) ) ) from 0x600022b60 to 0x600022b80 ( 32 B ) in 2500 ns
+DEBUG: allocated nil from 0x600022b80 to 0x600022b90 ( 16 B ) in 2100 ns
 DEBUG: allocated [a Const] ( ( + ( 0 ( 0 nil ) ) ) nil ) from 0x600022b90 to 0x600022bb0 ( 32 B ) in 2000 ns
 DEBUG: allocated [a Const] ( ( + ( 1 ( 0 nil ) ) ) ( ( + ( 0 ( 0 nil ) ) ) nil ) ) from 0x600022bb0 to 0x600022bd0 ( 32 B ) in 2100 ns
-DEBUG: allocated [a Const] ( ( < ( 2 ( 3 nil ) ) ) ( ( + ( 1 ( 0 nil ) ) ) ( ( + ( 0 ( 0 nil ) ) ) nil ) ) ) from 0x600022bd0 to 0x600022bf0 ( 32 B ) in 1700 ns
+DEBUG: allocated [a Const] ( ( < ( 2 ( 3 nil ) ) ) ( ( + ( 1 ( 0 nil ) ) ) ( ( + ( 0 ( 0 nil ) ) ) nil ) ) ) from 0x600022bd0 to 0x600022bf0 ( 32 B ) in 2100 ns
 DEBUG: allocated [a Const] ( if ( ( < ( 2 ( 3 nil ) ) ) ( ( + ( 1 ( 0 nil ) ) ) ( ( + ( 0 ( 0 nil ) ) ) nil ) ) ) ) from 0x600022bf0 to 0x600022c10 ( 32 B ) in 2100 ns
-DEBUG: allocated [a Boolean] #t from 0x600022c10 to 0x600022c20 ( 16 B ) in 1700 ns
-DEBUG: allocated [an Integer] 1 from 0x600022c20 to 0x600022c38 ( 24 B ) in 2000 ns
+DEBUG: allocated [a Boolean] #t from 0x600022c10 to 0x600022c20 ( 16 B ) in 2400 ns
+DEBUG: allocated [an Integer] 1 from 0x600022c20 to 0x600022c38 ( 24 B ) in 2500 ns
 1
-> DEBUG: allocated [a Symbol] if from 0x600022c38 to 0x600022c50 ( 24 B ) in 2800 ns
-DEBUG: allocated [a Symbol] < from 0x600022c50 to 0x600022c68 ( 24 B ) in 2100 ns
-DEBUG: allocated [an Integer] 3 from 0x600022c68 to 0x600022c80 ( 24 B ) in 1700 ns
-DEBUG: allocated [an Integer] 2 from 0x600022c80 to 0x600022c98 ( 24 B ) in 1600 ns
+> DEBUG: allocated [a Symbol] if from 0x600022c38 to 0x600022c50 ( 24 B ) in 3700 ns
+DEBUG: allocated [a Symbol] < from 0x600022c50 to 0x600022c68 ( 24 B ) in 2000 ns
+DEBUG: allocated [an Integer] 3 from 0x600022c68 to 0x600022c80 ( 24 B ) in 2500 ns
+DEBUG: allocated [an Integer] 2 from 0x600022c80 to 0x600022c98 ( 24 B ) in 2000 ns
 DEBUG: allocated nil from 0x600022c98 to 0x600022ca8 ( 16 B ) in 2000 ns
-DEBUG: allocated [a Const] ( 2 nil ) from 0x600022ca8 to 0x600022cc8 ( 32 B ) in 1600 ns
-DEBUG: allocated [a Const] ( 3 ( 2 nil ) ) from 0x600022cc8 to 0x600022ce8 ( 32 B ) in 1700 ns
-DEBUG: allocated [a Const] ( < ( 3 ( 2 nil ) ) ) from 0x600022ce8 to 0x600022d08 ( 32 B ) in 2000 ns
-DEBUG: allocated [a Symbol] + from 0x600022d08 to 0x600022d20 ( 24 B ) in 2100 ns
-DEBUG: allocated [an Integer] 1 from 0x600022d20 to 0x600022d38 ( 24 B ) in 2100 ns
-DEBUG: allocated [an Integer] 0 from 0x600022d38 to 0x600022d50 ( 24 B ) in 1700 ns
+DEBUG: allocated [a Const] ( 2 nil ) from 0x600022ca8 to 0x600022cc8 ( 32 B ) in 2900 ns
+DEBUG: allocated [a Const] ( 3 ( 2 nil ) ) from 0x600022cc8 to 0x600022ce8 ( 32 B ) in 2100 ns
+DEBUG: allocated [a Const] ( < ( 3 ( 2 nil ) ) ) from 0x600022ce8 to 0x600022d08 ( 32 B ) in 2900 ns
+DEBUG: allocated [a Symbol] + from 0x600022d08 to 0x600022d20 ( 24 B ) in 2900 ns
+DEBUG: allocated [an Integer] 1 from 0x600022d20 to 0x600022d38 ( 24 B ) in 1600 ns
+DEBUG: allocated [an Integer] 0 from 0x600022d38 to 0x600022d50 ( 24 B ) in 2000 ns
 DEBUG: allocated nil from 0x600022d50 to 0x600022d60 ( 16 B ) in 1600 ns
-DEBUG: allocated [a Const] ( 0 nil ) from 0x600022d60 to 0x600022d80 ( 32 B ) in 2100 ns
-DEBUG: allocated [a Const] ( 1 ( 0 nil ) ) from 0x600022d80 to 0x600022da0 ( 32 B ) in 1600 ns
-DEBUG: allocated [a Const] ( + ( 1 ( 0 nil ) ) ) from 0x600022da0 to 0x600022dc0 ( 32 B ) in 2000 ns
-DEBUG: allocated [a Symbol] + from 0x600022dc0 to 0x600022dd8 ( 24 B ) in 2500 ns
-DEBUG: allocated [an Integer] 0 from 0x600022dd8 to 0x600022df0 ( 24 B ) in 1600 ns
+DEBUG: allocated [a Const] ( 0 nil ) from 0x600022d60 to 0x600022d80 ( 32 B ) in 2400 ns
+DEBUG: allocated [a Const] ( 1 ( 0 nil ) ) from 0x600022d80 to 0x600022da0 ( 32 B ) in 2000 ns
+DEBUG: allocated [a Const] ( + ( 1 ( 0 nil ) ) ) from 0x600022da0 to 0x600022dc0 ( 32 B ) in 2100 ns
+DEBUG: allocated [a Symbol] + from 0x600022dc0 to 0x600022dd8 ( 24 B ) in 2400 ns
+DEBUG: allocated [an Integer] 0 from 0x600022dd8 to 0x600022df0 ( 24 B ) in 2100 ns
 DEBUG: allocated [an Integer] 0 from 0x600022df0 to 0x600022e08 ( 24 B ) in 2100 ns
-DEBUG: allocated nil from 0x600022e08 to 0x600022e18 ( 16 B ) in 2100 ns
-DEBUG: allocated [a Const] ( 0 nil ) from 0x600022e18 to 0x600022e38 ( 32 B ) in 2000 ns
+DEBUG: allocated nil from 0x600022e08 to 0x600022e18 ( 16 B ) in 4100 ns
+DEBUG: allocated [a Const] ( 0 nil ) from 0x600022e18 to 0x600022e38 ( 32 B ) in 2100 ns
 DEBUG: allocated [a Const] ( 0 ( 0 nil ) ) from 0x600022e38 to 0x600022e58 ( 32 B ) in 2000 ns
 DEBUG: allocated [a Const] ( + ( 0 ( 0 nil ) ) ) from 0x600022e58 to 0x600022e78 ( 32 B ) in 2000 ns
 DEBUG: allocated nil from 0x600022e78 to 0x600022e88 ( 16 B ) in 2500 ns
 DEBUG: allocated [a Const] ( ( + ( 0 ( 0 nil ) ) ) nil ) from 0x600022e88 to 0x600022ea8 ( 32 B ) in 2400 ns
-DEBUG: allocated [a Const] ( ( + ( 1 ( 0 nil ) ) ) ( ( + ( 0 ( 0 nil ) ) ) nil ) ) from 0x600022ea8 to 0x600022ec8 ( 32 B ) in 2100 ns
-DEBUG: allocated [a Const] ( ( < ( 3 ( 2 nil ) ) ) ( ( + ( 1 ( 0 nil ) ) ) ( ( + ( 0 ( 0 nil ) ) ) nil ) ) ) from 0x600022ec8 to 0x600022ee8 ( 32 B ) in 1600 ns
-DEBUG: allocated [a Const] ( if ( ( < ( 3 ( 2 nil ) ) ) ( ( + ( 1 ( 0 nil ) ) ) ( ( + ( 0 ( 0 nil ) ) ) nil ) ) ) ) from 0x600022ee8 to 0x600022f08 ( 32 B ) in 2100 ns
-DEBUG: allocated [a Boolean] #f from 0x600022f08 to 0x600022f18 ( 16 B ) in 1600 ns
-DEBUG: allocated [an Integer] 0 from 0x600022f18 to 0x600022f30 ( 24 B ) in 2000 ns
+DEBUG: allocated [a Const] ( ( + ( 1 ( 0 nil ) ) ) ( ( + ( 0 ( 0 nil ) ) ) nil ) ) from 0x600022ea8 to 0x600022ec8 ( 32 B ) in 2400 ns
+DEBUG: allocated [a Const] ( ( < ( 3 ( 2 nil ) ) ) ( ( + ( 1 ( 0 nil ) ) ) ( ( + ( 0 ( 0 nil ) ) ) nil ) ) ) from 0x600022ec8 to 0x600022ee8 ( 32 B ) in 2000 ns
+DEBUG: allocated [a Const] ( if ( ( < ( 3 ( 2 nil ) ) ) ( ( + ( 1 ( 0 nil ) ) ) ( ( + ( 0 ( 0 nil ) ) ) nil ) ) ) ) from 0x600022ee8 to 0x600022f08 ( 32 B ) in 2500 ns
+DEBUG: allocated [a Boolean] #f from 0x600022f08 to 0x600022f18 ( 16 B ) in 2400 ns
+DEBUG: allocated [an Integer] 0 from 0x600022f18 to 0x600022f30 ( 24 B ) in 1600 ns
 0
-> DEBUG: allocated [a Symbol] define from 0x600022f30 to 0x600022f48 ( 24 B ) in 2500 ns
-DEBUG: allocated [a Symbol] not from 0x600022f48 to 0x600022f60 ( 24 B ) in 2500 ns
-DEBUG: allocated [a Symbol] lambda from 0x600022f60 to 0x600022f78 ( 24 B ) in 2100 ns
-DEBUG: allocated [a Symbol] bool from 0x600022f78 to 0x600022f90 ( 24 B ) in 2500 ns
-DEBUG: allocated nil from 0x600022f90 to 0x600022fa0 ( 16 B ) in 1600 ns
-DEBUG: allocated [a Const] ( bool nil ) from 0x600022fa0 to 0x600022fc0 ( 32 B ) in 2400 ns
-DEBUG: allocated [a Symbol] if from 0x600022fc0 to 0x600022fd8 ( 24 B ) in 2800 ns
-DEBUG: allocated [a Symbol] bool from 0x600022fd8 to 0x600022ff0 ( 24 B ) in 2400 ns
-DEBUG: allocated [a Boolean] #f from 0x600022ff0 to 0x600023000 ( 16 B ) in 2000 ns
-DEBUG: allocated [a Boolean] #t from 0x600023000 to 0x600023010 ( 16 B ) in 2100 ns
-DEBUG: allocated nil from 0x600023010 to 0x600023020 ( 16 B ) in 2000 ns
+> DEBUG: allocated [a Symbol] define from 0x600022f30 to 0x600022f48 ( 24 B ) in 4100 ns
+DEBUG: allocated [a Symbol] not from 0x600022f48 to 0x600022f60 ( 24 B ) in 2900 ns
+DEBUG: allocated [a Symbol] lambda from 0x600022f60 to 0x600022f78 ( 24 B ) in 4500 ns
+DEBUG: allocated [a Symbol] bool from 0x600022f78 to 0x600022f90 ( 24 B ) in 2800 ns
+DEBUG: allocated nil from 0x600022f90 to 0x600022fa0 ( 16 B ) in 2100 ns
+DEBUG: allocated [a Const] ( bool nil ) from 0x600022fa0 to 0x600022fc0 ( 32 B ) in 2100 ns
+DEBUG: allocated [a Symbol] if from 0x600022fc0 to 0x600022fd8 ( 24 B ) in 2400 ns
+DEBUG: allocated [a Symbol] bool from 0x600022fd8 to 0x600022ff0 ( 24 B ) in 2900 ns
+DEBUG: allocated [a Boolean] #f from 0x600022ff0 to 0x600023000 ( 16 B ) in 2500 ns
+DEBUG: allocated [a Boolean] #t from 0x600023000 to 0x600023010 ( 16 B ) in 1600 ns
+DEBUG: allocated nil from 0x600023010 to 0x600023020 ( 16 B ) in 1600 ns
 DEBUG: allocated [a Const] ( #t nil ) from 0x600023020 to 0x600023040 ( 32 B ) in 2100 ns
-DEBUG: allocated [a Const] ( #f ( #t nil ) ) from 0x600023040 to 0x600023060 ( 32 B ) in 2500 ns
-DEBUG: allocated [a Const] ( bool ( #f ( #t nil ) ) ) from 0x600023060 to 0x600023080 ( 32 B ) in 2000 ns
-DEBUG: allocated [a Const] ( if ( bool ( #f ( #t nil ) ) ) ) from 0x600023080 to 0x6000230a0 ( 32 B ) in 2100 ns
-DEBUG: allocated nil from 0x6000230a0 to 0x6000230b0 ( 16 B ) in 2100 ns
-DEBUG: allocated [a Const] ( ( if ( bool ( #f ( #t nil ) ) ) ) nil ) from 0x6000230b0 to 0x6000230d0 ( 32 B ) in 2100 ns
+DEBUG: allocated [a Const] ( #f ( #t nil ) ) from 0x600023040 to 0x600023060 ( 32 B ) in 2000 ns
+DEBUG: allocated [a Const] ( bool ( #f ( #t nil ) ) ) from 0x600023060 to 0x600023080 ( 32 B ) in 2100 ns
+DEBUG: allocated [a Const] ( if ( bool ( #f ( #t nil ) ) ) ) from 0x600023080 to 0x6000230a0 ( 32 B ) in 2000 ns
+DEBUG: allocated nil from 0x6000230a0 to 0x6000230b0 ( 16 B ) in 2500 ns
+DEBUG: allocated [a Const] ( ( if ( bool ( #f ( #t nil ) ) ) ) nil ) from 0x6000230b0 to 0x6000230d0 ( 32 B ) in 2500 ns
 DEBUG: allocated [a Const] ( ( bool nil ) ( ( if ( bool ( #f ( #t nil ) ) ) ) nil ) ) from 0x6000230d0 to 0x6000230f0 ( 32 B ) in 2100 ns
-DEBUG: allocated [a Const] ( lambda ( ( bool nil ) ( ( if ( bool ( #f ( #t nil ) ) ) ) nil ) ) ) from 0x6000230f0 to 0x600023110 ( 32 B ) in 2100 ns
-DEBUG: allocated nil from 0x600023110 to 0x600023120 ( 16 B ) in 2100 ns
-DEBUG: allocated [a Const] ( ( lambda ( ( bool nil ) ( ( if ( bool ( #f ( #t nil ) ) ) ) nil ) ) ) nil ) from 0x600023120 to 0x600023140 ( 32 B ) in 2100 ns
-DEBUG: allocated [a Const] ( not ( ( lambda ( ( bool nil ) ( ( if ( bool ( #f ( #t nil ) ) ) ) nil ) ) ) nil ) ) from 0x600023140 to 0x600023160 ( 32 B ) in 2500 ns
-DEBUG: allocated [a Const] ( define ( not ( ( lambda ( ( bool nil ) ( ( if ( bool ( #f ( #t nil ) ) ) ) nil ) ) ) nil ) ) ) from 0x600023160 to 0x600023180 ( 32 B ) in 2000 ns
-DEBUG: allocated [a Void (scary, right?)] from 0x600023180 to 0x6000231a0 ( 32 B ) in 2500 ns
-DEBUG: allocated [an Object]  from 0x6000231a0 to 0x6000231b0 ( 16 B ) in 2100 ns
+DEBUG: allocated [a Const] ( lambda ( ( bool nil ) ( ( if ( bool ( #f ( #t nil ) ) ) ) nil ) ) ) from 0x6000230f0 to 0x600023110 ( 32 B ) in 2000 ns
+DEBUG: allocated nil from 0x600023110 to 0x600023120 ( 16 B ) in 1600 ns
+DEBUG: allocated [a Const] ( ( lambda ( ( bool nil ) ( ( if ( bool ( #f ( #t nil ) ) ) ) nil ) ) ) nil ) from 0x600023120 to 0x600023140 ( 32 B ) in 2000 ns
+DEBUG: allocated [a Const] ( not ( ( lambda ( ( bool nil ) ( ( if ( bool ( #f ( #t nil ) ) ) ) nil ) ) ) nil ) ) from 0x600023140 to 0x600023160 ( 32 B ) in 1700 ns
+DEBUG: allocated [a Const] ( define ( not ( ( lambda ( ( bool nil ) ( ( if ( bool ( #f ( #t nil ) ) ) ) nil ) ) ) nil ) ) ) from 0x600023160 to 0x600023180 ( 32 B ) in 1600 ns
+DEBUG: allocated [a Void (scary, right?)] from 0x600023180 to 0x6000231a0 ( 32 B ) in 1200 ns
+DEBUG: allocated [an Object]  from 0x6000231a0 to 0x6000231b0 ( 16 B ) in 1200 ns
 
-> DEBUG: allocated [a Symbol] define from 0x6000231b0 to 0x6000231c8 ( 24 B ) in 2900 ns
-DEBUG: allocated [a Symbol] and from 0x6000231c8 to 0x6000231e0 ( 24 B ) in 2500 ns
-DEBUG: allocated [a Symbol] lambda from 0x6000231e0 to 0x6000231f8 ( 24 B ) in 2500 ns
+> DEBUG: allocated [a Symbol] define from 0x6000231b0 to 0x6000231c8 ( 24 B ) in 1600 ns
+DEBUG: allocated [a Symbol] and from 0x6000231c8 to 0x6000231e0 ( 24 B ) in 1700 ns
+DEBUG: allocated [a Symbol] lambda from 0x6000231e0 to 0x6000231f8 ( 24 B ) in 1300 ns
 DEBUG: allocated [a Symbol] a from 0x6000231f8 to 0x600023210 ( 24 B ) in 2500 ns
-DEBUG: allocated [a Symbol] b from 0x600023210 to 0x600023228 ( 24 B ) in 2900 ns
-DEBUG: allocated nil from 0x600023228 to 0x600023238 ( 16 B ) in 2100 ns
-DEBUG: allocated [a Const] ( b nil ) from 0x600023238 to 0x600023258 ( 32 B ) in 2100 ns
-DEBUG: allocated [a Const] ( a ( b nil ) ) from 0x600023258 to 0x600023278 ( 32 B ) in 2100 ns
-DEBUG: allocated [a Symbol] if from 0x600023278 to 0x600023290 ( 24 B ) in 2900 ns
-DEBUG: allocated [a Symbol] a from 0x600023290 to 0x6000232a8 ( 24 B ) in 2400 ns
-DEBUG: allocated [a Symbol] b from 0x6000232a8 to 0x6000232c0 ( 24 B ) in 2500 ns
-DEBUG: allocated [a Boolean] #f from 0x6000232c0 to 0x6000232d0 ( 16 B ) in 2000 ns
-DEBUG: allocated nil from 0x6000232d0 to 0x6000232e0 ( 16 B ) in 2500 ns
-DEBUG: allocated [a Const] ( #f nil ) from 0x6000232e0 to 0x600023300 ( 32 B ) in 2000 ns
-DEBUG: allocated [a Const] ( b ( #f nil ) ) from 0x600023300 to 0x600023320 ( 32 B ) in 2100 ns
-DEBUG: allocated [a Const] ( a ( b ( #f nil ) ) ) from 0x600023320 to 0x600023340 ( 32 B ) in 2100 ns
-DEBUG: allocated [a Const] ( if ( a ( b ( #f nil ) ) ) ) from 0x600023340 to 0x600023360 ( 32 B ) in 2400 ns
-DEBUG: allocated nil from 0x600023360 to 0x600023370 ( 16 B ) in 2400 ns
-DEBUG: allocated [a Const] ( ( if ( a ( b ( #f nil ) ) ) ) nil ) from 0x600023370 to 0x600023390 ( 32 B ) in 2400 ns
-DEBUG: allocated [a Const] ( ( a ( b nil ) ) ( ( if ( a ( b ( #f nil ) ) ) ) nil ) ) from 0x600023390 to 0x6000233b0 ( 32 B ) in 2400 ns
-DEBUG: allocated [a Const] ( lambda ( ( a ( b nil ) ) ( ( if ( a ( b ( #f nil ) ) ) ) nil ) ) ) from 0x6000233b0 to 0x6000233d0 ( 32 B ) in 2100 ns
-DEBUG: allocated nil from 0x6000233d0 to 0x6000233e0 ( 16 B ) in 2400 ns
-DEBUG: allocated [a Const] ( ( lambda ( ( a ( b nil ) ) ( ( if ( a ( b ( #f nil ) ) ) ) nil ) ) ) nil ) from 0x6000233e0 to 0x600023400 ( 32 B ) in 2100 ns
-DEBUG: allocated [a Const] ( and ( ( lambda ( ( a ( b nil ) ) ( ( if ( a ( b ( #f nil ) ) ) ) nil ) ) ) nil ) ) from 0x600023400 to 0x600023420 ( 32 B ) in 2000 ns
-DEBUG: allocated [a Const] ( define ( and ( ( lambda ( ( a ( b nil ) ) ( ( if ( a ( b ( #f nil ) ) ) ) nil ) ) ) nil ) ) ) from 0x600023420 to 0x600023440 ( 32 B ) in 1600 ns
-DEBUG: allocated [a Void (scary, right?)] from 0x600023440 to 0x600023460 ( 32 B ) in 2100 ns
-DEBUG: allocated [an Object]  from 0x600023460 to 0x600023470 ( 16 B ) in 1700 ns
+DEBUG: allocated [a Symbol] b from 0x600023210 to 0x600023228 ( 24 B ) in 1700 ns
+DEBUG: allocated nil from 0x600023228 to 0x600023238 ( 16 B ) in 1200 ns
+DEBUG: allocated [a Const] ( b nil ) from 0x600023238 to 0x600023258 ( 32 B ) in 1700 ns
+DEBUG: allocated [a Const] ( a ( b nil ) ) from 0x600023258 to 0x600023278 ( 32 B ) in 1200 ns
+DEBUG: allocated [a Symbol] if from 0x600023278 to 0x600023290 ( 24 B ) in 1200 ns
+DEBUG: allocated [a Symbol] a from 0x600023290 to 0x6000232a8 ( 24 B ) in 1300 ns
+DEBUG: allocated [a Symbol] b from 0x6000232a8 to 0x6000232c0 ( 24 B ) in 1600 ns
+DEBUG: allocated [a Boolean] #f from 0x6000232c0 to 0x6000232d0 ( 16 B ) in 1200 ns
+DEBUG: allocated nil from 0x6000232d0 to 0x6000232e0 ( 16 B ) in 1200 ns
+DEBUG: allocated [a Const] ( #f nil ) from 0x6000232e0 to 0x600023300 ( 32 B ) in 1700 ns
+DEBUG: allocated [a Const] ( b ( #f nil ) ) from 0x600023300 to 0x600023320 ( 32 B ) in 1600 ns
+DEBUG: allocated [a Const] ( a ( b ( #f nil ) ) ) from 0x600023320 to 0x600023340 ( 32 B ) in 1300 ns
+DEBUG: allocated [a Const] ( if ( a ( b ( #f nil ) ) ) ) from 0x600023340 to 0x600023360 ( 32 B ) in 1600 ns
+DEBUG: allocated nil from 0x600023360 to 0x600023370 ( 16 B ) in 1200 ns
+DEBUG: allocated [a Const] ( ( if ( a ( b ( #f nil ) ) ) ) nil ) from 0x600023370 to 0x600023390 ( 32 B ) in 1200 ns
+DEBUG: allocated [a Const] ( ( a ( b nil ) ) ( ( if ( a ( b ( #f nil ) ) ) ) nil ) ) from 0x600023390 to 0x6000233b0 ( 32 B ) in 1200 ns
+DEBUG: allocated [a Const] ( lambda ( ( a ( b nil ) ) ( ( if ( a ( b ( #f nil ) ) ) ) nil ) ) ) from 0x6000233b0 to 0x6000233d0 ( 32 B ) in 1200 ns
+DEBUG: allocated nil from 0x6000233d0 to 0x6000233e0 ( 16 B ) in 1200 ns
+DEBUG: allocated [a Const] ( ( lambda ( ( a ( b nil ) ) ( ( if ( a ( b ( #f nil ) ) ) ) nil ) ) ) nil ) from 0x6000233e0 to 0x600023400 ( 32 B ) in 1300 ns
+DEBUG: allocated [a Const] ( and ( ( lambda ( ( a ( b nil ) ) ( ( if ( a ( b ( #f nil ) ) ) ) nil ) ) ) nil ) ) from 0x600023400 to 0x600023420 ( 32 B ) in 1700 ns
+DEBUG: allocated [a Const] ( define ( and ( ( lambda ( ( a ( b nil ) ) ( ( if ( a ( b ( #f nil ) ) ) ) nil ) ) ) nil ) ) ) from 0x600023420 to 0x600023440 ( 32 B ) in 1200 ns
+DEBUG: allocated [a Void (scary, right?)] from 0x600023440 to 0x600023460 ( 32 B ) in 1700 ns
+DEBUG: allocated [an Object]  from 0x600023460 to 0x600023470 ( 16 B ) in 1200 ns
 
-> DEBUG: allocated [a Symbol] define from 0x600023470 to 0x600023488 ( 24 B ) in 2500 ns
-DEBUG: allocated [a Symbol] or from 0x600023488 to 0x6000234a0 ( 24 B ) in 2100 ns
-DEBUG: allocated [a Symbol] lambda from 0x6000234a0 to 0x6000234b8 ( 24 B ) in 2500 ns
-DEBUG: allocated [a Symbol] a from 0x6000234b8 to 0x6000234d0 ( 24 B ) in 2400 ns
-DEBUG: allocated [a Symbol] b from 0x6000234d0 to 0x6000234e8 ( 24 B ) in 2500 ns
-DEBUG: allocated nil from 0x6000234e8 to 0x6000234f8 ( 16 B ) in 2000 ns
-DEBUG: allocated [a Const] ( b nil ) from 0x6000234f8 to 0x600023518 ( 32 B ) in 2100 ns
-DEBUG: allocated [a Const] ( a ( b nil ) ) from 0x600023518 to 0x600023538 ( 32 B ) in 2100 ns
-DEBUG: allocated [a Symbol] if from 0x600023538 to 0x600023550 ( 24 B ) in 1700 ns
+> DEBUG: allocated [a Symbol] define from 0x600023470 to 0x600023488 ( 24 B ) in 1600 ns
+DEBUG: allocated [a Symbol] or from 0x600023488 to 0x6000234a0 ( 24 B ) in 1200 ns
+DEBUG: allocated [a Symbol] lambda from 0x6000234a0 to 0x6000234b8 ( 24 B ) in 1300 ns
+DEBUG: allocated [a Symbol] a from 0x6000234b8 to 0x6000234d0 ( 24 B ) in 1200 ns
+DEBUG: allocated [a Symbol] b from 0x6000234d0 to 0x6000234e8 ( 24 B ) in 1700 ns
+DEBUG: allocated nil from 0x6000234e8 to 0x6000234f8 ( 16 B ) in 1200 ns
+DEBUG: allocated [a Const] ( b nil ) from 0x6000234f8 to 0x600023518 ( 32 B ) in 1700 ns
+DEBUG: allocated [a Const] ( a ( b nil ) ) from 0x600023518 to 0x600023538 ( 32 B ) in 1200 ns
+DEBUG: allocated [a Symbol] if from 0x600023538 to 0x600023550 ( 24 B ) in 1600 ns
 DEBUG: allocated [a Symbol] a from 0x600023550 to 0x600023568 ( 24 B ) in 1300 ns
 DEBUG: allocated [a Boolean] #t from 0x600023568 to 0x600023578 ( 16 B ) in 1200 ns
 DEBUG: allocated [a Symbol] b from 0x600023578 to 0x600023590 ( 24 B ) in 1200 ns
 DEBUG: allocated nil from 0x600023590 to 0x6000235a0 ( 16 B ) in 1200 ns
 DEBUG: allocated [a Const] ( b nil ) from 0x6000235a0 to 0x6000235c0 ( 32 B ) in 1300 ns
 DEBUG: allocated [a Const] ( #t ( b nil ) ) from 0x6000235c0 to 0x6000235e0 ( 32 B ) in 1200 ns
-DEBUG: allocated [a Const] ( a ( #t ( b nil ) ) ) from 0x6000235e0 to 0x600023600 ( 32 B ) in 1700 ns
+DEBUG: allocated [a Const] ( a ( #t ( b nil ) ) ) from 0x6000235e0 to 0x600023600 ( 32 B ) in 1300 ns
 DEBUG: allocated [a Const] ( if ( a ( #t ( b nil ) ) ) ) from 0x600023600 to 0x600023620 ( 32 B ) in 1200 ns
 DEBUG: allocated nil from 0x600023620 to 0x600023630 ( 16 B ) in 1200 ns
 DEBUG: allocated [a Const] ( ( if ( a ( #t ( b nil ) ) ) ) nil ) from 0x600023630 to 0x600023650 ( 32 B ) in 1200 ns
 DEBUG: allocated [a Const] ( ( a ( b nil ) ) ( ( if ( a ( #t ( b nil ) ) ) ) nil ) ) from 0x600023650 to 0x600023670 ( 32 B ) in 1300 ns
-DEBUG: allocated [a Const] ( lambda ( ( a ( b nil ) ) ( ( if ( a ( #t ( b nil ) ) ) ) nil ) ) ) from 0x600023670 to 0x600023690 ( 32 B ) in 2100 ns
-DEBUG: allocated nil from 0x600023690 to 0x6000236a0 ( 16 B ) in 2100 ns
+DEBUG: allocated [a Const] ( lambda ( ( a ( b nil ) ) ( ( if ( a ( #t ( b nil ) ) ) ) nil ) ) ) from 0x600023670 to 0x600023690 ( 32 B ) in 1200 ns
+DEBUG: allocated nil from 0x600023690 to 0x6000236a0 ( 16 B ) in 1200 ns
 DEBUG: allocated [a Const] ( ( lambda ( ( a ( b nil ) ) ( ( if ( a ( #t ( b nil ) ) ) ) nil ) ) ) nil ) from 0x6000236a0 to 0x6000236c0 ( 32 B ) in 1200 ns
-DEBUG: allocated [a Const] ( or ( ( lambda ( ( a ( b nil ) ) ( ( if ( a ( #t ( b nil ) ) ) ) nil ) ) ) nil ) ) from 0x6000236c0 to 0x6000236e0 ( 32 B ) in 1200 ns
+DEBUG: allocated [a Const] ( or ( ( lambda ( ( a ( b nil ) ) ( ( if ( a ( #t ( b nil ) ) ) ) nil ) ) ) nil ) ) from 0x6000236c0 to 0x6000236e0 ( 32 B ) in 1300 ns
 DEBUG: allocated [a Const] ( define ( or ( ( lambda ( ( a ( b nil ) ) ( ( if ( a ( #t ( b nil ) ) ) ) nil ) ) ) nil ) ) ) from 0x6000236e0 to 0x600023700 ( 32 B ) in 1200 ns
-DEBUG: allocated [a Void (scary, right?)] from 0x600023700 to 0x600023720 ( 32 B ) in 1600 ns
+DEBUG: allocated [a Void (scary, right?)] from 0x600023700 to 0x600023720 ( 32 B ) in 1300 ns
 DEBUG: allocated [an Object]  from 0x600023720 to 0x600023730 ( 16 B ) in 1200 ns
 
 > DEBUG: allocated [a Symbol] define from 0x600023730 to 0x600023748 ( 24 B ) in 1600 ns
-DEBUG: allocated [a Symbol] square from 0x600023748 to 0x600023760 ( 24 B ) in 1700 ns
-DEBUG: allocated [a Symbol] lambda from 0x600023760 to 0x600023778 ( 24 B ) in 1600 ns
-DEBUG: allocated [a Symbol] n from 0x600023778 to 0x600023790 ( 24 B ) in 1200 ns
+DEBUG: allocated [a Symbol] square from 0x600023748 to 0x600023760 ( 24 B ) in 1200 ns
+DEBUG: allocated [a Symbol] lambda from 0x600023760 to 0x600023778 ( 24 B ) in 1700 ns
+DEBUG: allocated [a Symbol] n from 0x600023778 to 0x600023790 ( 24 B ) in 1600 ns
 DEBUG: allocated nil from 0x600023790 to 0x6000237a0 ( 16 B ) in 1200 ns
-DEBUG: allocated [a Const] ( n nil ) from 0x6000237a0 to 0x6000237c0 ( 32 B ) in 1300 ns
-DEBUG: allocated [a Symbol] * from 0x6000237c0 to 0x6000237d8 ( 24 B ) in 1700 ns
-DEBUG: allocated [a Symbol] n from 0x6000237d8 to 0x6000237f0 ( 24 B ) in 1200 ns
-DEBUG: allocated [a Symbol] n from 0x6000237f0 to 0x600023808 ( 24 B ) in 1200 ns
-DEBUG: allocated nil from 0x600023808 to 0x600023818 ( 16 B ) in 1200 ns
-DEBUG: allocated [a Const] ( n nil ) from 0x600023818 to 0x600023838 ( 32 B ) in 900 ns
+DEBUG: allocated [a Const] ( n nil ) from 0x6000237a0 to 0x6000237c0 ( 32 B ) in 1200 ns
+DEBUG: allocated [a Symbol] * from 0x6000237c0 to 0x6000237d8 ( 24 B ) in 1200 ns
+DEBUG: allocated [a Symbol] n from 0x6000237d8 to 0x6000237f0 ( 24 B ) in 1300 ns
+DEBUG: allocated [a Symbol] n from 0x6000237f0 to 0x600023808 ( 24 B ) in 1600 ns
+DEBUG: allocated nil from 0x600023808 to 0x600023818 ( 16 B ) in 1300 ns
+DEBUG: allocated [a Const] ( n nil ) from 0x600023818 to 0x600023838 ( 32 B ) in 1200 ns
 DEBUG: new block from 0x60006d6e0 to 0x60006e6e0 ( 4096 B )
-DEBUG: allocated [a Const] ( n ( n nil ) ) from 0x60006d6e0 to 0x60006d700 ( 32 B ) in 12700 ns
+DEBUG: allocated [a Const] ( n ( n nil ) ) from 0x60006d6e0 to 0x60006d700 ( 32 B ) in 14000 ns
 DEBUG: allocated [a Const] ( * ( n ( n nil ) ) ) from 0x60006d700 to 0x60006d720 ( 32 B ) in 1700 ns
-DEBUG: allocated nil from 0x60006d720 to 0x60006d730 ( 16 B ) in 1300 ns
-DEBUG: allocated [a Const] ( ( * ( n ( n nil ) ) ) nil ) from 0x60006d730 to 0x60006d750 ( 32 B ) in 1600 ns
-DEBUG: allocated [a Const] ( ( n nil ) ( ( * ( n ( n nil ) ) ) nil ) ) from 0x60006d750 to 0x60006d770 ( 32 B ) in 1300 ns
-DEBUG: allocated [a Const] ( lambda ( ( n nil ) ( ( * ( n ( n nil ) ) ) nil ) ) ) from 0x60006d770 to 0x60006d790 ( 32 B ) in 1700 ns
+DEBUG: allocated nil from 0x60006d720 to 0x60006d730 ( 16 B ) in 1600 ns
+DEBUG: allocated [a Const] ( ( * ( n ( n nil ) ) ) nil ) from 0x60006d730 to 0x60006d750 ( 32 B ) in 1300 ns
+DEBUG: allocated [a Const] ( ( n nil ) ( ( * ( n ( n nil ) ) ) nil ) ) from 0x60006d750 to 0x60006d770 ( 32 B ) in 1700 ns
+DEBUG: allocated [a Const] ( lambda ( ( n nil ) ( ( * ( n ( n nil ) ) ) nil ) ) ) from 0x60006d770 to 0x60006d790 ( 32 B ) in 1200 ns
 DEBUG: allocated nil from 0x60006d790 to 0x60006d7a0 ( 16 B ) in 1700 ns
 DEBUG: allocated [a Const] ( ( lambda ( ( n nil ) ( ( * ( n ( n nil ) ) ) nil ) ) ) nil ) from 0x60006d7a0 to 0x60006d7c0 ( 32 B ) in 1600 ns
-DEBUG: allocated [a Const] ( square ( ( lambda ( ( n nil ) ( ( * ( n ( n nil ) ) ) nil ) ) ) nil ) ) from 0x60006d7c0 to 0x60006d7e0 ( 32 B ) in 1600 ns
-DEBUG: allocated [a Const] ( define ( square ( ( lambda ( ( n nil ) ( ( * ( n ( n nil ) ) ) nil ) ) ) nil ) ) ) from 0x60006d7e0 to 0x60006d800 ( 32 B ) in 1600 ns
+DEBUG: allocated [a Const] ( square ( ( lambda ( ( n nil ) ( ( * ( n ( n nil ) ) ) nil ) ) ) nil ) ) from 0x60006d7c0 to 0x60006d7e0 ( 32 B ) in 1700 ns
+DEBUG: allocated [a Const] ( define ( square ( ( lambda ( ( n nil ) ( ( * ( n ( n nil ) ) ) nil ) ) ) nil ) ) ) from 0x60006d7e0 to 0x60006d800 ( 32 B ) in 1200 ns
 DEBUG: allocated [a Void (scary, right?)] from 0x60006d800 to 0x60006d820 ( 32 B ) in 1700 ns
-DEBUG: allocated [an Object]  from 0x60006d820 to 0x60006d830 ( 16 B ) in 1300 ns
+DEBUG: allocated [an Object]  from 0x60006d820 to 0x60006d830 ( 16 B ) in 1200 ns
 
-> DEBUG: allocated [a Symbol] define from 0x60006d830 to 0x60006d848 ( 24 B ) in 1700 ns
-DEBUG: allocated [a Symbol] fac from 0x60006d848 to 0x60006d860 ( 24 B ) in 1600 ns
-DEBUG: allocated [a Symbol] lambda from 0x60006d860 to 0x60006d878 ( 24 B ) in 1600 ns
-DEBUG: allocated [a Symbol] n from 0x60006d878 to 0x60006d890 ( 24 B ) in 1300 ns
-DEBUG: allocated nil from 0x60006d890 to 0x60006d8a0 ( 16 B ) in 1200 ns
+> DEBUG: allocated [a Symbol] define from 0x60006d830 to 0x60006d848 ( 24 B ) in 1600 ns
+DEBUG: allocated [a Symbol] fac from 0x60006d848 to 0x60006d860 ( 24 B ) in 1700 ns
+DEBUG: allocated [a Symbol] lambda from 0x60006d860 to 0x60006d878 ( 24 B ) in 1700 ns
+DEBUG: allocated [a Symbol] n from 0x60006d878 to 0x60006d890 ( 24 B ) in 1600 ns
+DEBUG: allocated nil from 0x60006d890 to 0x60006d8a0 ( 16 B ) in 1300 ns
 DEBUG: allocated [a Const] ( n nil ) from 0x60006d8a0 to 0x60006d8c0 ( 32 B ) in 1600 ns
 DEBUG: allocated [a Symbol] if from 0x60006d8c0 to 0x60006d8d8 ( 24 B ) in 1600 ns
-DEBUG: allocated [a Symbol] = from 0x60006d8d8 to 0x60006d8f0 ( 24 B ) in 1200 ns
+DEBUG: allocated [a Symbol] = from 0x60006d8d8 to 0x60006d8f0 ( 24 B ) in 1300 ns
 DEBUG: allocated [a Symbol] n from 0x60006d8f0 to 0x60006d908 ( 24 B ) in 1700 ns
-DEBUG: allocated [an Integer] 1 from 0x60006d908 to 0x60006d920 ( 24 B ) in 1700 ns
-DEBUG: allocated nil from 0x60006d920 to 0x60006d930 ( 16 B ) in 1200 ns
-DEBUG: allocated [a Const] ( 1 nil ) from 0x60006d930 to 0x60006d950 ( 32 B ) in 1300 ns
+DEBUG: allocated [an Integer] 1 from 0x60006d908 to 0x60006d920 ( 24 B ) in 1300 ns
+DEBUG: allocated nil from 0x60006d920 to 0x60006d930 ( 16 B ) in 1600 ns
+DEBUG: allocated [a Const] ( 1 nil ) from 0x60006d930 to 0x60006d950 ( 32 B ) in 1700 ns
 DEBUG: allocated [a Const] ( n ( 1 nil ) ) from 0x60006d950 to 0x60006d970 ( 32 B ) in 1600 ns
-DEBUG: allocated [a Const] ( = ( n ( 1 nil ) ) ) from 0x60006d970 to 0x60006d990 ( 32 B ) in 1300 ns
-DEBUG: allocated [an Integer] 1 from 0x60006d990 to 0x60006d9a8 ( 24 B ) in 1700 ns
-DEBUG: allocated [a Symbol] * from 0x60006d9a8 to 0x60006d9c0 ( 24 B ) in 1200 ns
-DEBUG: allocated [a Symbol] n from 0x60006d9c0 to 0x60006d9d8 ( 24 B ) in 1200 ns
+DEBUG: allocated [a Const] ( = ( n ( 1 nil ) ) ) from 0x60006d970 to 0x60006d990 ( 32 B ) in 1600 ns
+DEBUG: allocated [an Integer] 1 from 0x60006d990 to 0x60006d9a8 ( 24 B ) in 1300 ns
+DEBUG: allocated [a Symbol] * from 0x60006d9a8 to 0x60006d9c0 ( 24 B ) in 1600 ns
+DEBUG: allocated [a Symbol] n from 0x60006d9c0 to 0x60006d9d8 ( 24 B ) in 1600 ns
 DEBUG: allocated [a Symbol] fac from 0x60006d9d8 to 0x60006d9f0 ( 24 B ) in 1700 ns
-DEBUG: allocated [a Symbol] - from 0x60006d9f0 to 0x60006da08 ( 24 B ) in 1200 ns
-DEBUG: allocated [a Symbol] n from 0x60006da08 to 0x60006da20 ( 24 B ) in 1700 ns
-DEBUG: allocated [an Integer] 1 from 0x60006da20 to 0x60006da38 ( 24 B ) in 1600 ns
-DEBUG: allocated nil from 0x60006da38 to 0x60006da48 ( 16 B ) in 1300 ns
+DEBUG: allocated [a Symbol] - from 0x60006d9f0 to 0x60006da08 ( 24 B ) in 1600 ns
+DEBUG: allocated [a Symbol] n from 0x60006da08 to 0x60006da20 ( 24 B ) in 1600 ns
+DEBUG: allocated [an Integer] 1 from 0x60006da20 to 0x60006da38 ( 24 B ) in 1300 ns
+DEBUG: allocated nil from 0x60006da38 to 0x60006da48 ( 16 B ) in 1600 ns
 DEBUG: allocated [a Const] ( 1 nil ) from 0x60006da48 to 0x60006da68 ( 32 B ) in 1200 ns
-DEBUG: allocated [a Const] ( n ( 1 nil ) ) from 0x60006da68 to 0x60006da88 ( 32 B ) in 1700 ns
-DEBUG: allocated [a Const] ( - ( n ( 1 nil ) ) ) from 0x60006da88 to 0x60006daa8 ( 32 B ) in 1600 ns
+DEBUG: allocated [a Const] ( n ( 1 nil ) ) from 0x60006da68 to 0x60006da88 ( 32 B ) in 1600 ns
+DEBUG: allocated [a Const] ( - ( n ( 1 nil ) ) ) from 0x60006da88 to 0x60006daa8 ( 32 B ) in 1700 ns
 DEBUG: allocated nil from 0x60006daa8 to 0x60006dab8 ( 16 B ) in 1200 ns
-DEBUG: allocated [a Const] ( ( - ( n ( 1 nil ) ) ) nil ) from 0x60006dab8 to 0x60006dad8 ( 32 B ) in 1200 ns
-DEBUG: allocated [a Const] ( fac ( ( - ( n ( 1 nil ) ) ) nil ) ) from 0x60006dad8 to 0x60006daf8 ( 32 B ) in 1600 ns
-DEBUG: allocated nil from 0x60006daf8 to 0x60006db08 ( 16 B ) in 1600 ns
-DEBUG: allocated [a Const] ( ( fac ( ( - ( n ( 1 nil ) ) ) nil ) ) nil ) from 0x60006db08 to 0x60006db28 ( 32 B ) in 1600 ns
-DEBUG: allocated [a Const] ( n ( ( fac ( ( - ( n ( 1 nil ) ) ) nil ) ) nil ) ) from 0x60006db28 to 0x60006db48 ( 32 B ) in 1200 ns
-DEBUG: allocated [a Const] ( * ( n ( ( fac ( ( - ( n ( 1 nil ) ) ) nil ) ) nil ) ) ) from 0x60006db48 to 0x60006db68 ( 32 B ) in 1200 ns
-DEBUG: allocated nil from 0x60006db68 to 0x60006db78 ( 16 B ) in 1200 ns
-DEBUG: allocated [a Const] ( ( * ( n ( ( fac ( ( - ( n ( 1 nil ) ) ) nil ) ) nil ) ) ) nil ) from 0x60006db78 to 0x60006db98 ( 32 B ) in 1300 ns
-DEBUG: allocated [a Const] ( 1 ( ( * ( n ( ( fac ( ( - ( n ( 1 nil ) ) ) nil ) ) nil ) ) ) nil ) ) from 0x60006db98 to 0x60006dbb8 ( 32 B ) in 1300 ns
-DEBUG: allocated [a Const] ( ( = ( n ( 1 nil ) ) ) ( 1 ( ( * ( n ( ( fac ( ( - ( n ( 1 nil ) ) ) nil ) ) nil ) ) ) nil ) ) ) from 0x60006dbb8 to 0x60006dbd8 ( 32 B ) in 1700 ns
+DEBUG: allocated [a Const] ( ( - ( n ( 1 nil ) ) ) nil ) from 0x60006dab8 to 0x60006dad8 ( 32 B ) in 1300 ns
+DEBUG: allocated [a Const] ( fac ( ( - ( n ( 1 nil ) ) ) nil ) ) from 0x60006dad8 to 0x60006daf8 ( 32 B ) in 1300 ns
+DEBUG: allocated nil from 0x60006daf8 to 0x60006db08 ( 16 B ) in 1200 ns
+DEBUG: allocated [a Const] ( ( fac ( ( - ( n ( 1 nil ) ) ) nil ) ) nil ) from 0x60006db08 to 0x60006db28 ( 32 B ) in 1700 ns
+DEBUG: allocated [a Const] ( n ( ( fac ( ( - ( n ( 1 nil ) ) ) nil ) ) nil ) ) from 0x60006db28 to 0x60006db48 ( 32 B ) in 1300 ns
+DEBUG: allocated [a Const] ( * ( n ( ( fac ( ( - ( n ( 1 nil ) ) ) nil ) ) nil ) ) ) from 0x60006db48 to 0x60006db68 ( 32 B ) in 1300 ns
+DEBUG: allocated nil from 0x60006db68 to 0x60006db78 ( 16 B ) in 1300 ns
+DEBUG: allocated [a Const] ( ( * ( n ( ( fac ( ( - ( n ( 1 nil ) ) ) nil ) ) nil ) ) ) nil ) from 0x60006db78 to 0x60006db98 ( 32 B ) in 1200 ns
+DEBUG: allocated [a Const] ( 1 ( ( * ( n ( ( fac ( ( - ( n ( 1 nil ) ) ) nil ) ) nil ) ) ) nil ) ) from 0x60006db98 to 0x60006dbb8 ( 32 B ) in 1200 ns
+DEBUG: allocated [a Const] ( ( = ( n ( 1 nil ) ) ) ( 1 ( ( * ( n ( ( fac ( ( - ( n ( 1 nil ) ) ) nil ) ) nil ) ) ) nil ) ) ) from 0x60006dbb8 to 0x60006dbd8 ( 32 B ) in 1600 ns
 DEBUG: allocated [a Const] ( if ( ( = ( n ( 1 nil ) ) ) ( 1 ( ( * ( n ( ( fac ( ( - ( n ( 1 nil ) ) ) nil ) ) nil ) ) ) nil ) ) ) ) from 0x60006dbd8 to 0x60006dbf8 ( 32 B ) in 1600 ns
-DEBUG: allocated nil from 0x60006dbf8 to 0x60006dc08 ( 16 B ) in 1700 ns
+DEBUG: allocated nil from 0x60006dbf8 to 0x60006dc08 ( 16 B ) in 1300 ns
 DEBUG: allocated [a Const] ( ( if ( ( = ( n ( 1 nil ) ) ) ( 1 ( ( * ( n ( ( fac ( ( - ( n ( 1 nil ) ) ) nil ) ) nil ) ) ) nil ) ) ) ) nil ) from 0x60006dc08 to 0x60006dc28 ( 32 B ) in 1200 ns
-DEBUG: allocated [a Const] ( ( n nil ) ( ( if ( ( = ( n ( 1 nil ) ) ) ( 1 ( ( * ( n ( ( fac ( ( - ( n ( 1 nil ) ) ) nil ) ) nil ) ) ) nil ) ) ) ) nil ) ) from 0x60006dc28 to 0x60006dc48 ( 32 B ) in 1700 ns
-DEBUG: allocated [a Const] ( lambda ( ( n nil ) ( ( if ( ( = ( n ( 1 nil ) ) ) ( 1 ( ( * ( n ( ( fac ( ( - ( n ( 1 nil ) ) ) nil ) ) nil ) ) ) nil ) ) ) ) nil ) ) ) from 0x60006dc48 to 0x60006dc68 ( 32 B ) in 1700 ns
+DEBUG: allocated [a Const] ( ( n nil ) ( ( if ( ( = ( n ( 1 nil ) ) ) ( 1 ( ( * ( n ( ( fac ( ( - ( n ( 1 nil ) ) ) nil ) ) nil ) ) ) nil ) ) ) ) nil ) ) from 0x60006dc28 to 0x60006dc48 ( 32 B ) in 1300 ns
+DEBUG: allocated [a Const] ( lambda ( ( n nil ) ( ( if ( ( = ( n ( 1 nil ) ) ) ( 1 ( ( * ( n ( ( fac ( ( - ( n ( 1 nil ) ) ) nil ) ) nil ) ) ) nil ) ) ) ) nil ) ) ) from 0x60006dc48 to 0x60006dc68 ( 32 B ) in 1200 ns
 DEBUG: allocated nil from 0x60006dc68 to 0x60006dc78 ( 16 B ) in 1200 ns
 DEBUG: allocated [a Const] ( ( lambda ( ( n nil ) ( ( if ( ( = ( n ( 1 nil ) ) ) ( 1 ( ( * ( n ( ( fac ( ( - ( n ( 1 nil ) ) ) nil ) ) nil ) ) ) nil ) ) ) ) nil ) ) ) nil ) from 0x60006dc78 to 0x60006dc98 ( 32 B ) in 1700 ns
-DEBUG: allocated [a Const] ( fac ( ( lambda ( ( n nil ) ( ( if ( ( = ( n ( 1 nil ) ) ) ( 1 ( ( * ( n ( ( fac ( ( - ( n ( 1 nil ) ) ) nil ) ) nil ) ) ) nil ) ) ) ) nil ) ) ) nil ) ) from 0x60006dc98 to 0x60006dcb8 ( 32 B ) in 1700 ns
+DEBUG: allocated [a Const] ( fac ( ( lambda ( ( n nil ) ( ( if ( ( = ( n ( 1 nil ) ) ) ( 1 ( ( * ( n ( ( fac ( ( - ( n ( 1 nil ) ) ) nil ) ) nil ) ) ) nil ) ) ) ) nil ) ) ) nil ) ) from 0x60006dc98 to 0x60006dcb8 ( 32 B ) in 1600 ns
 DEBUG: allocated [a Const] ( define ( fac ( ( lambda ( ( n nil ) ( ( if ( ( = ( n ( 1 nil ) ) ) ( 1 ( ( * ( n ( ( fac ( ( - ( n ( 1 nil ) ) ) nil ) ) nil ) ) ) nil ) ) ) ) nil ) ) ) nil ) ) ) from 0x60006dcb8 to 0x60006dcd8 ( 32 B ) in 1700 ns
-DEBUG: allocated [a Void (scary, right?)] from 0x60006dcd8 to 0x60006dcf8 ( 32 B ) in 1200 ns
-DEBUG: allocated [an Object]  from 0x60006dcf8 to 0x60006dd08 ( 16 B ) in 1600 ns
+DEBUG: allocated [a Void (scary, right?)] from 0x60006dcd8 to 0x60006dcf8 ( 32 B ) in 1700 ns
+DEBUG: allocated [an Object]  from 0x60006dcf8 to 0x60006dd08 ( 16 B ) in 1200 ns
 
-> DEBUG: allocated [a Symbol] define from 0x60006dd08 to 0x60006dd20 ( 24 B ) in 1600 ns
-DEBUG: allocated [a Symbol] a from 0x60006dd20 to 0x60006dd38 ( 24 B ) in 1700 ns
+> DEBUG: allocated [a Symbol] define from 0x60006dd08 to 0x60006dd20 ( 24 B ) in 2000 ns
+DEBUG: allocated [a Symbol] a from 0x60006dd20 to 0x60006dd38 ( 24 B ) in 1300 ns
 DEBUG: allocated [an Integer] 10 from 0x60006dd38 to 0x60006dd50 ( 24 B ) in 1200 ns
-DEBUG: allocated nil from 0x60006dd50 to 0x60006dd60 ( 16 B ) in 1300 ns
+DEBUG: allocated nil from 0x60006dd50 to 0x60006dd60 ( 16 B ) in 1200 ns
 DEBUG: allocated [a Const] ( 10 nil ) from 0x60006dd60 to 0x60006dd80 ( 32 B ) in 1600 ns
 DEBUG: allocated [a Const] ( a ( 10 nil ) ) from 0x60006dd80 to 0x60006dda0 ( 32 B ) in 1700 ns
-DEBUG: allocated [a Const] ( define ( a ( 10 nil ) ) ) from 0x60006dda0 to 0x60006ddc0 ( 32 B ) in 1200 ns
-DEBUG: allocated [an Object]  from 0x60006ddc0 to 0x60006ddd0 ( 16 B ) in 1200 ns
+DEBUG: allocated [a Const] ( define ( a ( 10 nil ) ) ) from 0x60006dda0 to 0x60006ddc0 ( 32 B ) in 2100 ns
+DEBUG: allocated [an Object]  from 0x60006ddc0 to 0x60006ddd0 ( 16 B ) in 1600 ns
 
-> DEBUG: allocated [a Symbol] define from 0x60006ddd0 to 0x60006dde8 ( 24 B ) in 1600 ns
-DEBUG: allocated [a Symbol] b from 0x60006dde8 to 0x60006de00 ( 24 B ) in 1200 ns
-DEBUG: allocated [an Integer] 20 from 0x60006de00 to 0x60006de18 ( 24 B ) in 1200 ns
-DEBUG: allocated nil from 0x60006de18 to 0x60006de28 ( 16 B ) in 1700 ns
-DEBUG: allocated [a Const] ( 20 nil ) from 0x60006de28 to 0x60006de48 ( 32 B ) in 1200 ns
-DEBUG: allocated [a Const] ( b ( 20 nil ) ) from 0x60006de48 to 0x60006de68 ( 32 B ) in 1300 ns
-DEBUG: allocated [a Const] ( define ( b ( 20 nil ) ) ) from 0x60006de68 to 0x60006de88 ( 32 B ) in 1600 ns
+> DEBUG: allocated [a Symbol] define from 0x60006ddd0 to 0x60006dde8 ( 24 B ) in 2400 ns
+DEBUG: allocated [a Symbol] b from 0x60006dde8 to 0x60006de00 ( 24 B ) in 2800 ns
+DEBUG: allocated [an Integer] 20 from 0x60006de00 to 0x60006de18 ( 24 B ) in 27100 ns
+DEBUG: allocated nil from 0x60006de18 to 0x60006de28 ( 16 B ) in 2900 ns
+DEBUG: allocated [a Const] ( 20 nil ) from 0x60006de28 to 0x60006de48 ( 32 B ) in 2000 ns
+DEBUG: allocated [a Const] ( b ( 20 nil ) ) from 0x60006de48 to 0x60006de68 ( 32 B ) in 1700 ns
+DEBUG: allocated [a Const] ( define ( b ( 20 nil ) ) ) from 0x60006de68 to 0x60006de88 ( 32 B ) in 1700 ns
 DEBUG: allocated [an Object]  from 0x60006de88 to 0x60006de98 ( 16 B ) in 1200 ns
 
-> DEBUG: allocated [a Symbol] not from 0x60006de98 to 0x60006deb0 ( 24 B ) in 1600 ns
-DEBUG: allocated [a Boolean] #t from 0x60006deb0 to 0x60006dec0 ( 16 B ) in 1200 ns
-DEBUG: allocated nil from 0x60006dec0 to 0x60006ded0 ( 16 B ) in 1200 ns
-DEBUG: allocated [a Const] ( #t nil ) from 0x60006ded0 to 0x60006def0 ( 32 B ) in 1700 ns
-DEBUG: allocated [a Const] ( not ( #t nil ) ) from 0x60006def0 to 0x60006df10 ( 32 B ) in 1200 ns
+> DEBUG: allocated [a Symbol] not from 0x60006de98 to 0x60006deb0 ( 24 B ) in 3200 ns
+DEBUG: allocated [a Boolean] #t from 0x60006deb0 to 0x60006dec0 ( 16 B ) in 3300 ns
+DEBUG: allocated nil from 0x60006dec0 to 0x60006ded0 ( 16 B ) in 4600 ns
+DEBUG: allocated [a Const] ( #t nil ) from 0x60006ded0 to 0x60006def0 ( 32 B ) in 2500 ns
+DEBUG: allocated [a Const] ( not ( #t nil ) ) from 0x60006def0 to 0x60006df10 ( 32 B ) in 5400 ns
 #f
-> DEBUG: allocated [a Symbol] not from 0x60006df10 to 0x60006df28 ( 24 B ) in 1600 ns
-DEBUG: allocated [a Symbol] = from 0x60006df28 to 0x60006df40 ( 24 B ) in 1700 ns
-DEBUG: allocated [an Integer] 3 from 0x60006df40 to 0x60006df58 ( 24 B ) in 1200 ns
-DEBUG: allocated [an Integer] 4 from 0x60006df58 to 0x60006df70 ( 24 B ) in 1300 ns
-DEBUG: allocated nil from 0x60006df70 to 0x60006df80 ( 16 B ) in 1200 ns
-DEBUG: allocated [a Const] ( 4 nil ) from 0x60006df80 to 0x60006dfa0 ( 32 B ) in 1700 ns
-DEBUG: allocated [a Const] ( 3 ( 4 nil ) ) from 0x60006dfa0 to 0x60006dfc0 ( 32 B ) in 1200 ns
-DEBUG: allocated [a Const] ( = ( 3 ( 4 nil ) ) ) from 0x60006dfc0 to 0x60006dfe0 ( 32 B ) in 1300 ns
-DEBUG: allocated nil from 0x60006dfe0 to 0x60006dff0 ( 16 B ) in 1700 ns
-DEBUG: allocated [a Const] ( ( = ( 3 ( 4 nil ) ) ) nil ) from 0x60006dff0 to 0x60006e010 ( 32 B ) in 1200 ns
-DEBUG: allocated [a Const] ( not ( ( = ( 3 ( 4 nil ) ) ) nil ) ) from 0x60006e010 to 0x60006e030 ( 32 B ) in 1300 ns
-DEBUG: allocated [a Boolean] #f from 0x60006e030 to 0x60006e040 ( 16 B ) in 1200 ns
+> DEBUG: allocated [a Symbol] not from 0x60006df10 to 0x60006df28 ( 24 B ) in 12800 ns
+DEBUG: allocated [a Symbol] = from 0x60006df28 to 0x60006df40 ( 24 B ) in 6100 ns
+DEBUG: allocated [an Integer] 3 from 0x60006df40 to 0x60006df58 ( 24 B ) in 2900 ns
+DEBUG: allocated [an Integer] 4 from 0x60006df58 to 0x60006df70 ( 24 B ) in 2500 ns
+DEBUG: allocated nil from 0x60006df70 to 0x60006df80 ( 16 B ) in 2800 ns
+DEBUG: allocated [a Const] ( 4 nil ) from 0x60006df80 to 0x60006dfa0 ( 32 B ) in 6200 ns
+DEBUG: allocated [a Const] ( 3 ( 4 nil ) ) from 0x60006dfa0 to 0x60006dfc0 ( 32 B ) in 5300 ns
+DEBUG: allocated [a Const] ( = ( 3 ( 4 nil ) ) ) from 0x60006dfc0 to 0x60006dfe0 ( 32 B ) in 5800 ns
+DEBUG: allocated nil from 0x60006dfe0 to 0x60006dff0 ( 16 B ) in 2000 ns
+DEBUG: allocated [a Const] ( ( = ( 3 ( 4 nil ) ) ) nil ) from 0x60006dff0 to 0x60006e010 ( 32 B ) in 2500 ns
+DEBUG: allocated [a Const] ( not ( ( = ( 3 ( 4 nil ) ) ) nil ) ) from 0x60006e010 to 0x60006e030 ( 32 B ) in 2900 ns
+DEBUG: allocated [a Boolean] #f from 0x60006e030 to 0x60006e040 ( 16 B ) in 2900 ns
 #t
-> DEBUG: allocated [a Symbol] and from 0x60006e040 to 0x60006e058 ( 24 B ) in 1600 ns
-DEBUG: allocated [a Boolean] #t from 0x60006e058 to 0x60006e068 ( 16 B ) in 1300 ns
-DEBUG: allocated [a Boolean] #t from 0x60006e068 to 0x60006e078 ( 16 B ) in 1200 ns
-DEBUG: allocated nil from 0x60006e078 to 0x60006e088 ( 16 B ) in 1300 ns
-DEBUG: allocated [a Const] ( #t nil ) from 0x60006e088 to 0x60006e0a8 ( 32 B ) in 1200 ns
-DEBUG: allocated [a Const] ( #t ( #t nil ) ) from 0x60006e0a8 to 0x60006e0c8 ( 32 B ) in 1300 ns
-DEBUG: allocated [a Const] ( and ( #t ( #t nil ) ) ) from 0x60006e0c8 to 0x60006e0e8 ( 32 B ) in 1600 ns
+> DEBUG: allocated [a Symbol] and from 0x60006e040 to 0x60006e058 ( 24 B ) in 2800 ns
+DEBUG: allocated [a Boolean] #t from 0x60006e058 to 0x60006e068 ( 16 B ) in 1600 ns
+DEBUG: allocated [a Boolean] #t from 0x60006e068 to 0x60006e078 ( 16 B ) in 2100 ns
+DEBUG: allocated nil from 0x60006e078 to 0x60006e088 ( 16 B ) in 2000 ns
+DEBUG: allocated [a Const] ( #t nil ) from 0x60006e088 to 0x60006e0a8 ( 32 B ) in 2100 ns
+DEBUG: allocated [a Const] ( #t ( #t nil ) ) from 0x60006e0a8 to 0x60006e0c8 ( 32 B ) in 1700 ns
+DEBUG: allocated [a Const] ( and ( #t ( #t nil ) ) ) from 0x60006e0c8 to 0x60006e0e8 ( 32 B ) in 2000 ns
 #t
-> DEBUG: allocated [a Symbol] square from 0x60006e0e8 to 0x60006e100 ( 24 B ) in 1700 ns
-DEBUG: allocated [a Symbol] a from 0x60006e100 to 0x60006e118 ( 24 B ) in 1700 ns
-DEBUG: allocated nil from 0x60006e118 to 0x60006e128 ( 16 B ) in 1300 ns
-DEBUG: allocated [a Const] ( a nil ) from 0x60006e128 to 0x60006e148 ( 32 B ) in 1600 ns
-DEBUG: allocated [a Const] ( square ( a nil ) ) from 0x60006e148 to 0x60006e168 ( 32 B ) in 1300 ns
-DEBUG: allocated [an Integer] 100 from 0x60006e168 to 0x60006e180 ( 24 B ) in 1700 ns
+> DEBUG: allocated [a Symbol] square from 0x60006e0e8 to 0x60006e100 ( 24 B ) in 2800 ns
+DEBUG: allocated [a Symbol] a from 0x60006e100 to 0x60006e118 ( 24 B ) in 2500 ns
+DEBUG: allocated nil from 0x60006e118 to 0x60006e128 ( 16 B ) in 1600 ns
+DEBUG: allocated [a Const] ( a nil ) from 0x60006e128 to 0x60006e148 ( 32 B ) in 2100 ns
+DEBUG: allocated [a Const] ( square ( a nil ) ) from 0x60006e148 to 0x60006e168 ( 32 B ) in 2100 ns
+DEBUG: allocated [an Integer] 100 from 0x60006e168 to 0x60006e180 ( 24 B ) in 2000 ns
 100
-> DEBUG: allocated [a Symbol] square from 0x60006e180 to 0x60006e198 ( 24 B ) in 1600 ns
-DEBUG: allocated [a Symbol] * from 0x60006e198 to 0x60006e1b0 ( 24 B ) in 1700 ns
-DEBUG: allocated [an Integer] 2 from 0x60006e1b0 to 0x60006e1c8 ( 24 B ) in 1200 ns
-DEBUG: allocated [an Integer] 1 from 0x60006e1c8 to 0x60006e1e0 ( 24 B ) in 1300 ns
-DEBUG: allocated nil from 0x60006e1e0 to 0x60006e1f0 ( 16 B ) in 1200 ns
-DEBUG: allocated [a Const] ( 1 nil ) from 0x60006e1f0 to 0x60006e210 ( 32 B ) in 1200 ns
-DEBUG: allocated [a Const] ( 2 ( 1 nil ) ) from 0x60006e210 to 0x60006e230 ( 32 B ) in 1200 ns
-DEBUG: allocated [a Const] ( * ( 2 ( 1 nil ) ) ) from 0x60006e230 to 0x60006e250 ( 32 B ) in 1200 ns
-DEBUG: allocated nil from 0x60006e250 to 0x60006e260 ( 16 B ) in 1600 ns
-DEBUG: allocated [a Const] ( ( * ( 2 ( 1 nil ) ) ) nil ) from 0x60006e260 to 0x60006e280 ( 32 B ) in 1300 ns
-DEBUG: allocated [a Const] ( square ( ( * ( 2 ( 1 nil ) ) ) nil ) ) from 0x60006e280 to 0x60006e2a0 ( 32 B ) in 1200 ns
-DEBUG: allocated [an Integer] 2 from 0x60006e2a0 to 0x60006e2b8 ( 24 B ) in 1300 ns
-DEBUG: allocated [an Integer] 4 from 0x60006e2b8 to 0x60006e2d0 ( 24 B ) in 1200 ns
+> DEBUG: allocated [a Symbol] square from 0x60006e180 to 0x60006e198 ( 24 B ) in 2900 ns
+DEBUG: allocated [a Symbol] * from 0x60006e198 to 0x60006e1b0 ( 24 B ) in 2500 ns
+DEBUG: allocated [an Integer] 2 from 0x60006e1b0 to 0x60006e1c8 ( 24 B ) in 2000 ns
+DEBUG: allocated [an Integer] 1 from 0x60006e1c8 to 0x60006e1e0 ( 24 B ) in 2100 ns
+DEBUG: allocated nil from 0x60006e1e0 to 0x60006e1f0 ( 16 B ) in 1600 ns
+DEBUG: allocated [a Const] ( 1 nil ) from 0x60006e1f0 to 0x60006e210 ( 32 B ) in 2000 ns
+DEBUG: allocated [a Const] ( 2 ( 1 nil ) ) from 0x60006e210 to 0x60006e230 ( 32 B ) in 2100 ns
+DEBUG: allocated [a Const] ( * ( 2 ( 1 nil ) ) ) from 0x60006e230 to 0x60006e250 ( 32 B ) in 2100 ns
+DEBUG: allocated nil from 0x60006e250 to 0x60006e260 ( 16 B ) in 2000 ns
+DEBUG: allocated [a Const] ( ( * ( 2 ( 1 nil ) ) ) nil ) from 0x60006e260 to 0x60006e280 ( 32 B ) in 2100 ns
+DEBUG: allocated [a Const] ( square ( ( * ( 2 ( 1 nil ) ) ) nil ) ) from 0x60006e280 to 0x60006e2a0 ( 32 B ) in 2100 ns
+DEBUG: allocated [an Integer] 2 from 0x60006e2a0 to 0x60006e2b8 ( 24 B ) in 1700 ns
+DEBUG: allocated [an Integer] 4 from 0x60006e2b8 to 0x60006e2d0 ( 24 B ) in 1700 ns
 4
-> DEBUG: allocated [a Symbol] fac from 0x60006e2d0 to 0x60006e2e8 ( 24 B ) in 2000 ns
+> DEBUG: allocated [a Symbol] fac from 0x60006e2d0 to 0x60006e2e8 ( 24 B ) in 2900 ns
 DEBUG: allocated [an Integer] 4 from 0x60006e2e8 to 0x60006e300 ( 24 B ) in 1700 ns
-DEBUG: allocated nil from 0x60006e300 to 0x60006e310 ( 16 B ) in 1200 ns
-DEBUG: allocated [a Const] ( 4 nil ) from 0x60006e310 to 0x60006e330 ( 32 B ) in 1600 ns
+DEBUG: allocated nil from 0x60006e300 to 0x60006e310 ( 16 B ) in 1600 ns
+DEBUG: allocated [a Const] ( 4 nil ) from 0x60006e310 to 0x60006e330 ( 32 B ) in 2100 ns
 DEBUG: allocated [a Const] ( fac ( 4 nil ) ) from 0x60006e330 to 0x60006e350 ( 32 B ) in 1600 ns
 DEBUG: allocated [a Boolean] #f from 0x60006e350 to 0x60006e360 ( 16 B ) in 1700 ns
-DEBUG: allocated [an Integer] 3 from 0x60006e360 to 0x60006e378 ( 24 B ) in 1200 ns
-DEBUG: allocated [a Boolean] #f from 0x60006e378 to 0x60006e388 ( 16 B ) in 1200 ns
-DEBUG: allocated [an Integer] 2 from 0x60006e388 to 0x60006e3a0 ( 24 B ) in 1200 ns
-DEBUG: allocated [a Boolean] #f from 0x60006e3a0 to 0x60006e3b0 ( 16 B ) in 1300 ns
-DEBUG: allocated [an Integer] 1 from 0x60006e3b0 to 0x60006e3c8 ( 24 B ) in 1200 ns
-DEBUG: allocated [a Boolean] #t from 0x60006e3c8 to 0x60006e3d8 ( 16 B ) in 1200 ns
-DEBUG: allocated [an Integer] 2 from 0x60006e3d8 to 0x60006e3f0 ( 24 B ) in 1200 ns
-DEBUG: allocated [an Integer] 6 from 0x60006e3f0 to 0x60006e408 ( 24 B ) in 1200 ns
-DEBUG: allocated [an Integer] 24 from 0x60006e408 to 0x60006e420 ( 24 B ) in 1300 ns
+DEBUG: allocated [an Integer] 3 from 0x60006e360 to 0x60006e378 ( 24 B ) in 2000 ns
+DEBUG: allocated [a Boolean] #f from 0x60006e378 to 0x60006e388 ( 16 B ) in 1700 ns
+DEBUG: allocated [an Integer] 2 from 0x60006e388 to 0x60006e3a0 ( 24 B ) in 1600 ns
+DEBUG: allocated [a Boolean] #f from 0x60006e3a0 to 0x60006e3b0 ( 16 B ) in 2100 ns
+DEBUG: allocated [an Integer] 1 from 0x60006e3b0 to 0x60006e3c8 ( 24 B ) in 2000 ns
+DEBUG: allocated [a Boolean] #t from 0x60006e3c8 to 0x60006e3d8 ( 16 B ) in 1700 ns
+DEBUG: allocated [an Integer] 2 from 0x60006e3d8 to 0x60006e3f0 ( 24 B ) in 2000 ns
+DEBUG: allocated [an Integer] 6 from 0x60006e3f0 to 0x60006e408 ( 24 B ) in 2100 ns
+DEBUG: allocated [an Integer] 24 from 0x60006e408 to 0x60006e420 ( 24 B ) in 1700 ns
 24
-> DEBUG: allocated [a Symbol] define from 0x60006e420 to 0x60006e438 ( 24 B ) in 1600 ns
-DEBUG: allocated [a Symbol] cadr from 0x60006e438 to 0x60006e450 ( 24 B ) in 1700 ns
-DEBUG: allocated [a Symbol] lambda from 0x60006e450 to 0x60006e468 ( 24 B ) in 1700 ns
-DEBUG: allocated [a Symbol] l from 0x60006e468 to 0x60006e480 ( 24 B ) in 1600 ns
-DEBUG: allocated nil from 0x60006e480 to 0x60006e490 ( 16 B ) in 1300 ns
-DEBUG: allocated [a Const] ( l nil ) from 0x60006e490 to 0x60006e4b0 ( 32 B ) in 1200 ns
-DEBUG: allocated [a Symbol] car from 0x60006e4b0 to 0x60006e4c8 ( 24 B ) in 1600 ns
-DEBUG: allocated [a Symbol] cdr from 0x60006e4c8 to 0x60006e4e0 ( 24 B ) in 1700 ns
-DEBUG: allocated [a Symbol] l from 0x60006e4e0 to 0x60006e4f8 ( 24 B ) in 1600 ns
-DEBUG: allocated nil from 0x60006e4f8 to 0x60006e508 ( 16 B ) in 1300 ns
-DEBUG: allocated [a Const] ( l nil ) from 0x60006e508 to 0x60006e528 ( 32 B ) in 1200 ns
-DEBUG: allocated [a Const] ( cdr ( l nil ) ) from 0x60006e528 to 0x60006e548 ( 32 B ) in 1200 ns
-DEBUG: allocated nil from 0x60006e548 to 0x60006e558 ( 16 B ) in 1200 ns
-DEBUG: allocated [a Const] ( ( cdr ( l nil ) ) nil ) from 0x60006e558 to 0x60006e578 ( 32 B ) in 1700 ns
-DEBUG: allocated [a Const] ( car ( ( cdr ( l nil ) ) nil ) ) from 0x60006e578 to 0x60006e598 ( 32 B ) in 1700 ns
-DEBUG: allocated nil from 0x60006e598 to 0x60006e5a8 ( 16 B ) in 1300 ns
-DEBUG: allocated [a Const] ( ( car ( ( cdr ( l nil ) ) nil ) ) nil ) from 0x60006e5a8 to 0x60006e5c8 ( 32 B ) in 1200 ns
-DEBUG: allocated [a Const] ( ( l nil ) ( ( car ( ( cdr ( l nil ) ) nil ) ) nil ) ) from 0x60006e5c8 to 0x60006e5e8 ( 32 B ) in 1700 ns
-DEBUG: allocated [a Const] ( lambda ( ( l nil ) ( ( car ( ( cdr ( l nil ) ) nil ) ) nil ) ) ) from 0x60006e5e8 to 0x60006e608 ( 32 B ) in 1300 ns
-DEBUG: allocated nil from 0x60006e608 to 0x60006e618 ( 16 B ) in 1300 ns
-DEBUG: allocated [a Const] ( ( lambda ( ( l nil ) ( ( car ( ( cdr ( l nil ) ) nil ) ) nil ) ) ) nil ) from 0x60006e618 to 0x60006e638 ( 32 B ) in 1200 ns
-DEBUG: allocated [a Const] ( cadr ( ( lambda ( ( l nil ) ( ( car ( ( cdr ( l nil ) ) nil ) ) nil ) ) ) nil ) ) from 0x60006e638 to 0x60006e658 ( 32 B ) in 1200 ns
-DEBUG: allocated [a Const] ( define ( cadr ( ( lambda ( ( l nil ) ( ( car ( ( cdr ( l nil ) ) nil ) ) nil ) ) ) nil ) ) ) from 0x60006e658 to 0x60006e678 ( 32 B ) in 1600 ns
-DEBUG: allocated [a Void (scary, right?)] from 0x60006e678 to 0x60006e698 ( 32 B ) in 1200 ns
-DEBUG: allocated [an Object]  from 0x60006e698 to 0x60006e6a8 ( 16 B ) in 1700 ns
+> DEBUG: allocated [a Symbol] define from 0x60006e420 to 0x60006e438 ( 24 B ) in 2800 ns
+DEBUG: allocated [a Symbol] cadr from 0x60006e438 to 0x60006e450 ( 24 B ) in 2400 ns
+DEBUG: allocated [a Symbol] lambda from 0x60006e450 to 0x60006e468 ( 24 B ) in 2500 ns
+DEBUG: allocated [a Symbol] l from 0x60006e468 to 0x60006e480 ( 24 B ) in 2000 ns
+DEBUG: allocated nil from 0x60006e480 to 0x60006e490 ( 16 B ) in 2100 ns
+DEBUG: allocated [a Const] ( l nil ) from 0x60006e490 to 0x60006e4b0 ( 32 B ) in 2000 ns
+DEBUG: allocated [a Symbol] car from 0x60006e4b0 to 0x60006e4c8 ( 24 B ) in 2100 ns
+DEBUG: allocated [a Symbol] cdr from 0x60006e4c8 to 0x60006e4e0 ( 24 B ) in 2100 ns
+DEBUG: allocated [a Symbol] l from 0x60006e4e0 to 0x60006e4f8 ( 24 B ) in 2000 ns
+DEBUG: allocated nil from 0x60006e4f8 to 0x60006e508 ( 16 B ) in 1600 ns
+DEBUG: allocated [a Const] ( l nil ) from 0x60006e508 to 0x60006e528 ( 32 B ) in 2000 ns
+DEBUG: allocated [a Const] ( cdr ( l nil ) ) from 0x60006e528 to 0x60006e548 ( 32 B ) in 2000 ns
+DEBUG: allocated nil from 0x60006e548 to 0x60006e558 ( 16 B ) in 2100 ns
+DEBUG: allocated [a Const] ( ( cdr ( l nil ) ) nil ) from 0x60006e558 to 0x60006e578 ( 32 B ) in 1600 ns
+DEBUG: allocated [a Const] ( car ( ( cdr ( l nil ) ) nil ) ) from 0x60006e578 to 0x60006e598 ( 32 B ) in 2000 ns
+DEBUG: allocated nil from 0x60006e598 to 0x60006e5a8 ( 16 B ) in 2000 ns
+DEBUG: allocated [a Const] ( ( car ( ( cdr ( l nil ) ) nil ) ) nil ) from 0x60006e5a8 to 0x60006e5c8 ( 32 B ) in 2500 ns
+DEBUG: allocated [a Const] ( ( l nil ) ( ( car ( ( cdr ( l nil ) ) nil ) ) nil ) ) from 0x60006e5c8 to 0x60006e5e8 ( 32 B ) in 2500 ns
+DEBUG: allocated [a Const] ( lambda ( ( l nil ) ( ( car ( ( cdr ( l nil ) ) nil ) ) nil ) ) ) from 0x60006e5e8 to 0x60006e608 ( 32 B ) in 2400 ns
+DEBUG: allocated nil from 0x60006e608 to 0x60006e618 ( 16 B ) in 2500 ns
+DEBUG: allocated [a Const] ( ( lambda ( ( l nil ) ( ( car ( ( cdr ( l nil ) ) nil ) ) nil ) ) ) nil ) from 0x60006e618 to 0x60006e638 ( 32 B ) in 2500 ns
+DEBUG: allocated [a Const] ( cadr ( ( lambda ( ( l nil ) ( ( car ( ( cdr ( l nil ) ) nil ) ) nil ) ) ) nil ) ) from 0x60006e638 to 0x60006e658 ( 32 B ) in 2100 ns
+DEBUG: allocated [a Const] ( define ( cadr ( ( lambda ( ( l nil ) ( ( car ( ( cdr ( l nil ) ) nil ) ) nil ) ) ) nil ) ) ) from 0x60006e658 to 0x60006e678 ( 32 B ) in 2400 ns
+DEBUG: allocated [a Void (scary, right?)] from 0x60006e678 to 0x60006e698 ( 32 B ) in 2400 ns
+DEBUG: allocated [an Object]  from 0x60006e698 to 0x60006e6a8 ( 16 B ) in 2100 ns
 
-> DEBUG: allocated [a Symbol] define from 0x60006e6a8 to 0x60006e6c0 ( 24 B ) in 1700 ns
-DEBUG: allocated [a Symbol] caddr from 0x60006e6c0 to 0x60006e6d8 ( 24 B ) in 1600 ns
+> DEBUG: allocated [a Symbol] define from 0x60006e6a8 to 0x60006e6c0 ( 24 B ) in 3200 ns
+DEBUG: allocated [a Symbol] caddr from 0x60006e6c0 to 0x60006e6d8 ( 24 B ) in 2900 ns
 DEBUG: collecting garbage to free 24 B
 DEBUG:   freed [a Symbol] < from 0x600022958 to 0x600022970 ( 24 B )
 DEBUG:   freed [an Integer] 2 from 0x600022970 to 0x600022988 ( 24 B )
@@ -849,14 +849,14 @@ DEBUG:   freed [a Const] ( define ( cadr ( ( lambda ( ( l nil ) ( ( car ( ( cdr 
 DEBUG:   freed [an Object]  from 0x60006e698 to 0x60006e6a8 ( 16 B )
 DEBUG:   empty space from 0x60006e6d8 to 0x60006e6e0 ( 8 B )
 DEBUG: garbage collected - freed enough memory
-DEBUG: allocated [a Symbol] lambda from 0x600022958 to 0x600022970 ( 24 B ) in 1252100 ns
-DEBUG: allocated [a Symbol] l from 0x600022970 to 0x600022988 ( 24 B ) in 1700 ns
+DEBUG: allocated [a Symbol] lambda from 0x600022958 to 0x600022970 ( 24 B ) in 1981200 ns
+DEBUG: allocated [a Symbol] l from 0x600022970 to 0x600022988 ( 24 B ) in 2000 ns
 DEBUG: allocated nil from 0x600022988 to 0x600022998 ( 16 B ) in 1200 ns
-DEBUG: allocated [a Const] ( l nil ) from 0x600022998 to 0x6000229b8 ( 32 B ) in 1600 ns
-DEBUG: allocated [a Symbol] car from 0x6000229b8 to 0x6000229d0 ( 24 B ) in 1600 ns
-DEBUG: allocated [a Symbol] cdr from 0x6000229d0 to 0x6000229e8 ( 24 B ) in 1600 ns
-DEBUG: allocated [a Symbol] cdr from 0x6000229e8 to 0x600022a00 ( 24 B ) in 1700 ns
-DEBUG: allocated [a Symbol] l from 0x600022a00 to 0x600022a18 ( 24 B ) in 1200 ns
+DEBUG: allocated [a Const] ( l nil ) from 0x600022998 to 0x6000229b8 ( 32 B ) in 1200 ns
+DEBUG: allocated [a Symbol] car from 0x6000229b8 to 0x6000229d0 ( 24 B ) in 1200 ns
+DEBUG: allocated [a Symbol] cdr from 0x6000229d0 to 0x6000229e8 ( 24 B ) in 1300 ns
+DEBUG: allocated [a Symbol] cdr from 0x6000229e8 to 0x600022a00 ( 24 B ) in 1600 ns
+DEBUG: allocated [a Symbol] l from 0x600022a00 to 0x600022a18 ( 24 B ) in 1700 ns
 DEBUG: allocated nil from 0x600022a18 to 0x600022a28 ( 16 B ) in 1200 ns
 DEBUG: allocated [a Const] ( l nil ) from 0x600022a28 to 0x600022a48 ( 32 B ) in 1300 ns
 DEBUG: allocated [a Const] ( cdr ( l nil ) ) from 0x600022a48 to 0x600022a68 ( 32 B ) in 1200 ns
@@ -864,81 +864,81 @@ DEBUG: allocated nil from 0x600022a68 to 0x600022a78 ( 16 B ) in 1300 ns
 DEBUG: allocated [a Const] ( ( cdr ( l nil ) ) nil ) from 0x600022a78 to 0x600022a98 ( 32 B ) in 1200 ns
 DEBUG: allocated [a Const] ( cdr ( ( cdr ( l nil ) ) nil ) ) from 0x600022a98 to 0x600022ab8 ( 32 B ) in 1200 ns
 DEBUG: allocated nil from 0x600022ab8 to 0x600022ac8 ( 16 B ) in 1200 ns
-DEBUG: allocated [a Const] ( ( cdr ( ( cdr ( l nil ) ) nil ) ) nil ) from 0x600022ac8 to 0x600022ae8 ( 32 B ) in 1200 ns
+DEBUG: allocated [a Const] ( ( cdr ( ( cdr ( l nil ) ) nil ) ) nil ) from 0x600022ac8 to 0x600022ae8 ( 32 B ) in 1300 ns
 DEBUG: allocated [a Const] ( car ( ( cdr ( ( cdr ( l nil ) ) nil ) ) nil ) ) from 0x600022ae8 to 0x600022b08 ( 32 B ) in 1200 ns
 DEBUG: allocated nil from 0x600022b08 to 0x600022b18 ( 16 B ) in 1200 ns
-DEBUG: allocated [a Const] ( ( car ( ( cdr ( ( cdr ( l nil ) ) nil ) ) nil ) ) nil ) from 0x600022b18 to 0x600022b38 ( 32 B ) in 1200 ns
-DEBUG: allocated [a Const] ( ( l nil ) ( ( car ( ( cdr ( ( cdr ( l nil ) ) nil ) ) nil ) ) nil ) ) from 0x600022b38 to 0x600022b58 ( 32 B ) in 1600 ns
-DEBUG: allocated [a Const] ( lambda ( ( l nil ) ( ( car ( ( cdr ( ( cdr ( l nil ) ) nil ) ) nil ) ) nil ) ) ) from 0x600022b58 to 0x600022b78 ( 32 B ) in 1200 ns
+DEBUG: allocated [a Const] ( ( car ( ( cdr ( ( cdr ( l nil ) ) nil ) ) nil ) ) nil ) from 0x600022b18 to 0x600022b38 ( 32 B ) in 1300 ns
+DEBUG: allocated [a Const] ( ( l nil ) ( ( car ( ( cdr ( ( cdr ( l nil ) ) nil ) ) nil ) ) nil ) ) from 0x600022b38 to 0x600022b58 ( 32 B ) in 1300 ns
+DEBUG: allocated [a Const] ( lambda ( ( l nil ) ( ( car ( ( cdr ( ( cdr ( l nil ) ) nil ) ) nil ) ) nil ) ) ) from 0x600022b58 to 0x600022b78 ( 32 B ) in 1700 ns
 DEBUG: allocated nil from 0x600022b78 to 0x600022b88 ( 16 B ) in 1300 ns
 DEBUG: allocated [a Const] ( ( lambda ( ( l nil ) ( ( car ( ( cdr ( ( cdr ( l nil ) ) nil ) ) nil ) ) nil ) ) ) nil ) from 0x600022b88 to 0x600022ba8 ( 32 B ) in 1200 ns
 DEBUG: allocated [a Const] ( caddr ( ( lambda ( ( l nil ) ( ( car ( ( cdr ( ( cdr ( l nil ) ) nil ) ) nil ) ) nil ) ) ) nil ) ) from 0x600022ba8 to 0x600022bc8 ( 32 B ) in 1600 ns
-DEBUG: allocated [a Const] ( define ( caddr ( ( lambda ( ( l nil ) ( ( car ( ( cdr ( ( cdr ( l nil ) ) nil ) ) nil ) ) nil ) ) ) nil ) ) ) from 0x600022bc8 to 0x600022be8 ( 32 B ) in 1600 ns
+DEBUG: allocated [a Const] ( define ( caddr ( ( lambda ( ( l nil ) ( ( car ( ( cdr ( ( cdr ( l nil ) ) nil ) ) nil ) ) nil ) ) ) nil ) ) ) from 0x600022bc8 to 0x600022be8 ( 32 B ) in 1200 ns
 DEBUG: allocated [a Void (scary, right?)] from 0x600022be8 to 0x600022c08 ( 32 B ) in 1200 ns
-DEBUG: allocated [an Object]  from 0x600022c08 to 0x600022c18 ( 16 B ) in 1300 ns
+DEBUG: allocated [an Object]  from 0x600022c08 to 0x600022c18 ( 16 B ) in 1200 ns
 
-> DEBUG: allocated [a Symbol] define from 0x600022c18 to 0x600022c30 ( 24 B ) in 1300 ns
+> DEBUG: allocated [a Symbol] define from 0x600022c18 to 0x600022c30 ( 24 B ) in 1600 ns
 DEBUG: allocated [a Symbol] first from 0x600022c30 to 0x600022c48 ( 24 B ) in 1600 ns
-DEBUG: allocated [a Symbol] car from 0x600022c48 to 0x600022c60 ( 24 B ) in 1600 ns
-DEBUG: allocated nil from 0x600022c60 to 0x600022c70 ( 16 B ) in 1200 ns
-DEBUG: allocated [a Const] ( car nil ) from 0x600022c70 to 0x600022c90 ( 32 B ) in 1300 ns
+DEBUG: allocated [a Symbol] car from 0x600022c48 to 0x600022c60 ( 24 B ) in 1700 ns
+DEBUG: allocated nil from 0x600022c60 to 0x600022c70 ( 16 B ) in 1600 ns
+DEBUG: allocated [a Const] ( car nil ) from 0x600022c70 to 0x600022c90 ( 32 B ) in 1200 ns
 DEBUG: allocated [a Const] ( first ( car nil ) ) from 0x600022c90 to 0x600022cb0 ( 32 B ) in 1200 ns
-DEBUG: allocated [a Const] ( define ( first ( car nil ) ) ) from 0x600022cb0 to 0x600022cd0 ( 32 B ) in 1300 ns
+DEBUG: allocated [a Const] ( define ( first ( car nil ) ) ) from 0x600022cb0 to 0x600022cd0 ( 32 B ) in 1200 ns
 DEBUG: allocated [an Object]  from 0x600022cd0 to 0x600022ce0 ( 16 B ) in 1300 ns
 
 > DEBUG: allocated [a Symbol] define from 0x600022ce0 to 0x600022cf8 ( 24 B ) in 1700 ns
-DEBUG: allocated [a Symbol] second from 0x600022cf8 to 0x600022d10 ( 24 B ) in 1700 ns
+DEBUG: allocated [a Symbol] second from 0x600022cf8 to 0x600022d10 ( 24 B ) in 1600 ns
 DEBUG: allocated [a Symbol] cadr from 0x600022d10 to 0x600022d28 ( 24 B ) in 1600 ns
 DEBUG: allocated nil from 0x600022d28 to 0x600022d38 ( 16 B ) in 1200 ns
 DEBUG: allocated [a Const] ( cadr nil ) from 0x600022d38 to 0x600022d58 ( 32 B ) in 1300 ns
-DEBUG: allocated [a Const] ( second ( cadr nil ) ) from 0x600022d58 to 0x600022d78 ( 32 B ) in 1600 ns
-DEBUG: allocated [a Const] ( define ( second ( cadr nil ) ) ) from 0x600022d78 to 0x600022d98 ( 32 B ) in 1700 ns
+DEBUG: allocated [a Const] ( second ( cadr nil ) ) from 0x600022d58 to 0x600022d78 ( 32 B ) in 1200 ns
+DEBUG: allocated [a Const] ( define ( second ( cadr nil ) ) ) from 0x600022d78 to 0x600022d98 ( 32 B ) in 1300 ns
 DEBUG: allocated [an Object]  from 0x600022d98 to 0x600022da8 ( 16 B ) in 1200 ns
 
 > DEBUG: allocated [a Symbol] define from 0x600022da8 to 0x600022dc0 ( 24 B ) in 1700 ns
 DEBUG: allocated [a Symbol] third from 0x600022dc0 to 0x600022dd8 ( 24 B ) in 1700 ns
 DEBUG: allocated [a Symbol] caddr from 0x600022dd8 to 0x600022df0 ( 24 B ) in 1200 ns
-DEBUG: allocated nil from 0x600022df0 to 0x600022e00 ( 16 B ) in 1200 ns
-DEBUG: allocated [a Const] ( caddr nil ) from 0x600022e00 to 0x600022e20 ( 32 B ) in 1700 ns
-DEBUG: allocated [a Const] ( third ( caddr nil ) ) from 0x600022e20 to 0x600022e40 ( 32 B ) in 1200 ns
+DEBUG: allocated nil from 0x600022df0 to 0x600022e00 ( 16 B ) in 1300 ns
+DEBUG: allocated [a Const] ( caddr nil ) from 0x600022e00 to 0x600022e20 ( 32 B ) in 1200 ns
+DEBUG: allocated [a Const] ( third ( caddr nil ) ) from 0x600022e20 to 0x600022e40 ( 32 B ) in 1600 ns
 DEBUG: allocated [a Const] ( define ( third ( caddr nil ) ) ) from 0x600022e40 to 0x600022e60 ( 32 B ) in 1200 ns
 DEBUG: allocated [an Object]  from 0x600022e60 to 0x600022e70 ( 16 B ) in 1300 ns
 
 > DEBUG: allocated [a Symbol] first from 0x600022e70 to 0x600022e88 ( 24 B ) in 1700 ns
 DEBUG: allocated [an Integer] 1 from 0x600022e88 to 0x600022ea0 ( 24 B ) in 1200 ns
 DEBUG: allocated [an Integer] 2 from 0x600022ea0 to 0x600022eb8 ( 24 B ) in 1200 ns
-DEBUG: allocated [an Integer] 3 from 0x600022eb8 to 0x600022ed0 ( 24 B ) in 1300 ns
-DEBUG: allocated nil from 0x600022ed0 to 0x600022ee0 ( 16 B ) in 1200 ns
-DEBUG: allocated [a Const] ( 3 nil ) from 0x600022ee0 to 0x600022f00 ( 32 B ) in 1300 ns
-DEBUG: allocated [a Const] ( 2 ( 3 nil ) ) from 0x600022f00 to 0x600022f20 ( 32 B ) in 1200 ns
-DEBUG: allocated [a Const] ( 1 ( 2 ( 3 nil ) ) ) from 0x600022f20 to 0x600022f40 ( 32 B ) in 1700 ns
+DEBUG: allocated [an Integer] 3 from 0x600022eb8 to 0x600022ed0 ( 24 B ) in 1200 ns
+DEBUG: allocated nil from 0x600022ed0 to 0x600022ee0 ( 16 B ) in 1300 ns
+DEBUG: allocated [a Const] ( 3 nil ) from 0x600022ee0 to 0x600022f00 ( 32 B ) in 1200 ns
+DEBUG: allocated [a Const] ( 2 ( 3 nil ) ) from 0x600022f00 to 0x600022f20 ( 32 B ) in 1300 ns
+DEBUG: allocated [a Const] ( 1 ( 2 ( 3 nil ) ) ) from 0x600022f20 to 0x600022f40 ( 32 B ) in 1600 ns
 DEBUG: allocated nil from 0x600022f40 to 0x600022f50 ( 16 B ) in 1200 ns
-DEBUG: allocated [a Const] ( ( 1 ( 2 ( 3 nil ) ) ) nil ) from 0x600022f50 to 0x600022f70 ( 32 B ) in 1300 ns
+DEBUG: allocated [a Const] ( ( 1 ( 2 ( 3 nil ) ) ) nil ) from 0x600022f50 to 0x600022f70 ( 32 B ) in 1200 ns
 DEBUG: allocated [a Const] ( first ( ( 1 ( 2 ( 3 nil ) ) ) nil ) ) from 0x6000230a0 to 0x6000230c0 ( 32 B ) in 1600 ns
 1
-> DEBUG: allocated [a Symbol] second from 0x6000230c0 to 0x6000230d8 ( 24 B ) in 1600 ns
-DEBUG: allocated [an Integer] 1 from 0x6000230d8 to 0x6000230f0 ( 24 B ) in 1300 ns
+> DEBUG: allocated [a Symbol] second from 0x6000230c0 to 0x6000230d8 ( 24 B ) in 2100 ns
+DEBUG: allocated [an Integer] 1 from 0x6000230d8 to 0x6000230f0 ( 24 B ) in 1200 ns
 DEBUG: allocated [an Integer] 2 from 0x6000230f0 to 0x600023108 ( 24 B ) in 1200 ns
-DEBUG: allocated [an Integer] 3 from 0x600023108 to 0x600023120 ( 24 B ) in 1700 ns
+DEBUG: allocated [an Integer] 3 from 0x600023108 to 0x600023120 ( 24 B ) in 1200 ns
 DEBUG: allocated nil from 0x600023120 to 0x600023130 ( 16 B ) in 1200 ns
-DEBUG: allocated [a Const] ( 3 nil ) from 0x600023130 to 0x600023150 ( 32 B ) in 1700 ns
-DEBUG: allocated [a Const] ( 2 ( 3 nil ) ) from 0x600023150 to 0x600023170 ( 32 B ) in 1200 ns
-DEBUG: allocated [a Const] ( 1 ( 2 ( 3 nil ) ) ) from 0x6000231a0 to 0x6000231c0 ( 32 B ) in 1300 ns
-DEBUG: allocated nil from 0x600023170 to 0x600023180 ( 16 B ) in 800 ns
-DEBUG: allocated [a Const] ( ( 1 ( 2 ( 3 nil ) ) ) nil ) from 0x6000231c0 to 0x6000231e0 ( 32 B ) in 1300 ns
-DEBUG: allocated [a Const] ( second ( ( 1 ( 2 ( 3 nil ) ) ) nil ) ) from 0x600023360 to 0x600023380 ( 32 B ) in 1200 ns
+DEBUG: allocated [a Const] ( 3 nil ) from 0x600023130 to 0x600023150 ( 32 B ) in 1600 ns
+DEBUG: allocated [a Const] ( 2 ( 3 nil ) ) from 0x600023150 to 0x600023170 ( 32 B ) in 1700 ns
+DEBUG: allocated [a Const] ( 1 ( 2 ( 3 nil ) ) ) from 0x6000231a0 to 0x6000231c0 ( 32 B ) in 1600 ns
+DEBUG: allocated nil from 0x600023170 to 0x600023180 ( 16 B ) in 1200 ns
+DEBUG: allocated [a Const] ( ( 1 ( 2 ( 3 nil ) ) ) nil ) from 0x6000231c0 to 0x6000231e0 ( 32 B ) in 1600 ns
+DEBUG: allocated [a Const] ( second ( ( 1 ( 2 ( 3 nil ) ) ) nil ) ) from 0x600023360 to 0x600023380 ( 32 B ) in 1600 ns
 2
 > DEBUG: allocated [a Symbol] third from 0x6000231e0 to 0x6000231f8 ( 24 B ) in 1200 ns
-DEBUG: allocated [an Integer] 1 from 0x600023380 to 0x600023398 ( 24 B ) in 1700 ns
+DEBUG: allocated [an Integer] 1 from 0x600023380 to 0x600023398 ( 24 B ) in 1200 ns
 DEBUG: allocated [an Integer] 2 from 0x600023398 to 0x6000233b0 ( 24 B ) in 1200 ns
 DEBUG: allocated [an Integer] 3 from 0x6000233b0 to 0x6000233c8 ( 24 B ) in 1200 ns
 DEBUG: allocated nil from 0x6000233c8 to 0x6000233d8 ( 16 B ) in 1200 ns
-DEBUG: allocated [a Const] ( 3 nil ) from 0x6000233d8 to 0x6000233f8 ( 32 B ) in 1300 ns
-DEBUG: allocated [a Const] ( 2 ( 3 nil ) ) from 0x6000233f8 to 0x600023418 ( 32 B ) in 1600 ns
-DEBUG: allocated [a Const] ( 1 ( 2 ( 3 nil ) ) ) from 0x600023418 to 0x600023438 ( 32 B ) in 1300 ns
-DEBUG: allocated nil from 0x600023460 to 0x600023470 ( 16 B ) in 1700 ns
-DEBUG: allocated [a Const] ( ( 1 ( 2 ( 3 nil ) ) ) nil ) from 0x600023470 to 0x600023490 ( 32 B ) in 1600 ns
-DEBUG: allocated [a Const] ( third ( ( 1 ( 2 ( 3 nil ) ) ) nil ) ) from 0x600023490 to 0x6000234b0 ( 32 B ) in 1700 ns
+DEBUG: allocated [a Const] ( 3 nil ) from 0x6000233d8 to 0x6000233f8 ( 32 B ) in 1700 ns
+DEBUG: allocated [a Const] ( 2 ( 3 nil ) ) from 0x6000233f8 to 0x600023418 ( 32 B ) in 1200 ns
+DEBUG: allocated [a Const] ( 1 ( 2 ( 3 nil ) ) ) from 0x600023418 to 0x600023438 ( 32 B ) in 1200 ns
+DEBUG: allocated nil from 0x600023460 to 0x600023470 ( 16 B ) in 1300 ns
+DEBUG: allocated [a Const] ( ( 1 ( 2 ( 3 nil ) ) ) nil ) from 0x600023470 to 0x600023490 ( 32 B ) in 1200 ns
+DEBUG: allocated [a Const] ( third ( ( 1 ( 2 ( 3 nil ) ) ) nil ) ) from 0x600023490 to 0x6000234b0 ( 32 B ) in 1200 ns
 3
-> DEBUG: allocated nil from 0x600023620 to 0x600023630 ( 16 B ) in 1600 ns
+> DEBUG: allocated nil from 0x600023620 to 0x600023630 ( 16 B ) in 2000 ns
 empty input, ending
