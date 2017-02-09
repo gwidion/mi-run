@@ -51,7 +51,7 @@
       </toolsSet>
       <compileType>
         <ccTool>
-          <commandLine>-O0 -pedantic -Wall</commandLine>
+          <commandLine>-O0 -pedantic -Wall -D DEBUG</commandLine>
         </ccTool>
       </compileType>
       <item path="Environment.cpp" ex="false" tool="1" flavor2="0">

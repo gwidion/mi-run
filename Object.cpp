@@ -7,9 +7,11 @@ extern Memory memory;
 using namespace std;
 
 void Object::memoryPrint() const {
+	#ifdef DEBUG
     cout << "DEBUG: allocated ";
     this->typePrint();
     cout << " from " << reinterpret_cast<const void*> (this) << " to " << reinterpret_cast<const void*> (reinterpret_cast<const char *> (this) + this->size()) << " ( " << this->size() << " B )" << endl;
+	#endif
 }
 
 

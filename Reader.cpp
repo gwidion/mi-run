@@ -97,7 +97,7 @@ Object* Reader::readString(FILE *input) {
     for (;;) {
         char ch = nextChar(input);
         if (ch == '\\') {
-            ch = nextChar();
+            ch = nextChar(input);
 
             if (ch == -1) {
                runtime_error("unterminated string");
