@@ -45,14 +45,13 @@ unsigned char * MemoryBlock::allocate(unsigned int requestedSize) {
 }
 
 unsigned char * MemoryBlock::allocateAtEnd(unsigned int requestedSize) {
-    set<MemoryRecord>::reverse_iterator iterator = freeAddresses.rbegin();
-    if (!(iterator->hasSpaceFor(requestedSize)))
+    set<MemoryRecord>::const_reverse_iterator iterator = freeAddresses.rbegin();
+    if (iterator == freeAddresses.rend() || !(iterator->hasSpaceFor(requestedSize)))
         return nullptr;
     unsigned char * address = iterator->address();
     if (iterator->hasMoreSpaceThan(requestedSize)) // if free size == requestedSize, this would create 0 free size record
         freeAddresses.insert(iterator->allocated(requestedSize));
-    freeAddresses.erase(next(iterator).base());
-    //    this->print();
+    freeAddresses.erase(prev(prev(freeAddresses.end())));
     return address;
 }
 
