@@ -18,19 +18,19 @@ Memory::~Memory() {
 Object * Memory::allocate(unsigned int requestedSize) {
     unsigned char * address = this->tryAllocate(requestedSize);
     if (!address) {
-		#ifdef DEBUG
+#ifdef DEBUG
         cout << "DEBUG: collecting garbage to free " << requestedSize << " B" << endl;
-		#endif
+#endif
         collectGarbage();
-		#ifdef DEBUG
+#ifdef DEBUG
         cout << "DEBUG: garbage collected";
-		#endif
+#endif
         address = this->tryAllocate(requestedSize);
-		#ifdef DEBUG
+#ifdef DEBUG
         if (address)
             cout << " - freed enough memory";
         cout << endl;
-		#endif
+#endif
     }
     if (address)
         return reinterpret_cast<Object*> (address);

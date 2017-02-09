@@ -24,6 +24,8 @@ private:
 
     void mark();
     void sweep();
+    
+    Object * _allocate(unsigned int requestedSize);
 };
 
 #endif /* MEMORY_H */
