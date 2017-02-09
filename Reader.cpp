@@ -1,5 +1,7 @@
 #include "Reader.h"
 
+#include <string.h>
+
 using namespace std;
 
 extern Memory memory;
