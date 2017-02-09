@@ -1,15 +1,15 @@
-> DEBUG: allocated [a Symbol] + from 0x60005af58 to 0x60005af70 ( 24 B ) in 9800 ns
+> DEBUG: allocated [a Symbol] + from 0x60005af58 to 0x60005af70 ( 24 B ) in 11100 ns
 DEBUG: collecting garbage to free 16 B
 DEBUG:   empty space from 0x600022900 to 0x600022904 ( 4 B )
 DEBUG:   empty space from 0x60005ac60 to 0x60005ac64 ( 4 B )
 DEBUG:   empty space from 0x60005af70 to 0x60005af74 ( 4 B )
 DEBUG: garbage collected
 DEBUG: new block from 0x60006bae0 to 0x60006bb44 ( 100 B )
-DEBUG: allocated nil from 0x60006bae0 to 0x60006baf0 ( 16 B ) in 62000 ns
+DEBUG: allocated nil from 0x60006bae0 to 0x60006baf0 ( 16 B ) in 71500 ns
 DEBUG: allocated [a Const] ( + nil ) from 0x60006baf0 to 0x60006bb10 ( 32 B )
-DEBUG: allocated [an Integer] 0 from 0x60006bb10 to 0x60006bb28 ( 24 B ) in 1600 ns
+DEBUG: allocated [an Integer] 0 from 0x60006bb10 to 0x60006bb28 ( 24 B ) in 2500 ns
 0
-> DEBUG: allocated [a Symbol] + from 0x60006bb28 to 0x60006bb40 ( 24 B ) in 2500 ns
+> DEBUG: allocated [a Symbol] + from 0x60006bb28 to 0x60006bb40 ( 24 B ) in 3300 ns
 DEBUG: collecting garbage to free 24 B
 DEBUG:   empty space from 0x600022900 to 0x600022904 ( 4 B )
 DEBUG:   empty space from 0x60005ac60 to 0x60005ac64 ( 4 B )
@@ -20,9 +20,9 @@ DEBUG:   freed [a Const] ( + nil ) from 0x60006baf0 to 0x60006bb10 ( 32 B )
 DEBUG:   freed [an Integer] 0 from 0x60006bb10 to 0x60006bb28 ( 24 B )
 DEBUG:   empty space from 0x60006bb40 to 0x60006bb44 ( 4 B )
 DEBUG: garbage collected - freed enough memory
-DEBUG: allocated [an Integer] 1 from 0x60005af58 to 0x60005af70 ( 24 B ) in 58700 ns
-DEBUG: allocated [an Integer] 1 from 0x60006bae0 to 0x60006baf8 ( 24 B ) in 1600 ns
-DEBUG: allocated nil from 0x60006baf8 to 0x60006bb08 ( 16 B ) in 1700 ns
+DEBUG: allocated [an Integer] 1 from 0x60005af58 to 0x60005af70 ( 24 B ) in 89500 ns
+DEBUG: allocated [an Integer] 1 from 0x60006bae0 to 0x60006baf8 ( 24 B ) in 2400 ns
+DEBUG: allocated nil from 0x60006baf8 to 0x60006bb08 ( 16 B ) in 2400 ns
 DEBUG: allocated [a Const] ( 1 nil ) from 0x60006bb08 to 0x60006bb28 ( 32 B )
 DEBUG: collecting garbage to free 32 B
 DEBUG:   empty space from 0x600022900 to 0x600022904 ( 4 B )
@@ -33,7 +33,7 @@ DEBUG: garbage collected
 DEBUG: new block from 0x60006bca0 to 0x60006bd04 ( 100 B )
 DEBUG: allocated [a Const] ( 1 ( 1 nil ) ) from 0x60006bca0 to 0x60006bcc0 ( 32 B )
 DEBUG: allocated [a Const] ( + ( 1 ( 1 nil ) ) ) from 0x60006bcc0 to 0x60006bce0 ( 32 B )
-DEBUG: allocated [an Integer] 2 from 0x60006bce0 to 0x60006bcf8 ( 24 B ) in 1700 ns
+DEBUG: allocated [an Integer] 2 from 0x60006bce0 to 0x60006bcf8 ( 24 B ) in 2400 ns
 2
 > DEBUG: collecting garbage to free 24 B
 DEBUG:   empty space from 0x600022900 to 0x600022904 ( 4 B )
@@ -50,10 +50,10 @@ DEBUG:   freed [a Const] ( + ( 1 ( 1 nil ) ) ) from 0x60006bcc0 to 0x60006bce0 (
 DEBUG:   freed [an Integer] 2 from 0x60006bce0 to 0x60006bcf8 ( 24 B )
 DEBUG:   empty space from 0x60006bcf8 to 0x60006bd04 ( 12 B )
 DEBUG: garbage collected - freed enough memory
-DEBUG: allocated [a Symbol] + from 0x60005af58 to 0x60005af70 ( 24 B ) in 87900 ns
-DEBUG: allocated [an Integer] 5 from 0x60006bae0 to 0x60006baf8 ( 24 B ) in 1300 ns
-DEBUG: allocated [an Integer] 5 from 0x60006baf8 to 0x60006bb10 ( 24 B ) in 1200 ns
-DEBUG: allocated [an Integer] 5 from 0x60006bb10 to 0x60006bb28 ( 24 B ) in 1300 ns
+DEBUG: allocated [a Symbol] + from 0x60005af58 to 0x60005af70 ( 24 B ) in 91500 ns
+DEBUG: allocated [an Integer] 5 from 0x60006bae0 to 0x60006baf8 ( 24 B ) in 1200 ns
+DEBUG: allocated [an Integer] 5 from 0x60006baf8 to 0x60006bb10 ( 24 B ) in 1600 ns
+DEBUG: allocated [an Integer] 5 from 0x60006bb10 to 0x60006bb28 ( 24 B ) in 1600 ns
 DEBUG: allocated [an Integer] 5 from 0x60006bb28 to 0x60006bb40 ( 24 B ) in 1200 ns
 DEBUG: allocated [an Integer] 5 from 0x60006bca0 to 0x60006bcb8 ( 24 B ) in 1600 ns
 DEBUG: allocated nil from 0x60006bcb8 to 0x60006bcc8 ( 16 B ) in 1200 ns
@@ -82,7 +82,7 @@ DEBUG: allocated [a Const] ( 5 ( 5 ( 5 ( 5 ( 5 nil ) ) ) ) ) from 0x60006bf40 to
 DEBUG: allocated [a Const] ( + ( 5 ( 5 ( 5 ( 5 ( 5 nil ) ) ) ) ) ) from 0x60006bf60 to 0x60006bf80 ( 32 B )
 DEBUG: allocated [an Integer] 25 from 0x60006bce8 to 0x60006bd00 ( 24 B ) in 1700 ns
 25
-> DEBUG: allocated [a Symbol] - from 0x60006bf80 to 0x60006bf98 ( 24 B ) in 2100 ns
+> DEBUG: allocated [a Symbol] - from 0x60006bf80 to 0x60006bf98 ( 24 B ) in 2000 ns
 DEBUG: collecting garbage to free 16 B
 DEBUG:   empty space from 0x600022900 to 0x600022904 ( 4 B )
 DEBUG:   empty space from 0x60005ac60 to 0x60005ac64 ( 4 B )
@@ -106,23 +106,23 @@ DEBUG:   freed [a Const] ( 5 ( 5 ( 5 ( 5 ( 5 nil ) ) ) ) ) from 0x60006bf40 to 0
 DEBUG:   freed [a Const] ( + ( 5 ( 5 ( 5 ( 5 ( 5 nil ) ) ) ) ) ) from 0x60006bf60 to 0x60006bf80 ( 32 B )
 DEBUG:   empty space from 0x60006bf98 to 0x60006bfa4 ( 12 B )
 DEBUG: garbage collected - freed enough memory
-DEBUG: allocated nil from 0x60005af58 to 0x60005af68 ( 16 B ) in 138300 ns
+DEBUG: allocated nil from 0x60005af58 to 0x60005af68 ( 16 B ) in 135000 ns
 DEBUG: allocated [a Const] ( - nil ) from 0x60006bae0 to 0x60006bb00 ( 32 B )
-no args for minus operatorDEBUG: allocated [an Object]  from 0x60006bb00 to 0x60006bb10 ( 16 B ) in 1700 ns
+no args for minus operatorDEBUG: allocated [an Object]  from 0x60006bb00 to 0x60006bb10 ( 16 B ) in 1200 ns
 
-> DEBUG: allocated [a Symbol] - from 0x60006bb10 to 0x60006bb28 ( 24 B ) in 3300 ns
-DEBUG: allocated [an Integer] 5 from 0x60006bb28 to 0x60006bb40 ( 24 B ) in 1700 ns
-DEBUG: allocated nil from 0x60006bca0 to 0x60006bcb0 ( 16 B ) in 1600 ns
+> DEBUG: allocated [a Symbol] - from 0x60006bb10 to 0x60006bb28 ( 24 B ) in 1700 ns
+DEBUG: allocated [an Integer] 5 from 0x60006bb28 to 0x60006bb40 ( 24 B ) in 1200 ns
+DEBUG: allocated nil from 0x60006bca0 to 0x60006bcb0 ( 16 B ) in 1700 ns
 DEBUG: allocated [a Const] ( 5 nil ) from 0x60006bcb0 to 0x60006bcd0 ( 32 B )
 DEBUG: allocated [a Const] ( - ( 5 nil ) ) from 0x60006bcd0 to 0x60006bcf0 ( 32 B )
 DEBUG: allocated [an Integer] -5 from 0x60006be40 to 0x60006be58 ( 24 B ) in 1600 ns
 -5
-> DEBUG: allocated [a Symbol] - from 0x60006be58 to 0x60006be70 ( 24 B ) in 2100 ns
-DEBUG: allocated [an Integer] 30 from 0x60006be70 to 0x60006be88 ( 24 B ) in 1700 ns
+> DEBUG: allocated [a Symbol] - from 0x60006be58 to 0x60006be70 ( 24 B ) in 1600 ns
+DEBUG: allocated [an Integer] 30 from 0x60006be70 to 0x60006be88 ( 24 B ) in 1300 ns
 DEBUG: allocated [an Integer] 10 from 0x60006be88 to 0x60006bea0 ( 24 B ) in 1600 ns
-DEBUG: allocated [an Integer] 10 from 0x60006bf40 to 0x60006bf58 ( 24 B ) in 1700 ns
-DEBUG: allocated [an Integer] 10 from 0x60006bf58 to 0x60006bf70 ( 24 B ) in 2000 ns
-DEBUG: allocated nil from 0x60006bcf0 to 0x60006bd00 ( 16 B ) in 1700 ns
+DEBUG: allocated [an Integer] 10 from 0x60006bf40 to 0x60006bf58 ( 24 B ) in 1600 ns
+DEBUG: allocated [an Integer] 10 from 0x60006bf58 to 0x60006bf70 ( 24 B ) in 2100 ns
+DEBUG: allocated nil from 0x60006bcf0 to 0x60006bd00 ( 16 B ) in 1300 ns
 DEBUG: collecting garbage to free 32 B
 DEBUG:   empty space from 0x600022900 to 0x600022904 ( 4 B )
 DEBUG:   empty space from 0x60005ac60 to 0x60005ac64 ( 4 B )
@@ -148,10 +148,10 @@ DEBUG: allocated [a Const] ( 10 ( 10 nil ) ) from 0x60006bb00 to 0x60006bb20 ( 3
 DEBUG: allocated [a Const] ( 10 ( 10 ( 10 nil ) ) ) from 0x60006bb20 to 0x60006bb40 ( 32 B )
 DEBUG: allocated [a Const] ( 30 ( 10 ( 10 ( 10 nil ) ) ) ) from 0x60006bca0 to 0x60006bcc0 ( 32 B )
 DEBUG: allocated [a Const] ( - ( 30 ( 10 ( 10 ( 10 nil ) ) ) ) ) from 0x60006bcc0 to 0x60006bce0 ( 32 B )
-DEBUG: allocated [an Integer] 0 from 0x60005af58 to 0x60005af70 ( 24 B ) in 1600 ns
+DEBUG: allocated [an Integer] 0 from 0x60005af58 to 0x60005af70 ( 24 B ) in 1200 ns
 0
-> DEBUG: allocated [a Symbol] * from 0x60006be40 to 0x60006be58 ( 24 B ) in 1200 ns
-DEBUG: allocated nil from 0x60006bce0 to 0x60006bcf0 ( 16 B ) in 1300 ns
+> DEBUG: allocated [a Symbol] * from 0x60006be40 to 0x60006be58 ( 24 B ) in 1600 ns
+DEBUG: allocated nil from 0x60006bce0 to 0x60006bcf0 ( 16 B ) in 900 ns
 DEBUG: allocated [a Const] ( * nil ) from 0x60006bf70 to 0x60006bf90 ( 32 B )
 DEBUG: collecting garbage to free 24 B
 DEBUG:   empty space from 0x600022900 to 0x600022904 ( 4 B )
@@ -177,21 +177,21 @@ DEBUG:   freed [an Integer] 10 from 0x60006bf58 to 0x60006bf70 ( 24 B )
 DEBUG:   freed [a Const] ( * nil ) from 0x60006bf70 to 0x60006bf90 ( 32 B )
 DEBUG:   empty space from 0x60006bf90 to 0x60006bfa4 ( 20 B )
 DEBUG: garbage collected - freed enough memory
-DEBUG: allocated [an Integer] 1 from 0x60005af58 to 0x60005af70 ( 24 B ) in 141200 ns
+DEBUG: allocated [an Integer] 1 from 0x60005af58 to 0x60005af70 ( 24 B ) in 137500 ns
 1
-> DEBUG: allocated [a Symbol] * from 0x60006bae0 to 0x60006baf8 ( 24 B ) in 2100 ns
+> DEBUG: allocated [a Symbol] * from 0x60006bae0 to 0x60006baf8 ( 24 B ) in 1700 ns
 DEBUG: allocated [an Integer] 6 from 0x60006baf8 to 0x60006bb10 ( 24 B ) in 1200 ns
-DEBUG: allocated nil from 0x60006bb10 to 0x60006bb20 ( 16 B ) in 1600 ns
+DEBUG: allocated nil from 0x60006bb10 to 0x60006bb20 ( 16 B ) in 1200 ns
 DEBUG: allocated [a Const] ( 6 nil ) from 0x60006bb20 to 0x60006bb40 ( 32 B )
 DEBUG: allocated [a Const] ( * ( 6 nil ) ) from 0x60006bca0 to 0x60006bcc0 ( 32 B )
 DEBUG: allocated [an Integer] 6 from 0x60006bcc0 to 0x60006bcd8 ( 24 B ) in 1600 ns
 6
-> DEBUG: allocated [a Symbol] * from 0x60006bcd8 to 0x60006bcf0 ( 24 B ) in 2100 ns
-DEBUG: allocated [an Integer] 2 from 0x60006be40 to 0x60006be58 ( 24 B ) in 1600 ns
-DEBUG: allocated [an Integer] 2 from 0x60006be58 to 0x60006be70 ( 24 B ) in 1600 ns
-DEBUG: allocated [an Integer] 2 from 0x60006be70 to 0x60006be88 ( 24 B ) in 1600 ns
-DEBUG: allocated [an Integer] 2 from 0x60006be88 to 0x60006bea0 ( 24 B ) in 1200 ns
-DEBUG: allocated nil from 0x60006bcf0 to 0x60006bd00 ( 16 B ) in 1200 ns
+> DEBUG: allocated [a Symbol] * from 0x60006bcd8 to 0x60006bcf0 ( 24 B ) in 1600 ns
+DEBUG: allocated [an Integer] 2 from 0x60006be40 to 0x60006be58 ( 24 B ) in 1700 ns
+DEBUG: allocated [an Integer] 2 from 0x60006be58 to 0x60006be70 ( 24 B ) in 2000 ns
+DEBUG: allocated [an Integer] 2 from 0x60006be70 to 0x60006be88 ( 24 B ) in 2900 ns
+DEBUG: allocated [an Integer] 2 from 0x60006be88 to 0x60006bea0 ( 24 B ) in 1700 ns
+DEBUG: allocated nil from 0x60006bcf0 to 0x60006bd00 ( 16 B ) in 1600 ns
 DEBUG: allocated [a Const] ( 2 nil ) from 0x60006bf40 to 0x60006bf60 ( 32 B )
 DEBUG: allocated [a Const] ( 2 ( 2 nil ) ) from 0x60006bf60 to 0x60006bf80 ( 32 B )
 DEBUG: allocated [a Const] ( 2 ( 2 ( 2 nil ) ) ) from 0x60006bf80 to 0x60006bfa0 ( 32 B )
@@ -213,11 +213,11 @@ DEBUG:   empty space from 0x60006bfa0 to 0x60006bfa4 ( 4 B )
 DEBUG: garbage collected - freed enough memory
 DEBUG: allocated [a Const] ( 2 ( 2 ( 2 ( 2 nil ) ) ) ) from 0x60006bae0 to 0x60006bb00 ( 32 B )
 DEBUG: allocated [a Const] ( * ( 2 ( 2 ( 2 ( 2 nil ) ) ) ) ) from 0x60006bb00 to 0x60006bb20 ( 32 B )
-DEBUG: allocated [an Integer] 16 from 0x60005af58 to 0x60005af70 ( 24 B ) in 1300 ns
+DEBUG: allocated [an Integer] 16 from 0x60005af58 to 0x60005af70 ( 24 B ) in 1600 ns
 16
 > DEBUG: allocated [a Symbol] = from 0x60006bb20 to 0x60006bb38 ( 24 B ) in 1700 ns
 DEBUG: allocated [an Integer] 1 from 0x60006bca0 to 0x60006bcb8 ( 24 B ) in 1600 ns
-DEBUG: allocated nil from 0x60006bcb8 to 0x60006bcc8 ( 16 B ) in 2500 ns
+DEBUG: allocated nil from 0x60006bcb8 to 0x60006bcc8 ( 16 B ) in 1200 ns
 DEBUG: collecting garbage to free 32 B
 DEBUG:   empty space from 0x600022900 to 0x600022904 ( 4 B )
 DEBUG:   empty space from 0x60005ac60 to 0x60005ac64 ( 4 B )
@@ -244,16 +244,16 @@ DEBUG: allocated [a Const] ( 1 nil ) from 0x60006bae0 to 0x60006bb00 ( 32 B )
 DEBUG: allocated [a Const] ( = ( 1 nil ) ) from 0x60006bb00 to 0x60006bb20 ( 32 B )
 = expects exactly 2 argumentsDEBUG: allocated [an Object]  from 0x60005af58 to 0x60005af68 ( 16 B ) in 1600 ns
 
-> DEBUG: allocated [a Symbol] = from 0x60006bcc8 to 0x60006bce0 ( 24 B ) in 2000 ns
-DEBUG: allocated [an Integer] 10 from 0x60006bce0 to 0x60006bcf8 ( 24 B ) in 1600 ns
-DEBUG: allocated [an Integer] 10 from 0x60006be40 to 0x60006be58 ( 24 B ) in 1700 ns
-DEBUG: allocated nil from 0x60006be58 to 0x60006be68 ( 16 B ) in 1200 ns
+> DEBUG: allocated [a Symbol] = from 0x60006bcc8 to 0x60006bce0 ( 24 B ) in 1600 ns
+DEBUG: allocated [an Integer] 10 from 0x60006bce0 to 0x60006bcf8 ( 24 B ) in 1200 ns
+DEBUG: allocated [an Integer] 10 from 0x60006be40 to 0x60006be58 ( 24 B ) in 1300 ns
+DEBUG: allocated nil from 0x60006be58 to 0x60006be68 ( 16 B ) in 1600 ns
 DEBUG: allocated [a Const] ( 10 nil ) from 0x60006be68 to 0x60006be88 ( 32 B )
 DEBUG: allocated [a Const] ( 10 ( 10 nil ) ) from 0x60006bf40 to 0x60006bf60 ( 32 B )
 DEBUG: allocated [a Const] ( = ( 10 ( 10 nil ) ) ) from 0x60006bf60 to 0x60006bf80 ( 32 B )
-DEBUG: allocated [a Boolean] #t from 0x60006be88 to 0x60006be98 ( 16 B ) in 2100 ns
+DEBUG: allocated [a Boolean] #t from 0x60006be88 to 0x60006be98 ( 16 B ) in 1600 ns
 #t
-> DEBUG: allocated [a Symbol] = from 0x60006bf80 to 0x60006bf98 ( 24 B ) in 1700 ns
+> DEBUG: allocated [a Symbol] = from 0x60006bf80 to 0x60006bf98 ( 24 B ) in 1600 ns
 DEBUG: collecting garbage to free 24 B
 DEBUG:   empty space from 0x600022900 to 0x600022904 ( 4 B )
 DEBUG:   empty space from 0x60005ac60 to 0x60005ac64 ( 4 B )
@@ -277,19 +277,19 @@ DEBUG:   freed [a Const] ( 10 ( 10 nil ) ) from 0x60006bf40 to 0x60006bf60 ( 32 
 DEBUG:   freed [a Const] ( = ( 10 ( 10 nil ) ) ) from 0x60006bf60 to 0x60006bf80 ( 32 B )
 DEBUG:   empty space from 0x60006bf98 to 0x60006bfa4 ( 12 B )
 DEBUG: garbage collected - freed enough memory
-DEBUG: allocated [an Integer] 5 from 0x60005af58 to 0x60005af70 ( 24 B ) in 136300 ns
-DEBUG: allocated [an Integer] 2 from 0x60006bae0 to 0x60006baf8 ( 24 B ) in 2500 ns
-DEBUG: allocated nil from 0x60006baf8 to 0x60006bb08 ( 16 B ) in 2100 ns
+DEBUG: allocated [an Integer] 5 from 0x60005af58 to 0x60005af70 ( 24 B ) in 130900 ns
+DEBUG: allocated [an Integer] 2 from 0x60006bae0 to 0x60006baf8 ( 24 B ) in 1700 ns
+DEBUG: allocated nil from 0x60006baf8 to 0x60006bb08 ( 16 B ) in 1600 ns
 DEBUG: allocated [a Const] ( 2 nil ) from 0x60006bb08 to 0x60006bb28 ( 32 B )
 DEBUG: allocated [a Const] ( 5 ( 2 nil ) ) from 0x60006bca0 to 0x60006bcc0 ( 32 B )
 DEBUG: allocated [a Const] ( = ( 5 ( 2 nil ) ) ) from 0x60006bcc0 to 0x60006bce0 ( 32 B )
-DEBUG: allocated [a Boolean] #f from 0x60006bb28 to 0x60006bb38 ( 16 B ) in 2000 ns
+DEBUG: allocated [a Boolean] #f from 0x60006bb28 to 0x60006bb38 ( 16 B ) in 1700 ns
 #f
-> DEBUG: allocated [a Symbol] = from 0x60006bce0 to 0x60006bcf8 ( 24 B ) in 3200 ns
-DEBUG: allocated [an Integer] 2 from 0x60006be40 to 0x60006be58 ( 24 B ) in 2800 ns
-DEBUG: allocated [an Integer] 3 from 0x60006be58 to 0x60006be70 ( 24 B ) in 2000 ns
-DEBUG: allocated [an Integer] 5 from 0x60006be70 to 0x60006be88 ( 24 B ) in 2100 ns
-DEBUG: allocated nil from 0x60006be88 to 0x60006be98 ( 16 B ) in 2100 ns
+> DEBUG: allocated [a Symbol] = from 0x60006bce0 to 0x60006bcf8 ( 24 B ) in 1600 ns
+DEBUG: allocated [an Integer] 2 from 0x60006be40 to 0x60006be58 ( 24 B ) in 1600 ns
+DEBUG: allocated [an Integer] 3 from 0x60006be58 to 0x60006be70 ( 24 B ) in 1300 ns
+DEBUG: allocated [an Integer] 5 from 0x60006be70 to 0x60006be88 ( 24 B ) in 1600 ns
+DEBUG: allocated nil from 0x60006be88 to 0x60006be98 ( 16 B ) in 1700 ns
 DEBUG: allocated [a Const] ( 5 nil ) from 0x60006bf40 to 0x60006bf60 ( 32 B )
 DEBUG: allocated [a Const] ( 3 ( 5 nil ) ) from 0x60006bf60 to 0x60006bf80 ( 32 B )
 DEBUG: collecting garbage to free 32 B
@@ -311,11 +311,11 @@ DEBUG:   empty space from 0x60006bf98 to 0x60006bfa4 ( 12 B )
 DEBUG: garbage collected - freed enough memory
 DEBUG: allocated [a Const] ( 2 ( 3 ( 5 nil ) ) ) from 0x60006bae0 to 0x60006bb00 ( 32 B )
 DEBUG: allocated [a Const] ( = ( 2 ( 3 ( 5 nil ) ) ) ) from 0x60006bb00 to 0x60006bb20 ( 32 B )
-= expects exactly 2 argumentsDEBUG: allocated [an Object]  from 0x60005af58 to 0x60005af68 ( 16 B ) in 1200 ns
+= expects exactly 2 argumentsDEBUG: allocated [an Object]  from 0x60005af58 to 0x60005af68 ( 16 B ) in 1600 ns
 
-> DEBUG: allocated [a Symbol] < from 0x60006bb20 to 0x60006bb38 ( 24 B ) in 2100 ns
-DEBUG: allocated [an Integer] 4 from 0x60006bca0 to 0x60006bcb8 ( 24 B ) in 1700 ns
-DEBUG: allocated nil from 0x60006bcb8 to 0x60006bcc8 ( 16 B ) in 2900 ns
+> DEBUG: allocated [a Symbol] < from 0x60006bb20 to 0x60006bb38 ( 24 B ) in 1600 ns
+DEBUG: allocated [an Integer] 4 from 0x60006bca0 to 0x60006bcb8 ( 24 B ) in 1600 ns
+DEBUG: allocated nil from 0x60006bcb8 to 0x60006bcc8 ( 16 B ) in 1700 ns
 DEBUG: allocated [a Const] ( 4 nil ) from 0x60006bf80 to 0x60006bfa0 ( 32 B )
 DEBUG: collecting garbage to free 32 B
 DEBUG:   empty space from 0x600022900 to 0x600022904 ( 4 B )
@@ -340,16 +340,16 @@ DEBUG: garbage collected - freed enough memory
 DEBUG: allocated [a Const] ( < ( 4 nil ) ) from 0x60006bae0 to 0x60006bb00 ( 32 B )
 < expects exactly 2 argumentsDEBUG: allocated [an Object]  from 0x60005af58 to 0x60005af68 ( 16 B ) in 1700 ns
 
-> DEBUG: allocated [a Symbol] < from 0x60006bb00 to 0x60006bb18 ( 24 B ) in 2100 ns
+> DEBUG: allocated [a Symbol] < from 0x60006bb00 to 0x60006bb18 ( 24 B ) in 1700 ns
 DEBUG: allocated [an Integer] 2 from 0x60006bcc8 to 0x60006bce0 ( 24 B ) in 1600 ns
-DEBUG: allocated [an Integer] 3 from 0x60006bce0 to 0x60006bcf8 ( 24 B ) in 1600 ns
-DEBUG: allocated nil from 0x60006be40 to 0x60006be50 ( 16 B ) in 1700 ns
+DEBUG: allocated [an Integer] 3 from 0x60006bce0 to 0x60006bcf8 ( 24 B ) in 1200 ns
+DEBUG: allocated nil from 0x60006be40 to 0x60006be50 ( 16 B ) in 1600 ns
 DEBUG: allocated [a Const] ( 3 nil ) from 0x60006be50 to 0x60006be70 ( 32 B )
 DEBUG: allocated [a Const] ( 2 ( 3 nil ) ) from 0x60006be70 to 0x60006be90 ( 32 B )
 DEBUG: allocated [a Const] ( < ( 2 ( 3 nil ) ) ) from 0x60006bf40 to 0x60006bf60 ( 32 B )
-DEBUG: allocated [a Boolean] #t from 0x60006be90 to 0x60006bea0 ( 16 B ) in 1600 ns
+DEBUG: allocated [a Boolean] #t from 0x60006be90 to 0x60006bea0 ( 16 B ) in 2100 ns
 #t
-> DEBUG: allocated [a Symbol] < from 0x60006bf60 to 0x60006bf78 ( 24 B ) in 2000 ns
+> DEBUG: allocated [a Symbol] < from 0x60006bf60 to 0x60006bf78 ( 24 B ) in 2100 ns
 DEBUG: collecting garbage to free 24 B
 DEBUG:   empty space from 0x600022900 to 0x600022904 ( 4 B )
 DEBUG:   empty space from 0x60005ac60 to 0x60005ac64 ( 4 B )
@@ -375,8 +375,8 @@ DEBUG:   empty space from 0x60006bf78 to 0x60006bf80 ( 8 B )
 DEBUG:   freed [a Const] ( 4 nil ) from 0x60006bf80 to 0x60006bfa0 ( 32 B )
 DEBUG:   empty space from 0x60006bfa0 to 0x60006bfa4 ( 4 B )
 DEBUG: garbage collected - freed enough memory
-DEBUG: allocated [an Integer] 2 from 0x60005af58 to 0x60005af70 ( 24 B ) in 150600 ns
-DEBUG: allocated [an Integer] 3 from 0x60006bae0 to 0x60006baf8 ( 24 B ) in 1200 ns
+DEBUG: allocated [an Integer] 2 from 0x60005af58 to 0x60005af70 ( 24 B ) in 148200 ns
+DEBUG: allocated [an Integer] 3 from 0x60006bae0 to 0x60006baf8 ( 24 B ) in 1600 ns
 DEBUG: allocated [an Integer] 5 from 0x60006baf8 to 0x60006bb10 ( 24 B ) in 1300 ns
 DEBUG: allocated nil from 0x60006bb10 to 0x60006bb20 ( 16 B ) in 1600 ns
 DEBUG: allocated [a Const] ( 5 nil ) from 0x60006bb20 to 0x60006bb40 ( 32 B )
@@ -385,9 +385,9 @@ DEBUG: allocated [a Const] ( 2 ( 3 ( 5 nil ) ) ) from 0x60006bcc0 to 0x60006bce0
 DEBUG: allocated [a Const] ( < ( 2 ( 3 ( 5 nil ) ) ) ) from 0x60006bce0 to 0x60006bd00 ( 32 B )
 < expects exactly 2 argumentsDEBUG: allocated [an Object]  from 0x60006be40 to 0x60006be50 ( 16 B ) in 1600 ns
 
-> DEBUG: allocated [a Symbol] > from 0x60006be50 to 0x60006be68 ( 24 B ) in 2000 ns
-DEBUG: allocated [an Integer] 4 from 0x60006be68 to 0x60006be80 ( 24 B ) in 1700 ns
-DEBUG: allocated nil from 0x60006be80 to 0x60006be90 ( 16 B ) in 1600 ns
+> DEBUG: allocated [a Symbol] > from 0x60006be50 to 0x60006be68 ( 24 B ) in 1600 ns
+DEBUG: allocated [an Integer] 4 from 0x60006be68 to 0x60006be80 ( 24 B ) in 1600 ns
+DEBUG: allocated nil from 0x60006be80 to 0x60006be90 ( 16 B ) in 1700 ns
 DEBUG: allocated [a Const] ( 4 nil ) from 0x60006bf40 to 0x60006bf60 ( 32 B )
 DEBUG: allocated [a Const] ( > ( 4 nil ) ) from 0x60006bf78 to 0x60006bf98 ( 32 B )
 > expects exactly 2 argumentsDEBUG: allocated [an Object]  from 0x60006be90 to 0x60006bea0 ( 16 B ) in 1700 ns
@@ -417,20 +417,20 @@ DEBUG:   freed [a Symbol] < from 0x60006bf60 to 0x60006bf78 ( 24 B )
 DEBUG:   freed [a Const] ( > ( 4 nil ) ) from 0x60006bf78 to 0x60006bf98 ( 32 B )
 DEBUG:   empty space from 0x60006bf98 to 0x60006bfa4 ( 12 B )
 DEBUG: garbage collected - freed enough memory
-DEBUG: allocated [a Symbol] > from 0x60005af58 to 0x60005af70 ( 24 B ) in 148600 ns
-DEBUG: allocated [an Integer] 2 from 0x60006bae0 to 0x60006baf8 ( 24 B ) in 1300 ns
+DEBUG: allocated [a Symbol] > from 0x60005af58 to 0x60005af70 ( 24 B ) in 151500 ns
+DEBUG: allocated [an Integer] 2 from 0x60006bae0 to 0x60006baf8 ( 24 B ) in 1700 ns
 DEBUG: allocated [an Integer] 3 from 0x60006baf8 to 0x60006bb10 ( 24 B ) in 1200 ns
-DEBUG: allocated nil from 0x60006bb10 to 0x60006bb20 ( 16 B ) in 1700 ns
+DEBUG: allocated nil from 0x60006bb10 to 0x60006bb20 ( 16 B ) in 1600 ns
 DEBUG: allocated [a Const] ( 3 nil ) from 0x60006bb20 to 0x60006bb40 ( 32 B )
 DEBUG: allocated [a Const] ( 2 ( 3 nil ) ) from 0x60006bca0 to 0x60006bcc0 ( 32 B )
 DEBUG: allocated [a Const] ( > ( 2 ( 3 nil ) ) ) from 0x60006bcc0 to 0x60006bce0 ( 32 B )
-DEBUG: allocated [a Boolean] #f from 0x60006bce0 to 0x60006bcf0 ( 16 B ) in 1200 ns
+DEBUG: allocated [a Boolean] #f from 0x60006bce0 to 0x60006bcf0 ( 16 B ) in 1600 ns
 #f
-> DEBUG: allocated [a Symbol] > from 0x60006be40 to 0x60006be58 ( 24 B ) in 2100 ns
-DEBUG: allocated [an Integer] 2 from 0x60006be58 to 0x60006be70 ( 24 B ) in 1700 ns
-DEBUG: allocated [an Integer] 3 from 0x60006be70 to 0x60006be88 ( 24 B ) in 1600 ns
-DEBUG: allocated [an Integer] 5 from 0x60006be88 to 0x60006bea0 ( 24 B ) in 1700 ns
-DEBUG: allocated nil from 0x60006bcf0 to 0x60006bd00 ( 16 B ) in 1200 ns
+> DEBUG: allocated [a Symbol] > from 0x60006be40 to 0x60006be58 ( 24 B ) in 2400 ns
+DEBUG: allocated [an Integer] 2 from 0x60006be58 to 0x60006be70 ( 24 B ) in 1600 ns
+DEBUG: allocated [an Integer] 3 from 0x60006be70 to 0x60006be88 ( 24 B ) in 1300 ns
+DEBUG: allocated [an Integer] 5 from 0x60006be88 to 0x60006bea0 ( 24 B ) in 1600 ns
+DEBUG: allocated nil from 0x60006bcf0 to 0x60006bd00 ( 16 B ) in 1700 ns
 DEBUG: allocated [a Const] ( 5 nil ) from 0x60006bf40 to 0x60006bf60 ( 32 B )
 DEBUG: allocated [a Const] ( 3 ( 5 nil ) ) from 0x60006bf60 to 0x60006bf80 ( 32 B )
 DEBUG: allocated [a Const] ( 2 ( 3 ( 5 nil ) ) ) from 0x60006bf80 to 0x60006bfa0 ( 32 B )
@@ -452,13 +452,13 @@ DEBUG:   empty space from 0x60006bea0 to 0x60006bea4 ( 4 B )
 DEBUG:   empty space from 0x60006bfa0 to 0x60006bfa4 ( 4 B )
 DEBUG: garbage collected - freed enough memory
 DEBUG: allocated [a Const] ( > ( 2 ( 3 ( 5 nil ) ) ) ) from 0x60006bae0 to 0x60006bb00 ( 32 B )
-> expects exactly 2 argumentsDEBUG: allocated [an Object]  from 0x60005af58 to 0x60005af68 ( 16 B ) in 1600 ns
+> expects exactly 2 argumentsDEBUG: allocated [an Object]  from 0x60005af58 to 0x60005af68 ( 16 B ) in 1700 ns
 
-> DEBUG: allocated [a Symbol] if from 0x60006bb00 to 0x60006bb18 ( 24 B ) in 2000 ns
-DEBUG: allocated [a Symbol] < from 0x60006bb18 to 0x60006bb30 ( 24 B ) in 2100 ns
-DEBUG: allocated [an Integer] 2 from 0x60006bca0 to 0x60006bcb8 ( 24 B ) in 1600 ns
-DEBUG: allocated [an Integer] 3 from 0x60006bcb8 to 0x60006bcd0 ( 24 B ) in 1600 ns
-DEBUG: allocated nil from 0x60006bb30 to 0x60006bb40 ( 16 B ) in 1200 ns
+> DEBUG: allocated [a Symbol] if from 0x60006bb00 to 0x60006bb18 ( 24 B ) in 1700 ns
+DEBUG: allocated [a Symbol] < from 0x60006bb18 to 0x60006bb30 ( 24 B ) in 1600 ns
+DEBUG: allocated [an Integer] 2 from 0x60006bca0 to 0x60006bcb8 ( 24 B ) in 1700 ns
+DEBUG: allocated [an Integer] 3 from 0x60006bcb8 to 0x60006bcd0 ( 24 B ) in 1700 ns
+DEBUG: allocated nil from 0x60006bb30 to 0x60006bb40 ( 16 B ) in 1600 ns
 DEBUG: allocated [a Const] ( 3 nil ) from 0x60006bcd0 to 0x60006bcf0 ( 32 B )
 DEBUG: collecting garbage to free 32 B
 DEBUG:   empty space from 0x600022900 to 0x600022904 ( 4 B )
@@ -483,8 +483,8 @@ DEBUG: allocated [a Const] ( 2 ( 3 nil ) ) from 0x60006bae0 to 0x60006bb00 ( 32 
 DEBUG: allocated [a Const] ( < ( 2 ( 3 nil ) ) ) from 0x60006be40 to 0x60006be60 ( 32 B )
 DEBUG: allocated [a Symbol] + from 0x60005af58 to 0x60005af70 ( 24 B ) in 1600 ns
 DEBUG: allocated [an Integer] 1 from 0x60006be60 to 0x60006be78 ( 24 B ) in 1600 ns
-DEBUG: allocated [an Integer] 0 from 0x60006be78 to 0x60006be90 ( 24 B ) in 1300 ns
-DEBUG: allocated nil from 0x60006bcf0 to 0x60006bd00 ( 16 B ) in 1200 ns
+DEBUG: allocated [an Integer] 0 from 0x60006be78 to 0x60006be90 ( 24 B ) in 1700 ns
+DEBUG: allocated nil from 0x60006bcf0 to 0x60006bd00 ( 16 B ) in 1600 ns
 DEBUG: allocated [a Const] ( 0 nil ) from 0x60006bf40 to 0x60006bf60 ( 32 B )
 DEBUG: allocated [a Const] ( 1 ( 0 nil ) ) from 0x60006bf60 to 0x60006bf80 ( 32 B )
 DEBUG: allocated [a Const] ( + ( 1 ( 0 nil ) ) ) from 0x60006bf80 to 0x60006bfa0 ( 32 B )
@@ -498,10 +498,10 @@ DEBUG:   empty space from 0x60006be90 to 0x60006bea4 ( 20 B )
 DEBUG:   empty space from 0x60006bfa0 to 0x60006bfa4 ( 4 B )
 DEBUG: garbage collected
 DEBUG: new block from 0x60006c500 to 0x60006c564 ( 100 B )
-DEBUG: allocated [a Symbol] + from 0x60006c500 to 0x60006c518 ( 24 B ) in 57900 ns
-DEBUG: allocated [an Integer] 0 from 0x60006c518 to 0x60006c530 ( 24 B ) in 2100 ns
-DEBUG: allocated [an Integer] 0 from 0x60006c530 to 0x60006c548 ( 24 B ) in 1600 ns
-DEBUG: allocated nil from 0x60006be90 to 0x60006bea0 ( 16 B ) in 1700 ns
+DEBUG: allocated [a Symbol] + from 0x60006c500 to 0x60006c518 ( 24 B ) in 50900 ns
+DEBUG: allocated [an Integer] 0 from 0x60006c518 to 0x60006c530 ( 24 B ) in 1700 ns
+DEBUG: allocated [an Integer] 0 from 0x60006c530 to 0x60006c548 ( 24 B ) in 1700 ns
+DEBUG: allocated nil from 0x60006be90 to 0x60006bea0 ( 16 B ) in 1600 ns
 DEBUG: collecting garbage to free 32 B
 DEBUG:   empty space from 0x600022900 to 0x600022904 ( 4 B )
 DEBUG:   empty space from 0x60005ac60 to 0x60005ac64 ( 4 B )
@@ -547,9 +547,9 @@ DEBUG: garbage collected
 DEBUG: new block from 0x60006c850 to 0x60006c8b4 ( 100 B )
 DEBUG: allocated [a Const] ( if ( ( < ( 2 ( 3 nil ) ) ) ( ( + ( 1 ( 0 nil ) ) ) ( ( + ( 0 ( 0 nil ) ) ) nil ) ) ) ) from 0x60006c850 to 0x60006c870 ( 32 B )
 DEBUG: allocated [a Boolean] #t from 0x60006c870 to 0x60006c880 ( 16 B ) in 2100 ns
-DEBUG: allocated [an Integer] 1 from 0x60006c880 to 0x60006c898 ( 24 B ) in 2100 ns
+DEBUG: allocated [an Integer] 1 from 0x60006c880 to 0x60006c898 ( 24 B ) in 2000 ns
 1
-> DEBUG: allocated [a Symbol] if from 0x60006c898 to 0x60006c8b0 ( 24 B ) in 2500 ns
+> DEBUG: allocated [a Symbol] if from 0x60006c898 to 0x60006c8b0 ( 24 B ) in 2400 ns
 DEBUG: collecting garbage to free 24 B
 DEBUG:   empty space from 0x600022900 to 0x600022904 ( 4 B )
 DEBUG:   empty space from 0x60005ac60 to 0x60005ac64 ( 4 B )
@@ -592,34 +592,34 @@ DEBUG:   freed [a Boolean] #t from 0x60006c870 to 0x60006c880 ( 16 B )
 DEBUG:   freed [an Integer] 1 from 0x60006c880 to 0x60006c898 ( 24 B )
 DEBUG:   empty space from 0x60006c8b0 to 0x60006c8b4 ( 4 B )
 DEBUG: garbage collected - freed enough memory
-DEBUG: allocated [a Symbol] < from 0x60005af58 to 0x60005af70 ( 24 B ) in 258600 ns
-DEBUG: allocated [an Integer] 3 from 0x60006bae0 to 0x60006baf8 ( 24 B ) in 1600 ns
-DEBUG: allocated [an Integer] 2 from 0x60006baf8 to 0x60006bb10 ( 24 B ) in 1700 ns
-DEBUG: allocated nil from 0x60006bb10 to 0x60006bb20 ( 16 B ) in 1600 ns
+DEBUG: allocated [a Symbol] < from 0x60005af58 to 0x60005af70 ( 24 B ) in 265200 ns
+DEBUG: allocated [an Integer] 3 from 0x60006bae0 to 0x60006baf8 ( 24 B ) in 1700 ns
+DEBUG: allocated [an Integer] 2 from 0x60006baf8 to 0x60006bb10 ( 24 B ) in 1600 ns
+DEBUG: allocated nil from 0x60006bb10 to 0x60006bb20 ( 16 B ) in 1300 ns
 DEBUG: allocated [a Const] ( 2 nil ) from 0x60006bb20 to 0x60006bb40 ( 32 B )
 DEBUG: allocated [a Const] ( 3 ( 2 nil ) ) from 0x60006bca0 to 0x60006bcc0 ( 32 B )
 DEBUG: allocated [a Const] ( < ( 3 ( 2 nil ) ) ) from 0x60006bcc0 to 0x60006bce0 ( 32 B )
-DEBUG: allocated [a Symbol] + from 0x60006bce0 to 0x60006bcf8 ( 24 B ) in 2100 ns
+DEBUG: allocated [a Symbol] + from 0x60006bce0 to 0x60006bcf8 ( 24 B ) in 1600 ns
 DEBUG: allocated [an Integer] 1 from 0x60006be40 to 0x60006be58 ( 24 B ) in 1700 ns
 DEBUG: allocated [an Integer] 0 from 0x60006be58 to 0x60006be70 ( 24 B ) in 1600 ns
 DEBUG: allocated nil from 0x60006be70 to 0x60006be80 ( 16 B ) in 1700 ns
 DEBUG: allocated [a Const] ( 0 nil ) from 0x60006be80 to 0x60006bea0 ( 32 B )
 DEBUG: allocated [a Const] ( 1 ( 0 nil ) ) from 0x60006bf40 to 0x60006bf60 ( 32 B )
 DEBUG: allocated [a Const] ( + ( 1 ( 0 nil ) ) ) from 0x60006bf60 to 0x60006bf80 ( 32 B )
-DEBUG: allocated [a Symbol] + from 0x60006bf80 to 0x60006bf98 ( 24 B ) in 2000 ns
-DEBUG: allocated [an Integer] 0 from 0x60006c500 to 0x60006c518 ( 24 B ) in 2000 ns
-DEBUG: allocated [an Integer] 0 from 0x60006c518 to 0x60006c530 ( 24 B ) in 1600 ns
+DEBUG: allocated [a Symbol] + from 0x60006bf80 to 0x60006bf98 ( 24 B ) in 1600 ns
+DEBUG: allocated [an Integer] 0 from 0x60006c500 to 0x60006c518 ( 24 B ) in 1600 ns
+DEBUG: allocated [an Integer] 0 from 0x60006c518 to 0x60006c530 ( 24 B ) in 1700 ns
 DEBUG: allocated nil from 0x60006c530 to 0x60006c540 ( 16 B ) in 1600 ns
 DEBUG: allocated [a Const] ( 0 nil ) from 0x60006c540 to 0x60006c560 ( 32 B )
 DEBUG: allocated [a Const] ( 0 ( 0 nil ) ) from 0x60006c600 to 0x60006c620 ( 32 B )
 DEBUG: allocated [a Const] ( + ( 0 ( 0 nil ) ) ) from 0x60006c620 to 0x60006c640 ( 32 B )
-DEBUG: allocated nil from 0x60006c640 to 0x60006c650 ( 16 B ) in 1600 ns
+DEBUG: allocated nil from 0x60006c640 to 0x60006c650 ( 16 B ) in 2100 ns
 DEBUG: allocated [a Const] ( ( + ( 0 ( 0 nil ) ) ) nil ) from 0x60006c750 to 0x60006c770 ( 32 B )
 DEBUG: allocated [a Const] ( ( + ( 1 ( 0 nil ) ) ) ( ( + ( 0 ( 0 nil ) ) ) nil ) ) from 0x60006c770 to 0x60006c790 ( 32 B )
 DEBUG: allocated [a Const] ( ( < ( 3 ( 2 nil ) ) ) ( ( + ( 1 ( 0 nil ) ) ) ( ( + ( 0 ( 0 nil ) ) ) nil ) ) ) from 0x60006c790 to 0x60006c7b0 ( 32 B )
 DEBUG: allocated [a Const] ( if ( ( < ( 3 ( 2 nil ) ) ) ( ( + ( 1 ( 0 nil ) ) ) ( ( + ( 0 ( 0 nil ) ) ) nil ) ) ) ) from 0x60006c850 to 0x60006c870 ( 32 B )
 DEBUG: allocated [a Boolean] #f from 0x60006c650 to 0x60006c660 ( 16 B ) in 2000 ns
-DEBUG: allocated [an Integer] 0 from 0x60006c870 to 0x60006c888 ( 24 B ) in 2000 ns
+DEBUG: allocated [an Integer] 0 from 0x60006c870 to 0x60006c888 ( 24 B ) in 2500 ns
 0
 > DEBUG: collecting garbage to free 24 B
 DEBUG:   empty space from 0x600022900 to 0x600022904 ( 4 B )
@@ -664,38 +664,38 @@ DEBUG:   empty space from 0x60006c888 to 0x60006c898 ( 16 B )
 DEBUG:   freed [a Symbol] if from 0x60006c898 to 0x60006c8b0 ( 24 B )
 DEBUG:   empty space from 0x60006c8b0 to 0x60006c8b4 ( 4 B )
 DEBUG: garbage collected - freed enough memory
-DEBUG: allocated [a Symbol] define from 0x60005af58 to 0x60005af70 ( 24 B ) in 266800 ns
-DEBUG: allocated [a Symbol] not from 0x60006bae0 to 0x60006baf8 ( 24 B ) in 2000 ns
-DEBUG: allocated [a Symbol] lambda from 0x60006baf8 to 0x60006bb10 ( 24 B ) in 2000 ns
-DEBUG: allocated [a Symbol] bool from 0x60006bb10 to 0x60006bb28 ( 24 B ) in 1600 ns
-DEBUG: allocated nil from 0x60006bb28 to 0x60006bb38 ( 16 B ) in 1300 ns
+DEBUG: allocated [a Symbol] define from 0x60005af58 to 0x60005af70 ( 24 B ) in 260700 ns
+DEBUG: allocated [a Symbol] not from 0x60006bae0 to 0x60006baf8 ( 24 B ) in 1700 ns
+DEBUG: allocated [a Symbol] lambda from 0x60006baf8 to 0x60006bb10 ( 24 B ) in 2100 ns
+DEBUG: allocated [a Symbol] bool from 0x60006bb10 to 0x60006bb28 ( 24 B ) in 1700 ns
+DEBUG: allocated nil from 0x60006bb28 to 0x60006bb38 ( 16 B ) in 1600 ns
 DEBUG: allocated [a Const] ( bool nil ) from 0x60006bca0 to 0x60006bcc0 ( 32 B )
-DEBUG: allocated [a Symbol] if from 0x60006bcc0 to 0x60006bcd8 ( 24 B ) in 2000 ns
-DEBUG: allocated [a Symbol] bool from 0x60006bcd8 to 0x60006bcf0 ( 24 B ) in 1600 ns
-DEBUG: allocated [a Boolean] #f from 0x60006bcf0 to 0x60006bd00 ( 16 B ) in 1700 ns
-DEBUG: allocated [a Boolean] #t from 0x60006be40 to 0x60006be50 ( 16 B ) in 1700 ns
-DEBUG: allocated nil from 0x60006be50 to 0x60006be60 ( 16 B ) in 1600 ns
+DEBUG: allocated [a Symbol] if from 0x60006bcc0 to 0x60006bcd8 ( 24 B ) in 2100 ns
+DEBUG: allocated [a Symbol] bool from 0x60006bcd8 to 0x60006bcf0 ( 24 B ) in 1700 ns
+DEBUG: allocated [a Boolean] #f from 0x60006bcf0 to 0x60006bd00 ( 16 B ) in 1600 ns
+DEBUG: allocated [a Boolean] #t from 0x60006be40 to 0x60006be50 ( 16 B ) in 1600 ns
+DEBUG: allocated nil from 0x60006be50 to 0x60006be60 ( 16 B ) in 1700 ns
 DEBUG: allocated [a Const] ( #t nil ) from 0x60006be60 to 0x60006be80 ( 32 B )
 DEBUG: allocated [a Const] ( #f ( #t nil ) ) from 0x60006be80 to 0x60006bea0 ( 32 B )
 DEBUG: allocated [a Const] ( bool ( #f ( #t nil ) ) ) from 0x60006bf40 to 0x60006bf60 ( 32 B )
 DEBUG: allocated [a Const] ( if ( bool ( #f ( #t nil ) ) ) ) from 0x60006bf60 to 0x60006bf80 ( 32 B )
-DEBUG: allocated nil from 0x60006bf80 to 0x60006bf90 ( 16 B ) in 1700 ns
+DEBUG: allocated nil from 0x60006bf80 to 0x60006bf90 ( 16 B ) in 1600 ns
 DEBUG: allocated [a Const] ( ( if ( bool ( #f ( #t nil ) ) ) ) nil ) from 0x60006c500 to 0x60006c520 ( 32 B )
 DEBUG: allocated [a Const] ( ( bool nil ) ( ( if ( bool ( #f ( #t nil ) ) ) ) nil ) ) from 0x60006c520 to 0x60006c540 ( 32 B )
 DEBUG: allocated [a Const] ( lambda ( ( bool nil ) ( ( if ( bool ( #f ( #t nil ) ) ) ) nil ) ) ) from 0x60006c540 to 0x60006c560 ( 32 B )
-DEBUG: allocated nil from 0x60006bf90 to 0x60006bfa0 ( 16 B ) in 1200 ns
+DEBUG: allocated nil from 0x60006bf90 to 0x60006bfa0 ( 16 B ) in 1600 ns
 DEBUG: allocated [a Const] ( ( lambda ( ( bool nil ) ( ( if ( bool ( #f ( #t nil ) ) ) ) nil ) ) ) nil ) from 0x60006c600 to 0x60006c620 ( 32 B )
 DEBUG: allocated [a Const] ( not ( ( lambda ( ( bool nil ) ( ( if ( bool ( #f ( #t nil ) ) ) ) nil ) ) ) nil ) ) from 0x60006c620 to 0x60006c640 ( 32 B )
 DEBUG: allocated [a Const] ( define ( not ( ( lambda ( ( bool nil ) ( ( if ( bool ( #f ( #t nil ) ) ) ) nil ) ) ) nil ) ) ) from 0x60006c640 to 0x60006c660 ( 32 B )
-DEBUG: allocated [a Void (scary, right?)] from 0x60006c750 to 0x60006c770 ( 32 B ) in 2500 ns
-DEBUG: allocated [an Object]  from 0x60006c770 to 0x60006c780 ( 16 B ) in 2000 ns
+DEBUG: allocated [a Void (scary, right?)] from 0x60006c750 to 0x60006c770 ( 32 B ) in 1600 ns
+DEBUG: allocated [an Object]  from 0x60006c770 to 0x60006c780 ( 16 B ) in 2100 ns
 
-> DEBUG: allocated [a Symbol] define from 0x60006c780 to 0x60006c798 ( 24 B ) in 2000 ns
-DEBUG: allocated [a Symbol] and from 0x60006c798 to 0x60006c7b0 ( 24 B ) in 2100 ns
-DEBUG: allocated [a Symbol] lambda from 0x60006c850 to 0x60006c868 ( 24 B ) in 2500 ns
+> DEBUG: allocated [a Symbol] define from 0x60006c780 to 0x60006c798 ( 24 B ) in 2100 ns
+DEBUG: allocated [a Symbol] and from 0x60006c798 to 0x60006c7b0 ( 24 B ) in 2000 ns
+DEBUG: allocated [a Symbol] lambda from 0x60006c850 to 0x60006c868 ( 24 B ) in 2100 ns
 DEBUG: allocated [a Symbol] a from 0x60006c868 to 0x60006c880 ( 24 B ) in 2500 ns
-DEBUG: allocated [a Symbol] b from 0x60006c880 to 0x60006c898 ( 24 B ) in 2000 ns
-DEBUG: allocated nil from 0x60006c898 to 0x60006c8a8 ( 16 B ) in 1600 ns
+DEBUG: allocated [a Symbol] b from 0x60006c880 to 0x60006c898 ( 24 B ) in 2400 ns
+DEBUG: allocated nil from 0x60006c898 to 0x60006c8a8 ( 16 B ) in 1700 ns
 DEBUG: collecting garbage to free 32 B
 DEBUG:   empty space from 0x600022900 to 0x600022904 ( 4 B )
 DEBUG:   empty space from 0x60005ac60 to 0x60005ac64 ( 4 B )
@@ -723,16 +723,16 @@ DEBUG:   empty space from 0x60006c8a8 to 0x60006c8b4 ( 12 B )
 DEBUG: garbage collected - freed enough memory
 DEBUG: allocated [a Const] ( b nil ) from 0x60006bae0 to 0x60006bb00 ( 32 B )
 DEBUG: allocated [a Const] ( a ( b nil ) ) from 0x60006bf80 to 0x60006bfa0 ( 32 B )
-DEBUG: allocated [a Symbol] if from 0x60005af58 to 0x60005af70 ( 24 B ) in 1700 ns
-DEBUG: allocated [a Symbol] a from 0x60006c500 to 0x60006c518 ( 24 B ) in 2100 ns
+DEBUG: allocated [a Symbol] if from 0x60005af58 to 0x60005af70 ( 24 B ) in 2100 ns
+DEBUG: allocated [a Symbol] a from 0x60006c500 to 0x60006c518 ( 24 B ) in 2000 ns
 DEBUG: allocated [a Symbol] b from 0x60006c518 to 0x60006c530 ( 24 B ) in 1600 ns
-DEBUG: allocated [a Boolean] #f from 0x60006bb00 to 0x60006bb10 ( 16 B ) in 800 ns
+DEBUG: allocated [a Boolean] #f from 0x60006bb00 to 0x60006bb10 ( 16 B ) in 1300 ns
 DEBUG: allocated nil from 0x60006c530 to 0x60006c540 ( 16 B ) in 2000 ns
 DEBUG: allocated [a Const] ( #f nil ) from 0x60006c540 to 0x60006c560 ( 32 B )
 DEBUG: allocated [a Const] ( b ( #f nil ) ) from 0x60006c600 to 0x60006c620 ( 32 B )
 DEBUG: allocated [a Const] ( a ( b ( #f nil ) ) ) from 0x60006c620 to 0x60006c640 ( 32 B )
 DEBUG: allocated [a Const] ( if ( a ( b ( #f nil ) ) ) ) from 0x60006c640 to 0x60006c660 ( 32 B )
-DEBUG: allocated nil from 0x60006c770 to 0x60006c780 ( 16 B ) in 1200 ns
+DEBUG: allocated nil from 0x60006c770 to 0x60006c780 ( 16 B ) in 1300 ns
 DEBUG: collecting garbage to free 32 B
 DEBUG:   empty space from 0x600022900 to 0x600022904 ( 4 B )
 DEBUG:   empty space from 0x60005ac60 to 0x60005ac64 ( 4 B )
@@ -765,7 +765,7 @@ DEBUG:   empty space from 0x60006c8a8 to 0x60006c8b4 ( 12 B )
 DEBUG:   empty space from 0x60006cee0 to 0x60006cee4 ( 4 B )
 DEBUG: garbage collected
 DEBUG: new block from 0x60006cf80 to 0x60006cfe4 ( 100 B )
-DEBUG: allocated nil from 0x60006cf80 to 0x60006cf90 ( 16 B ) in 77200 ns
+DEBUG: allocated nil from 0x60006cf80 to 0x60006cf90 ( 16 B ) in 78800 ns
 DEBUG: allocated [a Const] ( ( lambda ( ( a ( b nil ) ) ( ( if ( a ( b ( #f nil ) ) ) ) nil ) ) ) nil ) from 0x60006cf90 to 0x60006cfb0 ( 32 B )
 DEBUG: allocated [a Const] ( and ( ( lambda ( ( a ( b nil ) ) ( ( if ( a ( b ( #f nil ) ) ) ) nil ) ) ) nil ) ) from 0x60006cfb0 to 0x60006cfd0 ( 32 B )
 DEBUG: collecting garbage to free 32 B
@@ -788,7 +788,7 @@ DEBUG: allocated [a Const] ( define ( and ( ( lambda ( ( a ( b nil ) ) ( ( if ( 
 DEBUG: allocated [a Void (scary, right?)] from 0x60006d0a0 to 0x60006d0c0 ( 32 B ) in 2100 ns
 DEBUG: allocated [an Object]  from 0x60006cfd0 to 0x60006cfe0 ( 16 B ) in 2100 ns
 
-> DEBUG: allocated [a Symbol] define from 0x60006d0c0 to 0x60006d0d8 ( 24 B ) in 2900 ns
+> DEBUG: allocated [a Symbol] define from 0x60006d0c0 to 0x60006d0d8 ( 24 B ) in 2500 ns
 DEBUG: collecting garbage to free 24 B
 DEBUG:   empty space from 0x600022900 to 0x600022904 ( 4 B )
 DEBUG:   empty space from 0x60005ac60 to 0x60005ac64 ( 4 B )
@@ -817,18 +817,18 @@ DEBUG:   empty space from 0x60006cfe0 to 0x60006cfe4 ( 4 B )
 DEBUG:   freed [a Const] ( define ( and ( ( lambda ( ( a ( b nil ) ) ( ( if ( a ( b ( #f nil ) ) ) ) nil ) ) ) nil ) ) ) from 0x60006d080 to 0x60006d0a0 ( 32 B )
 DEBUG:   empty space from 0x60006d0d8 to 0x60006d0e4 ( 12 B )
 DEBUG: garbage collected - freed enough memory
-DEBUG: allocated [a Symbol] or from 0x60006c770 to 0x60006c788 ( 24 B ) in 171200 ns
+DEBUG: allocated [a Symbol] or from 0x60006c770 to 0x60006c788 ( 24 B ) in 172800 ns
 DEBUG: allocated [a Symbol] lambda from 0x60006c788 to 0x60006c7a0 ( 24 B ) in 2500 ns
-DEBUG: allocated [a Symbol] a from 0x60006c850 to 0x60006c868 ( 24 B ) in 1700 ns
+DEBUG: allocated [a Symbol] a from 0x60006c850 to 0x60006c868 ( 24 B ) in 1600 ns
 DEBUG: allocated [a Symbol] b from 0x60006ce80 to 0x60006ce98 ( 24 B ) in 2100 ns
-DEBUG: allocated nil from 0x60006c7a0 to 0x60006c7b0 ( 16 B ) in 1600 ns
+DEBUG: allocated nil from 0x60006c7a0 to 0x60006c7b0 ( 16 B ) in 2100 ns
 DEBUG: allocated [a Const] ( b nil ) from 0x60006ce98 to 0x60006ceb8 ( 32 B )
 DEBUG: allocated [a Const] ( a ( b nil ) ) from 0x60006ceb8 to 0x60006ced8 ( 32 B )
 DEBUG: allocated [a Symbol] if from 0x60006cf80 to 0x60006cf98 ( 24 B ) in 2400 ns
-DEBUG: allocated [a Symbol] a from 0x60006cf98 to 0x60006cfb0 ( 24 B ) in 2500 ns
-DEBUG: allocated [a Boolean] #t from 0x60006cfb0 to 0x60006cfc0 ( 16 B ) in 2100 ns
-DEBUG: allocated [a Symbol] b from 0x60006cfc0 to 0x60006cfd8 ( 24 B ) in 2500 ns
-DEBUG: allocated nil from 0x60006d080 to 0x60006d090 ( 16 B ) in 2400 ns
+DEBUG: allocated [a Symbol] a from 0x60006cf98 to 0x60006cfb0 ( 24 B ) in 2400 ns
+DEBUG: allocated [a Boolean] #t from 0x60006cfb0 to 0x60006cfc0 ( 16 B ) in 2000 ns
+DEBUG: allocated [a Symbol] b from 0x60006cfc0 to 0x60006cfd8 ( 24 B ) in 2100 ns
+DEBUG: allocated nil from 0x60006d080 to 0x60006d090 ( 16 B ) in 2500 ns
 DEBUG: collecting garbage to free 32 B
 DEBUG:   empty space from 0x600022900 to 0x600022904 ( 4 B )
 DEBUG:   empty space from 0x60005ac60 to 0x60005ac64 ( 4 B )
@@ -893,7 +893,7 @@ DEBUG:   empty space from 0x60006d580 to 0x60006d584 ( 4 B )
 DEBUG: garbage collected
 DEBUG: new block from 0x60006d5e0 to 0x60006d644 ( 100 B )
 DEBUG: allocated [a Const] ( lambda ( ( a ( b nil ) ) ( ( if ( a ( #t ( b nil ) ) ) ) nil ) ) ) from 0x60006d5e0 to 0x60006d600 ( 32 B )
-DEBUG: allocated nil from 0x60006d600 to 0x60006d610 ( 16 B ) in 2400 ns
+DEBUG: allocated nil from 0x60006d600 to 0x60006d610 ( 16 B ) in 2500 ns
 DEBUG: allocated [a Const] ( ( lambda ( ( a ( b nil ) ) ( ( if ( a ( #t ( b nil ) ) ) ) nil ) ) ) nil ) from 0x60006d610 to 0x60006d630 ( 32 B )
 DEBUG: collecting garbage to free 32 B
 DEBUG:   empty space from 0x600022900 to 0x600022904 ( 4 B )
@@ -917,8 +917,8 @@ DEBUG: garbage collected
 DEBUG: new block from 0x60006d760 to 0x60006d7c4 ( 100 B )
 DEBUG: allocated [a Const] ( or ( ( lambda ( ( a ( b nil ) ) ( ( if ( a ( #t ( b nil ) ) ) ) nil ) ) ) nil ) ) from 0x60006d760 to 0x60006d780 ( 32 B )
 DEBUG: allocated [a Const] ( define ( or ( ( lambda ( ( a ( b nil ) ) ( ( if ( a ( #t ( b nil ) ) ) ) nil ) ) ) nil ) ) ) from 0x60006d780 to 0x60006d7a0 ( 32 B )
-DEBUG: allocated [a Void (scary, right?)] from 0x60006d7a0 to 0x60006d7c0 ( 32 B ) in 2800 ns
-DEBUG: allocated [an Object]  from 0x60006d630 to 0x60006d640 ( 16 B ) in 2400 ns
+DEBUG: allocated [a Void (scary, right?)] from 0x60006d7a0 to 0x60006d7c0 ( 32 B ) in 2500 ns
+DEBUG: allocated [an Object]  from 0x60006d630 to 0x60006d640 ( 16 B ) in 2500 ns
 
 > DEBUG: collecting garbage to free 24 B
 DEBUG:   empty space from 0x600022900 to 0x600022904 ( 4 B )
@@ -952,16 +952,16 @@ DEBUG:   freed [a Const] ( or ( ( lambda ( ( a ( b nil ) ) ( ( if ( a ( #t ( b n
 DEBUG:   freed [a Const] ( define ( or ( ( lambda ( ( a ( b nil ) ) ( ( if ( a ( #t ( b nil ) ) ) ) nil ) ) ) nil ) ) ) from 0x60006d780 to 0x60006d7a0 ( 32 B )
 DEBUG:   empty space from 0x60006d7c0 to 0x60006d7c4 ( 4 B )
 DEBUG: garbage collected - freed enough memory
-DEBUG: allocated [a Symbol] define from 0x60006c770 to 0x60006c788 ( 24 B ) in 189200 ns
-DEBUG: allocated [a Symbol] square from 0x60006c788 to 0x60006c7a0 ( 24 B ) in 2000 ns
-DEBUG: allocated [a Symbol] lambda from 0x60006d0c0 to 0x60006d0d8 ( 24 B ) in 2800 ns
-DEBUG: allocated [a Symbol] n from 0x60006d540 to 0x60006d558 ( 24 B ) in 2800 ns
-DEBUG: allocated nil from 0x60006d090 to 0x60006d0a0 ( 16 B ) in 1700 ns
+DEBUG: allocated [a Symbol] define from 0x60006c770 to 0x60006c788 ( 24 B ) in 188500 ns
+DEBUG: allocated [a Symbol] square from 0x60006c788 to 0x60006c7a0 ( 24 B ) in 1700 ns
+DEBUG: allocated [a Symbol] lambda from 0x60006d0c0 to 0x60006d0d8 ( 24 B ) in 2500 ns
+DEBUG: allocated [a Symbol] n from 0x60006d540 to 0x60006d558 ( 24 B ) in 2500 ns
+DEBUG: allocated nil from 0x60006d090 to 0x60006d0a0 ( 16 B ) in 1600 ns
 DEBUG: allocated [a Const] ( n nil ) from 0x60006d558 to 0x60006d578 ( 32 B )
-DEBUG: allocated [a Symbol] * from 0x60006d5e0 to 0x60006d5f8 ( 24 B ) in 2900 ns
-DEBUG: allocated [a Symbol] n from 0x60006d5f8 to 0x60006d610 ( 24 B ) in 2500 ns
-DEBUG: allocated [a Symbol] n from 0x60006d610 to 0x60006d628 ( 24 B ) in 2400 ns
-DEBUG: allocated nil from 0x60006d628 to 0x60006d638 ( 16 B ) in 2400 ns
+DEBUG: allocated [a Symbol] * from 0x60006d5e0 to 0x60006d5f8 ( 24 B ) in 2400 ns
+DEBUG: allocated [a Symbol] n from 0x60006d5f8 to 0x60006d610 ( 24 B ) in 2400 ns
+DEBUG: allocated [a Symbol] n from 0x60006d610 to 0x60006d628 ( 24 B ) in 2500 ns
+DEBUG: allocated nil from 0x60006d628 to 0x60006d638 ( 16 B ) in 2500 ns
 DEBUG: allocated [a Const] ( n nil ) from 0x60006d760 to 0x60006d780 ( 32 B )
 DEBUG: allocated [a Const] ( n ( n nil ) ) from 0x60006d780 to 0x60006d7a0 ( 32 B )
 DEBUG: collecting garbage to free 32 B
@@ -986,7 +986,7 @@ DEBUG:   empty space from 0x60006d7c0 to 0x60006d7c4 ( 4 B )
 DEBUG: garbage collected
 DEBUG: new block from 0x60006da20 to 0x60006da84 ( 100 B )
 DEBUG: allocated [a Const] ( * ( n ( n nil ) ) ) from 0x60006da20 to 0x60006da40 ( 32 B )
-DEBUG: allocated nil from 0x60006da40 to 0x60006da50 ( 16 B ) in 2900 ns
+DEBUG: allocated nil from 0x60006da40 to 0x60006da50 ( 16 B ) in 2500 ns
 DEBUG: allocated [a Const] ( ( * ( n ( n nil ) ) ) nil ) from 0x60006da50 to 0x60006da70 ( 32 B )
 DEBUG: collecting garbage to free 32 B
 DEBUG:   empty space from 0x600022900 to 0x600022904 ( 4 B )
@@ -1012,7 +1012,7 @@ DEBUG: garbage collected
 DEBUG: new block from 0x60006db20 to 0x60006db84 ( 100 B )
 DEBUG: allocated [a Const] ( ( n nil ) ( ( * ( n ( n nil ) ) ) nil ) ) from 0x60006db20 to 0x60006db40 ( 32 B )
 DEBUG: allocated [a Const] ( lambda ( ( n nil ) ( ( * ( n ( n nil ) ) ) nil ) ) ) from 0x60006db40 to 0x60006db60 ( 32 B )
-DEBUG: allocated nil from 0x60006da70 to 0x60006da80 ( 16 B ) in 2900 ns
+DEBUG: allocated nil from 0x60006da70 to 0x60006da80 ( 16 B ) in 4100 ns
 DEBUG: allocated [a Const] ( ( lambda ( ( n nil ) ( ( * ( n ( n nil ) ) ) nil ) ) ) nil ) from 0x60006db60 to 0x60006db80 ( 32 B )
 DEBUG: collecting garbage to free 32 B
 DEBUG:   empty space from 0x600022900 to 0x600022904 ( 4 B )
@@ -1039,7 +1039,7 @@ DEBUG: garbage collected
 DEBUG: new block from 0x60006dc20 to 0x60006dc84 ( 100 B )
 DEBUG: allocated [a Const] ( square ( ( lambda ( ( n nil ) ( ( * ( n ( n nil ) ) ) nil ) ) ) nil ) ) from 0x60006dc20 to 0x60006dc40 ( 32 B )
 DEBUG: allocated [a Const] ( define ( square ( ( lambda ( ( n nil ) ( ( * ( n ( n nil ) ) ) nil ) ) ) nil ) ) ) from 0x60006dc40 to 0x60006dc60 ( 32 B )
-DEBUG: allocated [a Void (scary, right?)] from 0x60006dc60 to 0x60006dc80 ( 32 B ) in 2900 ns
+DEBUG: allocated [a Void (scary, right?)] from 0x60006dc60 to 0x60006dc80 ( 32 B ) in 4500 ns
 DEBUG: collecting garbage to free 16 B
 DEBUG:   empty space from 0x600022900 to 0x600022904 ( 4 B )
 DEBUG:   empty space from 0x60005ac60 to 0x60005ac64 ( 4 B )
@@ -1074,19 +1074,19 @@ DEBUG:   freed [a Const] ( square ( ( lambda ( ( n nil ) ( ( * ( n ( n nil ) ) )
 DEBUG:   freed [a Const] ( define ( square ( ( lambda ( ( n nil ) ( ( * ( n ( n nil ) ) ) nil ) ) ) nil ) ) ) from 0x60006dc40 to 0x60006dc60 ( 32 B )
 DEBUG:   empty space from 0x60006dc80 to 0x60006dc84 ( 4 B )
 DEBUG: garbage collected - freed enough memory
-DEBUG: allocated [an Object]  from 0x60006c770 to 0x60006c780 ( 16 B ) in 193300 ns
+DEBUG: allocated [an Object]  from 0x60006c770 to 0x60006c780 ( 16 B ) in 360100 ns
 
-> DEBUG: allocated [a Symbol] define from 0x60006c780 to 0x60006c798 ( 24 B ) in 2400 ns
-DEBUG: allocated [a Symbol] fac from 0x60006d0c0 to 0x60006d0d8 ( 24 B ) in 2400 ns
-DEBUG: allocated [a Symbol] lambda from 0x60006da40 to 0x60006da58 ( 24 B ) in 2800 ns
-DEBUG: allocated [a Symbol] n from 0x60006da58 to 0x60006da70 ( 24 B ) in 2400 ns
-DEBUG: allocated nil from 0x60006da70 to 0x60006da80 ( 16 B ) in 2500 ns
+> DEBUG: allocated [a Symbol] define from 0x60006c780 to 0x60006c798 ( 24 B ) in 6500 ns
+DEBUG: allocated [a Symbol] fac from 0x60006d0c0 to 0x60006d0d8 ( 24 B ) in 7400 ns
+DEBUG: allocated [a Symbol] lambda from 0x60006da40 to 0x60006da58 ( 24 B ) in 5700 ns
+DEBUG: allocated [a Symbol] n from 0x60006da58 to 0x60006da70 ( 24 B ) in 5300 ns
+DEBUG: allocated nil from 0x60006da70 to 0x60006da80 ( 16 B ) in 4500 ns
 DEBUG: allocated [a Const] ( n nil ) from 0x60006db20 to 0x60006db40 ( 32 B )
-DEBUG: allocated [a Symbol] if from 0x60006db40 to 0x60006db58 ( 24 B ) in 2900 ns
-DEBUG: allocated [a Symbol] = from 0x60006db58 to 0x60006db70 ( 24 B ) in 2500 ns
-DEBUG: allocated [a Symbol] n from 0x60006dc20 to 0x60006dc38 ( 24 B ) in 2900 ns
-DEBUG: allocated [an Integer] 1 from 0x60006dc38 to 0x60006dc50 ( 24 B ) in 2900 ns
-DEBUG: allocated nil from 0x60006db70 to 0x60006db80 ( 16 B ) in 2400 ns
+DEBUG: allocated [a Symbol] if from 0x60006db40 to 0x60006db58 ( 24 B ) in 4900 ns
+DEBUG: allocated [a Symbol] = from 0x60006db58 to 0x60006db70 ( 24 B ) in 5400 ns
+DEBUG: allocated [a Symbol] n from 0x60006dc20 to 0x60006dc38 ( 24 B ) in 5300 ns
+DEBUG: allocated [an Integer] 1 from 0x60006dc38 to 0x60006dc50 ( 24 B ) in 5300 ns
+DEBUG: allocated nil from 0x60006db70 to 0x60006db80 ( 16 B ) in 3700 ns
 DEBUG: collecting garbage to free 32 B
 DEBUG:   empty space from 0x600022900 to 0x600022904 ( 4 B )
 DEBUG:   empty space from 0x60005ac60 to 0x60005ac64 ( 4 B )
@@ -1145,10 +1145,10 @@ DEBUG:   empty space from 0x60006dc80 to 0x60006dc84 ( 4 B )
 DEBUG:   empty space from 0x60006e020 to 0x60006e024 ( 4 B )
 DEBUG: garbage collected
 DEBUG: new block from 0x60006e100 to 0x60006e164 ( 100 B )
-DEBUG: allocated [an Integer] 1 from 0x60006e100 to 0x60006e118 ( 24 B ) in 135500 ns
-DEBUG: allocated [a Symbol] * from 0x60006e118 to 0x60006e130 ( 24 B ) in 3300 ns
-DEBUG: allocated [a Symbol] n from 0x60006e130 to 0x60006e148 ( 24 B ) in 3300 ns
-DEBUG: allocated [a Symbol] fac from 0x60006e148 to 0x60006e160 ( 24 B ) in 3200 ns
+DEBUG: allocated [an Integer] 1 from 0x60006e100 to 0x60006e118 ( 24 B ) in 154000 ns
+DEBUG: allocated [a Symbol] * from 0x60006e118 to 0x60006e130 ( 24 B ) in 4100 ns
+DEBUG: allocated [a Symbol] n from 0x60006e130 to 0x60006e148 ( 24 B ) in 3700 ns
+DEBUG: allocated [a Symbol] fac from 0x60006e148 to 0x60006e160 ( 24 B ) in 3300 ns
 DEBUG: collecting garbage to free 24 B
 DEBUG:   empty space from 0x600022900 to 0x600022904 ( 4 B )
 DEBUG:   empty space from 0x60005ac60 to 0x60005ac64 ( 4 B )
@@ -1178,10 +1178,10 @@ DEBUG:   empty space from 0x60006e020 to 0x60006e024 ( 4 B )
 DEBUG:   empty space from 0x60006e160 to 0x60006e164 ( 4 B )
 DEBUG: garbage collected
 DEBUG: new block from 0x60006e2d0 to 0x60006e334 ( 100 B )
-DEBUG: allocated [a Symbol] - from 0x60006e2d0 to 0x60006e2e8 ( 24 B ) in 142800 ns
-DEBUG: allocated [a Symbol] n from 0x60006e2e8 to 0x60006e300 ( 24 B ) in 3200 ns
+DEBUG: allocated [a Symbol] - from 0x60006e2d0 to 0x60006e2e8 ( 24 B ) in 151500 ns
+DEBUG: allocated [a Symbol] n from 0x60006e2e8 to 0x60006e300 ( 24 B ) in 3300 ns
 DEBUG: allocated [an Integer] 1 from 0x60006e300 to 0x60006e318 ( 24 B ) in 3300 ns
-DEBUG: allocated nil from 0x60006c770 to 0x60006c780 ( 16 B ) in 1700 ns
+DEBUG: allocated nil from 0x60006c770 to 0x60006c780 ( 16 B ) in 1300 ns
 DEBUG: collecting garbage to free 32 B
 DEBUG:   empty space from 0x600022900 to 0x600022904 ( 4 B )
 DEBUG:   empty space from 0x60005ac60 to 0x60005ac64 ( 4 B )
@@ -1214,7 +1214,7 @@ DEBUG: new block from 0x60006e410 to 0x60006e474 ( 100 B )
 DEBUG: allocated [a Const] ( 1 nil ) from 0x60006e410 to 0x60006e430 ( 32 B )
 DEBUG: allocated [a Const] ( n ( 1 nil ) ) from 0x60006e430 to 0x60006e450 ( 32 B )
 DEBUG: allocated [a Const] ( - ( n ( 1 nil ) ) ) from 0x60006e450 to 0x60006e470 ( 32 B )
-DEBUG: allocated nil from 0x60006dc50 to 0x60006dc60 ( 16 B ) in 2000 ns
+DEBUG: allocated nil from 0x60006dc50 to 0x60006dc60 ( 16 B ) in 2400 ns
 DEBUG: collecting garbage to free 32 B
 DEBUG:   empty space from 0x600022900 to 0x600022904 ( 4 B )
 DEBUG:   empty space from 0x60005ac60 to 0x60005ac64 ( 4 B )
@@ -1246,7 +1246,7 @@ DEBUG: garbage collected
 DEBUG: new block from 0x60006e4c0 to 0x60006e524 ( 100 B )
 DEBUG: allocated [a Const] ( ( - ( n ( 1 nil ) ) ) nil ) from 0x60006e4c0 to 0x60006e4e0 ( 32 B )
 DEBUG: allocated [a Const] ( fac ( ( - ( n ( 1 nil ) ) ) nil ) ) from 0x60006e4e0 to 0x60006e500 ( 32 B )
-DEBUG: allocated nil from 0x60006e318 to 0x60006e328 ( 16 B ) in 2900 ns
+DEBUG: allocated nil from 0x60006e318 to 0x60006e328 ( 16 B ) in 2800 ns
 DEBUG: allocated [a Const] ( ( fac ( ( - ( n ( 1 nil ) ) ) nil ) ) nil ) from 0x60006e500 to 0x60006e520 ( 32 B )
 DEBUG: collecting garbage to free 32 B
 DEBUG:   empty space from 0x600022900 to 0x600022904 ( 4 B )
@@ -1280,7 +1280,7 @@ DEBUG: garbage collected
 DEBUG: new block from 0x60006e5c0 to 0x60006e624 ( 100 B )
 DEBUG: allocated [a Const] ( n ( ( fac ( ( - ( n ( 1 nil ) ) ) nil ) ) nil ) ) from 0x60006e5c0 to 0x60006e5e0 ( 32 B )
 DEBUG: allocated [a Const] ( * ( n ( ( fac ( ( - ( n ( 1 nil ) ) ) nil ) ) nil ) ) ) from 0x60006e5e0 to 0x60006e600 ( 32 B )
-DEBUG: allocated nil from 0x60006e600 to 0x60006e610 ( 16 B ) in 3300 ns
+DEBUG: allocated nil from 0x60006e600 to 0x60006e610 ( 16 B ) in 2800 ns
 DEBUG: collecting garbage to free 32 B
 DEBUG:   empty space from 0x600022900 to 0x600022904 ( 4 B )
 DEBUG:   empty space from 0x60005ac60 to 0x60005ac64 ( 4 B )
@@ -1348,7 +1348,7 @@ DEBUG:   empty space from 0x60006e720 to 0x60006e724 ( 4 B )
 DEBUG: garbage collected
 DEBUG: new block from 0x60006e7c0 to 0x60006e824 ( 100 B )
 DEBUG: allocated [a Const] ( if ( ( = ( n ( 1 nil ) ) ) ( 1 ( ( * ( n ( ( fac ( ( - ( n ( 1 nil ) ) ) nil ) ) nil ) ) ) nil ) ) ) ) from 0x60006e7c0 to 0x60006e7e0 ( 32 B )
-DEBUG: allocated nil from 0x60006e610 to 0x60006e620 ( 16 B ) in 3300 ns
+DEBUG: allocated nil from 0x60006e610 to 0x60006e620 ( 16 B ) in 2900 ns
 DEBUG: allocated [a Const] ( ( if ( ( = ( n ( 1 nil ) ) ) ( 1 ( ( * ( n ( ( fac ( ( - ( n ( 1 nil ) ) ) nil ) ) nil ) ) ) nil ) ) ) ) nil ) from 0x60006e7e0 to 0x60006e800 ( 32 B )
 DEBUG: allocated [a Const] ( ( n nil ) ( ( if ( ( = ( n ( 1 nil ) ) ) ( 1 ( ( * ( n ( ( fac ( ( - ( n ( 1 nil ) ) ) nil ) ) nil ) ) ) nil ) ) ) ) nil ) ) from 0x60006e800 to 0x60006e820 ( 32 B )
 DEBUG: collecting garbage to free 32 B
@@ -1385,7 +1385,7 @@ DEBUG:   empty space from 0x60006e820 to 0x60006e824 ( 4 B )
 DEBUG: garbage collected
 DEBUG: new block from 0x60006e8c0 to 0x60006e924 ( 100 B )
 DEBUG: allocated [a Const] ( lambda ( ( n nil ) ( ( if ( ( = ( n ( 1 nil ) ) ) ( 1 ( ( * ( n ( ( fac ( ( - ( n ( 1 nil ) ) ) nil ) ) nil ) ) ) nil ) ) ) ) nil ) ) ) from 0x60006e8c0 to 0x60006e8e0 ( 32 B )
-DEBUG: allocated nil from 0x60006e8e0 to 0x60006e8f0 ( 16 B ) in 3300 ns
+DEBUG: allocated nil from 0x60006e8e0 to 0x60006e8f0 ( 16 B ) in 3200 ns
 DEBUG: allocated [a Const] ( ( lambda ( ( n nil ) ( ( if ( ( = ( n ( 1 nil ) ) ) ( 1 ( ( * ( n ( ( fac ( ( - ( n ( 1 nil ) ) ) nil ) ) nil ) ) ) nil ) ) ) ) nil ) ) ) nil ) from 0x60006e8f0 to 0x60006e910 ( 32 B )
 DEBUG: collecting garbage to free 32 B
 DEBUG:   empty space from 0x600022900 to 0x600022904 ( 4 B )
@@ -1424,7 +1424,7 @@ DEBUG: new block from 0x60006e9c0 to 0x60006ea24 ( 100 B )
 DEBUG: allocated [a Const] ( fac ( ( lambda ( ( n nil ) ( ( if ( ( = ( n ( 1 nil ) ) ) ( 1 ( ( * ( n ( ( fac ( ( - ( n ( 1 nil ) ) ) nil ) ) nil ) ) ) nil ) ) ) ) nil ) ) ) nil ) ) from 0x60006e9c0 to 0x60006e9e0 ( 32 B )
 DEBUG: allocated [a Const] ( define ( fac ( ( lambda ( ( n nil ) ( ( if ( ( = ( n ( 1 nil ) ) ) ( 1 ( ( * ( n ( ( fac ( ( - ( n ( 1 nil ) ) ) nil ) ) nil ) ) ) nil ) ) ) ) nil ) ) ) nil ) ) ) from 0x60006e9e0 to 0x60006ea00 ( 32 B )
 DEBUG: allocated [a Void (scary, right?)] from 0x60006ea00 to 0x60006ea20 ( 32 B ) in 3300 ns
-DEBUG: allocated [an Object]  from 0x60006e910 to 0x60006e920 ( 16 B ) in 2900 ns
+DEBUG: allocated [an Object]  from 0x60006e910 to 0x60006e920 ( 16 B ) in 3300 ns
 
 > DEBUG: collecting garbage to free 24 B
 DEBUG:   empty space from 0x600022900 to 0x600022904 ( 4 B )
@@ -1472,19 +1472,19 @@ DEBUG:   freed [a Const] ( fac ( ( lambda ( ( n nil ) ( ( if ( ( = ( n ( 1 nil )
 DEBUG:   freed [a Const] ( define ( fac ( ( lambda ( ( n nil ) ( ( if ( ( = ( n ( 1 nil ) ) ) ( 1 ( ( * ( n ( ( fac ( ( - ( n ( 1 nil ) ) ) nil ) ) nil ) ) ) nil ) ) ) ) nil ) ) ) nil ) ) ) from 0x60006e9e0 to 0x60006ea00 ( 32 B )
 DEBUG:   empty space from 0x60006ea20 to 0x60006ea24 ( 4 B )
 DEBUG: garbage collected - freed enough memory
-DEBUG: allocated [a Symbol] define from 0x60006c780 to 0x60006c798 ( 24 B ) in 275000 ns
-DEBUG: allocated [a Symbol] a from 0x60006d0c0 to 0x60006d0d8 ( 24 B ) in 2900 ns
-DEBUG: allocated [an Integer] 10 from 0x60006da40 to 0x60006da58 ( 24 B ) in 2100 ns
-DEBUG: allocated nil from 0x60006e610 to 0x60006e620 ( 16 B ) in 2800 ns
+DEBUG: allocated [a Symbol] define from 0x60006c780 to 0x60006c798 ( 24 B ) in 271400 ns
+DEBUG: allocated [a Symbol] a from 0x60006d0c0 to 0x60006d0d8 ( 24 B ) in 2500 ns
+DEBUG: allocated [an Integer] 10 from 0x60006da40 to 0x60006da58 ( 24 B ) in 2500 ns
+DEBUG: allocated nil from 0x60006e610 to 0x60006e620 ( 16 B ) in 2900 ns
 DEBUG: allocated [a Const] ( 10 nil ) from 0x60006e7e0 to 0x60006e800 ( 32 B )
 DEBUG: allocated [a Const] ( a ( 10 nil ) ) from 0x60006e800 to 0x60006e820 ( 32 B )
 DEBUG: allocated [a Const] ( define ( a ( 10 nil ) ) ) from 0x60006e8c0 to 0x60006e8e0 ( 32 B )
-DEBUG: allocated [an Object]  from 0x60006e8e0 to 0x60006e8f0 ( 16 B ) in 3700 ns
+DEBUG: allocated [an Object]  from 0x60006e8e0 to 0x60006e8f0 ( 16 B ) in 3300 ns
 
 > DEBUG: allocated [a Symbol] define from 0x60006e8f0 to 0x60006e908 ( 24 B ) in 3700 ns
-DEBUG: allocated [a Symbol] b from 0x60006e908 to 0x60006e920 ( 24 B ) in 3700 ns
+DEBUG: allocated [a Symbol] b from 0x60006e908 to 0x60006e920 ( 24 B ) in 3300 ns
 DEBUG: allocated [an Integer] 20 from 0x60006e9c0 to 0x60006e9d8 ( 24 B ) in 3300 ns
-DEBUG: allocated nil from 0x60006e9d8 to 0x60006e9e8 ( 16 B ) in 3700 ns
+DEBUG: allocated nil from 0x60006e9d8 to 0x60006e9e8 ( 16 B ) in 3300 ns
 DEBUG: collecting garbage to free 32 B
 DEBUG:   empty space from 0x600022900 to 0x600022904 ( 4 B )
 DEBUG:   empty space from 0x60005ac60 to 0x60005ac64 ( 4 B )
@@ -1530,7 +1530,7 @@ DEBUG: garbage collected - freed enough memory
 DEBUG: allocated [a Const] ( 20 nil ) from 0x60006c780 to 0x60006c7a0 ( 32 B )
 DEBUG: allocated [a Const] ( b ( 20 nil ) ) from 0x60006d0c0 to 0x60006d0e0 ( 32 B )
 DEBUG: allocated [a Const] ( define ( b ( 20 nil ) ) ) from 0x60006e7e0 to 0x60006e800 ( 32 B )
-DEBUG: allocated [an Object]  from 0x60006e610 to 0x60006e620 ( 16 B ) in 2900 ns
+DEBUG: allocated [an Object]  from 0x60006e610 to 0x60006e620 ( 16 B ) in 3300 ns
 
 > DEBUG: allocated [a Symbol] not from 0x60006e800 to 0x60006e818 ( 24 B ) in 3700 ns
 DEBUG: allocated [a Boolean] #t from 0x60006e8c0 to 0x60006e8d0 ( 16 B ) in 3300 ns
@@ -1580,11 +1580,11 @@ DEBUG: garbage collected - freed enough memory
 DEBUG: allocated [a Const] ( #t nil ) from 0x60006c780 to 0x60006c7a0 ( 32 B )
 DEBUG: allocated [a Const] ( not ( #t nil ) ) from 0x60006d0c0 to 0x60006d0e0 ( 32 B )
 #f
-> DEBUG: allocated [a Symbol] not from 0x60006e7e0 to 0x60006e7f8 ( 24 B ) in 4100 ns
-DEBUG: allocated [a Symbol] = from 0x60006e8e0 to 0x60006e8f8 ( 24 B ) in 3600 ns
-DEBUG: allocated [an Integer] 3 from 0x60006e8f8 to 0x60006e910 ( 24 B ) in 3700 ns
+> DEBUG: allocated [a Symbol] not from 0x60006e7e0 to 0x60006e7f8 ( 24 B ) in 3700 ns
+DEBUG: allocated [a Symbol] = from 0x60006e8e0 to 0x60006e8f8 ( 24 B ) in 3300 ns
+DEBUG: allocated [an Integer] 3 from 0x60006e8f8 to 0x60006e910 ( 24 B ) in 3300 ns
 DEBUG: allocated [an Integer] 4 from 0x60006e9d8 to 0x60006e9f0 ( 24 B ) in 3300 ns
-DEBUG: allocated nil from 0x60006e610 to 0x60006e620 ( 16 B ) in 3200 ns
+DEBUG: allocated nil from 0x60006e610 to 0x60006e620 ( 16 B ) in 2900 ns
 DEBUG: collecting garbage to free 32 B
 DEBUG:   empty space from 0x600022900 to 0x600022904 ( 4 B )
 DEBUG:   empty space from 0x60005ac60 to 0x60005ac64 ( 4 B )
@@ -1670,8 +1670,8 @@ DEBUG: allocated [a Const] ( not ( ( = ( 3 ( 4 nil ) ) ) nil ) ) from 0x60006ed7
 DEBUG: allocated [a Boolean] #f from 0x60006e8d0 to 0x60006e8e0 ( 16 B ) in 2900 ns
 #t
 > DEBUG: allocated [a Symbol] and from 0x60006ed90 to 0x60006eda8 ( 24 B ) in 4100 ns
-DEBUG: allocated [a Boolean] #t from 0x60006e910 to 0x60006e920 ( 16 B ) in 3700 ns
-DEBUG: allocated [a Boolean] #t from 0x60006e9f0 to 0x60006ea00 ( 16 B ) in 2900 ns
+DEBUG: allocated [a Boolean] #t from 0x60006e910 to 0x60006e920 ( 16 B ) in 3300 ns
+DEBUG: allocated [a Boolean] #t from 0x60006e9f0 to 0x60006ea00 ( 16 B ) in 2800 ns
 DEBUG: collecting garbage to free 16 B
 DEBUG:   empty space from 0x600022900 to 0x600022904 ( 4 B )
 DEBUG:   empty space from 0x60005ac60 to 0x60005ac64 ( 4 B )
@@ -1718,19 +1718,19 @@ DEBUG:   freed [a Const] ( ( = ( 3 ( 4 nil ) ) ) nil ) from 0x60006ed50 to 0x600
 DEBUG:   freed [a Const] ( not ( ( = ( 3 ( 4 nil ) ) ) nil ) ) from 0x60006ed70 to 0x60006ed90 ( 32 B )
 DEBUG:   empty space from 0x60006eda8 to 0x60006edb4 ( 12 B )
 DEBUG: garbage collected - freed enough memory
-DEBUG: allocated nil from 0x60006c780 to 0x60006c790 ( 16 B ) in 248000 ns
+DEBUG: allocated nil from 0x60006c780 to 0x60006c790 ( 16 B ) in 243100 ns
 DEBUG: allocated [a Const] ( #t nil ) from 0x60006d0c0 to 0x60006d0e0 ( 32 B )
 DEBUG: allocated [a Const] ( #t ( #t nil ) ) from 0x60006e7e0 to 0x60006e800 ( 32 B )
 DEBUG: allocated [a Const] ( and ( #t ( #t nil ) ) ) from 0x60006e800 to 0x60006e820 ( 32 B )
 #t
 > DEBUG: allocated [a Symbol] square from 0x60006e8c0 to 0x60006e8d8 ( 24 B ) in 4100 ns
 DEBUG: allocated [a Symbol] a from 0x60006e8d8 to 0x60006e8f0 ( 24 B ) in 3700 ns
-DEBUG: allocated nil from 0x60006c790 to 0x60006c7a0 ( 16 B ) in 1600 ns
+DEBUG: allocated nil from 0x60006c790 to 0x60006c7a0 ( 16 B ) in 1200 ns
 DEBUG: allocated [a Const] ( a nil ) from 0x60006e8f0 to 0x60006e910 ( 32 B )
 DEBUG: allocated [a Const] ( square ( a nil ) ) from 0x60006ed50 to 0x60006ed70 ( 32 B )
 DEBUG: allocated [an Integer] 100 from 0x60006e9d8 to 0x60006e9f0 ( 24 B ) in 2900 ns
 100
-> DEBUG: allocated [a Symbol] square from 0x60006ed70 to 0x60006ed88 ( 24 B ) in 4100 ns
+> DEBUG: allocated [a Symbol] square from 0x60006ed70 to 0x60006ed88 ( 24 B ) in 3700 ns
 DEBUG: collecting garbage to free 24 B
 DEBUG:   empty space from 0x600022900 to 0x600022904 ( 4 B )
 DEBUG:   empty space from 0x60005ac60 to 0x60005ac64 ( 4 B )
@@ -1779,17 +1779,17 @@ DEBUG:   empty space from 0x60006ed88 to 0x60006ed90 ( 8 B )
 DEBUG:   freed [a Symbol] and from 0x60006ed90 to 0x60006eda8 ( 24 B )
 DEBUG:   empty space from 0x60006eda8 to 0x60006edb4 ( 12 B )
 DEBUG: garbage collected - freed enough memory
-DEBUG: allocated [a Symbol] * from 0x60006c780 to 0x60006c798 ( 24 B ) in 350600 ns
-DEBUG: allocated [an Integer] 2 from 0x60006d0c0 to 0x60006d0d8 ( 24 B ) in 4100 ns
-DEBUG: allocated [an Integer] 1 from 0x60006e7e0 to 0x60006e7f8 ( 24 B ) in 5400 ns
-DEBUG: allocated nil from 0x60006e610 to 0x60006e620 ( 16 B ) in 5000 ns
+DEBUG: allocated [a Symbol] * from 0x60006c780 to 0x60006c798 ( 24 B ) in 249600 ns
+DEBUG: allocated [an Integer] 2 from 0x60006d0c0 to 0x60006d0d8 ( 24 B ) in 2000 ns
+DEBUG: allocated [an Integer] 1 from 0x60006e7e0 to 0x60006e7f8 ( 24 B ) in 3300 ns
+DEBUG: allocated nil from 0x60006e610 to 0x60006e620 ( 16 B ) in 2800 ns
 DEBUG: allocated [a Const] ( 1 nil ) from 0x60006e7f8 to 0x60006e818 ( 32 B )
 DEBUG: allocated [a Const] ( 2 ( 1 nil ) ) from 0x60006e8c0 to 0x60006e8e0 ( 32 B )
 DEBUG: allocated [a Const] ( * ( 2 ( 1 nil ) ) ) from 0x60006e8e0 to 0x60006e900 ( 32 B )
-DEBUG: allocated nil from 0x60006e900 to 0x60006e910 ( 16 B ) in 5300 ns
+DEBUG: allocated nil from 0x60006e900 to 0x60006e910 ( 16 B ) in 2800 ns
 DEBUG: allocated [a Const] ( ( * ( 2 ( 1 nil ) ) ) nil ) from 0x60006e9d8 to 0x60006e9f8 ( 32 B )
 DEBUG: allocated [a Const] ( square ( ( * ( 2 ( 1 nil ) ) ) nil ) ) from 0x60006ed50 to 0x60006ed70 ( 32 B )
-DEBUG: allocated [an Integer] 2 from 0x60006ed88 to 0x60006eda0 ( 24 B ) in 6200 ns
+DEBUG: allocated [an Integer] 2 from 0x60006ed88 to 0x60006eda0 ( 24 B ) in 3700 ns
 DEBUG: collecting garbage to free 24 B
 DEBUG:   empty space from 0x600022900 to 0x600022904 ( 4 B )
 DEBUG:   empty space from 0x60005ac60 to 0x60005ac64 ( 4 B )
@@ -1838,19 +1838,19 @@ DEBUG:   freed [a Symbol] square from 0x60006ed70 to 0x60006ed88 ( 24 B )
 DEBUG:   freed [an Integer] 2 from 0x60006ed88 to 0x60006eda0 ( 24 B )
 DEBUG:   empty space from 0x60006eda0 to 0x60006edb4 ( 20 B )
 DEBUG: garbage collected - freed enough memory
-DEBUG: allocated [an Integer] 4 from 0x60006c780 to 0x60006c798 ( 24 B ) in 486900 ns
+DEBUG: allocated [an Integer] 4 from 0x60006c780 to 0x60006c798 ( 24 B ) in 252000 ns
 4
-> DEBUG: allocated [a Symbol] fac from 0x60006d0c0 to 0x60006d0d8 ( 24 B ) in 6200 ns
-DEBUG: allocated [an Integer] 4 from 0x60006e7e0 to 0x60006e7f8 ( 24 B ) in 4500 ns
-DEBUG: allocated nil from 0x60006e610 to 0x60006e620 ( 16 B ) in 2800 ns
+> DEBUG: allocated [a Symbol] fac from 0x60006d0c0 to 0x60006d0d8 ( 24 B ) in 2900 ns
+DEBUG: allocated [an Integer] 4 from 0x60006e7e0 to 0x60006e7f8 ( 24 B ) in 3300 ns
+DEBUG: allocated nil from 0x60006e610 to 0x60006e620 ( 16 B ) in 2900 ns
 DEBUG: allocated [a Const] ( 4 nil ) from 0x60006e7f8 to 0x60006e818 ( 32 B )
 DEBUG: allocated [a Const] ( fac ( 4 nil ) ) from 0x60006e8c0 to 0x60006e8e0 ( 32 B )
-DEBUG: allocated [a Boolean] #f from 0x60006e8e0 to 0x60006e8f0 ( 16 B ) in 3700 ns
+DEBUG: allocated [a Boolean] #f from 0x60006e8e0 to 0x60006e8f0 ( 16 B ) in 3200 ns
 DEBUG: allocated [an Integer] 3 from 0x60006e8f0 to 0x60006e908 ( 24 B ) in 3300 ns
-DEBUG: allocated [a Boolean] #f from 0x60006e908 to 0x60006e918 ( 16 B ) in 3200 ns
-DEBUG: allocated [an Integer] 2 from 0x60006e9d8 to 0x60006e9f0 ( 24 B ) in 3700 ns
-DEBUG: allocated [a Boolean] #f from 0x60006e9f0 to 0x60006ea00 ( 16 B ) in 2900 ns
-DEBUG: allocated [an Integer] 1 from 0x60006ed50 to 0x60006ed68 ( 24 B ) in 3700 ns
+DEBUG: allocated [a Boolean] #f from 0x60006e908 to 0x60006e918 ( 16 B ) in 3300 ns
+DEBUG: allocated [an Integer] 2 from 0x60006e9d8 to 0x60006e9f0 ( 24 B ) in 3300 ns
+DEBUG: allocated [a Boolean] #f from 0x60006e9f0 to 0x60006ea00 ( 16 B ) in 2800 ns
+DEBUG: allocated [an Integer] 1 from 0x60006ed50 to 0x60006ed68 ( 24 B ) in 3300 ns
 DEBUG: allocated [a Boolean] #t from 0x60006ed68 to 0x60006ed78 ( 16 B ) in 3300 ns
 DEBUG: allocated [an Integer] 2 from 0x60006ed78 to 0x60006ed90 ( 24 B ) in 3700 ns
 DEBUG: allocated [an Integer] 6 from 0x60006ed90 to 0x60006eda8 ( 24 B ) in 3300 ns
@@ -1904,7 +1904,835 @@ DEBUG:   freed [an Integer] 2 from 0x60006ed78 to 0x60006ed90 ( 24 B )
 DEBUG:   freed [an Integer] 6 from 0x60006ed90 to 0x60006eda8 ( 24 B )
 DEBUG:   empty space from 0x60006eda8 to 0x60006edb4 ( 12 B )
 DEBUG: garbage collected - freed enough memory
-DEBUG: allocated [an Integer] 24 from 0x60006c780 to 0x60006c798 ( 24 B ) in 568900 ns
+DEBUG: allocated [an Integer] 24 from 0x60006c780 to 0x60006c798 ( 24 B ) in 262400 ns
 24
-> DEBUG: allocated nil from 0x60006d0c0 to 0x60006d0d0 ( 16 B ) in 4100 ns
+> DEBUG: allocated [a Symbol] define from 0x60006d0c0 to 0x60006d0d8 ( 24 B ) in 2800 ns
+DEBUG: allocated [a Symbol] cadr from 0x60006e7e0 to 0x60006e7f8 ( 24 B ) in 3700 ns
+DEBUG: allocated [a Symbol] lambda from 0x60006e7f8 to 0x60006e810 ( 24 B ) in 3700 ns
+DEBUG: allocated [a Symbol] l from 0x60006e8c0 to 0x60006e8d8 ( 24 B ) in 3700 ns
+DEBUG: allocated nil from 0x60006e610 to 0x60006e620 ( 16 B ) in 2900 ns
+DEBUG: allocated [a Const] ( l nil ) from 0x60006e8d8 to 0x60006e8f8 ( 32 B )
+DEBUG: allocated [a Symbol] car from 0x60006e8f8 to 0x60006e910 ( 24 B ) in 3700 ns
+DEBUG: allocated [a Symbol] cdr from 0x60006e9d8 to 0x60006e9f0 ( 24 B ) in 3700 ns
+DEBUG: allocated [a Symbol] l from 0x60006ed50 to 0x60006ed68 ( 24 B ) in 3300 ns
+DEBUG: allocated nil from 0x60006e810 to 0x60006e820 ( 16 B ) in 3300 ns
+DEBUG: allocated [a Const] ( l nil ) from 0x60006ed68 to 0x60006ed88 ( 32 B )
+DEBUG: allocated [a Const] ( cdr ( l nil ) ) from 0x60006ed88 to 0x60006eda8 ( 32 B )
+DEBUG: allocated nil from 0x60006e910 to 0x60006e920 ( 16 B ) in 3300 ns
+DEBUG: collecting garbage to free 32 B
+DEBUG:   empty space from 0x600022900 to 0x600022904 ( 4 B )
+DEBUG:   empty space from 0x60005ac60 to 0x60005ac64 ( 4 B )
+DEBUG:   empty space from 0x60005af70 to 0x60005af74 ( 4 B )
+DEBUG:   empty space from 0x60006bb38 to 0x60006bb44 ( 12 B )
+DEBUG:   empty space from 0x60006bd00 to 0x60006bd04 ( 4 B )
+DEBUG:   empty space from 0x60006bea0 to 0x60006bea4 ( 4 B )
+DEBUG:   empty space from 0x60006bfa0 to 0x60006bfa4 ( 4 B )
+DEBUG:   empty space from 0x60006c560 to 0x60006c564 ( 4 B )
+DEBUG:   empty space from 0x60006c660 to 0x60006c664 ( 4 B )
+DEBUG:   freed [an Integer] 24 from 0x60006c780 to 0x60006c798 ( 24 B )
+DEBUG:   empty space from 0x60006c798 to 0x60006c7a0 ( 8 B )
+DEBUG:   empty space from 0x60006c7b0 to 0x60006c7b4 ( 4 B )
+DEBUG:   empty space from 0x60006c8a8 to 0x60006c8b4 ( 12 B )
+DEBUG:   empty space from 0x60006ced8 to 0x60006cee4 ( 12 B )
+DEBUG:   empty space from 0x60006cfd8 to 0x60006cfe4 ( 12 B )
+DEBUG:   empty space from 0x60006d0d8 to 0x60006d0e4 ( 12 B )
+DEBUG:   empty space from 0x60006d480 to 0x60006d484 ( 4 B )
+DEBUG:   empty space from 0x60006d578 to 0x60006d584 ( 12 B )
+DEBUG:   empty space from 0x60006d638 to 0x60006d644 ( 12 B )
+DEBUG:   empty space from 0x60006d7c0 to 0x60006d7c4 ( 4 B )
+DEBUG:   empty space from 0x60006da80 to 0x60006da84 ( 4 B )
+DEBUG:   empty space from 0x60006db80 to 0x60006db84 ( 4 B )
+DEBUG:   empty space from 0x60006dc80 to 0x60006dc84 ( 4 B )
+DEBUG:   empty space from 0x60006e020 to 0x60006e024 ( 4 B )
+DEBUG:   empty space from 0x60006e160 to 0x60006e164 ( 4 B )
+DEBUG:   empty space from 0x60006e328 to 0x60006e334 ( 12 B )
+DEBUG:   empty space from 0x60006e470 to 0x60006e474 ( 4 B )
+DEBUG:   empty space from 0x60006e520 to 0x60006e524 ( 4 B )
+DEBUG:   empty space from 0x60006e620 to 0x60006e624 ( 4 B )
+DEBUG:   empty space from 0x60006e720 to 0x60006e724 ( 4 B )
+DEBUG:   empty space from 0x60006e820 to 0x60006e824 ( 4 B )
+DEBUG:   empty space from 0x60006e920 to 0x60006e924 ( 4 B )
+DEBUG:   empty space from 0x60006e9f0 to 0x60006ea00 ( 16 B )
+DEBUG:   empty space from 0x60006ea20 to 0x60006ea24 ( 4 B )
+DEBUG:   empty space from 0x60006eda8 to 0x60006edb4 ( 12 B )
+DEBUG: garbage collected - freed enough memory
+DEBUG: allocated [a Const] ( ( cdr ( l nil ) ) nil ) from 0x60006c780 to 0x60006c7a0 ( 32 B )
+DEBUG: collecting garbage to free 32 B
+DEBUG:   empty space from 0x600022900 to 0x600022904 ( 4 B )
+DEBUG:   empty space from 0x60005ac60 to 0x60005ac64 ( 4 B )
+DEBUG:   empty space from 0x60005af70 to 0x60005af74 ( 4 B )
+DEBUG:   empty space from 0x60006bb38 to 0x60006bb44 ( 12 B )
+DEBUG:   empty space from 0x60006bd00 to 0x60006bd04 ( 4 B )
+DEBUG:   empty space from 0x60006bea0 to 0x60006bea4 ( 4 B )
+DEBUG:   empty space from 0x60006bfa0 to 0x60006bfa4 ( 4 B )
+DEBUG:   empty space from 0x60006c560 to 0x60006c564 ( 4 B )
+DEBUG:   empty space from 0x60006c660 to 0x60006c664 ( 4 B )
+DEBUG:   empty space from 0x60006c7b0 to 0x60006c7b4 ( 4 B )
+DEBUG:   empty space from 0x60006c8a8 to 0x60006c8b4 ( 12 B )
+DEBUG:   empty space from 0x60006ced8 to 0x60006cee4 ( 12 B )
+DEBUG:   empty space from 0x60006cfd8 to 0x60006cfe4 ( 12 B )
+DEBUG:   empty space from 0x60006d0d8 to 0x60006d0e4 ( 12 B )
+DEBUG:   empty space from 0x60006d480 to 0x60006d484 ( 4 B )
+DEBUG:   empty space from 0x60006d578 to 0x60006d584 ( 12 B )
+DEBUG:   empty space from 0x60006d638 to 0x60006d644 ( 12 B )
+DEBUG:   empty space from 0x60006d7c0 to 0x60006d7c4 ( 4 B )
+DEBUG:   empty space from 0x60006da80 to 0x60006da84 ( 4 B )
+DEBUG:   empty space from 0x60006db80 to 0x60006db84 ( 4 B )
+DEBUG:   empty space from 0x60006dc80 to 0x60006dc84 ( 4 B )
+DEBUG:   empty space from 0x60006e020 to 0x60006e024 ( 4 B )
+DEBUG:   empty space from 0x60006e160 to 0x60006e164 ( 4 B )
+DEBUG:   empty space from 0x60006e328 to 0x60006e334 ( 12 B )
+DEBUG:   empty space from 0x60006e470 to 0x60006e474 ( 4 B )
+DEBUG:   empty space from 0x60006e520 to 0x60006e524 ( 4 B )
+DEBUG:   empty space from 0x60006e620 to 0x60006e624 ( 4 B )
+DEBUG:   empty space from 0x60006e720 to 0x60006e724 ( 4 B )
+DEBUG:   empty space from 0x60006e820 to 0x60006e824 ( 4 B )
+DEBUG:   empty space from 0x60006e920 to 0x60006e924 ( 4 B )
+DEBUG:   empty space from 0x60006e9f0 to 0x60006ea00 ( 16 B )
+DEBUG:   empty space from 0x60006ea20 to 0x60006ea24 ( 4 B )
+DEBUG:   empty space from 0x60006eda8 to 0x60006edb4 ( 12 B )
+DEBUG: garbage collected
+DEBUG: new block from 0x60006f0e0 to 0x60006f144 ( 100 B )
+DEBUG: allocated [a Const] ( car ( ( cdr ( l nil ) ) nil ) ) from 0x60006f0e0 to 0x60006f100 ( 32 B )
+DEBUG: allocated nil from 0x60006e9f0 to 0x60006ea00 ( 16 B ) in 2900 ns
+DEBUG: allocated [a Const] ( ( car ( ( cdr ( l nil ) ) nil ) ) nil ) from 0x60006f100 to 0x60006f120 ( 32 B )
+DEBUG: allocated [a Const] ( ( l nil ) ( ( car ( ( cdr ( l nil ) ) nil ) ) nil ) ) from 0x60006f120 to 0x60006f140 ( 32 B )
+DEBUG: collecting garbage to free 32 B
+DEBUG:   empty space from 0x600022900 to 0x600022904 ( 4 B )
+DEBUG:   empty space from 0x60005ac60 to 0x60005ac64 ( 4 B )
+DEBUG:   empty space from 0x60005af70 to 0x60005af74 ( 4 B )
+DEBUG:   empty space from 0x60006bb38 to 0x60006bb44 ( 12 B )
+DEBUG:   empty space from 0x60006bd00 to 0x60006bd04 ( 4 B )
+DEBUG:   empty space from 0x60006bea0 to 0x60006bea4 ( 4 B )
+DEBUG:   empty space from 0x60006bfa0 to 0x60006bfa4 ( 4 B )
+DEBUG:   empty space from 0x60006c560 to 0x60006c564 ( 4 B )
+DEBUG:   empty space from 0x60006c660 to 0x60006c664 ( 4 B )
+DEBUG:   empty space from 0x60006c7b0 to 0x60006c7b4 ( 4 B )
+DEBUG:   empty space from 0x60006c8a8 to 0x60006c8b4 ( 12 B )
+DEBUG:   empty space from 0x60006ced8 to 0x60006cee4 ( 12 B )
+DEBUG:   empty space from 0x60006cfd8 to 0x60006cfe4 ( 12 B )
+DEBUG:   empty space from 0x60006d0d8 to 0x60006d0e4 ( 12 B )
+DEBUG:   empty space from 0x60006d480 to 0x60006d484 ( 4 B )
+DEBUG:   empty space from 0x60006d578 to 0x60006d584 ( 12 B )
+DEBUG:   empty space from 0x60006d638 to 0x60006d644 ( 12 B )
+DEBUG:   empty space from 0x60006d7c0 to 0x60006d7c4 ( 4 B )
+DEBUG:   empty space from 0x60006da80 to 0x60006da84 ( 4 B )
+DEBUG:   empty space from 0x60006db80 to 0x60006db84 ( 4 B )
+DEBUG:   empty space from 0x60006dc80 to 0x60006dc84 ( 4 B )
+DEBUG:   empty space from 0x60006e020 to 0x60006e024 ( 4 B )
+DEBUG:   empty space from 0x60006e160 to 0x60006e164 ( 4 B )
+DEBUG:   empty space from 0x60006e328 to 0x60006e334 ( 12 B )
+DEBUG:   empty space from 0x60006e470 to 0x60006e474 ( 4 B )
+DEBUG:   empty space from 0x60006e520 to 0x60006e524 ( 4 B )
+DEBUG:   empty space from 0x60006e620 to 0x60006e624 ( 4 B )
+DEBUG:   empty space from 0x60006e720 to 0x60006e724 ( 4 B )
+DEBUG:   empty space from 0x60006e820 to 0x60006e824 ( 4 B )
+DEBUG:   empty space from 0x60006e920 to 0x60006e924 ( 4 B )
+DEBUG:   empty space from 0x60006ea20 to 0x60006ea24 ( 4 B )
+DEBUG:   empty space from 0x60006eda8 to 0x60006edb4 ( 12 B )
+DEBUG:   empty space from 0x60006f140 to 0x60006f144 ( 4 B )
+DEBUG: garbage collected
+DEBUG: new block from 0x60006d6a0 to 0x60006d704 ( 100 B )
+DEBUG: allocated [a Const] ( lambda ( ( l nil ) ( ( car ( ( cdr ( l nil ) ) nil ) ) nil ) ) ) from 0x60006d6a0 to 0x60006d6c0 ( 32 B )
+DEBUG: allocated nil from 0x60006d6c0 to 0x60006d6d0 ( 16 B ) in 3700 ns
+DEBUG: allocated [a Const] ( ( lambda ( ( l nil ) ( ( car ( ( cdr ( l nil ) ) nil ) ) nil ) ) ) nil ) from 0x60006d6d0 to 0x60006d6f0 ( 32 B )
+DEBUG: collecting garbage to free 32 B
+DEBUG:   empty space from 0x600022900 to 0x600022904 ( 4 B )
+DEBUG:   empty space from 0x60005ac60 to 0x60005ac64 ( 4 B )
+DEBUG:   empty space from 0x60005af70 to 0x60005af74 ( 4 B )
+DEBUG:   empty space from 0x60006bb38 to 0x60006bb44 ( 12 B )
+DEBUG:   empty space from 0x60006bd00 to 0x60006bd04 ( 4 B )
+DEBUG:   empty space from 0x60006bea0 to 0x60006bea4 ( 4 B )
+DEBUG:   empty space from 0x60006bfa0 to 0x60006bfa4 ( 4 B )
+DEBUG:   empty space from 0x60006c560 to 0x60006c564 ( 4 B )
+DEBUG:   empty space from 0x60006c660 to 0x60006c664 ( 4 B )
+DEBUG:   empty space from 0x60006c7b0 to 0x60006c7b4 ( 4 B )
+DEBUG:   empty space from 0x60006c8a8 to 0x60006c8b4 ( 12 B )
+DEBUG:   empty space from 0x60006ced8 to 0x60006cee4 ( 12 B )
+DEBUG:   empty space from 0x60006cfd8 to 0x60006cfe4 ( 12 B )
+DEBUG:   empty space from 0x60006d0d8 to 0x60006d0e4 ( 12 B )
+DEBUG:   empty space from 0x60006d480 to 0x60006d484 ( 4 B )
+DEBUG:   empty space from 0x60006d578 to 0x60006d584 ( 12 B )
+DEBUG:   empty space from 0x60006d638 to 0x60006d644 ( 12 B )
+DEBUG:   empty space from 0x60006d7c0 to 0x60006d7c4 ( 4 B )
+DEBUG:   empty space from 0x60006da80 to 0x60006da84 ( 4 B )
+DEBUG:   empty space from 0x60006db80 to 0x60006db84 ( 4 B )
+DEBUG:   empty space from 0x60006dc80 to 0x60006dc84 ( 4 B )
+DEBUG:   empty space from 0x60006e020 to 0x60006e024 ( 4 B )
+DEBUG:   empty space from 0x60006e160 to 0x60006e164 ( 4 B )
+DEBUG:   empty space from 0x60006e328 to 0x60006e334 ( 12 B )
+DEBUG:   empty space from 0x60006e470 to 0x60006e474 ( 4 B )
+DEBUG:   empty space from 0x60006e520 to 0x60006e524 ( 4 B )
+DEBUG:   empty space from 0x60006e620 to 0x60006e624 ( 4 B )
+DEBUG:   empty space from 0x60006e720 to 0x60006e724 ( 4 B )
+DEBUG:   empty space from 0x60006e820 to 0x60006e824 ( 4 B )
+DEBUG:   empty space from 0x60006e920 to 0x60006e924 ( 4 B )
+DEBUG:   empty space from 0x60006ea20 to 0x60006ea24 ( 4 B )
+DEBUG:   empty space from 0x60006eda8 to 0x60006edb4 ( 12 B )
+DEBUG:   empty space from 0x60006f140 to 0x60006f144 ( 4 B )
+DEBUG:   empty space from 0x60006d6f0 to 0x60006d704 ( 20 B )
+DEBUG: garbage collected
+DEBUG: new block from 0x60006f3b0 to 0x60006f414 ( 100 B )
+DEBUG: allocated [a Const] ( cadr ( ( lambda ( ( l nil ) ( ( car ( ( cdr ( l nil ) ) nil ) ) nil ) ) ) nil ) ) from 0x60006f3b0 to 0x60006f3d0 ( 32 B )
+DEBUG: allocated [a Const] ( define ( cadr ( ( lambda ( ( l nil ) ( ( car ( ( cdr ( l nil ) ) nil ) ) nil ) ) ) nil ) ) ) from 0x60006f3d0 to 0x60006f3f0 ( 32 B )
+DEBUG: allocated [a Void (scary, right?)] from 0x60006f3f0 to 0x60006f410 ( 32 B ) in 3700 ns
+DEBUG: allocated [an Object]  from 0x60006d6f0 to 0x60006d700 ( 16 B ) in 3700 ns
+
+> DEBUG: collecting garbage to free 24 B
+DEBUG:   empty space from 0x600022900 to 0x600022904 ( 4 B )
+DEBUG:   empty space from 0x60005ac60 to 0x60005ac64 ( 4 B )
+DEBUG:   empty space from 0x60005af70 to 0x60005af74 ( 4 B )
+DEBUG:   empty space from 0x60006bb38 to 0x60006bb44 ( 12 B )
+DEBUG:   empty space from 0x60006bd00 to 0x60006bd04 ( 4 B )
+DEBUG:   empty space from 0x60006bea0 to 0x60006bea4 ( 4 B )
+DEBUG:   empty space from 0x60006bfa0 to 0x60006bfa4 ( 4 B )
+DEBUG:   empty space from 0x60006c560 to 0x60006c564 ( 4 B )
+DEBUG:   empty space from 0x60006c660 to 0x60006c664 ( 4 B )
+DEBUG:   empty space from 0x60006c7b0 to 0x60006c7b4 ( 4 B )
+DEBUG:   empty space from 0x60006c8a8 to 0x60006c8b4 ( 12 B )
+DEBUG:   empty space from 0x60006ced8 to 0x60006cee4 ( 12 B )
+DEBUG:   empty space from 0x60006cfd8 to 0x60006cfe4 ( 12 B )
+DEBUG:   freed [a Symbol] define from 0x60006d0c0 to 0x60006d0d8 ( 24 B )
+DEBUG:   empty space from 0x60006d0d8 to 0x60006d0e4 ( 12 B )
+DEBUG:   empty space from 0x60006d480 to 0x60006d484 ( 4 B )
+DEBUG:   empty space from 0x60006d578 to 0x60006d584 ( 12 B )
+DEBUG:   empty space from 0x60006d638 to 0x60006d644 ( 12 B )
+DEBUG:   empty space from 0x60006d7c0 to 0x60006d7c4 ( 4 B )
+DEBUG:   empty space from 0x60006da80 to 0x60006da84 ( 4 B )
+DEBUG:   empty space from 0x60006db80 to 0x60006db84 ( 4 B )
+DEBUG:   empty space from 0x60006dc80 to 0x60006dc84 ( 4 B )
+DEBUG:   empty space from 0x60006e020 to 0x60006e024 ( 4 B )
+DEBUG:   empty space from 0x60006e160 to 0x60006e164 ( 4 B )
+DEBUG:   empty space from 0x60006e328 to 0x60006e334 ( 12 B )
+DEBUG:   empty space from 0x60006e470 to 0x60006e474 ( 4 B )
+DEBUG:   empty space from 0x60006e520 to 0x60006e524 ( 4 B )
+DEBUG:   empty space from 0x60006e620 to 0x60006e624 ( 4 B )
+DEBUG:   empty space from 0x60006e720 to 0x60006e724 ( 4 B )
+DEBUG:   freed [a Symbol] cadr from 0x60006e7e0 to 0x60006e7f8 ( 24 B )
+DEBUG:   freed [a Symbol] lambda from 0x60006e7f8 to 0x60006e810 ( 24 B )
+DEBUG:   empty space from 0x60006e820 to 0x60006e824 ( 4 B )
+DEBUG:   empty space from 0x60006e920 to 0x60006e924 ( 4 B )
+DEBUG:   freed nil from 0x60006e9f0 to 0x60006ea00 ( 16 B )
+DEBUG:   empty space from 0x60006ea20 to 0x60006ea24 ( 4 B )
+DEBUG:   empty space from 0x60006eda8 to 0x60006edb4 ( 12 B )
+DEBUG:   freed [a Const] ( ( car ( ( cdr ( l nil ) ) nil ) ) nil ) from 0x60006f100 to 0x60006f120 ( 32 B )
+DEBUG:   freed [a Const] ( ( l nil ) ( ( car ( ( cdr ( l nil ) ) nil ) ) nil ) ) from 0x60006f120 to 0x60006f140 ( 32 B )
+DEBUG:   empty space from 0x60006f140 to 0x60006f144 ( 4 B )
+DEBUG:   freed [a Const] ( lambda ( ( l nil ) ( ( car ( ( cdr ( l nil ) ) nil ) ) nil ) ) ) from 0x60006d6a0 to 0x60006d6c0 ( 32 B )
+DEBUG:   freed nil from 0x60006d6c0 to 0x60006d6d0 ( 16 B )
+DEBUG:   freed [a Const] ( ( lambda ( ( l nil ) ( ( car ( ( cdr ( l nil ) ) nil ) ) nil ) ) ) nil ) from 0x60006d6d0 to 0x60006d6f0 ( 32 B )
+DEBUG:   freed [an Object]  from 0x60006d6f0 to 0x60006d700 ( 16 B )
+DEBUG:   empty space from 0x60006d700 to 0x60006d704 ( 4 B )
+DEBUG:   freed [a Const] ( cadr ( ( lambda ( ( l nil ) ( ( car ( ( cdr ( l nil ) ) nil ) ) nil ) ) ) nil ) ) from 0x60006f3b0 to 0x60006f3d0 ( 32 B )
+DEBUG:   freed [a Const] ( define ( cadr ( ( lambda ( ( l nil ) ( ( car ( ( cdr ( l nil ) ) nil ) ) nil ) ) ) nil ) ) ) from 0x60006f3d0 to 0x60006f3f0 ( 32 B )
+DEBUG:   empty space from 0x60006f410 to 0x60006f414 ( 4 B )
+DEBUG: garbage collected - freed enough memory
+DEBUG: allocated [a Symbol] define from 0x60006d0c0 to 0x60006d0d8 ( 24 B ) in 332100 ns
+DEBUG: allocated [a Symbol] caddr from 0x60006e7e0 to 0x60006e7f8 ( 24 B ) in 4100 ns
+DEBUG: allocated [a Symbol] lambda from 0x60006e7f8 to 0x60006e810 ( 24 B ) in 3300 ns
+DEBUG: allocated [a Symbol] l from 0x60006f100 to 0x60006f118 ( 24 B ) in 4100 ns
+DEBUG: allocated nil from 0x60006e9f0 to 0x60006ea00 ( 16 B ) in 2800 ns
+DEBUG: allocated [a Const] ( l nil ) from 0x60006f118 to 0x60006f138 ( 32 B )
+DEBUG: allocated [a Symbol] car from 0x60006d6a0 to 0x60006d6b8 ( 24 B ) in 3700 ns
+DEBUG: allocated [a Symbol] cdr from 0x60006d6b8 to 0x60006d6d0 ( 24 B ) in 3700 ns
+DEBUG: allocated [a Symbol] cdr from 0x60006d6d0 to 0x60006d6e8 ( 24 B ) in 3700 ns
+DEBUG: allocated [a Symbol] l from 0x60006d6e8 to 0x60006d700 ( 24 B ) in 4100 ns
+DEBUG: allocated nil from 0x60006f3b0 to 0x60006f3c0 ( 16 B ) in 3700 ns
+DEBUG: allocated [a Const] ( l nil ) from 0x60006f3c0 to 0x60006f3e0 ( 32 B )
+DEBUG: collecting garbage to free 32 B
+DEBUG:   empty space from 0x600022900 to 0x600022904 ( 4 B )
+DEBUG:   empty space from 0x60005ac60 to 0x60005ac64 ( 4 B )
+DEBUG:   empty space from 0x60005af70 to 0x60005af74 ( 4 B )
+DEBUG:   empty space from 0x60006bb38 to 0x60006bb44 ( 12 B )
+DEBUG:   empty space from 0x60006bd00 to 0x60006bd04 ( 4 B )
+DEBUG:   empty space from 0x60006bea0 to 0x60006bea4 ( 4 B )
+DEBUG:   empty space from 0x60006bfa0 to 0x60006bfa4 ( 4 B )
+DEBUG:   empty space from 0x60006c560 to 0x60006c564 ( 4 B )
+DEBUG:   empty space from 0x60006c660 to 0x60006c664 ( 4 B )
+DEBUG:   empty space from 0x60006c7b0 to 0x60006c7b4 ( 4 B )
+DEBUG:   empty space from 0x60006c8a8 to 0x60006c8b4 ( 12 B )
+DEBUG:   empty space from 0x60006ced8 to 0x60006cee4 ( 12 B )
+DEBUG:   empty space from 0x60006cfd8 to 0x60006cfe4 ( 12 B )
+DEBUG:   empty space from 0x60006d0d8 to 0x60006d0e4 ( 12 B )
+DEBUG:   empty space from 0x60006d480 to 0x60006d484 ( 4 B )
+DEBUG:   empty space from 0x60006d578 to 0x60006d584 ( 12 B )
+DEBUG:   empty space from 0x60006d638 to 0x60006d644 ( 12 B )
+DEBUG:   empty space from 0x60006d7c0 to 0x60006d7c4 ( 4 B )
+DEBUG:   empty space from 0x60006da80 to 0x60006da84 ( 4 B )
+DEBUG:   empty space from 0x60006db80 to 0x60006db84 ( 4 B )
+DEBUG:   empty space from 0x60006dc80 to 0x60006dc84 ( 4 B )
+DEBUG:   empty space from 0x60006e020 to 0x60006e024 ( 4 B )
+DEBUG:   empty space from 0x60006e160 to 0x60006e164 ( 4 B )
+DEBUG:   empty space from 0x60006e328 to 0x60006e334 ( 12 B )
+DEBUG:   empty space from 0x60006e470 to 0x60006e474 ( 4 B )
+DEBUG:   empty space from 0x60006e520 to 0x60006e524 ( 4 B )
+DEBUG:   empty space from 0x60006e620 to 0x60006e624 ( 4 B )
+DEBUG:   empty space from 0x60006e720 to 0x60006e724 ( 4 B )
+DEBUG:   empty space from 0x60006e820 to 0x60006e824 ( 4 B )
+DEBUG:   empty space from 0x60006e920 to 0x60006e924 ( 4 B )
+DEBUG:   empty space from 0x60006ea20 to 0x60006ea24 ( 4 B )
+DEBUG:   empty space from 0x60006eda8 to 0x60006edb4 ( 12 B )
+DEBUG:   empty space from 0x60006f138 to 0x60006f144 ( 12 B )
+DEBUG:   empty space from 0x60006d700 to 0x60006d704 ( 4 B )
+DEBUG:   empty space from 0x60006f3e0 to 0x60006f3f0 ( 16 B )
+DEBUG:   empty space from 0x60006f410 to 0x60006f414 ( 4 B )
+DEBUG: garbage collected
+DEBUG: new block from 0x60006f6d0 to 0x60006f734 ( 100 B )
+DEBUG: allocated [a Const] ( cdr ( l nil ) ) from 0x60006f6d0 to 0x60006f6f0 ( 32 B )
+DEBUG: allocated nil from 0x60006f3e0 to 0x60006f3f0 ( 16 B ) in 3300 ns
+DEBUG: allocated [a Const] ( ( cdr ( l nil ) ) nil ) from 0x60006f6f0 to 0x60006f710 ( 32 B )
+DEBUG: allocated [a Const] ( cdr ( ( cdr ( l nil ) ) nil ) ) from 0x60006f710 to 0x60006f730 ( 32 B )
+DEBUG: collecting garbage to free 16 B
+DEBUG:   empty space from 0x600022900 to 0x600022904 ( 4 B )
+DEBUG:   empty space from 0x60005ac60 to 0x60005ac64 ( 4 B )
+DEBUG:   empty space from 0x60005af70 to 0x60005af74 ( 4 B )
+DEBUG:   empty space from 0x60006bb38 to 0x60006bb44 ( 12 B )
+DEBUG:   empty space from 0x60006bd00 to 0x60006bd04 ( 4 B )
+DEBUG:   empty space from 0x60006bea0 to 0x60006bea4 ( 4 B )
+DEBUG:   empty space from 0x60006bfa0 to 0x60006bfa4 ( 4 B )
+DEBUG:   empty space from 0x60006c560 to 0x60006c564 ( 4 B )
+DEBUG:   empty space from 0x60006c660 to 0x60006c664 ( 4 B )
+DEBUG:   empty space from 0x60006c7b0 to 0x60006c7b4 ( 4 B )
+DEBUG:   empty space from 0x60006c8a8 to 0x60006c8b4 ( 12 B )
+DEBUG:   empty space from 0x60006ced8 to 0x60006cee4 ( 12 B )
+DEBUG:   empty space from 0x60006cfd8 to 0x60006cfe4 ( 12 B )
+DEBUG:   empty space from 0x60006d0d8 to 0x60006d0e4 ( 12 B )
+DEBUG:   empty space from 0x60006d480 to 0x60006d484 ( 4 B )
+DEBUG:   empty space from 0x60006d578 to 0x60006d584 ( 12 B )
+DEBUG:   empty space from 0x60006d638 to 0x60006d644 ( 12 B )
+DEBUG:   empty space from 0x60006d7c0 to 0x60006d7c4 ( 4 B )
+DEBUG:   empty space from 0x60006da80 to 0x60006da84 ( 4 B )
+DEBUG:   empty space from 0x60006db80 to 0x60006db84 ( 4 B )
+DEBUG:   empty space from 0x60006dc80 to 0x60006dc84 ( 4 B )
+DEBUG:   empty space from 0x60006e020 to 0x60006e024 ( 4 B )
+DEBUG:   empty space from 0x60006e160 to 0x60006e164 ( 4 B )
+DEBUG:   empty space from 0x60006e328 to 0x60006e334 ( 12 B )
+DEBUG:   empty space from 0x60006e470 to 0x60006e474 ( 4 B )
+DEBUG:   empty space from 0x60006e520 to 0x60006e524 ( 4 B )
+DEBUG:   empty space from 0x60006e620 to 0x60006e624 ( 4 B )
+DEBUG:   empty space from 0x60006e720 to 0x60006e724 ( 4 B )
+DEBUG:   empty space from 0x60006e820 to 0x60006e824 ( 4 B )
+DEBUG:   empty space from 0x60006e920 to 0x60006e924 ( 4 B )
+DEBUG:   empty space from 0x60006ea20 to 0x60006ea24 ( 4 B )
+DEBUG:   empty space from 0x60006eda8 to 0x60006edb4 ( 12 B )
+DEBUG:   empty space from 0x60006f138 to 0x60006f144 ( 12 B )
+DEBUG:   empty space from 0x60006d700 to 0x60006d704 ( 4 B )
+DEBUG:   empty space from 0x60006f410 to 0x60006f414 ( 4 B )
+DEBUG:   empty space from 0x60006f730 to 0x60006f734 ( 4 B )
+DEBUG: garbage collected
+DEBUG: new block from 0x60006f7d0 to 0x60006f834 ( 100 B )
+DEBUG: allocated nil from 0x60006f7d0 to 0x60006f7e0 ( 16 B ) in 191300 ns
+DEBUG: allocated [a Const] ( ( cdr ( ( cdr ( l nil ) ) nil ) ) nil ) from 0x60006f7e0 to 0x60006f800 ( 32 B )
+DEBUG: allocated [a Const] ( car ( ( cdr ( ( cdr ( l nil ) ) nil ) ) nil ) ) from 0x60006f800 to 0x60006f820 ( 32 B )
+DEBUG: allocated nil from 0x60006f820 to 0x60006f830 ( 16 B ) in 4100 ns
+DEBUG: collecting garbage to free 32 B
+DEBUG:   empty space from 0x600022900 to 0x600022904 ( 4 B )
+DEBUG:   empty space from 0x60005ac60 to 0x60005ac64 ( 4 B )
+DEBUG:   empty space from 0x60005af70 to 0x60005af74 ( 4 B )
+DEBUG:   empty space from 0x60006bb38 to 0x60006bb44 ( 12 B )
+DEBUG:   empty space from 0x60006bd00 to 0x60006bd04 ( 4 B )
+DEBUG:   empty space from 0x60006bea0 to 0x60006bea4 ( 4 B )
+DEBUG:   empty space from 0x60006bfa0 to 0x60006bfa4 ( 4 B )
+DEBUG:   empty space from 0x60006c560 to 0x60006c564 ( 4 B )
+DEBUG:   empty space from 0x60006c660 to 0x60006c664 ( 4 B )
+DEBUG:   empty space from 0x60006c7b0 to 0x60006c7b4 ( 4 B )
+DEBUG:   empty space from 0x60006c8a8 to 0x60006c8b4 ( 12 B )
+DEBUG:   empty space from 0x60006ced8 to 0x60006cee4 ( 12 B )
+DEBUG:   empty space from 0x60006cfd8 to 0x60006cfe4 ( 12 B )
+DEBUG:   empty space from 0x60006d0d8 to 0x60006d0e4 ( 12 B )
+DEBUG:   empty space from 0x60006d480 to 0x60006d484 ( 4 B )
+DEBUG:   empty space from 0x60006d578 to 0x60006d584 ( 12 B )
+DEBUG:   empty space from 0x60006d638 to 0x60006d644 ( 12 B )
+DEBUG:   empty space from 0x60006d7c0 to 0x60006d7c4 ( 4 B )
+DEBUG:   empty space from 0x60006da80 to 0x60006da84 ( 4 B )
+DEBUG:   empty space from 0x60006db80 to 0x60006db84 ( 4 B )
+DEBUG:   empty space from 0x60006dc80 to 0x60006dc84 ( 4 B )
+DEBUG:   empty space from 0x60006e020 to 0x60006e024 ( 4 B )
+DEBUG:   empty space from 0x60006e160 to 0x60006e164 ( 4 B )
+DEBUG:   empty space from 0x60006e328 to 0x60006e334 ( 12 B )
+DEBUG:   empty space from 0x60006e470 to 0x60006e474 ( 4 B )
+DEBUG:   empty space from 0x60006e520 to 0x60006e524 ( 4 B )
+DEBUG:   empty space from 0x60006e620 to 0x60006e624 ( 4 B )
+DEBUG:   empty space from 0x60006e720 to 0x60006e724 ( 4 B )
+DEBUG:   empty space from 0x60006e820 to 0x60006e824 ( 4 B )
+DEBUG:   empty space from 0x60006e920 to 0x60006e924 ( 4 B )
+DEBUG:   empty space from 0x60006ea20 to 0x60006ea24 ( 4 B )
+DEBUG:   empty space from 0x60006eda8 to 0x60006edb4 ( 12 B )
+DEBUG:   empty space from 0x60006f138 to 0x60006f144 ( 12 B )
+DEBUG:   empty space from 0x60006d700 to 0x60006d704 ( 4 B )
+DEBUG:   empty space from 0x60006f410 to 0x60006f414 ( 4 B )
+DEBUG:   empty space from 0x60006f730 to 0x60006f734 ( 4 B )
+DEBUG:   empty space from 0x60006f830 to 0x60006f834 ( 4 B )
+DEBUG: garbage collected
+DEBUG: new block from 0x60006f890 to 0x60006f8f4 ( 100 B )
+DEBUG: allocated [a Const] ( ( car ( ( cdr ( ( cdr ( l nil ) ) nil ) ) nil ) ) nil ) from 0x60006f890 to 0x60006f8b0 ( 32 B )
+DEBUG: allocated [a Const] ( ( l nil ) ( ( car ( ( cdr ( ( cdr ( l nil ) ) nil ) ) nil ) ) nil ) ) from 0x60006f8b0 to 0x60006f8d0 ( 32 B )
+DEBUG: allocated [a Const] ( lambda ( ( l nil ) ( ( car ( ( cdr ( ( cdr ( l nil ) ) nil ) ) nil ) ) nil ) ) ) from 0x60006f8d0 to 0x60006f8f0 ( 32 B )
+DEBUG: collecting garbage to free 16 B
+DEBUG:   empty space from 0x600022900 to 0x600022904 ( 4 B )
+DEBUG:   empty space from 0x60005ac60 to 0x60005ac64 ( 4 B )
+DEBUG:   empty space from 0x60005af70 to 0x60005af74 ( 4 B )
+DEBUG:   empty space from 0x60006bb38 to 0x60006bb44 ( 12 B )
+DEBUG:   empty space from 0x60006bd00 to 0x60006bd04 ( 4 B )
+DEBUG:   empty space from 0x60006bea0 to 0x60006bea4 ( 4 B )
+DEBUG:   empty space from 0x60006bfa0 to 0x60006bfa4 ( 4 B )
+DEBUG:   empty space from 0x60006c560 to 0x60006c564 ( 4 B )
+DEBUG:   empty space from 0x60006c660 to 0x60006c664 ( 4 B )
+DEBUG:   empty space from 0x60006c7b0 to 0x60006c7b4 ( 4 B )
+DEBUG:   empty space from 0x60006c8a8 to 0x60006c8b4 ( 12 B )
+DEBUG:   empty space from 0x60006ced8 to 0x60006cee4 ( 12 B )
+DEBUG:   empty space from 0x60006cfd8 to 0x60006cfe4 ( 12 B )
+DEBUG:   empty space from 0x60006d0d8 to 0x60006d0e4 ( 12 B )
+DEBUG:   empty space from 0x60006d480 to 0x60006d484 ( 4 B )
+DEBUG:   empty space from 0x60006d578 to 0x60006d584 ( 12 B )
+DEBUG:   empty space from 0x60006d638 to 0x60006d644 ( 12 B )
+DEBUG:   empty space from 0x60006d7c0 to 0x60006d7c4 ( 4 B )
+DEBUG:   empty space from 0x60006da80 to 0x60006da84 ( 4 B )
+DEBUG:   empty space from 0x60006db80 to 0x60006db84 ( 4 B )
+DEBUG:   empty space from 0x60006dc80 to 0x60006dc84 ( 4 B )
+DEBUG:   empty space from 0x60006e020 to 0x60006e024 ( 4 B )
+DEBUG:   empty space from 0x60006e160 to 0x60006e164 ( 4 B )
+DEBUG:   empty space from 0x60006e328 to 0x60006e334 ( 12 B )
+DEBUG:   empty space from 0x60006e470 to 0x60006e474 ( 4 B )
+DEBUG:   empty space from 0x60006e520 to 0x60006e524 ( 4 B )
+DEBUG:   empty space from 0x60006e620 to 0x60006e624 ( 4 B )
+DEBUG:   empty space from 0x60006e720 to 0x60006e724 ( 4 B )
+DEBUG:   empty space from 0x60006e820 to 0x60006e824 ( 4 B )
+DEBUG:   empty space from 0x60006e920 to 0x60006e924 ( 4 B )
+DEBUG:   empty space from 0x60006ea20 to 0x60006ea24 ( 4 B )
+DEBUG:   empty space from 0x60006eda8 to 0x60006edb4 ( 12 B )
+DEBUG:   empty space from 0x60006f138 to 0x60006f144 ( 12 B )
+DEBUG:   empty space from 0x60006d700 to 0x60006d704 ( 4 B )
+DEBUG:   empty space from 0x60006f410 to 0x60006f414 ( 4 B )
+DEBUG:   empty space from 0x60006f730 to 0x60006f734 ( 4 B )
+DEBUG:   empty space from 0x60006f830 to 0x60006f834 ( 4 B )
+DEBUG:   empty space from 0x60006f8f0 to 0x60006f8f4 ( 4 B )
+DEBUG: garbage collected
+DEBUG: new block from 0x60006f9d0 to 0x60006fa34 ( 100 B )
+DEBUG: allocated nil from 0x60006f9d0 to 0x60006f9e0 ( 16 B ) in 199500 ns
+DEBUG: allocated [a Const] ( ( lambda ( ( l nil ) ( ( car ( ( cdr ( ( cdr ( l nil ) ) nil ) ) nil ) ) nil ) ) ) nil ) from 0x60006f9e0 to 0x60006fa00 ( 32 B )
+DEBUG: allocated [a Const] ( caddr ( ( lambda ( ( l nil ) ( ( car ( ( cdr ( ( cdr ( l nil ) ) nil ) ) nil ) ) nil ) ) ) nil ) ) from 0x60006fa00 to 0x60006fa20 ( 32 B )
+DEBUG: collecting garbage to free 32 B
+DEBUG:   empty space from 0x600022900 to 0x600022904 ( 4 B )
+DEBUG:   empty space from 0x60005ac60 to 0x60005ac64 ( 4 B )
+DEBUG:   empty space from 0x60005af70 to 0x60005af74 ( 4 B )
+DEBUG:   empty space from 0x60006bb38 to 0x60006bb44 ( 12 B )
+DEBUG:   empty space from 0x60006bd00 to 0x60006bd04 ( 4 B )
+DEBUG:   empty space from 0x60006bea0 to 0x60006bea4 ( 4 B )
+DEBUG:   empty space from 0x60006bfa0 to 0x60006bfa4 ( 4 B )
+DEBUG:   empty space from 0x60006c560 to 0x60006c564 ( 4 B )
+DEBUG:   empty space from 0x60006c660 to 0x60006c664 ( 4 B )
+DEBUG:   empty space from 0x60006c7b0 to 0x60006c7b4 ( 4 B )
+DEBUG:   empty space from 0x60006c8a8 to 0x60006c8b4 ( 12 B )
+DEBUG:   empty space from 0x60006ced8 to 0x60006cee4 ( 12 B )
+DEBUG:   empty space from 0x60006cfd8 to 0x60006cfe4 ( 12 B )
+DEBUG:   empty space from 0x60006d0d8 to 0x60006d0e4 ( 12 B )
+DEBUG:   empty space from 0x60006d480 to 0x60006d484 ( 4 B )
+DEBUG:   empty space from 0x60006d578 to 0x60006d584 ( 12 B )
+DEBUG:   empty space from 0x60006d638 to 0x60006d644 ( 12 B )
+DEBUG:   empty space from 0x60006d7c0 to 0x60006d7c4 ( 4 B )
+DEBUG:   empty space from 0x60006da80 to 0x60006da84 ( 4 B )
+DEBUG:   empty space from 0x60006db80 to 0x60006db84 ( 4 B )
+DEBUG:   empty space from 0x60006dc80 to 0x60006dc84 ( 4 B )
+DEBUG:   empty space from 0x60006e020 to 0x60006e024 ( 4 B )
+DEBUG:   empty space from 0x60006e160 to 0x60006e164 ( 4 B )
+DEBUG:   empty space from 0x60006e328 to 0x60006e334 ( 12 B )
+DEBUG:   empty space from 0x60006e470 to 0x60006e474 ( 4 B )
+DEBUG:   empty space from 0x60006e520 to 0x60006e524 ( 4 B )
+DEBUG:   empty space from 0x60006e620 to 0x60006e624 ( 4 B )
+DEBUG:   empty space from 0x60006e720 to 0x60006e724 ( 4 B )
+DEBUG:   empty space from 0x60006e820 to 0x60006e824 ( 4 B )
+DEBUG:   empty space from 0x60006e920 to 0x60006e924 ( 4 B )
+DEBUG:   empty space from 0x60006ea20 to 0x60006ea24 ( 4 B )
+DEBUG:   empty space from 0x60006eda8 to 0x60006edb4 ( 12 B )
+DEBUG:   empty space from 0x60006f138 to 0x60006f144 ( 12 B )
+DEBUG:   empty space from 0x60006d700 to 0x60006d704 ( 4 B )
+DEBUG:   empty space from 0x60006f410 to 0x60006f414 ( 4 B )
+DEBUG:   empty space from 0x60006f730 to 0x60006f734 ( 4 B )
+DEBUG:   empty space from 0x60006f830 to 0x60006f834 ( 4 B )
+DEBUG:   empty space from 0x60006f8f0 to 0x60006f8f4 ( 4 B )
+DEBUG:   empty space from 0x60006fa20 to 0x60006fa34 ( 20 B )
+DEBUG: garbage collected
+DEBUG: new block from 0x60006fad0 to 0x60006fb34 ( 100 B )
+DEBUG: allocated [a Const] ( define ( caddr ( ( lambda ( ( l nil ) ( ( car ( ( cdr ( ( cdr ( l nil ) ) nil ) ) nil ) ) nil ) ) ) nil ) ) ) from 0x60006fad0 to 0x60006faf0 ( 32 B )
+DEBUG: allocated [a Void (scary, right?)] from 0x60006faf0 to 0x60006fb10 ( 32 B ) in 4100 ns
+DEBUG: allocated [an Object]  from 0x60006fa20 to 0x60006fa30 ( 16 B ) in 3700 ns
+
+> DEBUG: allocated [a Symbol] define from 0x60006fb10 to 0x60006fb28 ( 24 B ) in 4500 ns
+DEBUG: collecting garbage to free 24 B
+DEBUG:   empty space from 0x600022900 to 0x600022904 ( 4 B )
+DEBUG:   empty space from 0x60005ac60 to 0x60005ac64 ( 4 B )
+DEBUG:   empty space from 0x60005af70 to 0x60005af74 ( 4 B )
+DEBUG:   empty space from 0x60006bb38 to 0x60006bb44 ( 12 B )
+DEBUG:   empty space from 0x60006bd00 to 0x60006bd04 ( 4 B )
+DEBUG:   empty space from 0x60006bea0 to 0x60006bea4 ( 4 B )
+DEBUG:   empty space from 0x60006bfa0 to 0x60006bfa4 ( 4 B )
+DEBUG:   empty space from 0x60006c560 to 0x60006c564 ( 4 B )
+DEBUG:   empty space from 0x60006c660 to 0x60006c664 ( 4 B )
+DEBUG:   empty space from 0x60006c7b0 to 0x60006c7b4 ( 4 B )
+DEBUG:   empty space from 0x60006c8a8 to 0x60006c8b4 ( 12 B )
+DEBUG:   empty space from 0x60006ced8 to 0x60006cee4 ( 12 B )
+DEBUG:   empty space from 0x60006cfd8 to 0x60006cfe4 ( 12 B )
+DEBUG:   freed [a Symbol] define from 0x60006d0c0 to 0x60006d0d8 ( 24 B )
+DEBUG:   empty space from 0x60006d0d8 to 0x60006d0e4 ( 12 B )
+DEBUG:   empty space from 0x60006d480 to 0x60006d484 ( 4 B )
+DEBUG:   empty space from 0x60006d578 to 0x60006d584 ( 12 B )
+DEBUG:   empty space from 0x60006d638 to 0x60006d644 ( 12 B )
+DEBUG:   empty space from 0x60006d7c0 to 0x60006d7c4 ( 4 B )
+DEBUG:   empty space from 0x60006da80 to 0x60006da84 ( 4 B )
+DEBUG:   empty space from 0x60006db80 to 0x60006db84 ( 4 B )
+DEBUG:   empty space from 0x60006dc80 to 0x60006dc84 ( 4 B )
+DEBUG:   empty space from 0x60006e020 to 0x60006e024 ( 4 B )
+DEBUG:   empty space from 0x60006e160 to 0x60006e164 ( 4 B )
+DEBUG:   empty space from 0x60006e328 to 0x60006e334 ( 12 B )
+DEBUG:   empty space from 0x60006e470 to 0x60006e474 ( 4 B )
+DEBUG:   empty space from 0x60006e520 to 0x60006e524 ( 4 B )
+DEBUG:   empty space from 0x60006e620 to 0x60006e624 ( 4 B )
+DEBUG:   empty space from 0x60006e720 to 0x60006e724 ( 4 B )
+DEBUG:   freed [a Symbol] caddr from 0x60006e7e0 to 0x60006e7f8 ( 24 B )
+DEBUG:   freed [a Symbol] lambda from 0x60006e7f8 to 0x60006e810 ( 24 B )
+DEBUG:   empty space from 0x60006e820 to 0x60006e824 ( 4 B )
+DEBUG:   empty space from 0x60006e920 to 0x60006e924 ( 4 B )
+DEBUG:   empty space from 0x60006ea20 to 0x60006ea24 ( 4 B )
+DEBUG:   empty space from 0x60006eda8 to 0x60006edb4 ( 12 B )
+DEBUG:   empty space from 0x60006f138 to 0x60006f144 ( 12 B )
+DEBUG:   empty space from 0x60006d700 to 0x60006d704 ( 4 B )
+DEBUG:   empty space from 0x60006f410 to 0x60006f414 ( 4 B )
+DEBUG:   empty space from 0x60006f730 to 0x60006f734 ( 4 B )
+DEBUG:   freed nil from 0x60006f820 to 0x60006f830 ( 16 B )
+DEBUG:   empty space from 0x60006f830 to 0x60006f834 ( 4 B )
+DEBUG:   freed [a Const] ( ( car ( ( cdr ( ( cdr ( l nil ) ) nil ) ) nil ) ) nil ) from 0x60006f890 to 0x60006f8b0 ( 32 B )
+DEBUG:   freed [a Const] ( ( l nil ) ( ( car ( ( cdr ( ( cdr ( l nil ) ) nil ) ) nil ) ) nil ) ) from 0x60006f8b0 to 0x60006f8d0 ( 32 B )
+DEBUG:   freed [a Const] ( lambda ( ( l nil ) ( ( car ( ( cdr ( ( cdr ( l nil ) ) nil ) ) nil ) ) nil ) ) ) from 0x60006f8d0 to 0x60006f8f0 ( 32 B )
+DEBUG:   empty space from 0x60006f8f0 to 0x60006f8f4 ( 4 B )
+DEBUG:   freed nil from 0x60006f9d0 to 0x60006f9e0 ( 16 B )
+DEBUG:   freed [a Const] ( ( lambda ( ( l nil ) ( ( car ( ( cdr ( ( cdr ( l nil ) ) nil ) ) nil ) ) nil ) ) ) nil ) from 0x60006f9e0 to 0x60006fa00 ( 32 B )
+DEBUG:   freed [a Const] ( caddr ( ( lambda ( ( l nil ) ( ( car ( ( cdr ( ( cdr ( l nil ) ) nil ) ) nil ) ) nil ) ) ) nil ) ) from 0x60006fa00 to 0x60006fa20 ( 32 B )
+DEBUG:   freed [an Object]  from 0x60006fa20 to 0x60006fa30 ( 16 B )
+DEBUG:   empty space from 0x60006fa30 to 0x60006fa34 ( 4 B )
+DEBUG:   freed [a Const] ( define ( caddr ( ( lambda ( ( l nil ) ( ( car ( ( cdr ( ( cdr ( l nil ) ) nil ) ) nil ) ) nil ) ) ) nil ) ) ) from 0x60006fad0 to 0x60006faf0 ( 32 B )
+DEBUG:   empty space from 0x60006fb28 to 0x60006fb34 ( 12 B )
+DEBUG: garbage collected - freed enough memory
+DEBUG: allocated [a Symbol] first from 0x60006d0c0 to 0x60006d0d8 ( 24 B ) in 294000 ns
+DEBUG: allocated [a Symbol] car from 0x60006e7e0 to 0x60006e7f8 ( 24 B ) in 3700 ns
+DEBUG: allocated nil from 0x60006e7f8 to 0x60006e808 ( 16 B ) in 3300 ns
+DEBUG: allocated [a Const] ( car nil ) from 0x60006f890 to 0x60006f8b0 ( 32 B )
+DEBUG: allocated [a Const] ( first ( car nil ) ) from 0x60006f8b0 to 0x60006f8d0 ( 32 B )
+DEBUG: allocated [a Const] ( define ( first ( car nil ) ) ) from 0x60006f8d0 to 0x60006f8f0 ( 32 B )
+DEBUG: allocated [an Object]  from 0x60006f820 to 0x60006f830 ( 16 B ) in 3700 ns
+
+> DEBUG: allocated [a Symbol] define from 0x60006f9d0 to 0x60006f9e8 ( 24 B ) in 4500 ns
+DEBUG: allocated [a Symbol] second from 0x60006f9e8 to 0x60006fa00 ( 24 B ) in 4100 ns
+DEBUG: allocated [a Symbol] cadr from 0x60006fa00 to 0x60006fa18 ( 24 B ) in 4200 ns
+DEBUG: allocated nil from 0x60006fa18 to 0x60006fa28 ( 16 B ) in 4100 ns
+DEBUG: allocated [a Const] ( cadr nil ) from 0x60006fad0 to 0x60006faf0 ( 32 B )
+DEBUG: collecting garbage to free 32 B
+DEBUG:   empty space from 0x600022900 to 0x600022904 ( 4 B )
+DEBUG:   empty space from 0x60005ac60 to 0x60005ac64 ( 4 B )
+DEBUG:   empty space from 0x60005af70 to 0x60005af74 ( 4 B )
+DEBUG:   empty space from 0x60006bb38 to 0x60006bb44 ( 12 B )
+DEBUG:   empty space from 0x60006bd00 to 0x60006bd04 ( 4 B )
+DEBUG:   empty space from 0x60006bea0 to 0x60006bea4 ( 4 B )
+DEBUG:   empty space from 0x60006bfa0 to 0x60006bfa4 ( 4 B )
+DEBUG:   empty space from 0x60006c560 to 0x60006c564 ( 4 B )
+DEBUG:   empty space from 0x60006c660 to 0x60006c664 ( 4 B )
+DEBUG:   empty space from 0x60006c7b0 to 0x60006c7b4 ( 4 B )
+DEBUG:   empty space from 0x60006c8a8 to 0x60006c8b4 ( 12 B )
+DEBUG:   empty space from 0x60006ced8 to 0x60006cee4 ( 12 B )
+DEBUG:   empty space from 0x60006cfd8 to 0x60006cfe4 ( 12 B )
+DEBUG:   freed [a Symbol] first from 0x60006d0c0 to 0x60006d0d8 ( 24 B )
+DEBUG:   empty space from 0x60006d0d8 to 0x60006d0e4 ( 12 B )
+DEBUG:   empty space from 0x60006d480 to 0x60006d484 ( 4 B )
+DEBUG:   empty space from 0x60006d578 to 0x60006d584 ( 12 B )
+DEBUG:   empty space from 0x60006d638 to 0x60006d644 ( 12 B )
+DEBUG:   empty space from 0x60006d7c0 to 0x60006d7c4 ( 4 B )
+DEBUG:   empty space from 0x60006da80 to 0x60006da84 ( 4 B )
+DEBUG:   empty space from 0x60006db80 to 0x60006db84 ( 4 B )
+DEBUG:   empty space from 0x60006dc80 to 0x60006dc84 ( 4 B )
+DEBUG:   empty space from 0x60006e020 to 0x60006e024 ( 4 B )
+DEBUG:   empty space from 0x60006e160 to 0x60006e164 ( 4 B )
+DEBUG:   empty space from 0x60006e328 to 0x60006e334 ( 12 B )
+DEBUG:   empty space from 0x60006e470 to 0x60006e474 ( 4 B )
+DEBUG:   empty space from 0x60006e520 to 0x60006e524 ( 4 B )
+DEBUG:   empty space from 0x60006e620 to 0x60006e624 ( 4 B )
+DEBUG:   empty space from 0x60006e720 to 0x60006e724 ( 4 B )
+DEBUG:   freed [a Symbol] car from 0x60006e7e0 to 0x60006e7f8 ( 24 B )
+DEBUG:   freed nil from 0x60006e7f8 to 0x60006e808 ( 16 B )
+DEBUG:   empty space from 0x60006e808 to 0x60006e810 ( 8 B )
+DEBUG:   empty space from 0x60006e820 to 0x60006e824 ( 4 B )
+DEBUG:   empty space from 0x60006e920 to 0x60006e924 ( 4 B )
+DEBUG:   empty space from 0x60006ea20 to 0x60006ea24 ( 4 B )
+DEBUG:   empty space from 0x60006eda8 to 0x60006edb4 ( 12 B )
+DEBUG:   empty space from 0x60006f138 to 0x60006f144 ( 12 B )
+DEBUG:   empty space from 0x60006d700 to 0x60006d704 ( 4 B )
+DEBUG:   empty space from 0x60006f410 to 0x60006f414 ( 4 B )
+DEBUG:   empty space from 0x60006f730 to 0x60006f734 ( 4 B )
+DEBUG:   freed [an Object]  from 0x60006f820 to 0x60006f830 ( 16 B )
+DEBUG:   empty space from 0x60006f830 to 0x60006f834 ( 4 B )
+DEBUG:   freed [a Const] ( car nil ) from 0x60006f890 to 0x60006f8b0 ( 32 B )
+DEBUG:   freed [a Const] ( first ( car nil ) ) from 0x60006f8b0 to 0x60006f8d0 ( 32 B )
+DEBUG:   freed [a Const] ( define ( first ( car nil ) ) ) from 0x60006f8d0 to 0x60006f8f0 ( 32 B )
+DEBUG:   empty space from 0x60006f8f0 to 0x60006f8f4 ( 4 B )
+DEBUG:   empty space from 0x60006fa28 to 0x60006fa34 ( 12 B )
+DEBUG:   freed [a Symbol] define from 0x60006fb10 to 0x60006fb28 ( 24 B )
+DEBUG:   empty space from 0x60006fb28 to 0x60006fb34 ( 12 B )
+DEBUG: garbage collected - freed enough memory
+DEBUG: allocated [a Const] ( second ( cadr nil ) ) from 0x60006d0c0 to 0x60006d0e0 ( 32 B )
+DEBUG: allocated [a Const] ( define ( second ( cadr nil ) ) ) from 0x60006e7e0 to 0x60006e800 ( 32 B )
+DEBUG: allocated [an Object]  from 0x60006e800 to 0x60006e810 ( 16 B ) in 2900 ns
+
+> DEBUG: allocated [a Symbol] define from 0x60006f890 to 0x60006f8a8 ( 24 B ) in 4100 ns
+DEBUG: allocated [a Symbol] third from 0x60006f8a8 to 0x60006f8c0 ( 24 B ) in 4100 ns
+DEBUG: allocated [a Symbol] caddr from 0x60006f8c0 to 0x60006f8d8 ( 24 B ) in 3700 ns
+DEBUG: allocated nil from 0x60006f820 to 0x60006f830 ( 16 B ) in 3700 ns
+DEBUG: allocated [a Const] ( caddr nil ) from 0x60006fb10 to 0x60006fb30 ( 32 B )
+DEBUG: collecting garbage to free 32 B
+DEBUG:   empty space from 0x600022900 to 0x600022904 ( 4 B )
+DEBUG:   empty space from 0x60005ac60 to 0x60005ac64 ( 4 B )
+DEBUG:   empty space from 0x60005af70 to 0x60005af74 ( 4 B )
+DEBUG:   empty space from 0x60006bb38 to 0x60006bb44 ( 12 B )
+DEBUG:   empty space from 0x60006bd00 to 0x60006bd04 ( 4 B )
+DEBUG:   empty space from 0x60006bea0 to 0x60006bea4 ( 4 B )
+DEBUG:   empty space from 0x60006bfa0 to 0x60006bfa4 ( 4 B )
+DEBUG:   empty space from 0x60006c560 to 0x60006c564 ( 4 B )
+DEBUG:   empty space from 0x60006c660 to 0x60006c664 ( 4 B )
+DEBUG:   empty space from 0x60006c7b0 to 0x60006c7b4 ( 4 B )
+DEBUG:   empty space from 0x60006c8a8 to 0x60006c8b4 ( 12 B )
+DEBUG:   empty space from 0x60006ced8 to 0x60006cee4 ( 12 B )
+DEBUG:   empty space from 0x60006cfd8 to 0x60006cfe4 ( 12 B )
+DEBUG:   freed [a Const] ( second ( cadr nil ) ) from 0x60006d0c0 to 0x60006d0e0 ( 32 B )
+DEBUG:   empty space from 0x60006d0e0 to 0x60006d0e4 ( 4 B )
+DEBUG:   empty space from 0x60006d480 to 0x60006d484 ( 4 B )
+DEBUG:   empty space from 0x60006d578 to 0x60006d584 ( 12 B )
+DEBUG:   empty space from 0x60006d638 to 0x60006d644 ( 12 B )
+DEBUG:   empty space from 0x60006d7c0 to 0x60006d7c4 ( 4 B )
+DEBUG:   empty space from 0x60006da80 to 0x60006da84 ( 4 B )
+DEBUG:   empty space from 0x60006db80 to 0x60006db84 ( 4 B )
+DEBUG:   empty space from 0x60006dc80 to 0x60006dc84 ( 4 B )
+DEBUG:   empty space from 0x60006e020 to 0x60006e024 ( 4 B )
+DEBUG:   empty space from 0x60006e160 to 0x60006e164 ( 4 B )
+DEBUG:   empty space from 0x60006e328 to 0x60006e334 ( 12 B )
+DEBUG:   empty space from 0x60006e470 to 0x60006e474 ( 4 B )
+DEBUG:   empty space from 0x60006e520 to 0x60006e524 ( 4 B )
+DEBUG:   empty space from 0x60006e620 to 0x60006e624 ( 4 B )
+DEBUG:   empty space from 0x60006e720 to 0x60006e724 ( 4 B )
+DEBUG:   freed [a Const] ( define ( second ( cadr nil ) ) ) from 0x60006e7e0 to 0x60006e800 ( 32 B )
+DEBUG:   freed [an Object]  from 0x60006e800 to 0x60006e810 ( 16 B )
+DEBUG:   empty space from 0x60006e820 to 0x60006e824 ( 4 B )
+DEBUG:   empty space from 0x60006e920 to 0x60006e924 ( 4 B )
+DEBUG:   empty space from 0x60006ea20 to 0x60006ea24 ( 4 B )
+DEBUG:   empty space from 0x60006eda8 to 0x60006edb4 ( 12 B )
+DEBUG:   empty space from 0x60006f138 to 0x60006f144 ( 12 B )
+DEBUG:   empty space from 0x60006d700 to 0x60006d704 ( 4 B )
+DEBUG:   empty space from 0x60006f410 to 0x60006f414 ( 4 B )
+DEBUG:   empty space from 0x60006f730 to 0x60006f734 ( 4 B )
+DEBUG:   empty space from 0x60006f830 to 0x60006f834 ( 4 B )
+DEBUG:   empty space from 0x60006f8d8 to 0x60006f8f4 ( 28 B )
+DEBUG:   freed [a Symbol] define from 0x60006f9d0 to 0x60006f9e8 ( 24 B )
+DEBUG:   freed [a Symbol] second from 0x60006f9e8 to 0x60006fa00 ( 24 B )
+DEBUG:   freed [a Symbol] cadr from 0x60006fa00 to 0x60006fa18 ( 24 B )
+DEBUG:   freed nil from 0x60006fa18 to 0x60006fa28 ( 16 B )
+DEBUG:   empty space from 0x60006fa28 to 0x60006fa34 ( 12 B )
+DEBUG:   freed [a Const] ( cadr nil ) from 0x60006fad0 to 0x60006faf0 ( 32 B )
+DEBUG:   empty space from 0x60006fb30 to 0x60006fb34 ( 4 B )
+DEBUG: garbage collected - freed enough memory
+DEBUG: allocated [a Const] ( third ( caddr nil ) ) from 0x60006d0c0 to 0x60006d0e0 ( 32 B )
+DEBUG: allocated [a Const] ( define ( third ( caddr nil ) ) ) from 0x60006e7e0 to 0x60006e800 ( 32 B )
+DEBUG: allocated [an Object]  from 0x60006e800 to 0x60006e810 ( 16 B ) in 2900 ns
+
+> DEBUG: allocated [a Symbol] first from 0x60006f8d8 to 0x60006f8f0 ( 24 B ) in 4500 ns
+DEBUG: allocated [an Integer] 1 from 0x60006f9d0 to 0x60006f9e8 ( 24 B ) in 4100 ns
+DEBUG: allocated [an Integer] 2 from 0x60006f9e8 to 0x60006fa00 ( 24 B ) in 4100 ns
+DEBUG: allocated [an Integer] 3 from 0x60006fa00 to 0x60006fa18 ( 24 B ) in 3700 ns
+DEBUG: allocated nil from 0x60006fa18 to 0x60006fa28 ( 16 B ) in 3700 ns
+DEBUG: allocated [a Const] ( 3 nil ) from 0x60006fad0 to 0x60006faf0 ( 32 B )
+DEBUG: collecting garbage to free 32 B
+DEBUG:   empty space from 0x600022900 to 0x600022904 ( 4 B )
+DEBUG:   empty space from 0x60005ac60 to 0x60005ac64 ( 4 B )
+DEBUG:   empty space from 0x60005af70 to 0x60005af74 ( 4 B )
+DEBUG:   empty space from 0x60006bb38 to 0x60006bb44 ( 12 B )
+DEBUG:   empty space from 0x60006bd00 to 0x60006bd04 ( 4 B )
+DEBUG:   empty space from 0x60006bea0 to 0x60006bea4 ( 4 B )
+DEBUG:   empty space from 0x60006bfa0 to 0x60006bfa4 ( 4 B )
+DEBUG:   empty space from 0x60006c560 to 0x60006c564 ( 4 B )
+DEBUG:   empty space from 0x60006c660 to 0x60006c664 ( 4 B )
+DEBUG:   empty space from 0x60006c7b0 to 0x60006c7b4 ( 4 B )
+DEBUG:   empty space from 0x60006c8a8 to 0x60006c8b4 ( 12 B )
+DEBUG:   empty space from 0x60006ced8 to 0x60006cee4 ( 12 B )
+DEBUG:   empty space from 0x60006cfd8 to 0x60006cfe4 ( 12 B )
+DEBUG:   freed [a Const] ( third ( caddr nil ) ) from 0x60006d0c0 to 0x60006d0e0 ( 32 B )
+DEBUG:   empty space from 0x60006d0e0 to 0x60006d0e4 ( 4 B )
+DEBUG:   empty space from 0x60006d480 to 0x60006d484 ( 4 B )
+DEBUG:   empty space from 0x60006d578 to 0x60006d584 ( 12 B )
+DEBUG:   empty space from 0x60006d638 to 0x60006d644 ( 12 B )
+DEBUG:   empty space from 0x60006d7c0 to 0x60006d7c4 ( 4 B )
+DEBUG:   empty space from 0x60006da80 to 0x60006da84 ( 4 B )
+DEBUG:   empty space from 0x60006db80 to 0x60006db84 ( 4 B )
+DEBUG:   empty space from 0x60006dc80 to 0x60006dc84 ( 4 B )
+DEBUG:   empty space from 0x60006e020 to 0x60006e024 ( 4 B )
+DEBUG:   empty space from 0x60006e160 to 0x60006e164 ( 4 B )
+DEBUG:   empty space from 0x60006e328 to 0x60006e334 ( 12 B )
+DEBUG:   empty space from 0x60006e470 to 0x60006e474 ( 4 B )
+DEBUG:   empty space from 0x60006e520 to 0x60006e524 ( 4 B )
+DEBUG:   empty space from 0x60006e620 to 0x60006e624 ( 4 B )
+DEBUG:   empty space from 0x60006e720 to 0x60006e724 ( 4 B )
+DEBUG:   freed [a Const] ( define ( third ( caddr nil ) ) ) from 0x60006e7e0 to 0x60006e800 ( 32 B )
+DEBUG:   freed [an Object]  from 0x60006e800 to 0x60006e810 ( 16 B )
+DEBUG:   empty space from 0x60006e820 to 0x60006e824 ( 4 B )
+DEBUG:   empty space from 0x60006e920 to 0x60006e924 ( 4 B )
+DEBUG:   empty space from 0x60006ea20 to 0x60006ea24 ( 4 B )
+DEBUG:   empty space from 0x60006eda8 to 0x60006edb4 ( 12 B )
+DEBUG:   empty space from 0x60006f138 to 0x60006f144 ( 12 B )
+DEBUG:   empty space from 0x60006d700 to 0x60006d704 ( 4 B )
+DEBUG:   empty space from 0x60006f410 to 0x60006f414 ( 4 B )
+DEBUG:   empty space from 0x60006f730 to 0x60006f734 ( 4 B )
+DEBUG:   freed nil from 0x60006f820 to 0x60006f830 ( 16 B )
+DEBUG:   empty space from 0x60006f830 to 0x60006f834 ( 4 B )
+DEBUG:   freed [a Symbol] define from 0x60006f890 to 0x60006f8a8 ( 24 B )
+DEBUG:   freed [a Symbol] third from 0x60006f8a8 to 0x60006f8c0 ( 24 B )
+DEBUG:   freed [a Symbol] caddr from 0x60006f8c0 to 0x60006f8d8 ( 24 B )
+DEBUG:   empty space from 0x60006f8f0 to 0x60006f8f4 ( 4 B )
+DEBUG:   empty space from 0x60006fa28 to 0x60006fa34 ( 12 B )
+DEBUG:   freed [a Const] ( caddr nil ) from 0x60006fb10 to 0x60006fb30 ( 32 B )
+DEBUG:   empty space from 0x60006fb30 to 0x60006fb34 ( 4 B )
+DEBUG: garbage collected - freed enough memory
+DEBUG: allocated [a Const] ( 2 ( 3 nil ) ) from 0x60006d0c0 to 0x60006d0e0 ( 32 B )
+DEBUG: allocated [a Const] ( 1 ( 2 ( 3 nil ) ) ) from 0x60006e7e0 to 0x60006e800 ( 32 B )
+DEBUG: allocated nil from 0x60006e800 to 0x60006e810 ( 16 B ) in 2400 ns
+DEBUG: allocated [a Const] ( ( 1 ( 2 ( 3 nil ) ) ) nil ) from 0x60006f890 to 0x60006f8b0 ( 32 B )
+DEBUG: allocated [a Const] ( first ( ( 1 ( 2 ( 3 nil ) ) ) nil ) ) from 0x60006f8b0 to 0x60006f8d0 ( 32 B )
+1
+> DEBUG: allocated [a Symbol] second from 0x60006fb10 to 0x60006fb28 ( 24 B ) in 4500 ns
+DEBUG: collecting garbage to free 24 B
+DEBUG:   empty space from 0x600022900 to 0x600022904 ( 4 B )
+DEBUG:   empty space from 0x60005ac60 to 0x60005ac64 ( 4 B )
+DEBUG:   empty space from 0x60005af70 to 0x60005af74 ( 4 B )
+DEBUG:   empty space from 0x60006bb38 to 0x60006bb44 ( 12 B )
+DEBUG:   empty space from 0x60006bd00 to 0x60006bd04 ( 4 B )
+DEBUG:   empty space from 0x60006bea0 to 0x60006bea4 ( 4 B )
+DEBUG:   empty space from 0x60006bfa0 to 0x60006bfa4 ( 4 B )
+DEBUG:   empty space from 0x60006c560 to 0x60006c564 ( 4 B )
+DEBUG:   empty space from 0x60006c660 to 0x60006c664 ( 4 B )
+DEBUG:   empty space from 0x60006c7b0 to 0x60006c7b4 ( 4 B )
+DEBUG:   empty space from 0x60006c8a8 to 0x60006c8b4 ( 12 B )
+DEBUG:   empty space from 0x60006ced8 to 0x60006cee4 ( 12 B )
+DEBUG:   empty space from 0x60006cfd8 to 0x60006cfe4 ( 12 B )
+DEBUG:   freed [a Const] ( 2 ( 3 nil ) ) from 0x60006d0c0 to 0x60006d0e0 ( 32 B )
+DEBUG:   empty space from 0x60006d0e0 to 0x60006d0e4 ( 4 B )
+DEBUG:   empty space from 0x60006d480 to 0x60006d484 ( 4 B )
+DEBUG:   empty space from 0x60006d578 to 0x60006d584 ( 12 B )
+DEBUG:   empty space from 0x60006d638 to 0x60006d644 ( 12 B )
+DEBUG:   empty space from 0x60006d7c0 to 0x60006d7c4 ( 4 B )
+DEBUG:   empty space from 0x60006da80 to 0x60006da84 ( 4 B )
+DEBUG:   empty space from 0x60006db80 to 0x60006db84 ( 4 B )
+DEBUG:   empty space from 0x60006dc80 to 0x60006dc84 ( 4 B )
+DEBUG:   empty space from 0x60006e020 to 0x60006e024 ( 4 B )
+DEBUG:   empty space from 0x60006e160 to 0x60006e164 ( 4 B )
+DEBUG:   empty space from 0x60006e328 to 0x60006e334 ( 12 B )
+DEBUG:   empty space from 0x60006e470 to 0x60006e474 ( 4 B )
+DEBUG:   empty space from 0x60006e520 to 0x60006e524 ( 4 B )
+DEBUG:   empty space from 0x60006e620 to 0x60006e624 ( 4 B )
+DEBUG:   empty space from 0x60006e720 to 0x60006e724 ( 4 B )
+DEBUG:   freed [a Const] ( 1 ( 2 ( 3 nil ) ) ) from 0x60006e7e0 to 0x60006e800 ( 32 B )
+DEBUG:   freed nil from 0x60006e800 to 0x60006e810 ( 16 B )
+DEBUG:   empty space from 0x60006e820 to 0x60006e824 ( 4 B )
+DEBUG:   empty space from 0x60006e920 to 0x60006e924 ( 4 B )
+DEBUG:   empty space from 0x60006ea20 to 0x60006ea24 ( 4 B )
+DEBUG:   empty space from 0x60006eda8 to 0x60006edb4 ( 12 B )
+DEBUG:   empty space from 0x60006f138 to 0x60006f144 ( 12 B )
+DEBUG:   empty space from 0x60006d700 to 0x60006d704 ( 4 B )
+DEBUG:   empty space from 0x60006f410 to 0x60006f414 ( 4 B )
+DEBUG:   empty space from 0x60006f730 to 0x60006f734 ( 4 B )
+DEBUG:   empty space from 0x60006f820 to 0x60006f834 ( 20 B )
+DEBUG:   freed [a Const] ( ( 1 ( 2 ( 3 nil ) ) ) nil ) from 0x60006f890 to 0x60006f8b0 ( 32 B )
+DEBUG:   freed [a Const] ( first ( ( 1 ( 2 ( 3 nil ) ) ) nil ) ) from 0x60006f8b0 to 0x60006f8d0 ( 32 B )
+DEBUG:   empty space from 0x60006f8d0 to 0x60006f8d8 ( 8 B )
+DEBUG:   freed [a Symbol] first from 0x60006f8d8 to 0x60006f8f0 ( 24 B )
+DEBUG:   empty space from 0x60006f8f0 to 0x60006f8f4 ( 4 B )
+DEBUG:   freed [an Integer] 1 from 0x60006f9d0 to 0x60006f9e8 ( 24 B )
+DEBUG:   freed [an Integer] 2 from 0x60006f9e8 to 0x60006fa00 ( 24 B )
+DEBUG:   freed [an Integer] 3 from 0x60006fa00 to 0x60006fa18 ( 24 B )
+DEBUG:   freed nil from 0x60006fa18 to 0x60006fa28 ( 16 B )
+DEBUG:   empty space from 0x60006fa28 to 0x60006fa34 ( 12 B )
+DEBUG:   freed [a Const] ( 3 nil ) from 0x60006fad0 to 0x60006faf0 ( 32 B )
+DEBUG:   empty space from 0x60006fb28 to 0x60006fb34 ( 12 B )
+DEBUG: garbage collected - freed enough memory
+DEBUG: allocated [an Integer] 1 from 0x60006d0c0 to 0x60006d0d8 ( 24 B ) in 280800 ns
+DEBUG: allocated [an Integer] 2 from 0x60006e7e0 to 0x60006e7f8 ( 24 B ) in 3300 ns
+DEBUG: allocated [an Integer] 3 from 0x60006e7f8 to 0x60006e810 ( 24 B ) in 2900 ns
+DEBUG: allocated nil from 0x60006f820 to 0x60006f830 ( 16 B ) in 3700 ns
+DEBUG: allocated [a Const] ( 3 nil ) from 0x60006f890 to 0x60006f8b0 ( 32 B )
+DEBUG: allocated [a Const] ( 2 ( 3 nil ) ) from 0x60006f8b0 to 0x60006f8d0 ( 32 B )
+DEBUG: allocated [a Const] ( 1 ( 2 ( 3 nil ) ) ) from 0x60006f8d0 to 0x60006f8f0 ( 32 B )
+DEBUG: allocated nil from 0x60006f9d0 to 0x60006f9e0 ( 16 B ) in 3700 ns
+DEBUG: allocated [a Const] ( ( 1 ( 2 ( 3 nil ) ) ) nil ) from 0x60006f9e0 to 0x60006fa00 ( 32 B )
+DEBUG: allocated [a Const] ( second ( ( 1 ( 2 ( 3 nil ) ) ) nil ) ) from 0x60006fa00 to 0x60006fa20 ( 32 B )
+2
+> DEBUG: allocated [a Symbol] third from 0x60006fad0 to 0x60006fae8 ( 24 B ) in 4900 ns
+DEBUG: collecting garbage to free 24 B
+DEBUG:   empty space from 0x600022900 to 0x600022904 ( 4 B )
+DEBUG:   empty space from 0x60005ac60 to 0x60005ac64 ( 4 B )
+DEBUG:   empty space from 0x60005af70 to 0x60005af74 ( 4 B )
+DEBUG:   empty space from 0x60006bb38 to 0x60006bb44 ( 12 B )
+DEBUG:   empty space from 0x60006bd00 to 0x60006bd04 ( 4 B )
+DEBUG:   empty space from 0x60006bea0 to 0x60006bea4 ( 4 B )
+DEBUG:   empty space from 0x60006bfa0 to 0x60006bfa4 ( 4 B )
+DEBUG:   empty space from 0x60006c560 to 0x60006c564 ( 4 B )
+DEBUG:   empty space from 0x60006c660 to 0x60006c664 ( 4 B )
+DEBUG:   empty space from 0x60006c7b0 to 0x60006c7b4 ( 4 B )
+DEBUG:   empty space from 0x60006c8a8 to 0x60006c8b4 ( 12 B )
+DEBUG:   empty space from 0x60006ced8 to 0x60006cee4 ( 12 B )
+DEBUG:   empty space from 0x60006cfd8 to 0x60006cfe4 ( 12 B )
+DEBUG:   freed [an Integer] 1 from 0x60006d0c0 to 0x60006d0d8 ( 24 B )
+DEBUG:   empty space from 0x60006d0d8 to 0x60006d0e4 ( 12 B )
+DEBUG:   empty space from 0x60006d480 to 0x60006d484 ( 4 B )
+DEBUG:   empty space from 0x60006d578 to 0x60006d584 ( 12 B )
+DEBUG:   empty space from 0x60006d638 to 0x60006d644 ( 12 B )
+DEBUG:   empty space from 0x60006d7c0 to 0x60006d7c4 ( 4 B )
+DEBUG:   empty space from 0x60006da80 to 0x60006da84 ( 4 B )
+DEBUG:   empty space from 0x60006db80 to 0x60006db84 ( 4 B )
+DEBUG:   empty space from 0x60006dc80 to 0x60006dc84 ( 4 B )
+DEBUG:   empty space from 0x60006e020 to 0x60006e024 ( 4 B )
+DEBUG:   empty space from 0x60006e160 to 0x60006e164 ( 4 B )
+DEBUG:   empty space from 0x60006e328 to 0x60006e334 ( 12 B )
+DEBUG:   empty space from 0x60006e470 to 0x60006e474 ( 4 B )
+DEBUG:   empty space from 0x60006e520 to 0x60006e524 ( 4 B )
+DEBUG:   empty space from 0x60006e620 to 0x60006e624 ( 4 B )
+DEBUG:   empty space from 0x60006e720 to 0x60006e724 ( 4 B )
+DEBUG:   freed [an Integer] 2 from 0x60006e7e0 to 0x60006e7f8 ( 24 B )
+DEBUG:   freed [an Integer] 3 from 0x60006e7f8 to 0x60006e810 ( 24 B )
+DEBUG:   empty space from 0x60006e820 to 0x60006e824 ( 4 B )
+DEBUG:   empty space from 0x60006e920 to 0x60006e924 ( 4 B )
+DEBUG:   empty space from 0x60006ea20 to 0x60006ea24 ( 4 B )
+DEBUG:   empty space from 0x60006eda8 to 0x60006edb4 ( 12 B )
+DEBUG:   empty space from 0x60006f138 to 0x60006f144 ( 12 B )
+DEBUG:   empty space from 0x60006d700 to 0x60006d704 ( 4 B )
+DEBUG:   empty space from 0x60006f410 to 0x60006f414 ( 4 B )
+DEBUG:   empty space from 0x60006f730 to 0x60006f734 ( 4 B )
+DEBUG:   freed nil from 0x60006f820 to 0x60006f830 ( 16 B )
+DEBUG:   empty space from 0x60006f830 to 0x60006f834 ( 4 B )
+DEBUG:   freed [a Const] ( 3 nil ) from 0x60006f890 to 0x60006f8b0 ( 32 B )
+DEBUG:   freed [a Const] ( 2 ( 3 nil ) ) from 0x60006f8b0 to 0x60006f8d0 ( 32 B )
+DEBUG:   freed [a Const] ( 1 ( 2 ( 3 nil ) ) ) from 0x60006f8d0 to 0x60006f8f0 ( 32 B )
+DEBUG:   empty space from 0x60006f8f0 to 0x60006f8f4 ( 4 B )
+DEBUG:   freed nil from 0x60006f9d0 to 0x60006f9e0 ( 16 B )
+DEBUG:   freed [a Const] ( ( 1 ( 2 ( 3 nil ) ) ) nil ) from 0x60006f9e0 to 0x60006fa00 ( 32 B )
+DEBUG:   freed [a Const] ( second ( ( 1 ( 2 ( 3 nil ) ) ) nil ) ) from 0x60006fa00 to 0x60006fa20 ( 32 B )
+DEBUG:   empty space from 0x60006fa20 to 0x60006fa34 ( 20 B )
+DEBUG:   empty space from 0x60006fae8 to 0x60006faf0 ( 8 B )
+DEBUG:   freed [a Symbol] second from 0x60006fb10 to 0x60006fb28 ( 24 B )
+DEBUG:   empty space from 0x60006fb28 to 0x60006fb34 ( 12 B )
+DEBUG: garbage collected - freed enough memory
+DEBUG: allocated [an Integer] 1 from 0x60006d0c0 to 0x60006d0d8 ( 24 B ) in 355500 ns
+DEBUG: allocated [an Integer] 2 from 0x60006e7e0 to 0x60006e7f8 ( 24 B ) in 3700 ns
+DEBUG: allocated [an Integer] 3 from 0x60006e7f8 to 0x60006e810 ( 24 B ) in 2900 ns
+DEBUG: allocated nil from 0x60006f820 to 0x60006f830 ( 16 B ) in 4100 ns
+DEBUG: allocated [a Const] ( 3 nil ) from 0x60006f890 to 0x60006f8b0 ( 32 B )
+DEBUG: allocated [a Const] ( 2 ( 3 nil ) ) from 0x60006f8b0 to 0x60006f8d0 ( 32 B )
+DEBUG: allocated [a Const] ( 1 ( 2 ( 3 nil ) ) ) from 0x60006f8d0 to 0x60006f8f0 ( 32 B )
+DEBUG: allocated nil from 0x60006f9d0 to 0x60006f9e0 ( 16 B ) in 4100 ns
+DEBUG: allocated [a Const] ( ( 1 ( 2 ( 3 nil ) ) ) nil ) from 0x60006f9e0 to 0x60006fa00 ( 32 B )
+DEBUG: allocated [a Const] ( third ( ( 1 ( 2 ( 3 nil ) ) ) nil ) ) from 0x60006fa00 to 0x60006fa20 ( 32 B )
+3
+> DEBUG: allocated nil from 0x60006fa20 to 0x60006fa30 ( 16 B ) in 4100 ns
 empty input, ending
