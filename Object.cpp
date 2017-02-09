@@ -263,10 +263,18 @@ unsigned int ObjectUserDefinedFunction::size() const {
     return sizeof (ObjectUserDefinedFunction);
 }
 
-ObjectUserDefinedFunction* ObjectUserDefinedFunction::allocate(Object* argList, Object* bodyList) {
-    high_resolution_clock::time_point t1 = high_resolution_clock::now();
-    ObjectUserDefinedFunction * object = new (memory.allocate(sizeof (ObjectUserDefinedFunction))) ObjectUserDefinedFunction(argList, bodyList);
-    high_resolution_clock::time_point t2 = high_resolution_clock::now();
+
+ObjectUserDefinedFunction * ObjectUserDefinedFunction::fromStack() {
+     high_resolution_clock::time_point t1 = high_resolution_clock::now();
+    Object * address = memory.allocate(sizeof (ObjectUserDefinedFunction));
+    Object * body = memory.stack.pop();
+    ObjectUserDefinedFunction * object = new (address) ObjectUserDefinedFunction(memory.stack.pop(), body);    high_resolution_clock::time_point t2 = high_resolution_clock::now();
+    if (object == object->argList)
+        throw "allocated same for const and argList";
+    if (object == object->bodyList)
+        throw "allocated same for const and bodyList";
+    if (object->argList == object->bodyList)
+        throw "allocated same for argList and bodyList";
     auto duration = duration_cast<nanoseconds>(t2 - t1).count();
     object->memoryPrint(string(" in ") + to_string(duration) + " ns");
     return object;

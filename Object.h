@@ -11,23 +11,23 @@ class Stack;
 typedef Object* (*ObjectFunction)(int, Environment&);
 
 enum tagEnum {
-   TAG_INT,
-   TAG_TRUE,
-   TAG_FALSE,
-   TAG_NIL,
-   TAG_VOID,
-   TAG_EOF,
-   TAG_CONS,
-   TAG_STRING,
-   TAG_SYMBOL,
-   TAG_BUILTINFUNCTION,
-   TAG_BUILTINSYNTAX,
-   TAG_USERDEFINEDFUNCTION,
+    TAG_INT,
+    TAG_TRUE,
+    TAG_FALSE,
+    TAG_NIL,
+    TAG_VOID,
+    TAG_EOF,
+    TAG_CONS,
+    TAG_STRING,
+    TAG_SYMBOL,
+    TAG_BUILTINFUNCTION,
+    TAG_BUILTINSYNTAX,
+    TAG_USERDEFINEDFUNCTION,
 };
 
 class Object {
 public:
-   Object();
+    Object();
 
     Object(tagEnum t) : tag(t) { }
 
@@ -37,7 +37,7 @@ public:
 
     virtual void print() const {
         //do nothing
-   }
+    }
 
     virtual void typePrint() const {
         std::cout << "[an Object] ";
@@ -75,14 +75,15 @@ public:
     virtual bool getBool() const {
         throw std::runtime_error("chyba, neni bool");
     }
+
     virtual Object* getArgList() const {
         throw std::runtime_error("chyba, neni user defined funkce");
     }
-    
+
     virtual Object* getBodyList() const {
         throw std::runtime_error("chyba, neni user defined funkce");
     }
-    
+
     virtual unsigned int size() const = 0;
 
     virtual bool isNil() const;
@@ -98,8 +99,9 @@ protected:
 
 class ObjectInt : public Object {
 public:
-   ObjectInt(int x) : Object(TAG_INT), intVal(x) {}
-   static ObjectInt * allocate(int x);
+
+    ObjectInt(int x) : Object(TAG_INT), intVal(x) { }
+    static ObjectInt * allocate(int x);
 
     virtual void print() const override {
         std::cout << intVal;
@@ -120,18 +122,21 @@ public:
     virtual unsigned int size() const override;
 
 private:
-   int intVal;
+    int intVal;
 };
 
 class ObjectBuiltInSyntax : public Object {
 public:
 
-   ObjectBuiltInSyntax(ObjectFunction f) : Object(TAG_BUILTINSYNTAX) { 
-      functionCode = f; 
-   }
-   
-   static ObjectBuiltInSyntax * allocate(ObjectFunction f);
-   virtual ObjectFunction getFunction() const override { return functionCode; }
+    ObjectBuiltInSyntax(ObjectFunction f) : Object(TAG_BUILTINSYNTAX) {
+        functionCode = f;
+    }
+
+    static ObjectBuiltInSyntax * allocate(ObjectFunction f);
+
+    virtual ObjectFunction getFunction() const override {
+        return functionCode;
+    }
 
     virtual void typePrint() const override {
         std::cout << "[an ObjectBuiltInSyntax] ";
@@ -141,7 +146,7 @@ public:
     virtual unsigned int size() const override;
 
 private:
-   ObjectFunction functionCode;
+    ObjectFunction functionCode;
 };
 
 class ObjectBuiltInFunction : public Object {
@@ -151,7 +156,7 @@ public:
         functionCode = f;
     }
 
-   static ObjectBuiltInFunction * allocate(ObjectFunction f);
+    static ObjectBuiltInFunction * allocate(ObjectFunction f);
 
     virtual ObjectFunction getFunction() const override {
         return functionCode;
@@ -165,7 +170,7 @@ public:
     virtual unsigned int size() const override;
 
 private:
-   ObjectFunction functionCode;
+    ObjectFunction functionCode;
 };
 
 class ObjectSymbol : public Object {
@@ -175,7 +180,7 @@ public:
         s = a;
     }
 
-   static ObjectSymbol * allocate(const char * a);
+    static ObjectSymbol * allocate(const char * a);
 
     virtual Object* eval(Environment& env);
 
@@ -195,7 +200,7 @@ public:
     virtual unsigned int size() const override;
 
 private:
-   std::string s;
+    std::string s;
 };
 
 class ObjectString : public Object {
@@ -205,7 +210,7 @@ public:
         s = a;
     }
 
-   static ObjectString * allocate(const char* a);
+    static ObjectString * allocate(const char* a);
 
     virtual std::string getString() const override {
         return s;
@@ -215,10 +220,10 @@ public:
         std::cout << s;
     }
 
-   virtual Object* eval(Environment& env) override { 
-      return this; 
-   }
-   
+    virtual Object* eval(Environment& env) override {
+        return this;
+    }
+
     virtual void typePrint() const override {
         std::cout << "[a String] ";
         this->print();
@@ -227,7 +232,7 @@ public:
     virtual unsigned int size() const override;
 
 private:
-   std::string s;
+    std::string s;
 };
 
 class ObjectCons : public Object {
@@ -251,13 +256,13 @@ public:
     }
 
     void print() const override {
-       std::cout << "( ";
-       car->print();
-       std::cout << " ";
-       cdr->print();
-       std::cout << " )";
+        std::cout << "( ";
+        car->print();
+        std::cout << " ";
+        cdr->print();
+        std::cout << " )";
     }
-    
+
     virtual void typePrint() const override {
         std::cout << "[a Const] ";
         this->print();
@@ -269,26 +274,29 @@ public:
     virtual int getInt(Environment & environment) override;
 
 private:
-   Object* car;
-   Object* cdr;
+    Object* car;
+    Object* cdr;
 };
 
 class ObjectTrue : public Object {
 public:
-   ObjectTrue() : Object(TAG_TRUE) {}
-   static ObjectTrue * allocate();
+
+    ObjectTrue() : Object(TAG_TRUE) { }
+    static ObjectTrue * allocate();
 
     bool getBool() const override {
         return true;
     }
     virtual unsigned int size() const override;
-   virtual Object* eval(Environment& env) override { 
-      return this; 
-   }
-   
+
+    virtual Object* eval(Environment& env) override {
+        return this;
+    }
+
     void print() const override {
-      std::cout << "#t"; 
-   }
+        std::cout << "#t";
+    }
+
     virtual void typePrint() const override {
         std::cout << "[a Boolean] ";
         this->print();
@@ -297,17 +305,18 @@ public:
 
 class ObjectFalse : public Object {
 public:
-   ObjectFalse() : Object(TAG_FALSE) {}
-   static ObjectFalse * allocate();
+
+    ObjectFalse() : Object(TAG_FALSE) { }
+    static ObjectFalse * allocate();
 
     bool getBool() const override {
         return false;
     }
     virtual unsigned int size() const override;
 
-   virtual Object* eval(Environment& env) override { 
-      return this; 
-   }
+    virtual Object* eval(Environment& env) override {
+        return this;
+    }
 
     void print() const override {
         std::cout << "#f";
@@ -321,13 +330,15 @@ public:
 
 class ObjectNil : public Object {
 public:
-   ObjectNil() : Object(TAG_NIL) {}
-   static ObjectNil * allocate();
+
+    ObjectNil() : Object(TAG_NIL) { }
+    static ObjectNil * allocate();
     virtual unsigned int size() const override;
 
-   virtual Object* eval(Environment& env) override { 
-      return this; 
-   }
+    virtual Object* eval(Environment& env) override {
+        return this;
+    }
+
     void print() const override {
         std::cout << "nil";
     }
@@ -342,25 +353,33 @@ public:
 
 class ObjectVoid : public Object {
 public:
-   ObjectVoid() : Object(TAG_VOID) {}
-   static ObjectVoid * allocate();
-   virtual unsigned int size() const override;
-   virtual Object* eval(Environment& env) override { return this; }
+
+    ObjectVoid() : Object(TAG_VOID) { }
+    static ObjectVoid * allocate();
+    virtual unsigned int size() const override;
+
+    virtual Object* eval(Environment& env) override {
+        return this;
+    }
 };
 
 class ObjectUserDefinedFunction : public Object {
 public:
-   ObjectUserDefinedFunction(Object* argL, Object* bodyL) : Object(TAG_USERDEFINEDFUNCTION) {
-      argList = argL;
-      bodyList = bodyL;
-   }
-   static ObjectUserDefinedFunction * allocate(Object* argList, Object* bodyList);
-   virtual Object* getArgList() const override { 
-      return argList; 
-   }
-   virtual Object* getBodyList() const override { 
-      return bodyList; 
-   }
+
+    ObjectUserDefinedFunction(Object* argL, Object* bodyL) : Object(TAG_USERDEFINEDFUNCTION) {
+        argList = argL;
+        bodyList = bodyL;
+    }
+
+    static ObjectUserDefinedFunction * fromStack();
+
+    virtual Object* getArgList() const override {
+        return argList;
+    }
+
+    virtual Object* getBodyList() const override {
+        return bodyList;
+    }
     virtual unsigned int size() const override;
 
     virtual void typePrint() const override {
@@ -368,8 +387,8 @@ public:
     }
     virtual void mark() override;
 private:
-   Object* argList;
-   Object* bodyList;
+    Object* argList;
+    Object* bodyList;
 };
 
 #endif /* OBJECT_H */

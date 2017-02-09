@@ -2,7 +2,7 @@
 #include "Object.h"
 
 using namespace std;
-static const unsigned int blockSize = 100; // 100 B
+static const unsigned int blockSize = 4096; // 4 kB
 //static const unsigned int blockSize = 1048576; // 1 MB
 
 MemoryBlock::MemoryBlock() {

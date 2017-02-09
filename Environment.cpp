@@ -165,11 +165,7 @@ Object* builtinLambda(int numArgs, Environment& environment) {
         return ObjectVoid::allocate();
     }
 
-    // arguments are reversed on stack
-    Object* bodyList = memory.stack.pop();
-    Object* argList = memory.stack.pop();
-
-    return ObjectUserDefinedFunction::allocate(argList, bodyList);
+    return ObjectUserDefinedFunction::fromStack();
 }
 
 //
