@@ -175,12 +175,6 @@ unsigned int ObjectCons::size() const {
     return sizeof (ObjectCons);
 }
 
-//ObjectCons * ObjectCons::allocate(Object* ca, Object * cd) {
-//    ObjectCons * object = new (memory.allocate(sizeof (ObjectCons))) ObjectCons(ca, cd);
-//    object->memoryPrint();
-//    return object;
-//}
-
 ObjectCons * ObjectCons::fromStack() {
     Object * address = memory.allocate(sizeof (ObjectCons));
     Object * cd = memory.stack.pop();
