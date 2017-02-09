@@ -151,7 +151,7 @@ Object* ObjectCons::eval(Environment& environment) {
       return bodyList->eval( newEnvironment );
    }
    else {
-      return nullptr;
+      return ObjectVoid::allocate();
    }
 }
 

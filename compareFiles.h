@@ -6,8 +6,8 @@
 #include <string.h>
 
 /* return line of file that differs, zero if they are same */
-int compareFiles(std::string & file1name, std::string & file2name) {
-    std::fstream file1(file1name), file2(file2name);
+int compareFiles(std::string & outputFile, std::string & referenceFile) {
+    std::fstream file1(outputFile), file2(referenceFile);
     std::string buffer1, buffer2;
     std::string buffer;
     size_t position;
