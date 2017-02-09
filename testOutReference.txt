@@ -7,16 +7,16 @@
 > 1
 > 6
 > 16
-> = expects exactly 2 arguments 
+> = expects exactly 2 arguments
 > #t
 > #f
-> = expects exactly 2 arguments 
-> < expects exactly 2 arguments 
+> = expects exactly 2 arguments
+> < expects exactly 2 arguments
 > #t
-> < expects exactly 2 arguments 
-> > expects exactly 2 arguments 
+> < expects exactly 2 arguments
+> > expects exactly 2 arguments
 > #f
-> > expects exactly 2 arguments 
+> > expects exactly 2 arguments
 > 1
 > 0
 > 
@@ -32,3 +32,4 @@
 > 100
 > 4
 > 24
+> 

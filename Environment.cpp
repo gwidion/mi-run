@@ -75,7 +75,7 @@ Object* builtinTimes(int numArgs, Environment& environment) {
 
 Object* builtinEquals(int numArgs, Environment& environment) {
     if (numArgs != 2) {
-        cout << "= expects exactly 2 arguments ";
+        cout << "= expects exactly 2 arguments";
         popFromStack(numArgs);
         return ObjectVoid::allocate();
     }
@@ -95,7 +95,7 @@ Object* builtinEquals(int numArgs, Environment& environment) {
 
 Object* builtinLessThan(int numArgs, Environment& environment) {
     if (numArgs != 2) {
-        cout << "< expects exactly 2 arguments ";
+        cout << "< expects exactly 2 arguments";
         popFromStack(numArgs);
         return ObjectVoid::allocate();
     }
@@ -116,7 +116,7 @@ Object* builtinLessThan(int numArgs, Environment& environment) {
 
 Object* builtinGreaterThan(int numArgs, Environment& environment) {
     if (numArgs != 2) {
-        cout << "> expects exactly 2 arguments ";
+        cout << "> expects exactly 2 arguments";
         popFromStack(numArgs);
         return ObjectVoid::allocate();
     }
@@ -137,7 +137,7 @@ Object* builtinGreaterThan(int numArgs, Environment& environment) {
 
 Object* builtinIf(int numArgs, Environment& environment) {
     if (numArgs != 3) {
-        cout << "if expects exactly 3 arguments ";
+        cout << "if expects exactly 3 arguments";
         popFromStack(numArgs);
         return ObjectVoid::allocate();
     }
@@ -178,7 +178,7 @@ Object* builtinLambda(int numArgs, Environment& environment) {
 
 Object* builtinDefine(int numArgs, Environment& environment) {
     if (numArgs != 2) {
-        cout << "define expects exactly 2 arguments ";
+        cout << "define expects exactly 2 arguments";
         popFromStack(numArgs);
         return ObjectVoid::allocate();
     }

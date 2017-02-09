@@ -63,16 +63,16 @@ void testing() {
    repl( fp );
 	
 	// checkResults
-    int testResult = compareFiles(testOutReference, testOut);
+    string testResult = compareFiles(testOutReference, testOut);
 	
    // restore cout's original streambuf
 	cout.rdbuf(backupOut);        
 	out.close();
 	
-	if( testResult == 0 ) {
+	if( testResult.empty() ) {
 		cout << "tests passed OK" << endl;
     } else {
-		cout << "tests failed, first difference at line " << testResult << endl;
+		cout << "tests failed, " << testResult << endl;
 	}
 }
 

@@ -236,7 +236,7 @@ DEBUG: allocated [an Integer] 1 from 0x60005af58 to 0x60005af70 ( 24 B )
 DEBUG: allocated nil from 0x60006ba00 to 0x60006ba10 ( 16 B )
 DEBUG: allocated [a Const]  from 0x60006ba10 to 0x60006ba30 ( 32 B )
 DEBUG: allocated [a Const]  from 0x60006ba30 to 0x60006ba50 ( 32 B )
-= expects exactly 2 arguments DEBUG: allocated [an Object]  from 0x60006ba50 to 0x60006ba60 ( 16 B )
+= expects exactly 2 argumentsDEBUG: allocated [an Object]  from 0x60006ba50 to 0x60006ba60 ( 16 B )
 
 > DEBUG: allocated [a Symbol] = from 0x60006bb40 to 0x60006bb58 ( 24 B )
 DEBUG: allocated [an Integer] 10 from 0x60006bb58 to 0x60006bb70 ( 24 B )
@@ -307,14 +307,14 @@ DEBUG:   freed [an Integer] 2 from 0x60006be70 to 0x60006be88 ( 24 B )
 DEBUG:   empty space from 0x60006be88 to 0x60006be94 ( 12 B )
 DEBUG: garbage collected - freed enough memory
 DEBUG: allocated [a Const]  from 0x60005af28 to 0x60005af48 ( 32 B )
-= expects exactly 2 arguments DEBUG: allocated [an Object]  from 0x60005af48 to 0x60005af58 ( 16 B )
+= expects exactly 2 argumentsDEBUG: allocated [an Object]  from 0x60005af48 to 0x60005af58 ( 16 B )
 
 > DEBUG: allocated [a Symbol] < from 0x60005af58 to 0x60005af70 ( 24 B )
 DEBUG: allocated [an Integer] 4 from 0x60006ba00 to 0x60006ba18 ( 24 B )
 DEBUG: allocated nil from 0x60006ba18 to 0x60006ba28 ( 16 B )
 DEBUG: allocated [a Const]  from 0x60006be30 to 0x60006be50 ( 32 B )
 DEBUG: allocated [a Const]  from 0x60006be50 to 0x60006be70 ( 32 B )
-< expects exactly 2 arguments DEBUG: allocated [an Object]  from 0x60006ba28 to 0x60006ba38 ( 16 B )
+< expects exactly 2 argumentsDEBUG: allocated [an Object]  from 0x60006ba28 to 0x60006ba38 ( 16 B )
 
 > DEBUG: allocated [a Symbol] < from 0x60006be70 to 0x60006be88 ( 24 B )
 DEBUG: collecting garbage to free 24 B
@@ -377,14 +377,14 @@ DEBUG:   freed [a Symbol] < from 0x60006be70 to 0x60006be88 ( 24 B )
 DEBUG:   empty space from 0x60006be88 to 0x60006be94 ( 12 B )
 DEBUG: garbage collected - freed enough memory
 DEBUG: allocated [a Const]  from 0x60005af28 to 0x60005af48 ( 32 B )
-< expects exactly 2 arguments DEBUG: allocated [an Object]  from 0x60005af48 to 0x60005af58 ( 16 B )
+< expects exactly 2 argumentsDEBUG: allocated [an Object]  from 0x60005af48 to 0x60005af58 ( 16 B )
 
 > DEBUG: allocated [a Symbol] > from 0x60005af58 to 0x60005af70 ( 24 B )
 DEBUG: allocated [an Integer] 4 from 0x60006ba00 to 0x60006ba18 ( 24 B )
 DEBUG: allocated nil from 0x60006ba18 to 0x60006ba28 ( 16 B )
 DEBUG: allocated [a Const]  from 0x60006ba28 to 0x60006ba48 ( 32 B )
 DEBUG: allocated [a Const]  from 0x60006be70 to 0x60006be90 ( 32 B )
-> expects exactly 2 arguments DEBUG: allocated [an Object]  from 0x60006ba48 to 0x60006ba58 ( 16 B )
+> expects exactly 2 argumentsDEBUG: allocated [an Object]  from 0x60006ba48 to 0x60006ba58 ( 16 B )
 
 > DEBUG: allocated [a Symbol] > from 0x60006bd78 to 0x60006bd90 ( 24 B )
 DEBUG: collecting garbage to free 24 B
@@ -430,7 +430,7 @@ DEBUG: allocated [a Const]  from 0x60006bd58 to 0x60006bd78 ( 32 B )
 DEBUG: allocated [a Const]  from 0x60006be30 to 0x60006be50 ( 32 B )
 DEBUG: allocated [a Const]  from 0x60006be50 to 0x60006be70 ( 32 B )
 DEBUG: allocated [a Const]  from 0x60006be70 to 0x60006be90 ( 32 B )
-> expects exactly 2 arguments DEBUG: collecting garbage to free 16 B
+> expects exactly 2 argumentsDEBUG: collecting garbage to free 16 B
 DEBUG:   empty space from 0x600022900 to 0x600022904 ( 4 B )
 DEBUG:   empty space from 0x60005ac60 to 0x60005ac64 ( 4 B )
 DEBUG:   freed [an Integer] 2 from 0x60005af28 to 0x60005af40 ( 24 B )
