@@ -192,6 +192,34 @@ Object* builtinDefine(int numArgs, Environment& environment) {
     return ObjectVoid::allocate();
 }
 
+//
+// (car <aCons>) -> CAR(aCons)
+//
+Object* builtinCar(int numArgs, Environment& environment) {
+   if( numArgs != 1 ) {
+        cout << "car expects exactly 1 argument ";
+        popFromStack(numArgs);
+        return ObjectVoid::allocate();
+   }
+
+   Object* theCell = memory.stack.pop();
+   return theCell->getCar();
+}
+
+//
+// (cdr <aCons>) -> CDR(aCons)
+//
+Object* builtinCdr(int numArgs, Environment& environment) {
+   if( numArgs != 1 ) {
+        cout << "cdr expects exactly 1 argument ";
+        popFromStack(numArgs);
+        return ObjectVoid::allocate();
+   }
+
+   Object* theCell = memory.stack.pop();
+   return theCell->getCdr();
+}
+
 Environment::Environment() {
     parent = nullptr;
     addObject("+", ObjectBuiltInFunction::allocate(builtinPlus));
@@ -200,6 +228,8 @@ Environment::Environment() {
     addObject("=", ObjectBuiltInFunction::allocate(builtinEquals));
     addObject("<", ObjectBuiltInFunction::allocate(builtinLessThan));
     addObject(">", ObjectBuiltInFunction::allocate(builtinGreaterThan));
+    addObject("car", ObjectBuiltInFunction::allocate(builtinCar));
+    addObject("cdr", ObjectBuiltInFunction::allocate(builtinCdr));
     addObject("if", ObjectBuiltInSyntax::allocate(builtinIf));
     addObject("define", ObjectBuiltInSyntax::allocate(builtinDefine));
     addObject("lambda", ObjectBuiltInSyntax::allocate(builtinLambda));

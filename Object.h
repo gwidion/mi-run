@@ -250,6 +250,14 @@ public:
         return cdr;
     }
 
+    void print() const override {
+       std::cout << "( ";
+       car->print();
+       std::cout << " ";
+       cdr->print();
+       std::cout << " )";
+    }
+    
     virtual void typePrint() const override {
         std::cout << "[a Const] ";
         this->print();

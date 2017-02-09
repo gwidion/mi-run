@@ -153,7 +153,7 @@ Object* ObjectCons::eval(Environment& environment) {
       return bodyList->eval( newEnvironment );
    }
    else {
-      return ObjectVoid::allocate();
+      return this;
    }
 }
 
