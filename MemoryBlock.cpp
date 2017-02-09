@@ -8,9 +8,9 @@ static const unsigned int blockSize = 4096; // 4 kB
 MemoryBlock::MemoryBlock() {
     data = new unsigned char [blockSize];
     freeAddresses.insert(MemoryRecord(data, blockSize));
-	#ifdef DEBUG
+#ifdef DEBUG
     cout << "DEBUG: new block from " << reinterpret_cast<void*> (data) << " to " << reinterpret_cast<void*> (data + blockSize) << " ( " << blockSize << " B )" << endl;
-	#endif
+#endif
 }
 
 MemoryBlock::~MemoryBlock() {
@@ -25,6 +25,10 @@ bool MemoryBlock::hasSpaceFor(unsigned int requestedSize) const {
     return false;
 }
 
+unsigned char * MemoryBlock::start() {
+    return data;
+}
+
 unsigned char * MemoryBlock::allocate(unsigned int requestedSize) {
     set<MemoryRecord>::iterator iterator;
     for (iterator = freeAddresses.begin(); iterator != freeAddresses.end(); iterator++) {
@@ -37,8 +41,17 @@ unsigned char * MemoryBlock::allocate(unsigned int requestedSize) {
     if (iterator->hasMoreSpaceThan(requestedSize)) // if free size == requestedSize, this would create 0 free size record
         freeAddresses.insert(iterator->allocated(requestedSize));
     freeAddresses.erase(iterator);
+    return address;
+}
 
-    //    this->print();
+unsigned char * MemoryBlock::allocateAtEnd(unsigned int requestedSize) {
+    set<MemoryRecord>::const_reverse_iterator iterator = freeAddresses.rbegin();
+    if (iterator == freeAddresses.rend() || !(iterator->hasSpaceFor(requestedSize)))
+        return nullptr;
+    unsigned char * address = iterator->address();
+    if (iterator->hasMoreSpaceThan(requestedSize)) // if free size == requestedSize, this would create 0 free size record
+        freeAddresses.insert(iterator->allocated(requestedSize));
+    freeAddresses.erase(prev(prev(freeAddresses.end())));
     return address;
 }
 
@@ -49,9 +62,9 @@ void MemoryBlock::sweep() {
     while (address < data + blockSize) {
         if (nextFree != freeAddresses.end() && (nextFree->address() == address)) {
             // address is amoungst free ones
-			#ifdef DEBUG
+#ifdef DEBUG
             cout << "DEBUG:   empty space from " << reinterpret_cast<void*> (nextFree->address()) << " to " << reinterpret_cast<void*> (nextFree->next()) << " ( " << nextFree->getSize() << " B )" << endl;
-			#endif
+#endif
             address = nextFree->next();
 
             nextFree++;
@@ -62,11 +75,11 @@ void MemoryBlock::sweep() {
             if (object->freed)
                 throw runtime_error("freed object!");
             if (!object->isMarked()) {
-				#ifdef DEBUG
+#ifdef DEBUG
                 cout << "DEBUG:   freed ";
                 object->typePrint();
                 cout << " from " << reinterpret_cast<void*> (address) << " to " << reinterpret_cast<void*> (address + size) << " ( " << size << " B )" << endl;
-				#endif
+#endif
                 unused.push_back(object);
             } else
                 object->unMark();

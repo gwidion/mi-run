@@ -8,11 +8,11 @@ extern Memory memory;
 using namespace std;
 using namespace std::chrono;
 
-void Object::memoryPrint(string additionalInfo) const {
+void Object::memoryPrint() const {
 #ifdef DEBUG
     cout << "DEBUG: allocated ";
     this->typePrint();
-    cout << " from " << reinterpret_cast<const void*> (this) << " to " << reinterpret_cast<const void*> (reinterpret_cast<const char *> (this) + this->size()) << " ( " << this->size() << " B )" << additionalInfo << endl;
+    cout << " from " << reinterpret_cast<const void*> (this) << " to " << reinterpret_cast<const void*> (reinterpret_cast<const char *> (this) + this->size()) << " ( " << this->size() << " B )" << endl;
 #endif
 }
 
@@ -54,11 +54,8 @@ unsigned int ObjectInt::size() const {
 }
 
 ObjectInt * ObjectInt::allocate(int x) {
-    high_resolution_clock::time_point t1 = high_resolution_clock::now();
     ObjectInt * object = new (memory.allocate(sizeof (ObjectInt))) ObjectInt(x);
-    high_resolution_clock::time_point t2 = high_resolution_clock::now();
-    auto duration = duration_cast<nanoseconds>(t2 - t1).count();
-    object->memoryPrint(string(" in ") + to_string(duration) + " ns");
+    object->memoryPrint();
     return object;
 }
 
@@ -67,11 +64,8 @@ unsigned int ObjectBuiltInSyntax::size() const {
 }
 
 ObjectBuiltInSyntax * ObjectBuiltInSyntax::allocate(ObjectFunction f) {
-    high_resolution_clock::time_point t1 = high_resolution_clock::now();
     ObjectBuiltInSyntax * object = new (memory.allocate(sizeof (ObjectBuiltInSyntax))) ObjectBuiltInSyntax(f);
-    high_resolution_clock::time_point t2 = high_resolution_clock::now();
-    auto duration = duration_cast<nanoseconds>(t2 - t1).count();
-    object->memoryPrint(string(" in ") + to_string(duration) + " ns");
+    object->memoryPrint();
     return object;
 }
 
@@ -80,11 +74,8 @@ unsigned int ObjectBuiltInFunction::size() const {
 }
 
 ObjectBuiltInFunction * ObjectBuiltInFunction::allocate(ObjectFunction f) {
-    high_resolution_clock::time_point t1 = high_resolution_clock::now();
     ObjectBuiltInFunction * object = new (memory.allocate(sizeof (ObjectBuiltInFunction))) ObjectBuiltInFunction(f);
-    high_resolution_clock::time_point t2 = high_resolution_clock::now();
-    auto duration = duration_cast<nanoseconds>(t2 - t1).count();
-    object->memoryPrint(string(" in ") + to_string(duration) + " ns");
+    object->memoryPrint();
     return object;
 }
 
@@ -93,11 +84,8 @@ unsigned int ObjectSymbol::size() const {
 }
 
 ObjectSymbol * ObjectSymbol::allocate(const char * a) {
-    high_resolution_clock::time_point t1 = high_resolution_clock::now();
     ObjectSymbol * object = new (memory.allocate(sizeof (ObjectSymbol))) ObjectSymbol(a);
-    high_resolution_clock::time_point t2 = high_resolution_clock::now();
-    auto duration = duration_cast<nanoseconds>(t2 - t1).count();
-    object->memoryPrint(string(" in ") + to_string(duration) + " ns");
+    object->memoryPrint();
     return object;
 }
 
@@ -106,11 +94,8 @@ unsigned int ObjectString::size() const {
 }
 
 ObjectString * ObjectString::allocate(const char* a) {
-    high_resolution_clock::time_point t1 = high_resolution_clock::now();
     ObjectString * object = new (memory.allocate(sizeof (ObjectString))) ObjectString(a);
-    high_resolution_clock::time_point t2 = high_resolution_clock::now();
-    auto duration = duration_cast<nanoseconds>(t2 - t1).count();
-    object->memoryPrint(string(" in ") + to_string(duration) + " ns");
+    object->memoryPrint();
     return object;
 }
 
@@ -204,11 +189,8 @@ unsigned int ObjectTrue::size() const {
 }
 
 ObjectTrue * ObjectTrue::allocate() {
-    high_resolution_clock::time_point t1 = high_resolution_clock::now();
     ObjectTrue * object = new (memory.allocate(sizeof (ObjectTrue))) ObjectTrue();
-    high_resolution_clock::time_point t2 = high_resolution_clock::now();
-    auto duration = duration_cast<nanoseconds>(t2 - t1).count();
-    object->memoryPrint(string(" in ") + to_string(duration) + " ns");
+    object->memoryPrint();
     return object;
 }
 
@@ -217,11 +199,8 @@ unsigned int ObjectFalse::size() const {
 }
 
 ObjectFalse * ObjectFalse::allocate() {
-    high_resolution_clock::time_point t1 = high_resolution_clock::now();
     ObjectFalse * object = new (memory.allocate(sizeof (ObjectFalse))) ObjectFalse();
-    high_resolution_clock::time_point t2 = high_resolution_clock::now();
-    auto duration = duration_cast<nanoseconds>(t2 - t1).count();
-    object->memoryPrint(string(" in ") + to_string(duration) + " ns");
+    object->memoryPrint();
     return object;
 }
 
@@ -230,11 +209,8 @@ unsigned int ObjectNil::size() const {
 }
 
 ObjectNil * ObjectNil::allocate() {
-    high_resolution_clock::time_point t1 = high_resolution_clock::now();
     ObjectNil * object = new (memory.allocate(sizeof (ObjectNil))) ObjectNil();
-    high_resolution_clock::time_point t2 = high_resolution_clock::now();
-    auto duration = duration_cast<nanoseconds>(t2 - t1).count();
-    object->memoryPrint(string(" in ") + to_string(duration) + " ns");
+    object->memoryPrint();
     return object;
 }
 
@@ -251,11 +227,8 @@ unsigned int ObjectVoid::size() const {
 }
 
 ObjectVoid * ObjectVoid::allocate() {
-    high_resolution_clock::time_point t1 = high_resolution_clock::now();
     ObjectVoid * object = new (memory.allocate(sizeof (ObjectVoid))) ObjectVoid();
-    high_resolution_clock::time_point t2 = high_resolution_clock::now();
-    auto duration = duration_cast<nanoseconds>(t2 - t1).count();
-    object->memoryPrint(string(" in ") + to_string(duration) + " ns");
+    object->memoryPrint();
     return object;
 }
 
@@ -263,20 +236,17 @@ unsigned int ObjectUserDefinedFunction::size() const {
     return sizeof (ObjectUserDefinedFunction);
 }
 
-
 ObjectUserDefinedFunction * ObjectUserDefinedFunction::fromStack() {
-     high_resolution_clock::time_point t1 = high_resolution_clock::now();
     Object * address = memory.allocate(sizeof (ObjectUserDefinedFunction));
     Object * body = memory.stack.pop();
-    ObjectUserDefinedFunction * object = new (address) ObjectUserDefinedFunction(memory.stack.pop(), body);    high_resolution_clock::time_point t2 = high_resolution_clock::now();
+    ObjectUserDefinedFunction * object = new (address) ObjectUserDefinedFunction(memory.stack.pop(), body);
     if (object == object->argList)
         throw "allocated same for const and argList";
     if (object == object->bodyList)
         throw "allocated same for const and bodyList";
     if (object->argList == object->bodyList)
         throw "allocated same for argList and bodyList";
-    auto duration = duration_cast<nanoseconds>(t2 - t1).count();
-    object->memoryPrint(string(" in ") + to_string(duration) + " ns");
+    object->memoryPrint();
     return object;
 }
 

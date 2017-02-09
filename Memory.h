@@ -6,7 +6,7 @@
 #include "Stack.h"
 
 class Object;
-
+    
 class Memory {
 public:
     Memory();
@@ -19,6 +19,7 @@ public:
     Stack stack;
 private:
     std::vector<MemoryBlock *> blocks;
+    int freeBlock = 0;
 
     unsigned char * tryAllocate(unsigned int requestedSize);
 

@@ -12,6 +12,8 @@ public:
     virtual ~MemoryBlock();
 
     unsigned char * allocate(unsigned int requestedSize);
+    unsigned char * allocateAtEnd(unsigned int requestedSize);
+    unsigned char * start();
     bool hasSpaceFor(unsigned int requestedSize) const;
     void sweep();
 private:
