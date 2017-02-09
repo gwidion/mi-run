@@ -1,5 +1,6 @@
 #include "Environment.h"
 #include "Memory.h"
+#include <limits.h>
 
 using namespace std;
 
@@ -21,7 +22,12 @@ Object* builtinPlus(int numArgs, Environment& environment) {
     long int sum = 0;
     for (int i = 0; i < numArgs; i++) {
         Object* nextArg = memory.stack.pop();
-        sum += nextArg->getInt(environment);
+        long int number = nextArg->getInt(environment);
+        if (((sum > 0) && (number > INT_MAX - sum)) || ((sum < 0) && (number < INT_MIN - sum))) {
+           popFromStack(numArgs - i);
+           throw runtime_error("plus under/overflow");
+        }
+        sum += number;
     }
     return ObjectInt::allocate(sum);
 }
@@ -35,8 +41,7 @@ Object* builtinPlus(int numArgs, Environment& environment) {
 
 Object* builtinMinus(int numArgs, Environment& environment) {
     if (numArgs == 0) {
-        cout << "no args for minus operator";
-        return ObjectVoid::allocate();
+        throw runtime_error("no args for minus operator");
     } else if (numArgs == 1) {
         Object* nextArg = memory.stack.pop();
         int intValue = nextArg->getInt(environment);
@@ -47,9 +52,15 @@ Object* builtinMinus(int numArgs, Environment& environment) {
         for (int i = 0; i < numArgs; i++) {
             Object* nextArg = memory.stack.pop();
             if (i == numArgs - 1) // first number, needs to be added
-                result += nextArg->getInt(environment);
-            else // the rest subtracted
-                result -= nextArg->getInt(environment);
+               result += nextArg->getInt(environment);
+            else { // the rest subtracted
+               int number = nextArg->getInt(environment);
+               if (((result < 0) && (number > INT_MAX + result)) || ((result > 0) && (number < INT_MIN + result))) {
+                  popFromStack(numArgs - i);
+                  throw runtime_error("minus under/overflow");
+               }
+               result -= number;
+            }
         }
         return ObjectInt::allocate(result);
     }
@@ -61,12 +72,21 @@ Object* builtinMinus(int numArgs, Environment& environment) {
 //
 
 Object* builtinTimes(int numArgs, Environment& environment) {
-    long int sum = 1;
+    long int result = 1;
     for (int i = 0; i < numArgs; i++) {
         Object* nextArg = memory.stack.pop();
-        sum *= nextArg->getInt(environment);
+        int number = nextArg->getInt(environment);
+        if ((result > INT_MAX / number) || ((result < INT_MIN / number))) {
+            popFromStack(numArgs - i);
+            throw runtime_error("multiplication under/overflow");
+        }
+        else if(((result == -1) && (number == INT_MIN)) || ((number == -1) && (result == INT_MIN))) {
+            popFromStack(numArgs - i);
+            throw runtime_error("multiplication possible under/overflow");
+        }
+        result *= number;
     }
-    return ObjectInt::allocate(sum);
+    return ObjectInt::allocate(result);
 }
 
 //
@@ -75,9 +95,8 @@ Object* builtinTimes(int numArgs, Environment& environment) {
 
 Object* builtinEquals(int numArgs, Environment& environment) {
     if (numArgs != 2) {
-        cout << "= expects exactly 2 arguments";
         popFromStack(numArgs);
-        return ObjectVoid::allocate();
+        throw runtime_error("= expects exactly 2 arguments");
     }
     Object* first = memory.stack.pop();
     Object* second = memory.stack.pop();
@@ -95,9 +114,8 @@ Object* builtinEquals(int numArgs, Environment& environment) {
 
 Object* builtinLessThan(int numArgs, Environment& environment) {
     if (numArgs != 2) {
-        cout << "< expects exactly 2 arguments";
         popFromStack(numArgs);
-        return ObjectVoid::allocate();
+        throw runtime_error("< expects exactly 2 arguments");
     }
 
     // arguments are reversed on stack
@@ -137,9 +155,8 @@ Object* builtinGreaterThan(int numArgs, Environment& environment) {
 
 Object* builtinIf(int numArgs, Environment& environment) {
     if (numArgs != 3) {
-        cout << "if expects exactly 3 arguments";
         popFromStack(numArgs);
-        return ObjectVoid::allocate();
+        throw runtime_error("if expects exactly 3 arguments");
     }
 
     // arguments are reversed on stack
@@ -160,9 +177,8 @@ Object* builtinIf(int numArgs, Environment& environment) {
 
 Object* builtinLambda(int numArgs, Environment& environment) {
     if (numArgs != 2) {
-        cout << "lambda expects 2 arguments";
         popFromStack(numArgs);
-        return ObjectVoid::allocate();
+        throw runtime_error("lambda expects 2 arguments");
     }
 
     return ObjectUserDefinedFunction::fromStack();
@@ -174,9 +190,8 @@ Object* builtinLambda(int numArgs, Environment& environment) {
 
 Object* builtinDefine(int numArgs, Environment& environment) {
     if (numArgs != 2) {
-        cout << "define expects exactly 2 arguments";
         popFromStack(numArgs);
-        return ObjectVoid::allocate();
+        throw runtime_error("define expects exactly 2 arguments");
     }
 
     // arguments are reversed on stack
@@ -193,9 +208,8 @@ Object* builtinDefine(int numArgs, Environment& environment) {
 //
 Object* builtinCar(int numArgs, Environment& environment) {
    if( numArgs != 1 ) {
-        cout << "car expects exactly 1 argument ";
         popFromStack(numArgs);
-        return ObjectVoid::allocate();
+        throw runtime_error("car expects exactly 1 argument ");
    }
 
    Object* theCell = memory.stack.pop();
@@ -207,9 +221,8 @@ Object* builtinCar(int numArgs, Environment& environment) {
 //
 Object* builtinCdr(int numArgs, Environment& environment) {
    if( numArgs != 1 ) {
-        cout << "cdr expects exactly 1 argument ";
         popFromStack(numArgs);
-        return ObjectVoid::allocate();
+        throw runtime_error("cdr expects exactly 1 argument ");
    }
 
    Object* theCell = memory.stack.pop();

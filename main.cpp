@@ -1,4 +1,5 @@
 #include <fstream>
+#include <stdexcept>
 
 #include "Environment.h"
 #include "Object.h"
@@ -20,16 +21,21 @@ void repl( FILE* input = stdin ) {
 	while(true) {
 		cout << "> ";
 		expression = reader.read(input);
-        if (expression->isNil()) {
-            cout << "empty input, ending" << endl;
+      if (expression->isNil()) {
+         cout << "empty input, ending" << endl;
 			return;
 		}
-        result = expression->eval(globalEnvironment);
-        if (result->isNil()) {
+      try {
+         result = expression->eval(globalEnvironment);
+         if (result->isNil()) {
             cout << "empty result, ending" << endl;
-			return;
-		}
-		result->print();
+            return;
+         }
+         result->print();
+      }
+      catch(runtime_error& err) {
+         cout << err.what();
+      }
 		cout << endl;
 	}
 }
@@ -65,7 +71,7 @@ void testing() {
 
 int main() {	
 	cout << "kabelja4 and bliznjan runtime system for scheme" << endl;
-//	testing();
+	testing();
 	repl();
 
 	return 0;
