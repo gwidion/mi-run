@@ -358,6 +358,7 @@ public:
     virtual void typePrint() const override {
         std::cout << "[a Void (scary, right?)]";
     }
+    virtual void mark() override;
 private:
    Object* argList;
    Object* bodyList;

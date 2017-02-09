@@ -15,7 +15,6 @@ public:
     void addObject( std::string key, Object* object );
 
     void mark();
-    void markWithParents();
 private:
     Environment* parent;
     std::unordered_map<std::string, Object*> objectMap;

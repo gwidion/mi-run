@@ -8,6 +8,7 @@ static const unsigned int blockSize = 100; // 100 B
 MemoryBlock::MemoryBlock() {
     data = new unsigned char [blockSize];
     freeAddresses.insert(MemoryRecord(data, blockSize));
+    cout << "DEBUG: new block from " << reinterpret_cast<void*> (data) << " to " << reinterpret_cast<void*> (data + blockSize) << " ( " << blockSize << " B )" << endl;
 }
 
 MemoryBlock::~MemoryBlock() {

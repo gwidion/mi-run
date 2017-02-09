@@ -244,3 +244,9 @@ unsigned int ObjectUserDefinedFunction::size( ) const {
 ObjectUserDefinedFunction* ObjectUserDefinedFunction::allocate( Object* argList, Object* bodyList ) {
    return new (memory.allocate( sizeof (ObjectUserDefinedFunction) ) ) ObjectUserDefinedFunction( argList, bodyList );
 }
+
+void ObjectUserDefinedFunction::mark() {
+    Object::mark();
+    argList->mark();
+    bodyList->mark();
+}
