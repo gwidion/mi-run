@@ -8,7 +8,9 @@ static const unsigned int blockSize = 100; // 100 B
 MemoryBlock::MemoryBlock() {
     data = new unsigned char [blockSize];
     freeAddresses.insert(MemoryRecord(data, blockSize));
+	#ifdef DEBUG
     cout << "DEBUG: new block from " << reinterpret_cast<void*> (data) << " to " << reinterpret_cast<void*> (data + blockSize) << " ( " << blockSize << " B )" << endl;
+	#endif
 }
 
 MemoryBlock::~MemoryBlock() {
@@ -47,7 +49,9 @@ void MemoryBlock::sweep() {
     while (address < data + blockSize) {
         if (nextFree != freeAddresses.end() && (nextFree->address() == address)) {
             // address is amoungst free ones
+			#ifdef DEBUG
             cout << "DEBUG:   empty space from " << reinterpret_cast<void*> (nextFree->address()) << " to " << reinterpret_cast<void*> (nextFree->next()) << " ( " << nextFree->getSize() << " B )" << endl;
+			#endif
             address = nextFree->next();
 
             nextFree++;
@@ -58,9 +62,11 @@ void MemoryBlock::sweep() {
             if (object->freed)
                 throw runtime_error("freed object!");
             if (!object->isMarked()) {
+				#ifdef DEBUG
                 cout << "DEBUG:   freed ";
                 object->typePrint();
                 cout << " from " << reinterpret_cast<void*> (address) << " to " << reinterpret_cast<void*> (address + size) << " ( " << size << " B )" << endl;
+				#endif
                 unused.push_back(object);
             } else
                 object->unMark();

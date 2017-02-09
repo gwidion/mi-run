@@ -10,18 +10,6 @@ extern Environment globalEnvironment;
 
 using namespace std;
 
-//void initializeObjects() {
-//	ObjectInt * i = ObjectInt::allocate( 1 );
-//	ObjectBuiltInFunction * bif = ObjectBuiltInFunction::allocate( nullptr );
-//	ObjectBuiltInSyntax * bis = ObjectBuiltInSyntax::allocate( nullptr );
-//	ObjectCons * c = ObjectCons::allocate( nullptr, nullptr );
-//	ObjectString * s = ObjectString::allocate( "" );
-//	ObjectTrue * t = ObjectTrue::allocate();
-//	ObjectFalse * f = ObjectFalse::allocate();
-//	ObjectNil * n = ObjectNil::allocate();
-//	ObjectUserDefinedFunction * udf = ObjectUserDefinedFunction::allocate(nullptr, nullptr);
-//}
-
 void repl( FILE* input = stdin ) {
 	Reader reader;
 	
@@ -77,12 +65,9 @@ void testing() {
 }
 
 int main() {	
-    // initializeObjects();
-
 	cout << "kabelja4 and bliznjan runtime system for scheme" << endl;
 	testing();
 	repl();
 
-	// only reached on EOF
 	return 0;
 }

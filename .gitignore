@@ -5,4 +5,5 @@ dist/
 nbdist/
 .nb-gradle/
 *.stackdump
-testOut.*
+/testOut.txt
+/mi-run.exe.stackdump

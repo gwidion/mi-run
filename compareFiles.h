@@ -6,8 +6,8 @@
 #include <string.h>
 
 /* returns text indicating where is difference or empty string if there is not */
-std::string compareFiles(std::string & file1name, std::string & file2name) {
-    std::fstream file1(file1name), file2(file2name);
+std::string compareFiles(std::string & outputFile, std::string & referenceFile) {
+    std::fstream file1(outputFile), file2(referenceFile);
     std::string buffer, buffer1, buffer2;
     size_t position;
 

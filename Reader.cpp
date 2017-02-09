@@ -1,5 +1,7 @@
 #include "Reader.h"
 
+#include <string.h>
+
 using namespace std;
 
 extern Memory memory;
@@ -35,8 +37,7 @@ char Reader::nextChar(FILE *input) {
             return -1;
         }
         if (errno != EINTR) {
-            //			error("read error");
-            // not reached.
+            throw runtime_error("read error");
         } else {
             // read again.
         }
@@ -95,7 +96,27 @@ Object* Reader::readString(FILE *input) {
 
     for (;;) {
         char ch = nextChar(input);
-        if (ch == '\"') {
+        if (ch == '\\') {
+            ch = nextChar(input);
+
+            if (ch == -1) {
+               runtime_error("unterminated string");
+            }
+            switch (ch) {
+            case 'n':
+               ch = '\n';
+               break;
+            case 'r':
+               ch = '\r';
+               break;
+            case 't':
+               ch = '\t';
+               break;
+            default:
+               break;
+            }
+        }
+        else if (ch == '\"') {
             Object* newStringObject;
 
             buffer[currentStringLen] = '\0';
@@ -142,13 +163,17 @@ Object* Reader::readSymbol(FILE *input) {
             unreadChar(ch);
             buffer[currentSymbolLen] = '\0';
             if (buffer[0] == '#') {
-                switch (buffer[1]) {
-                    case 't':
-                        free(buffer);
-                        return ObjectTrue::allocate();
-                    case 'f':
-                        free(buffer);
-                        return ObjectFalse::allocate();
+                if(strcmp(buffer, "#t") == 0) {
+                     free(buffer);
+                     return ObjectTrue::allocate();
+                }
+                if(strcmp(buffer, "#f") == 0) {
+                     free(buffer);
+                     return ObjectFalse::allocate();
+                }
+                if(strcmp(buffer, "#void") == 0) {
+                     free(buffer);
+                     return ObjectVoid::allocate();
                 }
             }
             newSymbolObject = ObjectSymbol::allocate(buffer);
